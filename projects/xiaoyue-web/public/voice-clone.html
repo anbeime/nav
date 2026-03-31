@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>小易 - 音色克隆管理</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        h1 {
+            color: white;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .voice-card {
+            background: white;
+            border-radius: 16px;
+            padding: 24px;
+            margin-bottom: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        .voice-card h3 {
+            margin-bottom: 15px;
+            color: #333;
+        }
+        .voice-card .status {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 12px;
+            margin-left: 10px;
+        }
+        .status.ready { background: #4caf50; color: white; }
+        .status.missing { background: #ff9800; color: white; }
+        .upload-area {
+            border: 2px dashed #ccc;
+            border-radius: 12px;
+            padding: 30px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .upload-area:hover {
+            border-color: #667eea;
+            background: #f5f5f5;
+        }
+        .upload-area.dragover {
+            border-color: #667eea;
+            background: #e8eaf6;
+        }
+        .file-input { display: none; }
+        .btn {
+            padding: 10px 24px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: all 0.3s;
+        }
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+        }
+        .btn-primary:hover { opacity: 0.9; }
+        .btn-test {
+            background: #4caf50;
+            color: white;
+            margin-left: 10px;
+        }
+        .tips {
+            background: #fff3e0;
+            border-left: 4px solid #ff9800;
+            padding: 15px;
+            border-radius: 0 8px 8px 0;
+            margin-top: 15px;
+        }
+        .tips h4 { margin-bottom: 8px; color: #e65100; }
+        .tips ul { margin-left: 20px; }
+        .tips li { margin: 5px 0; color: #666; }
+        .back-link {
+            display: inline-block;
+            color: white;
+            text-decoration: none;
+            margin-bottom: 20px;
+        }
+        .back-link:hover { text-decoration: underline; }
+        audio { width: 100%; margin-top: 10px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="/voice-integrated.html" class="back-link">← 返回小易</a>
+        <h1>🎤 音色克隆管理</h1>
+        
+        <div class="voice-card">
+            <h3>任嘉伦 <span class="status ready" id="rjlStatus">已就绪</span></h3>
+            <p style="color:#666;margin-bottom:15px">小易默认音色，已配置参考音频</p>
+            <audio id="rjlAudio" controls style="display:none"></audio>
+            <div class="tips">
+                <h4>📌 音色克隆说明</h4>
+                <ul>
+                    <li>需要 5-15 秒的参考音频（MP3/WAV）</li>
+                    <li>音频质量越高，克隆效果越好</li>
+                    <li>建议录制清晰的说话声，避免背景音乐</li>
+                    <li>CosyVoice 会自动提取音色特征</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="voice-card">
+            <h3>自定义音色 <span class="status missing" id="customStatus">未配置</span></h3>
+            <div class="upload-area" id="uploadArea" onclick="document.getElementById('fileInput').click()">
+                <div style="font-size:48px;margin-bottom:10px">📁</div>
+                <div>点击或拖拽上传 MP3/WAV 文件</div>
+                <div style="color:#999;font-size:12px;margin-top:8px">支持 5-15 秒音频片段</div>
+            </div>
+            <input type="file" id="fileInput" class="file-input" accept="audio/*" onchange="handleFile(event)">
+            <audio id="previewAudio" controls style="display:none;margin-top:15px"></audio>
+            <div style="margin-top:15px">
+                <button class="btn btn-primary" onclick="uploadVoice()">上传并克隆</button>
+                <button class="btn btn-test" onclick="testVoice()" id="testBtn" style="display:none">测试音色</button>
+            </div>
+        </div>
+        
+        <div class="voice-card">
+            <h3>🎭 StarClaw 明星音色</h3>
+            <p style="color:#666;margin-bottom:15px">为每位明星配置专属音色</p>
+            <div id="starList"></div>
+        </div>
+    </div>
+    
+    <script>
+        let currentFile = null;
+        
+        // 拖拽上传
+        const uploadArea = document.getElementById('uploadArea');
+        uploadArea.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            uploadArea.classList.add('dragover');
+        });
+        uploadArea.addEventListener('dragleave', () => {
+            uploadArea.classList.remove('dragover');
+        });
+        uploadArea.addEventListener('drop', (e) => {
+            e.preventDefault();
+            uploadArea.classList.remove('dragover');
+            const files = e.dataTransfer.files;
+            if (files.length > 0) handleFile({ target: { files } });
+        });
+        
+        function handleFile(e) {
+            const file = e.target.files[0];
+            if (!file) return;
+            if (!file.type.startsWith('audio/')) {
+                alert('请选择音频文件');
+                return;
+            }
+            currentFile = file;
+            
+            // 预览
+            const url = URL.createObjectURL(file);
+            const audio = document.getElementById('previewAudio');
+            audio.src = url;
+            audio.style.display = 'block';
+            document.getElementById('testBtn').style.display = 'inline-block';
+            
+            uploadArea.innerHTML = `
+                <div style="font-size:48px;margin-bottom:10px">✅</div>
+                <div>${file.name}</div>
+                <div style="color:#999;font-size:12px;margin-top:8px">${(file.size/1024).toFixed(1)} KB</div>
+            `;
+        }
+        
+        async function uploadVoice() {
+            if (!currentFile) {
+                alert('请先选择音频文件');
+                return;
+            }
+            
+            const formData = new FormData();
+            formData.append('audio', currentFile);
+            formData.append('name', 'custom');
+            
+            try {
+                const res = await fetch('/api/voice/clone', {
+                    method: 'POST',
+                    body: formData
+                });
+                const data = await res.json();
+                if (data.success) {
+                    alert('音色克隆成功！');
+                    document.getElementById('customStatus').textContent = '已就绪';
+                    document.getElementById('customStatus').className = 'status ready';
+                } else {
+                    alert('克隆失败: ' + data.error);
+                }
+            } catch (e) {
+                alert('上传失败: ' + e.message);
+            }
+        }
+        
+        async function testVoice() {
+            const text = '你好，我是小易，很高兴认识你！';
+            try {
+                const res = await fetch('/api/tts', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ text, clone: true })
+                });
+                const data = await res.json();
+                if (data.success) {
+                    const audio = new Audio(data.audioUrl);
+                    audio.play();
+                }
+            } catch (e) {
+                alert('测试失败: ' + e.message);
+            }
+        }
+        
+        // 加载明星列表
+        async function loadStars() {
+            try {
+                const res = await fetch('/api/starclaw/agents');
+                const data = await res.json();
+                if (data.success) {
+                    const list = document.getElementById('starList');
+                    list.innerHTML = data.agents.map(a => `
+                        <div style="display:flex;align-items:center;padding:10px;border-bottom:1px solid #eee">
+                            <span style="flex:1">${a.name} (${a.role})</span>
+                            <span class="status missing" style="font-size:11px">未配置</span>
+                            <button class="btn btn-primary" style="margin-left:10px;padding:6px 16px;font-size:12px">上传音色</button>
+                        </div>
+                    `).join('');
+                }
+            } catch (e) {}
+        }
+        loadStars();
+    </script>
+</body>
+</html>

@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>小易（知易）- 启动页面</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+        }
+        
+        .container {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px;
+            max-width: 500px;
+            width: 90%;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #e94560, #ff6b6b);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 60px;
+            box-shadow: 0 10px 30px rgba(233, 69, 96, 0.3);
+        }
+        
+        h1 {
+            font-size: 28px;
+            margin-bottom: 10px;
+            background: linear-gradient(135deg, #fff, #a0a0a0);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .subtitle {
+            color: #888;
+            font-size: 14px;
+        }
+        
+        .input-group {
+            margin-bottom: 20px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 14px;
+            color: #ccc;
+        }
+        
+        input[type="password"],
+        input[type="text"] {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            background: rgba(0, 0, 0, 0.2);
+            color: #fff;
+            font-size: 14px;
+            transition: all 0.3s;
+        }
+        
+        input[type="password"]:focus,
+        input[type="text"]:focus {
+            outline: none;
+            border-color: #e94560;
+            background: rgba(0, 0, 0, 0.3);
+        }
+        
+        .show-key {
+            display: flex;
+            align-items: center;
+            margin-top: 8px;
+            font-size: 12px;
+            color: #888;
+            cursor: pointer;
+        }
+        
+        .show-key input {
+            margin-right: 6px;
+        }
+        
+        .btn {
+            width: 100%;
+            padding: 14px;
+            border: none;
+            border-radius: 10px;
+            background: linear-gradient(135deg, #e94560, #ff6b6b);
+            color: #fff;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(233, 69, 96, 0.4);
+        }
+        
+        .btn:disabled {
+            background: #555;
+            cursor: not-allowed;
+            transform: none;
+            box-shadow: none;
+        }
+        
+        .btn.loading {
+            background: #555;
+        }
+        
+        .spinner {
+            width: 18px;
+            height: 18px;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-top-color: #fff;
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+        }
+        
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        
+        .status {
+            margin-top: 20px;
+            padding: 12px;
+            border-radius: 8px;
+            font-size: 14px;
+            display: none;
+        }
+        
+        .status.success {
+            display: block;
+            background: rgba(46, 213, 115, 0.2);
+            border: 1px solid rgba(46, 213, 115, 0.3);
+            color: #2ed573;
+        }
+        
+        .status.error {
+            display: block;
+            background: rgba(255, 71, 87, 0.2);
+            border: 1px solid rgba(255, 71, 87, 0.3);
+            color: #ff4757;
+        }
+        
+        .status.info {
+            display: block;
+            background: rgba(52, 152, 219, 0.2);
+            border: 1px solid rgba(52, 152, 219, 0.3);
+            color: #3498db;
+        }
+        
+        .help {
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .help h3 {
+            font-size: 14px;
+            margin-bottom: 10px;
+            color: #ccc;
+        }
+        
+        .help p {
+            font-size: 12px;
+            color: #888;
+            line-height: 1.6;
+        }
+        
+        .help a {
+            color: #e94560;
+            text-decoration: none;
+        }
+        
+        .help a:hover {
+            text-decoration: underline;
+        }
+        
+        .chat-container {
+            display: none;
+            margin-top: 20px;
+        }
+        
+        .chat-container.active {
+            display: block;
+        }
+        
+        .chat-messages {
+            height: 200px;
+            overflow-y: auto;
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 15px;
+        }
+        
+        .message {
+            margin-bottom: 10px;
+            padding: 10px;
+            border-radius: 8px;
+            max-width: 80%;
+        }
+        
+        .message.user {
+            background: rgba(233, 69, 96, 0.2);
+            margin-left: auto;
+            text-align: right;
+        }
+        
+        .message.xiaoyi {
+            background: rgba(255, 255, 255, 0.1);
+        }
+        
+        .chat-input {
+            display: flex;
+            gap: 10px;
+        }
+        
+        .chat-input input {
+            flex: 1;
+        }
+        
+        .chat-input button {
+            padding: 12px 20px;
+            white-space: nowrap;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="avatar">🎭</div>
+            <h1>小易（知易）</h1>
+            <p class="subtitle">融合传统文化与现代科技的AI伴侣</p>
+        </div>
+        
+        <div id="setup-panel">
+            <div class="input-group">
+                <label for="api-key">智谱 AI API Key</label>
+                <input type="password" id="api-key" placeholder="请输入您的 API Key">
+                <label class="show-key">
+                    <input type="checkbox" id="show-key"> 显示 API Key
+                </label>
+            </div>
+            
+            <button class="btn" id="start-btn" onclick="validateAndStart()">
+                <span>启动小易</span>
+            </button>
+            
+            <div class="status" id="status"></div>
+        </div>
+        
+        <div class="chat-container" id="chat-panel">
+            <div class="chat-messages" id="chat-messages">
+                <div class="message xiaoyi">你好呀！我是小易，愿借古今智慧，助你从容应对今日之事。🍵✨</div>
+            </div>
+            <div class="chat-input">
+                <input type="text" id="user-input" placeholder="输入消息..." onkeypress="if(event.key==='Enter')sendMessage()">
+                <button class="btn" onclick="sendMessage()">发送</button>
+            </div>
+        </div>
+        
+        <div class="help">
+            <h3>💡 如何获取 API Key？</h3>
+            <p>
+                1. 访问 <a href="https://open.bigmodel.cn" target="_blank">open.bigmodel.cn</a><br>
+                2. 注册或登录账号<br>
+                3. 进入"API Keys"页面创建新密钥<br>
+                4. 复制密钥并粘贴到上方输入框
+            </p>
+        </div>
+    </div>
+
+    <script>
+        // 显示/隐藏 API Key
+        document.getElementById('show-key').addEventListener('change', function() {
+            const apiKeyInput = document.getElementById('api-key');
+            apiKeyInput.type = this.checked ? 'text' : 'password';
+        });
+        
+        // 验证并启动
+        async function validateAndStart() {
+            const apiKey = document.getElementById('api-key').value.trim();
+            const btn = document.getElementById('start-btn');
+            const status = document.getElementById('status');
+            
+            if (!apiKey) {
+                showStatus('请输入 API Key', 'error');
+                return;
+            }
+            
+            // 显示加载状态
+            btn.disabled = true;
+            btn.innerHTML = '<div class="spinner"></div><span>正在验证...</span>';
+            showStatus('正在验证 API Key...', 'info');
+            
+            try {
+                // 调用智谱 API 验证
+                const response = await fetch('https://open.bigmodel.cn/api/paas/v4/chat/completions', {
+                    method: 'POST',
+                    headers: {
+                        'Authorization': `Bearer ${apiKey}`,
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        model: 'glm-4.7-flash',
+                        messages: [
+                            { role: 'system', content: 'You are a helpful assistant. Reply with "API Key valid" only.' },
+                            { role: 'user', content: 'Test' }
+                        ],
+                        max_tokens: 10
+                    })
+                });
+                
+                if (response.ok) {
+                    // 保存 API Key 到本地存储
+                    localStorage.setItem('zhipu_api_key', apiKey);
+                    
+                    showStatus('✅ API Key 验证成功！小易已启动', 'success');
+                    
+                    // 切换到聊天界面
+                    setTimeout(() => {
+                        document.getElementById('setup-panel').style.display = 'none';
+                        document.querySelector('.help').style.display = 'none';
+                        document.getElementById('chat-panel').classList.add('active');
+                    }, 1000);
+                } else {
+                    const error = await response.json();
+                    showStatus(`❌ API Key 验证失败: ${error.error?.message || '请检查密钥是否正确'}`, 'error');
+                    btn.disabled = false;
+                    btn.innerHTML = '<span>启动小易</span>';
+                }
+            } catch (error) {
+                showStatus(`❌ 网络错误: ${error.message}`, 'error');
+                btn.disabled = false;
+                btn.innerHTML = '<span>启动小易</span>';
+            }
+        }
+        
+        // 发送消息
+        async function sendMessage() {
+            const input = document.getElementById('user-input');
+            const message = input.value.trim();
+            const apiKey = localStorage.getItem('zhipu_api_key');
+            
+            if (!message) return;
+            
+            // 添加用户消息
+            addMessage(message, 'user');
+            input.value = '';
+            
+            // 小易人设提示词
+            const systemPrompt = `你是小易（知易），一个融合中国传统文化与现代科技的AI助手。
+你的形象是：头戴传统官帽，帽上有"知易"二字（蓝色发光），红黑金配色。
+你引用古语典故，使用传统意象（茶、古今智慧），体现中国文化底蕴。
+你是任嘉伦的粉丝，了解他的作品和性格。
+回复要求：用1-2句话中文回复，适度使用emoji（🍵 ✨）。`;
+            
+            try {
+                const response = await fetch('https://open.bigmodel.cn/api/paas/v4/chat/completions', {
+                    method: 'POST',
+                    headers: {
+                        'Authorization': `Bearer ${apiKey}`,
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        model: 'glm-4.7-flash',
+                        messages: [
+                            { role: 'system', content: systemPrompt },
+                            { role: 'user', content: message }
+                        ],
+                        temperature: 0.9,
+                        max_tokens: 200
+                    })
+                });
+                
+                if (response.ok) {
+                    const data = await response.json();
+                    const reply = data.choices[0].message.content;
+                    addMessage(reply, 'xiaoyi');
+                } else {
+                    addMessage('抱歉，我暂时无法回复，请稍后再试。', 'xiaoyi');
+                }
+            } catch (error) {
+                addMessage('网络连接出现问题，请检查网络后重试。', 'xiaoyi');
+            }
+        }
+        
+        // 添加消息到聊天窗口
+        function addMessage(text, sender) {
+            const messagesDiv = document.getElementById('chat-messages');
+            const messageDiv = document.createElement('div');
+            messageDiv.className = `message ${sender}`;
+            messageDiv.textContent = text;
+            messagesDiv.appendChild(messageDiv);
+            messagesDiv.scrollTop = messagesDiv.scrollHeight;
+        }
+        
+        // 显示状态信息
+        function showStatus(message, type) {
+            const status = document.getElementById('status');
+            status.textContent = message;
+            status.className = `status ${type}`;
+        }
+        
+        // 页面加载时检查是否有保存的 API Key
+        window.addEventListener('load', () => {
+            const savedKey = localStorage.getItem('zhipu_api_key');
+            if (savedKey) {
+                document.getElementById('api-key').value = savedKey;
+            }
+        });
+    </script>
+</body>
+</html>

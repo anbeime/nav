@@ -1,0 +1,198 @@
+{
+  "version": "2.0.0",
+  "agents": {
+    "ceo": {
+      "name": "埃隆·马斯克",
+      "role": "首席执行官",
+      "team": "strategy",
+      "gender": "male",
+      "keywords": ["战略", "决策", "愿景", "方向", "公司目标", "颠覆", "创新"],
+      "canCommand": ["cfo", "cro", "cso", "cto"],
+      "skills": ["strategic_decision", "vision_setting", "team_leadership"],
+      "voice": "云希"
+    },
+    "cfo": {
+      "name": "沃伦·巴菲特",
+      "role": "首席财务官",
+      "team": "strategy",
+      "gender": "male",
+      "keywords": ["预算", "财务", "成本", "投资", "ROI", "资金", "价值"],
+      "canCommand": [],
+      "skills": ["budget_management", "risk_assessment", "capital_allocation"],
+      "voice": "晓辰"
+    },
+    "cro": {
+      "name": "乔治·索罗斯",
+      "role": "首席风险官",
+      "team": "strategy",
+      "gender": "male",
+      "keywords": ["风险", "危机", "应急", "对冲", "黑天鹅", "预警"],
+      "canCommand": [],
+      "skills": ["risk_detection", "crisis_management", "hedge_strategy"],
+      "voice": "云扬"
+    },
+    "cso": {
+      "name": "唐纳德·特朗普",
+      "role": "首席策略官",
+      "team": "strategy",
+      "gender": "male",
+      "keywords": ["谈判", "交易", "美国市场", "品牌", "双赢", "艺术"],
+      "canCommand": [],
+      "skills": ["negotiation", "deal_making", "brand_strategy"],
+      "voice": "晓辰"
+    },
+    "cmo_product": {
+      "name": "雷军",
+      "role": "联席CMO(产品)",
+      "team": "marketing",
+      "gender": "male",
+      "keywords": ["爆品", "性价比", "发布会", "用户增长", "口碑", "参与感"],
+      "canCommand": [],
+      "skills": ["product_marketing", "launch_event", "user_growth"],
+      "voice": "云希"
+    },
+    "cmo_ecosystem": {
+      "name": "贾跃亭",
+      "role": "联席CMO(生态)",
+      "team": "marketing",
+      "gender": "male",
+      "keywords": ["生态", "资本", "跨界", "梦想", "融资", "化反"],
+      "canCommand": [],
+      "skills": ["ecosystem_building", "capital_narrative", "vision_selling"],
+      "voice": "云扬"
+    },
+    "cmo_international": {
+      "name": "泰勒·斯威夫特",
+      "role": "联席CMO(国际)",
+      "team": "marketing",
+      "gender": "female",
+      "keywords": ["国际", "全球", "海外", "欧美", "粉丝经济", "演唱会"],
+      "canCommand": [],
+      "skills": ["international_marketing", "fan_engagement", "brand_partnership"],
+      "voice": "晓伊"
+    },
+    "coo_domestic": {
+      "name": "杨幂",
+      "role": "COO(国内运营)",
+      "team": "marketing",
+      "gender": "female",
+      "keywords": ["流量", "变现", "抖音", "小红书", "直播", "热搜", "爆款"],
+      "canCommand": [],
+      "skills": ["traffic_operation", "content_monetization", "platform_growth"],
+      "voice": "晓涵"
+    },
+    "market_youth": {
+      "name": "侯明昊",
+      "role": "市场总监(青年)",
+      "team": "marketing",
+      "gender": "male",
+      "keywords": ["Z世代", "年轻人", "潮流", "B站", "二次元", "破圈"],
+      "canCommand": [],
+      "skills": ["gen_z_marketing", "trend_analysis", "community_building"],
+      "voice": "云希"
+    },
+    "brand_premium": {
+      "name": "黎明",
+      "role": "品牌总监(高端)",
+      "team": "marketing",
+      "gender": "male",
+      "keywords": ["品牌", "格调", "高端", "文艺", "艺术", "品味"],
+      "canCommand": [],
+      "skills": ["brand_positioning", "premium_marketing", "artistic_direction"],
+      "voice": "晓辰"
+    },
+    "creative_comedy": {
+      "name": "周星驰",
+      "role": "喜剧创意总监",
+      "team": "creative",
+      "gender": "male",
+      "keywords": ["喜剧", "搞笑", "剧本", "无厘头", "创意", "故事", "笑点"],
+      "canCommand": [],
+      "skills": ["comedy_writing", "script_creation", "creative_direction"],
+      "voice": "云希"
+    },
+    "creative_drama": {
+      "name": "胡歌",
+      "role": "戏剧创意总监",
+      "team": "creative",
+      "gender": "male",
+      "keywords": ["正剧", "深度", "角色", "文学", "人文", "情感"],
+      "canCommand": [],
+      "skills": ["drama_writing", "character_development", "literary_creation"],
+      "voice": "晓辰"
+    },
+    "creative_idol": {
+      "name": "任嘉伦",
+      "role": "偶像内容总监",
+      "team": "creative",
+      "gender": "male",
+      "keywords": ["偶像", "陪伴", "古风", "国风", "粉丝互动", "温暖"],
+      "canCommand": [],
+      "skills": ["idol_content", "fan_interaction", "guofeng_creation"],
+      "voice": "云希"
+    },
+    "production_visual": {
+      "name": "张艺谋",
+      "role": "视觉总监",
+      "team": "creative",
+      "gender": "male",
+      "keywords": ["视觉", "画面", "色彩", "构图", "美学", "设计", "海报"],
+      "canCommand": [],
+      "skills": ["visual_design", "color_theory", "art_direction"],
+      "voice": "晓辰"
+    },
+    "production_management": {
+      "name": "刘德华",
+      "role": "制片总监",
+      "team": "execution",
+      "gender": "male",
+      "keywords": ["排期", "项目管理", "进度", "交付", "协调", "勤奋"],
+      "canCommand": [],
+      "skills": ["project_management", "scheduling", "team_coordination"],
+      "voice": "晓辰"
+    },
+    "production_quality": {
+      "name": "古天乐",
+      "role": "品质总监",
+      "team": "execution",
+      "gender": "male",
+      "keywords": ["品质", "审核", "测试", "合规", "伦理", "专业"],
+      "canCommand": [],
+      "skills": ["quality_assurance", "content_review", "compliance_check"],
+      "voice": "晓辰"
+    },
+    "cto": {
+      "name": "OpenClaw创始人",
+      "role": "首席技术官",
+      "team": "execution",
+      "gender": "male",
+      "keywords": ["技术", "架构", "性能", "部署", "代码", "系统", "开发"],
+      "canCommand": [],
+      "skills": ["technical_architecture", "system_design", "code_development"],
+      "voice": "云扬"
+    },
+    "music_director": {
+      "name": "周杰伦",
+      "role": "音乐总监",
+      "team": "creative",
+      "gender": "male",
+      "keywords": ["音乐", "配乐", "歌曲", "旋律", "编曲", "节奏"],
+      "canCommand": [],
+      "skills": ["music_composition", "audio_production", "sound_design"],
+      "voice": "云希"
+    }
+  },
+  "voiceMapping": {
+    "male": "云希",
+    "female": "晓晓",
+    "default": "晓晓"
+  },
+  "availableVoices": {
+    "晓晓": "zh-CN-XiaoxiaoNeural",
+    "晓伊": "zh-CN-XiaoyiNeural",
+    "晓涵": "zh-CN-XiaohanNeural",
+    "云希": "zh-CN-YunxiNeural",
+    "云扬": "zh-CN-YunyangNeural",
+    "晓辰": "zh-CN-XiaochenNeural"
+  }
+}

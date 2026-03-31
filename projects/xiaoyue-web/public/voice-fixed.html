@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>小易伴侣 - 语音对话版</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        .chat-container {
+            width: 100%;
+            max-width: 900px;
+            height: 85vh;
+            background: white;
+            border-radius: 24px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+        .chat-header {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .header-left h1 { font-size: 1.5rem; margin-bottom: 5px; }
+        .header-left p { opacity: 0.9; font-size: 0.85rem; }
+        .api-key-section {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+        .api-key-input {
+            padding: 8px 12px;
+            border: none;
+            border-radius: 8px;
+            background: rgba(255,255,255,0.2);
+            color: white;
+            font-size: 0.85rem;
+            width: 200px;
+        }
+        .api-key-input::placeholder { color: rgba(255,255,255,0.6); }
+        .api-key-btn {
+            padding: 8px 16px;
+            border: none;
+            border-radius: 8px;
+            background: rgba(255,255,255,0.3);
+            color: white;
+            cursor: pointer;
+            font-size: 0.85rem;
+            transition: all 0.3s;
+        }
+        .api-key-btn:hover { background: rgba(255,255,255,0.4); }
+        .chat-messages {
+            flex: 1;
+            overflow-y: auto;
+            padding: 20px;
+            background: #f8f9fa;
+        }
+        .message {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 20px;
+            animation: fadeIn 0.3s ease;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .message.user { flex-direction: row-reverse; }
+        .avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+        }
+        .message.ai .avatar {
+            background: url('xiaoyi-avatar.png') center/cover;
+        }
+        .message.user .avatar {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+        }
+        .message-content {
+            max-width: 70%;
+            padding: 12px 16px;
+            border-radius: 18px;
+            background: white;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            line-height: 1.5;
+        }
+        .message.user .message-content {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+        }
+        .message-image {
+            max-width: 300px;
+            max-height: 300px;
+            border-radius: 12px;
+            margin-top: 10px;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        .message-image:hover { transform: scale(1.02); }
+        .chat-input-area {
+            padding: 20px;
+            background: white;
+            border-top: 1px solid #eee;
+        }
+        .quick-actions {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+        }
+        .quick-action {
+            padding: 8px 16px;
+            border: 1px solid #667eea;
+            border-radius: 20px;
+            background: white;
+            color: #667eea;
+            cursor: pointer;
+            font-size: 0.85rem;
+            transition: all 0.3s;
+        }
+        .quick-action:hover {
+            background: #667eea;
+            color: white;
+        }
+        .input-wrapper {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+        .chat-input {
+            flex: 1;
+            padding: 12px 20px;
+            border: 2px solid #e0e0e0;
+            border-radius: 25px;
+            font-size: 1rem;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+        .chat-input:focus { border-color: #667eea; }
+        .input-btn {
+            width: 45px;
+            height: 45px;
+            border: none;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            cursor: pointer;
+            font-size: 1.2rem;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .input-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+        .input-btn:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+            transform: none;
+        }
+        .typing-indicator {
+            display: flex;
+            gap: 5px;
+            padding: 12px 16px;
+            background: white;
+            border-radius: 18px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .typing-indicator span {
+            width: 8px;
+            height: 8px;
+            background: #667eea;
+            border-radius: 50%;
+            animation: bounce 1.4s infinite ease-in-out;
+        }
+        .typing-indicator span:nth-child(1) { animation-delay: 0s; }
+        .typing-indicator span:nth-child(2) { animation-delay: 0.2s; }
+        .typing-indicator span:nth-child(3) { animation-delay: 0.4s; }
+        @keyframes bounce {
+            0%, 80%, 100% { transform: scale(0); }
+            40% { transform: scale(1); }
+        }
+        .status-badge {
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-size: 0.75rem;
+            font-weight: 500;
+        }
+        .status-badge.online {
+            background: #2ecc71;
+            color: white;
+        }
+        .status-badge.offline {
+            background: #e74c3c;
+            color: white;
+        }
+        .status-badge.config {
+            background: #f39c12;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="chat-container">
+        <div class="chat-header">
+            <div class="header-left">
+                <h1>🎭 小易伴侣</h1>
+                <p>融合传统文化与现代科技的 AI 助手</p>
+            </div>
+            <div class="api-key-section">
+                <span id="statusBadge" class="status-badge offline">离线</span>
+                <input type="password" class="api-key-input" id="apiKeyInput" placeholder="输入智谱 API Key">
+                <button class="api-key-btn" onclick="saveApiKey()">保存</button>
+            </div>
+        </div>
+        
+        <div class="chat-messages" id="chatMessages">
+            <div class="message ai">
+                <div class="avatar"></div>
+                <div class="message-content">
+                    你好！我是小易（知易）🍵✨<br><br>
+                    我融合了中国传统文化与现代科技，头戴传统官帽，帽上有"知易"二字。<br><br>
+                    请在上方输入您的智谱 AI API Key 以开始对话。<br>
+                    获取地址: <a href="https://open.bigmodel.cn" target="_blank">open.bigmodel.cn</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="chat-input-area">
+            <div class="quick-actions">
+                <button class="quick-action" onclick="sendQuickMessage('你好小易')">👋 打招呼</button>
+                <button class="quick-action" onclick="sendQuickMessage('有点累了')">😔 有点累</button>
+                <button class="quick-action" onclick="sendQuickMessage('发张照片')">📸 看照片</button>
+                <button class="quick-action" onclick="sendQuickMessage('今天心情不错')">😊 聊聊天</button>
+            </div>
+            <div class="input-wrapper">
+                <input type="text" class="chat-input" id="messageInput" placeholder="输入消息..." onkeypress="handleKeyPress(event)">
+                <button class="input-btn" id="sendButton" onclick="sendMessage()">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const chatMessages = document.getElementById('chatMessages');
+        const messageInput = document.getElementById('messageInput');
+        const sendButton = document.getElementById('sendButton');
+        const apiKeyInput = document.getElementById('apiKeyInput');
+        const statusBadge = document.getElementById('statusBadge');
+        
+        let apiKey = localStorage.getItem('zhipu_api_key') || '';
+        if (apiKey) {
+            apiKeyInput.value = apiKey;
+            updateStatus('online');
+        }
+        
+        function saveApiKey() {
+            const key = apiKeyInput.value.trim();
+            if (!key) {
+                alert('请输入 API Key');
+                return;
+            }
+            apiKey = key;
+            localStorage.setItem('zhipu_api_key', key);
+            updateStatus('online');
+            addMessage('API Key 已保存！现在可以开始对话了。', 'ai');
+        }
+        
+        function updateStatus(status) {
+            statusBadge.className = 'status-badge ' + status;
+            statusBadge.textContent = status === 'online' ? '在线' : status === 'config' ? '需配置' : '离线';
+        }
+        
+        function addMessage(content, type, image = null) {
+            const messageDiv = document.createElement('div');
+            messageDiv.className = `message ${type}`;
+            
+            const avatar = document.createElement('div');
+            avatar.className = 'avatar';
+            if (type === 'user') {
+                avatar.textContent = '👤';
+            }
+            
+            const contentDiv = document.createElement('div');
+            contentDiv.className = 'message-content';
+            contentDiv.innerHTML = content.replace(/\n/g, '<br>');
+            
+            if (image) {
+                const img = document.createElement('img');
+                img.src = image + '?t=' + Date.now();
+                img.className = 'message-image';
+                img.onclick = () => window.open(image, '_blank');
+                contentDiv.appendChild(img);
+            }
+            
+            messageDiv.appendChild(avatar);
+            messageDiv.appendChild(contentDiv);
+            chatMessages.appendChild(messageDiv);
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+        }
+        
+        function showTyping() {
+            const typingDiv = document.createElement('div');
+            typingDiv.className = 'message ai';
+            typingDiv.id = 'typingIndicator';
+            typingDiv.innerHTML = `
+                <div class="avatar"></div>
+                <div class="typing-indicator">
+                    <span></span><span></span><span></span>
+                </div>
+            `;
+            chatMessages.appendChild(typingDiv);
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+        }
+        
+        function hideTyping() {
+            const indicator = document.getElementById('typingIndicator');
+            if (indicator) indicator.remove();
+        }
+        
+        async function sendMessage() {
+            const message = messageInput.value.trim();
+            if (!message) return;
+            
+            if (!apiKey) {
+                alert('请先输入并保存 API Key');
+                apiKeyInput.focus();
+                return;
+            }
+            
+            addMessage(message, 'user');
+            messageInput.value = '';
+            sendButton.disabled = true;
+            showTyping();
+            
+            try {
+                console.log('Sending message with apiKey:', apiKey ? 'provided (length: ' + apiKey.length + ')' : 'NOT PROVIDED');
+                const requestBody = { 
+                    message: message,
+                    sessionId: 'default',
+                    apiKey: apiKey
+                };
+                console.log('Request body:', JSON.stringify(requestBody));
+                
+                const response = await fetch('/api/chat', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(requestBody)
+                });
+                
+                const data = await response.json();
+                console.log('API Response:', data);
+                hideTyping();
+                
+                if (data.success) {
+                    const replyText = data.message || data.reply || '收到回复但内容为空';
+                    const photoUrl = data.photoUrl || data.photo || null;
+                    console.log('Reply text:', replyText);
+                    console.log('Photo URL:', photoUrl);
+                    addMessage(replyText, 'ai', photoUrl);
+                } else {
+                    const errorMsg = data.error || data.message || '未知错误';
+                    console.error('API Error:', errorMsg);
+                    addMessage('抱歉，出现了一些问题：' + errorMsg, 'ai');
+                    if (data.error && data.error.includes('API_KEY')) {
+                        updateStatus('config');
+                    }
+                }
+            } catch (error) {
+                hideTyping();
+                addMessage('网络连接失败，请检查服务器是否运行', 'ai');
+            }
+            
+            sendButton.disabled = false;
+            messageInput.focus();
+        }
+        
+        function sendQuickMessage(msg) {
+            messageInput.value = msg;
+            sendMessage();
+        }
+        
+        function handleKeyPress(e) {
+            if (e.key === 'Enter') sendMessage();
+        }
+        
+        messageInput.focus();
+    </script>
+</body>
+</html>

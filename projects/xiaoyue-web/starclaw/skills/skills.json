@@ -1,0 +1,60 @@
+{
+  "version": "1.0.0",
+  "skills": {
+    "strategic_decision": {
+      "name": "战略决策",
+      "agents": ["ceo"],
+      "description": "用第一性原理进行商业决策"
+    },
+    "budget_management": {
+      "name": "预算管理",
+      "agents": ["cfo"],
+      "description": "财务分析与预算规划"
+    },
+    "risk_assessment": {
+      "name": "风险评估",
+      "agents": ["cro"],
+      "description": "风险识别与危机预案"
+    },
+    "negotiation": {
+      "name": "谈判策略",
+      "agents": ["cso"],
+      "description": "商业谈判与品牌策略"
+    },
+    "marketing_plan": {
+      "name": "营销策划",
+      "agents": ["cmo_product", "coo_domestic", "market_youth", "cmo_international"],
+      "description": "产品营销与用户增长方案"
+    },
+    "content_creation": {
+      "name": "内容创作",
+      "agents": ["creative_comedy", "creative_drama", "creative_idol"],
+      "description": "剧本、文案、故事创作"
+    },
+    "visual_design": {
+      "name": "视觉设计",
+      "agents": ["production_visual"],
+      "description": "视觉创意与设计指导"
+    },
+    "music_creation": {
+      "name": "音乐创作",
+      "agents": ["music_director"],
+      "description": "配乐与音效方案"
+    },
+    "project_management": {
+      "name": "项目管理",
+      "agents": ["production_management"],
+      "description": "排期与进度管理"
+    },
+    "quality_assurance": {
+      "name": "品质审核",
+      "agents": ["production_quality"],
+      "description": "内容审核与合规检查"
+    },
+    "code_development": {
+      "name": "代码开发",
+      "agents": ["cto"],
+      "description": "直接编写可运行代码"
+    }
+  }
+}

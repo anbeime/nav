@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>小易 - 多模态智能助手</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .header {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+        }
+        
+        .header h1 {
+            color: white;
+            font-size: 24px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .header h1::before {
+            content: "🎭";
+            font-size: 28px;
+        }
+        
+        .model-status {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .model-badge {
+            background: rgba(255,255,255,0.2);
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .model-badge.ready::before {
+            content: "✅";
+        }
+        
+        .model-badge.loading::before {
+            content: "⏳";
+        }
+        
+        .main-container {
+            flex: 1;
+            display: flex;
+            max-width: 1400px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 20px;
+            gap: 20px;
+        }
+        
+        .chat-section {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            background: rgba(255,255,255,0.95);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+        
+        .chat-messages {
+            flex: 1;
+            overflow-y: auto;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        
+        .message {
+            max-width: 80%;
+            padding: 12px 18px;
+            border-radius: 18px;
+            animation: fadeIn 0.3s ease;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .message.user {
+            align-self: flex-end;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-bottom-right-radius: 4px;
+        }
+        
+        .message.assistant {
+            align-self: flex-start;
+            background: #f0f0f0;
+            color: #333;
+            border-bottom-left-radius: 4px;
+        }
+        
+        .message-image {
+            max-width: 200px;
+            border-radius: 10px;
+            margin-top: 8px;
+        }
+        
+        .message-audio {
+            margin-top: 8px;
+            width: 100%;
+        }
+        
+        .input-section {
+            padding: 20px;
+            background: #f8f8f8;
+            border-top: 1px solid #e0e0e0;
+        }
+        
+        .input-container {
+            display: flex;
+            gap: 10px;
+            align-items: flex-end;
+        }
+        
+        .input-wrapper {
+            flex: 1;
+            position: relative;
+        }
+        
+        textarea {
+            width: 100%;
+            min-height: 60px;
+            max-height: 150px;
+            padding: 12px 15px;
+            border: 2px solid #e0e0e0;
+            border-radius: 20px;
+            resize: none;
+            font-size: 15px;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+        
+        textarea:focus {
+            border-color: #667eea;
+        }
+        
+        .input-actions {
+            display: flex;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        
+        .action-btn {
+            background: white;
+            border: 1px solid #e0e0e0;
+            padding: 8px 15px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 13px;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .action-btn:hover {
+            background: #f0f0f0;
+            border-color: #667eea;
+        }
+        
+        .action-btn.primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+        }
+        
+        .action-btn.primary:hover {
+            opacity: 0.9;
+        }
+        
+        .action-btn.recording {
+            background: #ff4757;
+            color: white;
+            animation: pulse 1s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        
+        .sidebar {
+            width: 300px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        
+        .panel {
+            background: rgba(255,255,255,0.95);
+            border-radius: 20px;
+            padding: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+        }
+        
+        .panel h3 {
+            margin-bottom: 15px;
+            color: #333;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .upload-area {
+            border: 2px dashed #ccc;
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .upload-area:hover {
+            border-color: #667eea;
+            background: rgba(102,126,234,0.05);
+        }
+        
+        .upload-area.dragover {
+            border-color: #667eea;
+            background: rgba(102,126,234,0.1);
+        }
+        
+        .upload-preview {
+            margin-top: 15px;
+        }
+        
+        .upload-preview img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+        
+        .settings-group {
+            margin-bottom: 15px;
+        }
+        
+        .settings-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 13px;
+            color: #666;
+        }
+        
+        select, input[type="range"] {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 13px;
+        }
+        
+        .starclaw-agents {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        
+        .agent-chip {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-size: 12px;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+        
+        .agent-chip:hover {
+            transform: scale(1.05);
+        }
+        
+        .typing-indicator {
+            display: none;
+            align-self: flex-start;
+            background: #f0f0f0;
+            padding: 12px 18px;
+            border-radius: 18px;
+            border-bottom-left-radius: 4px;
+        }
+        
+        .typing-indicator span {
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            background: #999;
+            border-radius: 50%;
+            margin: 0 2px;
+            animation: typing 1.4s infinite;
+        }
+        
+        .typing-indicator span:nth-child(2) { animation-delay: 0.2s; }
+        .typing-indicator span:nth-child(3) { animation-delay: 0.4s; }
+        
+        @keyframes typing {
+            0%, 60%, 100% { transform: translateY(0); }
+            30% { transform: translateY(-10px); }
+        }
+        
+        @media (max-width: 1024px) {
+            .main-container {
+                flex-direction: column;
+            }
+            .sidebar {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>小易 - 多模态智能助手</h1>
+        <div class="model-status" id="modelStatus">
+            <span class="model-badge loading">加载中...</span>
+        </div>
+    </div>
+    
+    <div class="main-container">
+        <div class="chat-section">
+            <div class="chat-messages" id="chatMessages">
+                <div class="message assistant">
+                    你好呀！我是小易 🌟<br>
+                    我可以：<br>
+                    • 💬 文字聊天<br>
+                    • 🎤 语音对话（说/听）<br>
+                    • 🖼️ 看懂你发的图片<br>
+                    • 🎭 召唤 StarClaw 明星团队<br>
+                    有什么我可以帮你的吗？
+                </div>
+            </div>
+            <div class="typing-indicator" id="typingIndicator">
+                <span></span><span></span><span></span>
+            </div>
+            <div class="input-section">
+                <div class="input-container">
+                    <div class="input-wrapper">
+                        <textarea id="messageInput" placeholder="输入消息，或上传图片、语音..." rows="2"></textarea>
+                        <div class="input-actions">
+                            <button class="action-btn" id="uploadBtn">📎 上传图片</button>
+                            <button class="action-btn" id="voiceBtn">🎤 语音输入</button>
+                            <button class="action-btn primary" id="sendBtn">发送</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="sidebar">
+            <div class="panel">
+                <h3>🖼️ 图片上传</h3>
+                <div class="upload-area" id="uploadArea">
+                    <div>拖拽图片到这里</div>
+                    <div style="font-size: 12px; color: #999; margin-top: 10px;">或点击选择文件</div>
+                    <input type="file" id="fileInput" accept="image/*" style="display: none;">
+                </div>
+                <div class="upload-preview" id="uploadPreview"></div>
+            </div>
+            
+            <div class="panel">
+                <h3>⚙️ 设置</h3>
+                <div class="settings-group">
+                    <label>TTS 模型</label>
+                    <select id="ttsModel">
+                        <option value="cosyvoice">CosyVoice (轻量)</option>
+                        <option value="voxcpm">VoxCPM (高质量)</option>
+                        <option value="vits">VITS (特色音色)</option>
+                    </select>
+                </div>
+                <div class="settings-group">
+                    <label>说话人</label>
+                    <select id="ttsSpeaker">
+                        <option value="中文女">中文女</option>
+                        <option value="中文男">中文男</option>
+                        <option value="日语男">日语男</option>
+                        <option value="粤语女">粤语女</option>
+                    </select>
+                </div>
+                <div class="settings-group">
+                    <label>语速</label>
+                    <input type="range" id="ttsSpeed" min="0.5" max="2" step="0.1" value="1">
+                </div>
+            </div>
+            
+            <div class="panel">
+                <h3>🎭 StarClaw 团队</h3>
+                <div class="starclaw-agents" id="starclawAgents">
+                    <!-- 动态加载 -->
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // 全局状态
+        let currentImage = null;
+        let isRecording = false;
+        let mediaRecorder = null;
+        let audioChunks = [];
+        
+        // DOM 元素
+        const chatMessages = document.getElementById('chatMessages');
+        const messageInput = document.getElementById('messageInput');
+        const sendBtn = document.getElementById('sendBtn');
+        const voiceBtn = document.getElementById('voiceBtn');
+        const uploadBtn = document.getElementById('uploadBtn');
+        const uploadArea = document.getElementById('uploadArea');
+        const fileInput = document.getElementById('fileInput');
+        const uploadPreview = document.getElementById('uploadPreview');
+        const typingIndicator = document.getElementById('typingIndicator');
+        const modelStatus = document.getElementById('modelStatus');
+        
+        // 初始化
+        async function init() {
+            await checkModelStatus();
+            await loadStarClawAgents();
+            setupEventListeners();
+        }
+        
+        // 检查模型状态
+        async function checkModelStatus() {
+            try {
+                const res = await fetch('/api/multimodal/status');
+                const data = await res.json();
+                
+                if (data.success) {
+                    const available = data.available;
+                    modelStatus.innerHTML = available.map(m => 
+                        `<span class="model-badge ready">${m}</span>`
+                    ).join('');
+                }
+            } catch (e) {
+                console.error('模型状态检查失败:', e);
+            }
+        }
+        
+        // 加载 StarClaw 团队
+        async function loadStarClawAgents() {
+            try {
+                const res = await fetch('/api/starclaw/agents');
+                const data = await res.json();
+                
+                if (data.success) {
+                    const container = document.getElementById('starclawAgents');
+                    container.innerHTML = data.agents.slice(0, 8).map(agent => 
+                        `<span class="agent-chip" data-name="${agent.name}">${agent.name}</span>`
+                    ).join('');
+                    
+                    // 添加点击事件
+                    container.querySelectorAll('.agent-chip').forEach(chip => {
+                        chip.addEventListener('click', () => {
+                            messageInput.value += ` [召唤:${chip.dataset.name}]`;
+                            messageInput.focus();
+                        });
+                    });
+                }
+            } catch (e) {
+                console.error('加载 StarClaw 失败:', e);
+            }
+        }
+        
+        // 设置事件监听
+        function setupEventListeners() {
+            // 发送消息
+            sendBtn.addEventListener('click', sendMessage);
+            messageInput.addEventListener('keypress', (e) => {
+                if (e.key === 'Enter' && !e.shiftKey) {
+                    e.preventDefault();
+                    sendMessage();
+                }
+            });
+            
+            // 语音输入
+            voiceBtn.addEventListener('click', toggleVoiceInput);
+            
+            // 文件上传
+            uploadBtn.addEventListener('click', () => fileInput.click());
+            fileInput.addEventListener('change', handleFileSelect);
+            
+            // 拖拽上传
+            uploadArea.addEventListener('click', () => fileInput.click());
+            uploadArea.addEventListener('dragover', (e) => {
+                e.preventDefault();
+                uploadArea.classList.add('dragover');
+            });
+            uploadArea.addEventListener('dragleave', () => {
+                uploadArea.classList.remove('dragover');
+            });
+            uploadArea.addEventListener('drop', (e) => {
+                e.preventDefault();
+                uploadArea.classList.remove('dragover');
+                const files = e.dataTransfer.files;
+                if (files.length > 0) {
+                    handleFile(files[0]);
+                }
+            });
+        }
+        
+        // 发送消息
+        async function sendMessage() {
+            const text = messageInput.value.trim();
+            if (!text && !currentImage) return;
+            
+            // 添加用户消息
+            addMessage('user', text, currentImage);
+            messageInput.value = '';
+            
+            // 显示输入中
+            showTyping();
+            
+            try {
+                // 构建请求
+                const body = {
+                    message: text,
+                    sessionId: 'multimodal_' + Date.now(),
+                    apiKey: localStorage.getItem('zhipuApiKey') || ''
+                };
+                
+                // 如果有图片，添加图片数据
+                if (currentImage) {
+                    body.image = currentImage;
+                }
+                
+                const res = await fetch('/api/chat', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(body)
+                });
+                
+                const data = await res.json();
+                hideTyping();
+                
+                if (data.success) {
+                    addMessage('assistant', data.reply);
+                    
+                    // 如果有图片，显示图片
+                    if (data.photoUrl) {
+                        addImageToLastMessage(data.photoUrl);
+                    }
+                    
+                    // TTS 播放
+                    if (data.reply) {
+                        speakText(data.reply);
+                    }
+                } else {
+                    addMessage('assistant', '抱歉，出错了：' + (data.error || '未知错误'));
+                }
+                
+            } catch (e) {
+                hideTyping();
+                addMessage('assistant', '网络错误，请稍后重试');
+                console.error(e);
+            }
+            
+            // 清空当前图片
+            currentImage = null;
+            uploadPreview.innerHTML = '';
+        }
+        
+        // 添加消息到聊天
+        function addMessage(role, text, image = null) {
+            const div = document.createElement('div');
+            div.className = `message ${role}`;
+            
+            let html = text.replace(/\n/g, '<br>');
+            
+            if (image) {
+                html += `<br><img src="${image}" class="message-image">`;
+            }
+            
+            div.innerHTML = html;
+            chatMessages.appendChild(div);
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+        }
+        
+        // 添加图片到最后一条消息
+        function addImageToLastMessage(url) {
+            const lastMsg = chatMessages.lastElementChild;
+            if (lastMsg && lastMsg.classList.contains('assistant')) {
+                const img = document.createElement('img');
+                img.src = url;
+                img.className = 'message-image';
+                lastMsg.appendChild(img);
+            }
+        }
+        
+        // 显示/隐藏输入中
+        function showTyping() {
+            typingIndicator.style.display = 'block';
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+        }
+        
+        function hideTyping() {
+            typingIndicator.style.display = 'none';
+        }
+        
+        // 语音输入
+        async function toggleVoiceInput() {
+            if (!isRecording) {
+                // 开始录音
+                try {
+                    const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+                    mediaRecorder = new MediaRecorder(stream);
+                    audioChunks = [];
+                    
+                    mediaRecorder.ondataavailable = (e) => {
+                        audioChunks.push(e.data);
+                    };
+                    
+                    mediaRecorder.onstop = async () => {
+                        const audioBlob = new Blob(audioChunks, { type: 'audio/wav' });
+                        await processVoiceInput(audioBlob);
+                    };
+                    
+                    mediaRecorder.start();
+                    isRecording = true;
+                    voiceBtn.classList.add('recording');
+                    voiceBtn.textContent = '🔴 停止录音';
+                    
+                } catch (e) {
+                    alert('无法访问麦克风：' + e.message);
+                }
+            } else {
+                // 停止录音
+                mediaRecorder.stop();
+                mediaRecorder.stream.getTracks().forEach(t => t.stop());
+                isRecording = false;
+                voiceBtn.classList.remove('recording');
+                voiceBtn.textContent = '🎤 语音输入';
+            }
+        }
+        
+        // 处理语音输入
+        async function processVoiceInput(audioBlob) {
+            showTyping();
+            
+            // TODO: 调用 Whisper API 进行语音识别
+            // 临时模拟
+            setTimeout(() => {
+                hideTyping();
+                messageInput.value = '（语音识别结果会显示在这里）';
+            }, 1000);
+        }
+        
+        // TTS 播放
+        async function speakText(text) {
+            const model = document.getElementById('ttsModel').value;
+            const speaker = document.getElementById('ttsSpeaker').value;
+            const speed = document.getElementById('ttsSpeed').value;
+            
+            try {
+                const res = await fetch('/api/tts', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ text, model, speaker, speed })
+                });
+                
+                const data = await res.json();
+                
+                if (data.success && data.audioUrl) {
+                    const audio = new Audio(data.audioUrl);
+                    audio.play();
+                }
+            } catch (e) {
+                console.error('TTS 失败:', e);
+            }
+        }
+        
+        // 处理文件选择
+        function handleFileSelect(e) {
+            const file = e.target.files[0];
+            if (file) handleFile(file);
+        }
+        
+        // 处理文件
+        function handleFile(file) {
+            if (!file.type.startsWith('image/')) {
+                alert('请上传图片文件');
+                return;
+            }
+            
+            const reader = new FileReader();
+            reader.onload = (e) => {
+                currentImage = e.target.result;
+                uploadPreview.innerHTML = `<img src="${currentImage}">`;
+            };
+            reader.readAsDataURL(file);
+        }
+        
+        // 启动
+        init();
+    </script>
+</body>
+</html>

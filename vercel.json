@@ -1,0 +1,9 @@
+{
+  "version": 2,
+  "buildCommand": null,
+  "installCommand": null,
+  "framework": null,
+  "outputDirectory": "public",
+  "cleanUrls": true,
+  "trailingSlash": false
+}

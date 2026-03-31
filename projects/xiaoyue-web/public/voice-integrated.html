@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>小易伴侣 - 多模态版（OpenClaw + 飞书 + 语音 + 视觉）</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        .chat-container {
+            width: 100%;
+            max-width: 900px;
+            height: 85vh;
+            background: white;
+            border-radius: 24px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+        .chat-header {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .header-left h1 { font-size: 1.5rem; margin-bottom: 5px; }
+        .header-left p { opacity: 0.9; font-size: 0.85rem; }
+        .status-badge {
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-size: 0.75rem;
+            font-weight: 500;
+        }
+        .status-badge.online { background: #2ecc71; color: white; }
+        .status-badge.offline { background: #e74c3c; color: white; }
+        .status-badge.config { background: #f39c12; color: white; }
+        
+        .chat-messages {
+            flex: 1;
+            overflow-y: auto;
+            padding: 20px;
+            background: #f8f9fa;
+        }
+        .message {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 20px;
+            animation: fadeIn 0.3s ease;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .message.user { flex-direction: row-reverse; }
+        .avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+        }
+        .message.ai .avatar { background: url('xiaoyi-avatar.png') center/cover; }
+        .message.user .avatar { background: linear-gradient(135deg, #667eea, #764ba2); color: white; }
+        .message-content {
+            max-width: 70%;
+            padding: 12px 16px;
+            border-radius: 18px;
+            background: white;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            line-height: 1.5;
+        }
+        .message.user .message-content { background: linear-gradient(135deg, #667eea, #764ba2); color: white; }
+        .message-image { max-width: 300px; max-height: 300px; border-radius: 12px; margin-top: 10px; cursor: pointer; transition: transform 0.3s; }
+        .message-image:hover { transform: scale(1.02); }
+        
+        .config-panel {
+            padding: 15px 20px;
+            background: #f0f0f0;
+            border-bottom: 1px solid #ddd;
+        }
+        .config-tabs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+        .config-tab {
+            padding: 8px 16px;
+            border: none;
+            border-radius: 20px;
+            background: white;
+            color: #667eea;
+            cursor: pointer;
+            font-size: 0.85rem;
+            transition: all 0.3s;
+        }
+        .config-tab.active { background: #667eea; color: white; }
+        .config-content { display: none; }
+        .config-content.active { display: block; }
+        .config-group {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .config-input {
+            flex: 1;
+            padding: 8px 12px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 0.85rem;
+        }
+        .config-btn {
+            padding: 8px 16px;
+            border: none;
+            border-radius: 8px;
+            background: #667eea;
+            color: white;
+            cursor: pointer;
+            font-size: 0.85rem;
+        }
+        .config-btn:hover { background: #5a6fd6; }
+        .config-info {
+            font-size: 0.75rem;
+            color: #666;
+            margin-top: 5px;
+        }
+        
+        .chat-input-area {
+            padding: 20px;
+            background: white;
+            border-top: 1px solid #eee;
+        }
+        .image-preview-bar {
+            display: none;
+            padding: 8px 0;
+            margin-bottom: 10px;
+        }
+        .image-preview-bar img {
+            max-height: 80px;
+            border-radius: 8px;
+            border: 2px solid #667eea;
+        }
+        .image-preview-bar .remove-img {
+            cursor: pointer;
+            color: #e74c3c;
+            margin-left: 8px;
+            font-size: 18px;
+        }
+        .model-status-bar {
+            display: flex;
+            gap: 8px;
+            padding: 8px 20px;
+            background: #f8f9fa;
+            border-top: 1px solid #eee;
+            flex-wrap: wrap;
+        }
+        .model-chip {
+            font-size: 11px;
+            padding: 3px 10px;
+            border-radius: 12px;
+            background: #e8f5e9;
+            color: #2e7d32;
+        }
+        .starclaw-bar {
+            display: flex;
+            gap: 6px;
+            padding: 8px 20px;
+            background: #faf8ff;
+            border-top: 1px solid #eee;
+            flex-wrap: wrap;
+            overflow-x: auto;
+        }
+        .star-chip {
+            font-size: 11px;
+            padding: 3px 10px;
+            border-radius: 12px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            cursor: pointer;
+            white-space: nowrap;
+        }
+        .star-chip:hover { opacity: 0.85; }
+        .quick-actions {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+        }
+        .quick-action {
+            padding: 8px 16px;
+            border: 1px solid #667eea;
+            border-radius: 20px;
+            background: white;
+            color: #667eea;
+            cursor: pointer;
+            font-size: 0.85rem;
+            transition: all 0.3s;
+        }
+        .quick-action:hover { background: #667eea; color: white; }
+        .input-wrapper {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+        .chat-input {
+            flex: 1;
+            padding: 12px 20px;
+            border: 2px solid #e0e0e0;
+            border-radius: 25px;
+            font-size: 1rem;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+        .chat-input:focus { border-color: #667eea; }
+        .input-btn {
+            width: 45px;
+            height: 45px;
+            border: none;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            cursor: pointer;
+            font-size: 1.2rem;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .input-btn:hover { transform: scale(1.05); box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4); }
+        .input-btn:disabled { background: #ccc; cursor: not-allowed; transform: none; }
+        
+        .typing-indicator {
+            display: flex;
+            gap: 5px;
+            padding: 12px 16px;
+            background: white;
+            border-radius: 18px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .typing-indicator span {
+            width: 8px;
+            height: 8px;
+            background: #667eea;
+            border-radius: 50%;
+            animation: bounce 1.4s infinite ease-in-out;
+        }
+        .typing-indicator span:nth-child(1) { animation-delay: 0s; }
+        .typing-indicator span:nth-child(2) { animation-delay: 0.2s; }
+        .typing-indicator span:nth-child(3) { animation-delay: 0.4s; }
+        @keyframes bounce {
+            0%, 80%, 100% { transform: scale(0); }
+            40% { transform: scale(1); }
+        }
+    </style>
+</head>
+<body>
+    <div class="chat-container">
+        <div class="chat-header">
+            <div class="header-left">
+                <h1>🎭 小易伴侣</h1>
+                <p>融合传统文化与现代科技的 AI 助手</p>
+            </div>
+            <span id="statusBadge" class="status-badge offline">离线</span>
+        </div>
+        
+        <div class="config-panel">
+            <div class="config-tabs">
+                <button class="config-tab active" onclick="switchTab('zhipu')">智谱 AI</button>
+                <button class="config-tab" onclick="switchTab('openclaw')">OpenClaw</button>
+                <button class="config-tab" onclick="switchTab('feishu')">飞书</button>
+                <button class="config-tab" onclick="switchTab('voice')">音色克隆</button>
+            </div>
+            
+            <!-- 智谱 AI 配置 -->
+            <div id="zhipu-tab" class="config-content active">
+                <div class="config-group">
+                    <input type="password" class="config-input" id="zhipuApiKey" placeholder="输入智谱 API Key">
+                    <button class="config-btn" onclick="saveZhipuKey()">保存</button>
+                </div>
+                <div class="config-info">获取地址: <a href="https://open.bigmodel.cn" target="_blank">open.bigmodel.cn</a></div>
+            </div>
+            
+            <!-- OpenClaw 配置 -->
+            <div id="openclaw-tab" class="config-content">
+                <div class="config-group">
+                    <input type="password" class="config-input" id="openclawToken" placeholder="OpenClaw Token" value="a8351b767e724cf1924a4f9565b8b476.ATNkJF3bScIStuhe">
+                    <button class="config-btn" onclick="saveOpenclawToken()">保存</button>
+                </div>
+                <div class="config-info">已预填本机 OpenClaw Token | 路径: C:\Users\13632\.stepfun\runtimes\node\...</div>
+            </div>
+            
+            <!-- 音色克隆配置 -->
+            <div id="voice-tab" class="config-content">
+                <div class="config-group">
+                    <select id="voiceSelect" class="config-input" style="flex:1">
+                        <option value="">选择音色（默认）</option>
+                        <option value="中文女">中文女</option>
+                        <option value="中文男">中文男</option>
+                    </select>
+                    <button class="config-btn" onclick="loadClonedVoices()">刷新</button>
+                </div>
+                <div style="margin-top:10px; padding:10px; background:#f8f9fa; border-radius:8px;">
+                    <b>🎙️ 克隆新音色</b><br>
+                    <input type="file" id="cloneAudio" accept="audio/*" style="margin:8px 0"><br>
+                    <input type="text" id="cloneName" placeholder="音色名称（如：任嘉伦）" class="config-input" style="margin:8px 0; width:100%">
+                    <input type="text" id="cloneText" placeholder="参考音频对应的文字内容" class="config-input" style="margin:8px 0; width:100%">
+                    <button class="config-btn" onclick="cloneVoice()" style="width:100%">上传并克隆</button>
+                </div>
+                <div class="config-info">💡 上传 10-30 秒清晰语音，AI 会学习这个音色</div>
+            </div>
+            
+            <!-- 飞书配置 -->
+            <div id="feishu-tab" class="config-content">
+                <div class="config-group">
+                    <input type="text" class="config-input" id="feishuAppId" placeholder="飞书 App ID">
+                    <input type="password" class="config-input" id="feishuAppSecret" placeholder="飞书 App Secret">
+                    <button class="config-btn" onclick="saveFeishuConfig()">保存</button>
+                </div>
+                <div class="config-info">在飞书开放平台 https://open.feishu.cn 创建应用机器人，获取 App ID 和 App Secret ，进入你的应用 → 安全设置，添加重定向 URL：http://localhost:3000/callback，把机器人加入群聊</div>
+            </div>
+        </div>
+        
+        <div class="chat-messages" id="chatMessages">
+            <div class="message ai">
+                <div class="avatar"></div>
+                <div class="message-content">
+                    你好！我是小易（知易）🍵✨<br><br>
+                    我融合了中国传统文化与现代科技，头戴传统官帽，帽上有"知易"二字。<br><br>
+                    请在上方配置：<br>
+                    1. <b>智谱 AI</b> - 输入 API Key 开始对话<br>
+                    2. <b>OpenClaw</b> - 已预填本机 Token，可执行电脑任务<br>
+                    3. <b>飞书</b> - 可选，接入飞书机器人
+                </div>
+            </div>
+        </div>
+        
+        <div class="chat-input-area">
+            <div class="image-preview-bar" id="imagePreviewBar">
+                <img id="previewImg" src="">
+                <span class="remove-img" onclick="clearImage()">✕</span>
+            </div>
+            <div class="quick-actions">
+                <button class="quick-action" onclick="sendQuickMessage('你好小易')">👋 打招呼</button>
+                <button class="quick-action" onclick="sendQuickMessage('有点累了')">😔 有点累</button>
+                <button class="quick-action" onclick="sendQuickMessage('发张照片')">📸 看照片</button>
+                <button class="quick-action" onclick="sendQuickMessage('帮我整理桌面')">💻 整理桌面</button>
+                <button class="quick-action" onclick="document.getElementById('imgUpload').click()">🖼️ 上传图片</button>
+                <button class="quick-action" id="voiceInputBtn" onclick="toggleVoice()">🎤 语音输入</button>
+                <button class="quick-action" onclick="toggleVoiceClonePanel()">🎙️ 音色克隆</button>
+            </div>
+            <input type="file" id="imgUpload" accept="image/*" style="display:none" onchange="handleImageUpload(event)">
+            <div class="input-wrapper">
+                <input type="text" class="chat-input" id="messageInput" placeholder="输入消息..." onkeypress="handleKeyPress(event)">
+                <button class="input-btn" id="sendButton" onclick="sendMessage()">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- StarClaw 明星团队 -->
+        <div class="starclaw-bar" id="starclawBar"></div>
+        
+        <!-- 多模态模型状态 -->
+        <div class="model-status-bar" id="modelStatusBar"></div>
+    </div>
+
+    <script>
+        // 配置存储
+        let config = {
+            zhipu: { apiKey: localStorage.getItem('zhipu_api_key') || '' },
+            openclaw: { 
+                token: localStorage.getItem('openclaw_token') || 'a8351b767e724cf1924a4f9565b8b476.ATNkJF3bScIStuhe',
+                enabled: localStorage.getItem('openclaw_enabled') !== 'false'
+            },
+            feishu: {
+                appId: localStorage.getItem('feishu_app_id') || '',
+                appSecret: localStorage.getItem('feishu_app_secret') || ''
+            }
+        };
+        
+        // DOM 元素
+        const chatMessages = document.getElementById('chatMessages');
+        const messageInput = document.getElementById('messageInput');
+        const sendButton = document.getElementById('sendButton');
+        const statusBadge = document.getElementById('statusBadge');
+        
+        // 初始化
+        function init() {
+            // 加载保存的配置
+            if (config.zhipu.apiKey) {
+                document.getElementById('zhipuApiKey').value = config.zhipu.apiKey;
+                updateStatus('online');
+            }
+            if (config.openclaw.token) {
+                document.getElementById('openclawToken').value = config.openclaw.token;
+            }
+            if (config.feishu.appId) {
+                document.getElementById('feishuAppId').value = config.feishu.appId;
+                document.getElementById('feishuAppSecret').value = config.feishu.appSecret;
+            }
+            // 加载多模态状态
+            loadModelStatus();
+            loadStarClawAgents();
+        }
+        
+        // ==================== 多模态功能 ====================
+        
+        let currentImageData = null;
+        let isVoiceRecording = false;
+        let recognition = null;
+        
+        // 图片上传
+        function handleImageUpload(event) {
+            const file = event.target.files[0];
+            if (!file || !file.type.startsWith('image/')) return;
+            const reader = new FileReader();
+            reader.onload = (e) => {
+                currentImageData = e.target.result;
+                document.getElementById('previewImg').src = currentImageData;
+                document.getElementById('imagePreviewBar').style.display = 'flex';
+            };
+            reader.readAsDataURL(file);
+        }
+        
+        function clearImage() {
+            currentImageData = null;
+            document.getElementById('imagePreviewBar').style.display = 'none';
+            document.getElementById('imgUpload').value = '';
+        }
+        
+        // 语音输入（Web Speech API）
+        function toggleVoice() {
+            const btn = document.getElementById('voiceInputBtn');
+            if (!isVoiceRecording) {
+                if (!('webkitSpeechRecognition' in window) && !('SpeechRecognition' in window)) {
+                    alert('浏览器不支持语音识别，请使用 Chrome');
+                    return;
+                }
+                const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+                recognition = new SpeechRecognition();
+                recognition.lang = 'zh-CN';
+                recognition.continuous = false;
+                recognition.interimResults = true;
+                
+                recognition.onresult = (event) => {
+                    let transcript = '';
+                    for (let i = event.resultIndex; i < event.results.length; i++) {
+                        transcript += event.results[i][0].transcript;
+                    }
+                    messageInput.value = transcript;
+                    // 如果是最终结果，自动发送
+                    if (event.results[event.results.length - 1].isFinal) {
+                        setTimeout(() => sendMessage(), 300);
+                    }
+                };
+                
+                recognition.onend = () => {
+                    isVoiceRecording = false;
+                    btn.textContent = '🎤 语音输入';
+                    btn.style.background = '';
+                    btn.style.color = '';
+                };
+                
+                recognition.start();
+                isVoiceRecording = true;
+                btn.textContent = '🔴 停止录音';
+                btn.style.background = '#e74c3c';
+                btn.style.color = 'white';
+            } else {
+                recognition.stop();
+                isVoiceRecording = false;
+                btn.textContent = '🎤 语音输入';
+                btn.style.background = '';
+                btn.style.color = '';
+            }
+        }
+        
+        // Agent 音色配置（从 registry.json 同步）
+        const AGENT_VOICES = {
+            '马斯克': '云希', '巴菲特': '晓辰', '索罗斯': '云扬', '特朗普': '晓辰',
+            '雷军': '云希', '贾跃亭': '云扬', '泰勒': '晓伊', '霉霉': '晓伊', 
+            '杨幂': '晓涵', '侯明昊': '云希', '黎明': '晓辰',
+            '周星驰': '云希', '胡歌': '晓辰', '任嘉伦': '云希', '张艺谋': '晓辰',
+            '刘德华': '晓辰', '古天乐': '晓辰', 'OpenClaw': '云扬', '周杰伦': '云希'
+        };
+        
+        // 根据 Agent 名称获取对应音色
+        function getVoiceForAgent(agentName) {
+            if (!agentName) return '晓晓'; // 默认女声
+            return AGENT_VOICES[agentName] || '晓晓';
+        }
+        
+        // 语音播报回复（根据召唤的明星自动匹配音色）
+        async function speakReply(text, agentName = null) {
+            // 清理文本：移除表情、图片描述、多余符号
+            let cleanText = text
+                .replace(/[🍵✨😊💪🌙☀️🎵📸🌟🎭💻📱🌐🎨🎬📸🖼️👍❤️🔥💡🎁🎉]/g, '') // 移除表情
+                .replace(/（[^）]*图片[^）]*）/g, '') // 移除（图片展示...）
+                .replace(/（[^）]*照片[^）]*）/g, '') // 移除（照片...）
+                .replace(/\([^)]*图片[^)]*\)/gi, '') // 移除英文括号
+                .replace(/\[图片[^\]]*\]/g, '') // 移除 [图片：...]
+                .replace(/\n+/g, ' ') // 换行转空格
+                .trim()
+                .substring(0, 300);
+            
+            if (!cleanText.trim()) return;
+            
+            // 根据角色获取音色
+            const voice = getVoiceForAgent(agentName);
+            console.log(`[TTS] 角色: ${agentName || '小易'}, 音色: ${voice}`);
+            
+            try {
+                // 优先使用 Edge-TTS
+                const res = await fetch('/api/tts', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ text: cleanText, voice, speaker: voice })
+                });
+                const data = await res.json();
+                
+                if (data.success && data.audioUrl) {
+                    const audio = new Audio(data.audioUrl);
+                    audio.play();
+                    console.log('[TTS] Edge-TTS 播放成功');
+                    return;
+                }
+            } catch(e) {
+                console.log('[TTS] Edge-TTS 不可用，使用浏览器 TTS');
+            }
+            
+            // 降级：浏览器自带 TTS（选择合适的中文声音）
+            if ('speechSynthesis' in window) {
+                const utterance = new SpeechSynthesisUtterance(cleanText);
+                utterance.lang = 'zh-CN';
+                utterance.rate = 0.95;
+                
+                // 根据角色选择男声/女声
+                const maleVoices = ['云希', '晓辰', '云扬'];
+                const isMaleVoice = agentName && AGENT_VOICES[agentName] && maleVoices.includes(AGENT_VOICES[agentName]);
+                
+                // 尝试获取中文声音（需要确保声音列表已加载）
+                let voices = speechSynthesis.getVoices();
+                let zhVoices = voices.filter(v => v.lang.includes('zh'));
+                
+                // 如果声音列表为空，等待加载
+                if (voices.length === 0) {
+                    await new Promise(resolve => {
+                        speechSynthesis.onvoiceschanged = () => {
+                            voices = speechSynthesis.getVoices();
+                            zhVoices = voices.filter(v => v.lang.includes('zh'));
+                            resolve();
+                        };
+                        // 超时保护
+                        setTimeout(resolve, 500);
+                    });
+                }
+                
+                console.log(`[TTS] 可用中文声音: ${zhVoices.map(v => v.name).join(', ') || '无'}`);
+                
+                if (isMaleVoice) {
+                    // 男声：尝试找 Microsoft Huihui 或其他男声
+                    const maleVoice = zhVoices.find(v => v.name.includes('Huihui') || v.name.includes('Kangkang'))
+                        || zhVoices.find(v => v.name.toLowerCase().includes('male'))
+                        || zhVoices[0];
+                    if (maleVoice) utterance.voice = maleVoice;
+                    utterance.pitch = 0.8; // 降低音调，更像男声
+                    utterance.rate = 0.9;
+                } else {
+                    // 女声
+                    const femaleVoice = zhVoices.find(v => v.name.includes('Yaoyao') || v.name.includes('Xiaoxiao'))
+                        || zhVoices[0];
+                    if (femaleVoice) utterance.voice = femaleVoice;
+                    utterance.pitch = 1.1;
+                }
+                
+                console.log(`[TTS] 浏览器TTS: ${isMaleVoice ? '男声' : '女声'}, voice: ${utterance.voice?.name || 'default'}, pitch: ${utterance.pitch}`);
+                speechSynthesis.speak(utterance);
+            }
+        }
+        
+        // 加载模型状态
+        async function loadModelStatus() {
+            try {
+                const res = await fetch('/api/multimodal/status');
+                const data = await res.json();
+                if (data.success && data.available) {
+                    document.getElementById('modelStatusBar').innerHTML = 
+                        data.available.map(m => `<span class="model-chip">✅ ${m}</span>`).join('');
+                }
+            } catch(e) {}
+        }
+        
+        // 加载 StarClaw 团队
+        async function loadStarClawAgents() {
+            try {
+                const res = await fetch('/api/starclaw/agents');
+                const data = await res.json();
+                if (data.success) {
+                    document.getElementById('starclawBar').innerHTML = 
+                        '<span style="font-size:11px;color:#666;margin-right:5px">🎭 召唤:</span>' +
+                        data.agents.map(a => 
+                            `<span class="star-chip" onclick="messageInput.value+=' [召唤:${a.name}]';messageInput.focus()">${a.name}</span>`
+                        ).join('');
+                }
+            } catch(e) {}
+        }
+        
+        // 切换标签
+        function switchTab(tab) {
+            document.querySelectorAll('.config-tab').forEach(t => t.classList.remove('active'));
+            document.querySelectorAll('.config-content').forEach(c => c.classList.remove('active'));
+            event.target.classList.add('active');
+            document.getElementById(tab + '-tab').classList.add('active');
+        }
+        
+        // 保存智谱 API Key
+        function saveZhipuKey() {
+            const key = document.getElementById('zhipuApiKey').value.trim();
+            if (!key) {
+                alert('请输入智谱 API Key');
+                return;
+            }
+            config.zhipu.apiKey = key;
+            localStorage.setItem('zhipu_api_key', key);
+            updateStatus('online');
+            addMessage('智谱 API Key 已保存！现在可以开始对话了。🍵', 'ai');
+        }
+        
+        // 保存 OpenClaw Token
+        function saveOpenclawToken() {
+            const token = document.getElementById('openclawToken').value.trim();
+            if (!token) {
+                alert('请输入 OpenClaw Token');
+                return;
+            }
+            config.openclaw.token = token;
+            localStorage.setItem('openclaw_token', token);
+            localStorage.setItem('openclaw_enabled', 'true');
+            addMessage('OpenClaw Token 已保存！现在可以执行电脑任务了。💻', 'ai');
+        }
+        
+        // 保存飞书配置
+        function saveFeishuConfig() {
+            const appId = document.getElementById('feishuAppId').value.trim();
+            const appSecret = document.getElementById('feishuAppSecret').value.trim();
+            if (!appId || !appSecret) {
+                alert('请输入飞书 App ID 和 App Secret');
+                return;
+            }
+            config.feishu.appId = appId;
+            config.feishu.appSecret = appSecret;
+            localStorage.setItem('feishu_app_id', appId);
+            localStorage.setItem('feishu_app_secret', appSecret);
+            addMessage('飞书配置已保存！小易已接入飞书机器人。📱', 'ai');
+        }
+        
+        // 更新状态
+        function updateStatus(status) {
+            statusBadge.className = 'status-badge ' + status;
+            statusBadge.textContent = status === 'online' ? '在线' : status === 'config' ? '配置中' : '离线';
+        }
+        
+        // 添加消息
+        function addMessage(content, type, image = null) {
+            const messageDiv = document.createElement('div');
+            messageDiv.className = `message ${type}`;
+            
+            const avatar = document.createElement('div');
+            avatar.className = 'avatar';
+            if (type === 'user') avatar.textContent = '👤';
+            
+            const contentDiv = document.createElement('div');
+            contentDiv.className = 'message-content';
+            contentDiv.innerHTML = content.replace(/\n/g, '<br>');
+            
+            if (image) {
+                const img = document.createElement('img');
+                img.src = image;
+                img.className = 'message-image';
+                img.onclick = () => window.open(image, '_blank');
+                contentDiv.appendChild(img);
+            }
+            
+            messageDiv.appendChild(avatar);
+            messageDiv.appendChild(contentDiv);
+            chatMessages.appendChild(messageDiv);
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+        }
+        
+        // 显示输入中
+        function showTyping() {
+            const typingDiv = document.createElement('div');
+            typingDiv.className = 'message ai';
+            typingDiv.id = 'typingIndicator';
+            typingDiv.innerHTML = `
+                <div class="avatar"></div>
+                <div class="typing-indicator">
+                    <span></span><span></span><span></span>
+                </div>
+            `;
+            chatMessages.appendChild(typingDiv);
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+        }
+        
+        // 隐藏输入中
+        function hideTyping() {
+            const indicator = document.getElementById('typingIndicator');
+            if (indicator) indicator.remove();
+        }
+        
+        // 发送消息
+        async function sendMessage() {
+            const message = messageInput.value.trim();
+            if (!message) return;
+            
+            // 不再强制要求智谱 API Key，ModelRouter 会使用方舟优先
+            // if (!config.zhipu.apiKey) {
+            //     alert('请先配置智谱 API Key');
+            //     switchTab('zhipu');
+            //     return;
+            // }
+            
+            addMessage(message, 'user', currentImageData);
+            messageInput.value = '';
+            sendButton.disabled = true;
+            
+            showTyping();
+            
+            try {
+                const response = await fetch('/api/chat', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ 
+                        message: message,
+                        sessionId: 'default',
+                        apiKey: config.zhipu.apiKey,
+                        openclawToken: config.openclaw.token,
+                        openclawEnabled: config.openclaw.enabled,
+                        image: currentImageData
+                    })
+                });
+                
+                // 清除图片预览
+                clearImage();
+                
+                const data = await response.json();
+                hideTyping();
+                
+                if (data.success) {
+                    addMessage(data.message || data.reply, 'ai', data.photoUrl || data.photo);
+                    // 语音播报回复（根据召唤的明星自动匹配音色）
+                    speakReply(data.message || data.reply, data.summonedAgent);
+                } else {
+                    addMessage('抱歉：' + (data.error || data.message || '未知错误'), 'ai');
+                }
+            } catch (error) {
+                hideTyping();
+                addMessage('网络连接失败，请检查服务器是否运行', 'ai');
+            }
+            
+            sendButton.disabled = false;
+            messageInput.focus();
+        }
+        
+        // 快捷消息
+        function sendQuickMessage(msg) {
+            messageInput.value = msg;
+            sendMessage();
+        }
+        
+        // 按键处理
+        function handleKeyPress(e) {
+            if (e.key === 'Enter') sendMessage();
+        }
+        
+        // 初始化
+        init();
+        messageInput.focus();
+    </script>
+</body>
+</html>

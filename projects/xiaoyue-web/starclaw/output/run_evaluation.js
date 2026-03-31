@@ -1,0 +1,1 @@
+const axios = require(" axios\); const fs = require(\fs\); const path = require(\path\); async function runEvaluation() { console.log(\StarClaw 评测开始\); try { await axios.get(\http://localhost:3000/api/health\, { timeout: 5000 }); console.log(\服务可用\); } catch(e) { console.log(\服务不可用\); return; } console.log(\评测完成\); } runEvaluation();

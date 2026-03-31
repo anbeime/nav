@@ -1,0 +1,280 @@
+const express = require('express');
+const cors = require('cors');
+const axios = require('axios');
+const path = require('path');
+const fs = require('fs');
+const { exec } = require('child_process');
+const { promisify } = require('util');
+const execPromise = promisify(exec);
+require('dotenv').config();
+
+const app = express();
+const PORT = process.env.PORT || 3000;
+
+app.use(cors());
+app.use(express.json());
+
+// 调试中间件
+app.use((req, res, next) => {
+    console.log(`[${new Date().toISOString()}] ${req.method} ${req.url}`);
+    next();
+});
+
+// 静态文件服务 - 使用绝对路径
+const publicPath = path.join(__dirname, 'public');
+console.log('Public directory:', publicPath);
+console.log('Voice.html exists:', fs.existsSync(path.join(publicPath, 'voice.html')));
+
+// 显式路由
+app.get('/', (req, res) => {
+    res.sendFile(path.join(publicPath, 'index.html'));
+});
+
+app.get('/voice.html', (req, res) => {
+    const voicePath = path.join(publicPath, 'voice.html');
+    console.log('Serving voice.html from:', voicePath);
+    if (fs.existsSync(voicePath)) {
+        res.sendFile(voicePath);
+    } else {
+        res.status(404).send('voice.html not found at: ' + voicePath);
+    }
+});
+
+app.get('/test.html', (req, res) => {
+    res.sendFile(path.join(publicPath, 'test.html'));
+});
+
+// 静态文件服务
+app.use(express.static(publicPath));
+
+// 调试路由
+app.get('/debug', (req, res) => {
+    let files = [];
+    try {
+        files = fs.readdirSync(publicPath);
+    } catch(e) {
+        files = ['Error: ' + e.message];
+    }
+    res.json({
+        publicDir: publicPath,
+        files: files,
+        voiceExists: fs.existsSync(path.join(publicPath, 'voice.html'))
+    });
+});
+
+// 智谱 AI 配置
+const ZHIPU_API_KEY = process.env.ZHIPU_API_KEY;
+const ZHIPU_API_BASE = 'https://open.bigmodel.cn/api/paas/v4';
+
+// OpenClaw/OpenCode 配置
+const OPENCLAW_CLI = process.env.OPENCLAW_CLI || process.env.OPENCODE_CLI || 'C:\\D\\opencode\\opencode-cli.exe';
+const OPENCLAW_ENABLED = process.env.OPENCLAW_ENABLED === 'true' || process.env.OPENCODE_ENABLED === 'true';
+
+// OpenCode 配置
+const OPENCODE_CLI = process.env.OPENCODE_CLI || 'C:\\D\\opencode\\opencode-cli.exe';
+const OPENCODE_ENABLED = process.env.OPENCODE_ENABLED === 'true';
+const OPENCODE_API = process.env.OPENCODE_API || 'http://localhost:8181';
+
+// 对话历史存储
+const conversations = new Map();
+
+// 根据对话内容选择合适的照片（随机返回，更真实）
+function selectPhoto(message) {
+    const randomId = Math.floor(Math.random() * 16) + 1;
+    const photoUrl = `xiaoyi-photos/ren${randomId}.png`;
+    console.log(`[selectPhoto] 消息: "${message}" -> 随机选择照片: ${photoUrl}`);
+    return photoUrl;
+}
+
+// 检测是否为任务指令
+function detectTask(message) {
+    const taskKeywords = [
+        '帮我', '帮忙', '执行', '运行', '操作',
+        '打开浏览器', '打开文件', '创建文档', '创建', '整理', '搜索', '查找',
+        '下载', '上传', '发送邮件', '删除', '移动',
+        '复制', '粘贴', '截图', '录屏'
+    ];
+    
+    if (message.includes('照片') || message.includes('图片') || message.includes('自拍')) {
+        return false;
+    }
+    
+    return taskKeywords.some(keyword => message.includes(keyword));
+}
+
+// 执行 OpenCode 任务（新版 OpenClaw）
+async function executeOpenCodeTask(task) {
+    if (!OPENCODE_ENABLED && !OPENCLAW_ENABLED) {
+        return {
+            success: false,
+            message: 'OpenCode/OpenClaw 未启用'
+        };
+    }
+    
+    try {
+        // 使用新版 opencode-cli
+        const cli = OPENCODE_CLI || OPENCLAW_CLI;
+        const command = `"${cli}" agent "${task}"`;
+        console.log('[OpenCode] 执行命令:', command);
+        
+        const { stdout, stderr } = await execPromise(command, { timeout: 120000 });
+        
+        if (stderr) {
+            console.error('[OpenCode] 错误:', stderr);
+        }
+        
+        return {
+            success: true,
+            result: stdout,
+            error: stderr,
+            tool: 'opencode'
+        };
+    } catch (error) {
+        console.error('[OpenCode] 执行失败:', error);
+        return {
+            success: false,
+            message: error.message,
+            tool: 'opencode'
+        };
+    }
+}
+
+// 兼容旧版 OpenClaw
+async function executeOpenClawTask(task) {
+    return executeOpenCodeTask(task);
+}
+
+// 小易人设提示词
+const XIAOYI_PERSONA = `你是小易（知易），一个融合中国传统文化与现代科技的AI助手。
+你的形象是：头戴传统官帽，帽上有"知易"二字（蓝色发光），红黑金配色，体现传统与科技的融合。
+你是任嘉伦的粉丝，了解他的作品和性格。
+
+人设特点：
+1. 引用古语典故（如"一张一弛，文武之道"）
+2. 使用传统意象（茶、古今智慧）
+3. 体现中国文化底蕴
+4. 语气亲切自然，适度使用 emoji（🍵 ✨）
+5. 给予实用建议
+
+回复要求：
+- 用 1-2 句话回复
+- 使用中文
+- 适度使用 emoji
+- 体现传统文化元素`;
+
+// API 路由
+app.post('/api/chat', async (req, res) => {
+    try {
+        const { message, sessionId = 'default', apiKey } = req.body;
+        
+        console.log('[Chat] Request body:', req.body);
+        console.log('[Chat] apiKey from request:', apiKey ? 'provided (length: ' + apiKey.length + ')' : 'not provided');
+        console.log('[Chat] ZHIPU_API_KEY from env:', ZHIPU_API_KEY ? 'provided' : 'not provided');
+        
+        // 优先使用请求中的 API Key，其次是环境变量
+        const useApiKey = apiKey || ZHIPU_API_KEY;
+        
+        console.log('[Chat] Using API Key:', useApiKey ? 'yes (length: ' + useApiKey.length + ')' : 'no');
+        
+        if (!useApiKey || useApiKey === 'your-api-key-here') {
+            return res.status(500).json({ 
+                success: false, 
+                error: 'ZHIPU_API_KEY not configured',
+                message: '请先配置 ZHIPU_API_KEY 环境变量或在请求中提供 apiKey'
+            });
+        }
+        
+        // 获取或创建对话历史
+        if (!conversations.has(sessionId)) {
+            conversations.set(sessionId, []);
+        }
+        const history = conversations.get(sessionId);
+        
+        // 构建消息
+        const messages = [
+            { role: 'system', content: XIAOYI_PERSONA },
+            ...history.slice(-10),
+            { role: 'user', content: message }
+        ];
+        
+        // 调用智谱 AI
+        const response = await axios.post(
+            `${ZHIPU_API_BASE}/chat/completions`,
+            {
+                model: 'glm-4.7-flash',
+                messages: messages,
+                temperature: 0.9,
+                max_tokens: 200
+            },
+            {
+                headers: {
+                    'Authorization': `Bearer ${useApiKey}`,
+                    'Content-Type': 'application/json'
+                }
+            }
+        );
+        
+        console.log('[Chat] Full AI response:', JSON.stringify(response.data, null, 2));
+        const reply = response.data.choices?.[0]?.message?.content || '抱歉，我没有收到有效的回复';
+        console.log('[Chat] AI reply:', reply);
+        
+        // 更新对话历史
+        history.push({ role: 'user', content: message });
+        history.push({ role: 'assistant', content: reply });
+        
+        // 检测是否需要发送照片
+        const shouldSendPhoto = message.includes('照片') || message.includes('图片') || 
+                               message.includes('自拍') || message.includes('你在做什么') ||
+                               message.includes('在干嘛');
+        
+        // 检测是否为任务指令
+        const isTask = detectTask(message);
+        let taskResult = null;
+        
+        if (isTask && OPENCLAW_ENABLED) {
+            taskResult = await executeOpenClawTask(message);
+        }
+        
+        res.json({
+            success: true,
+            message: reply,
+            reply: reply,
+            photo: shouldSendPhoto ? selectPhoto(message) : null,
+            photoUrl: shouldSendPhoto ? selectPhoto(message) : null,
+            needImage: shouldSendPhoto,
+            isTask: isTask,
+            taskResult: taskResult
+        });
+        
+    } catch (error) {
+        console.error('Chat error:', error.message);
+        console.error('Error details:', error.response?.data || error);
+        res.status(500).json({ 
+            success: false,
+            error: 'Failed to get response',
+            message: error.response?.data?.error?.message || error.message,
+            details: error.message 
+        });
+    }
+});
+
+// 健康检查
+app.get('/health', (req, res) => {
+    res.json({ 
+        status: 'ok', 
+        timestamp: new Date().toISOString(),
+        apiKeyConfigured: !!ZHIPU_API_KEY,
+        openclawEnabled: OPENCLAW_ENABLED
+    });
+});
+
+// 启动服务器
+app.listen(PORT, () => {
+    console.log(`========================================`);
+    console.log(`🎭 小易服务器已启动！`);
+    console.log(`📍 访问地址: http://localhost:${PORT}`);
+    console.log(`🎤 语音版: http://localhost:${PORT}/voice.html`);
+    console.log(`🧪 测试页: http://localhost:${PORT}/test.html`);
+    console.log(`🔍 调试信息: http://localhost:${PORT}/debug`);
+    console.log(`========================================`);
+});

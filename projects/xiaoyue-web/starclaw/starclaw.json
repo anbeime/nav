@@ -1,0 +1,80 @@
+{
+  "name": "StarClaw",
+  "version": "2.0.0",
+  "description": "StarClaw 虚拟娱乐公司 - 具有实干能力的 AI 明星战队",
+  "meta": {
+    "createdAt": "2025-01-01",
+    "updatedAt": "2026-03-17",
+    "author": "StarClaw Team"
+  },
+  "models": {
+    "providers": {
+      "zhipu": {
+        "baseUrl": "https://open.bigmodel.cn/api/paas/v4",
+        "auth": "api-key",
+        "api": "openai-completions",
+        "models": [
+          { "id": "glm-4-flash", "name": "GLM-4-Flash", "contextWindow": 128000, "maxTokens": 4096 },
+          { "id": "glm-4.7-flash", "name": "GLM-4.7-Flash", "contextWindow": 200000, "maxTokens": 8192 }
+        ]
+      }
+    }
+  },
+  "agents": {
+    "defaults": {
+      "model": { "primary": "zhipu/glm-4-flash" },
+      "maxConcurrent": 4,
+      "temperature": 0.85
+    }
+  },
+  "gateway": {
+    "port": 3456,
+    "mode": "local"
+  },
+  "teams": {
+    "strategy": {
+      "name": "战略决策层",
+      "description": "公司战略与高层决策",
+      "members": ["ceo", "cfo", "cro", "cso"],
+      "workflow": ["ceo决策", "cfo预算评估", "cro风险分析", "cso策略制定"]
+    },
+    "marketing": {
+      "name": "营销运营层",
+      "description": "市场营销与用户增长",
+      "members": ["cmo_product", "cmo_ecosystem", "cmo_international", "coo_domestic", "market_youth", "brand_premium"],
+      "workflow": ["市场分析", "策略制定", "执行落地", "效果复盘"]
+    },
+    "creative": {
+      "name": "创意制作层",
+      "description": "内容创作与视觉设计",
+      "members": ["creative_comedy", "creative_drama", "creative_idol", "production_visual", "music_director"],
+      "workflow": ["创意构思", "内容创作", "视觉设计", "音频制作"]
+    },
+    "execution": {
+      "name": "执行保障层",
+      "description": "项目管理与品质保证",
+      "members": ["production_management", "production_quality", "cto"],
+      "workflow": ["项目排期", "进度跟踪", "品质审核", "技术支持"]
+    },
+    "courtyard": {
+      "name": "朝廷架构",
+      "description": "基于中国古代朝廷智慧的智能体协同系统",
+      "members": ["coordinator", "strategist", "intelligence", "executor-content", "executor-action", "auditor", "archivist", "communicator", "historian"],
+      "workflow": ["调度", "规划", "情报", "创作", "执行", "审核", "归档"]
+    }
+  },
+  "skills": {
+    "enabled": true,
+    "autoLoad": true,
+    "path": "./skills"
+  },
+  "knowledge": {
+    "enabled": true,
+    "path": "./knowledge"
+  },
+  "sessions": {
+    "path": "./sessions",
+    "maxHistory": 50,
+    "persistence": true
+  }
+}

@@ -1,0 +1,966 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>小易伴侣 - 真实 AI 对话（语音版）</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        .chat-container {
+            width: 100%;
+            max-width: 900px;
+            height: 85vh;
+            background: white;
+            border-radius: 24px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+        
+        .chat-header {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 20px 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .header-left h1 {
+            font-size: 1.6rem;
+            margin-bottom: 5px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .header-left p {
+            opacity: 0.9;
+            font-size: 0.85rem;
+        }
+        
+        .status-badges {
+            display: flex;
+            gap: 8px;
+            margin-top: 8px;
+            flex-wrap: wrap;
+        }
+        
+        .status-badge {
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 0.75rem;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            background: rgba(255,255,255,0.2);
+            cursor: help;
+        }
+        
+        .status-badge.online {
+            background: rgba(16, 185, 129, 0.3);
+        }
+        
+        .status-badge.offline {
+            background: rgba(239, 68, 68, 0.3);
+        }
+        
+        .status-badge.warning {
+            background: rgba(245, 158, 11, 0.3);
+        }
+        
+        .voice-controls {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        
+        .voice-select {
+            padding: 8px 12px;
+            background: rgba(255,255,255,0.2);
+            border: 1px solid rgba(255,255,255,0.3);
+            border-radius: 20px;
+            color: white;
+            font-size: 0.9rem;
+            cursor: pointer;
+            outline: none;
+            max-width: 200px;
+        }
+        
+        .voice-select option {
+            background: #667eea;
+            color: white;
+        }
+        
+        .voice-slider-group {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255,255,255,0.2);
+            padding: 6px 12px;
+            border-radius: 20px;
+        }
+        
+        .voice-slider-group label {
+            font-size: 0.85rem;
+            opacity: 0.9;
+        }
+        
+        .voice-slider {
+            width: 60px;
+            height: 4px;
+            -webkit-appearance: none;
+            background: rgba(255,255,255,0.3);
+            border-radius: 2px;
+            outline: none;
+        }
+        
+        .voice-slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            width: 14px;
+            height: 14px;
+            background: white;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        
+        .voice-slider::-moz-range-thumb {
+            width: 14px;
+            height: 14px;
+            background: white;
+            border-radius: 50%;
+            cursor: pointer;
+            border: none;
+        }
+        
+        .voice-btn {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.2);
+            border: none;
+            color: white;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s;
+            font-size: 1.2rem;
+        }
+        
+        .voice-btn:hover {
+            background: rgba(255,255,255,0.3);
+            transform: scale(1.05);
+        }
+        
+        .voice-btn.active {
+            background: #10b981;
+            animation: pulse-ring 1.5s infinite;
+        }
+        
+        @keyframes pulse-ring {
+            0%, 100% {
+                box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
+            }
+            50% {
+                box-shadow: 0 0 0 10px rgba(16, 185, 129, 0);
+            }
+        }
+        
+        .chat-messages {
+            flex: 1;
+            overflow-y: auto;
+            padding: 25px;
+            background: #f8f9fa;
+        }
+        
+        .message {
+            margin-bottom: 20px;
+            display: flex;
+            gap: 12px;
+            animation: slideIn 0.3s ease;
+        }
+        
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .message.user {
+            flex-direction: row-reverse;
+        }
+        
+        .avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            flex-shrink: 0;
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .message.user .avatar {
+            background: #667eea;
+        }
+        
+        .message.ai .avatar {
+            background-image: url('xiaoyi-avatar.png');
+            background-color: #f0f0f0;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        
+        .message-content {
+            max-width: 70%;
+            padding: 15px 20px;
+            border-radius: 18px;
+            line-height: 1.6;
+            position: relative;
+        }
+        
+        .message.user .message-content {
+            background: #667eea;
+            color: white;
+            border-bottom-right-radius: 4px;
+        }
+        
+        .message.ai .message-content {
+            background: white;
+            color: #333;
+            border-bottom-left-radius: 4px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+        
+        .message-audio-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background: rgba(102, 126, 234, 0.1);
+            border: none;
+            color: #667eea;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s;
+        }
+        
+        .message-audio-btn:hover {
+            background: rgba(102, 126, 234, 0.2);
+            transform: scale(1.1);
+        }
+        
+        .message-audio-btn.playing {
+            color: #10b981;
+            animation: pulse 1s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+        
+        .message-image {
+            max-width: 100%;
+            border-radius: 12px;
+            margin-top: 10px;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        
+        .message-image:hover {
+            transform: scale(1.02);
+        }
+        
+        .typing-indicator {
+            display: none;
+            padding: 15px 20px;
+            background: white;
+            border-radius: 18px;
+            width: fit-content;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+        
+        .typing-indicator.active {
+            display: block;
+        }
+        
+        .typing-dots {
+            display: flex;
+            gap: 6px;
+        }
+        
+        .typing-dots span {
+            width: 8px;
+            height: 8px;
+            background: #667eea;
+            border-radius: 50%;
+            animation: bounce 1.4s infinite;
+        }
+        
+        .typing-dots span:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+        
+        .typing-dots span:nth-child(3) {
+            animation-delay: 0.4s;
+        }
+        
+        @keyframes bounce {
+            0%, 60%, 100% {
+                transform: translateY(0);
+            }
+            30% {
+                transform: translateY(-10px);
+            }
+        }
+        
+        .chat-input-area {
+            padding: 20px;
+            background: white;
+            border-top: 1px solid #e0e0e0;
+        }
+        
+        .input-wrapper {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+        }
+        
+        .chat-input {
+            flex: 1;
+            padding: 14px 20px;
+            border: 2px solid #e0e0e0;
+            border-radius: 25px;
+            font-size: 1rem;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+        
+        .chat-input:focus {
+            border-color: #667eea;
+        }
+        
+        .input-btn {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: none;
+            cursor: pointer;
+            font-size: 1.3rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s;
+        }
+        
+        .mic-btn {
+            background: #10b981;
+            color: white;
+        }
+        
+        .mic-btn:hover:not(:disabled) {
+            transform: scale(1.05);
+            box-shadow: 0 4px 12px rgba(16, 185, 129, 0.4);
+        }
+        
+        .mic-btn.recording {
+            background: #ef4444;
+            animation: pulse-ring 1.5s infinite;
+        }
+        
+        .send-button {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+        }
+        
+        .send-button:hover:not(:disabled) {
+            transform: scale(1.05);
+            box-shadow: 0 6px 16px rgba(102, 126, 234, 0.6);
+        }
+        
+        .send-button:disabled, .mic-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+        
+        .quick-actions {
+            display: flex;
+            gap: 10px;
+            margin-top: 12px;
+            flex-wrap: wrap;
+        }
+        
+        .quick-action {
+            padding: 8px 16px;
+            background: #f0f0f0;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: all 0.3s;
+        }
+        
+        .quick-action:hover {
+            background: #667eea;
+            color: white;
+        }
+        
+        @media (max-width: 768px) {
+            .chat-container {
+                height: 100vh;
+                border-radius: 0;
+            }
+            
+            .message-content {
+                max-width: 85%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="chat-container">
+        <div class="chat-header">
+            <div class="header-left">
+                <h1>🌟 任嘉伦AI伴侣</h1>
+                <p>你的专属AI伴侣，陪你聊天、看照片、执行任务</p>
+                <div class="status-badges">
+                    <span class="status-badge online" id="apiStatus">
+                        <i class="fas fa-check-circle"></i> AI已连接
+                    </span>
+                    <span class="status-badge offline" id="openclawStatus" title="点击检查状态">
+                        <i class="fas fa-robot"></i> OpenClaw检查中...
+                    </span>
+                </div>
+            </div>
+            <div class="voice-controls">
+                <select class="voice-select" id="voiceSelect" title="选择音色">
+                    <option value="">默认音色</option>
+                </select>
+                <div class="voice-slider-group">
+                    <label>语速</label>
+                    <input type="range" class="voice-slider" id="rateSlider" min="0.5" max="2" step="0.1" value="1" title="语速">
+                </div>
+                <div class="voice-slider-group">
+                    <label>音调</label>
+                    <input type="range" class="voice-slider" id="pitchSlider" min="0.5" max="2" step="0.1" value="1" title="音调">
+                </div>
+                <button class="voice-btn" id="ttsToggle" title="语音播报">
+                    <i class="fas fa-volume-up"></i>
+                </button>
+            </div>
+        </div>
+        
+        <div class="chat-messages" id="chatMessages">
+            <div class="message ai">
+                <div class="avatar"></div>
+                <div class="message-content">
+                    你好！我是任嘉伦AI伴侣 😊<br><br>
+                    我可以：<br>
+                    📸 分享任嘉伦的照片（16张精选）<br>
+                    💬 陪你聊天，偶尔分享嘉伦的正能量<br>
+                    🎤 语音对话（点击麦克风说话）<br>
+                    🔊 语音播报（自动朗读回复）<br>
+                    🤖 执行电脑任务（如果OpenClaw已启用）<br><br>
+                    试试说"发张照片"或"任嘉伦好帅"吧！
+                </div>
+            </div>
+        </div>
+        
+        <div class="chat-input-area">
+            <div class="quick-actions">
+                <button class="quick-action" onclick="sendQuickMessage('发张任嘉伦的照片')">📸 看照片</button>
+                <button class="quick-action" onclick="sendQuickMessage('任嘉伦最近怎么样')">💬 聊嘉伦</button>
+                <button class="quick-action" onclick="sendQuickMessage('今天心情怎么样？')">😊 聊聊天</button>
+                <button class="quick-action" onclick="sendQuickMessage('帮我整理桌面文件')" id="taskBtn1" style="display:none;background:linear-gradient(135deg,#667eea20,#764ba220);border:1px solid #667eea40;">🤖 整理文件</button>
+                <button class="quick-action" onclick="sendQuickMessage('帮我打开浏览器搜索任嘉伦')" id="taskBtn2" style="display:none;background:linear-gradient(135deg,#667eea20,#764ba220);border:1px solid #667eea40;">🔍 搜索</button>
+            </div>
+            
+            <div class="input-wrapper">
+                <button class="input-btn mic-btn" id="micButton" title="按住说话">
+                    <i class="fas fa-microphone"></i>
+                </button>
+                <input 
+                    type="text" 
+                    class="chat-input" 
+                    id="messageInput" 
+                    placeholder="输入消息...或按住麦克风说话"
+                    onkeypress="handleKeyPress(event)"
+                >
+                <button class="input-btn send-button" id="sendButton" onclick="sendMessage()">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const chatMessages = document.getElementById('chatMessages');
+        const messageInput = document.getElementById('messageInput');
+        const sendButton = document.getElementById('sendButton');
+        const micButton = document.getElementById('micButton');
+        const ttsToggle = document.getElementById('ttsToggle');
+        const apiKeyInput = document.getElementById('apiKeyInput');
+        const saveApiKeyBtn = document.getElementById('saveApiKeyBtn');
+        const apiStatus = document.getElementById('apiStatus');
+        const openclawStatus = document.getElementById('openclawStatus');
+        
+        let openclawEnabled = false;
+        
+        // 检查服务器状态
+        async function checkServerStatus() {
+            try {
+                const response = await fetch('/api/health');
+                const data = await response.json();
+                
+                // 更新 API 状态
+                if (data.hasApiKey) {
+                    apiStatus.className = 'status-badge online';
+                    apiStatus.innerHTML = '<i class="fas fa-check-circle"></i> AI已连接';
+                } else {
+                    apiStatus.className = 'status-badge offline';
+                    apiStatus.innerHTML = '<i class="fas fa-times-circle"></i> AI未配置';
+                }
+                
+                // 更新 OpenClaw 状态
+                openclawEnabled = data.openclaw?.enabled || false;
+                if (openclawEnabled) {
+                    openclawStatus.className = 'status-badge online';
+                    openclawStatus.innerHTML = '<i class="fas fa-robot"></i> OpenClaw已连接';
+                    openclawStatus.title = 'OpenClaw 已启用，可以执行电脑任务';
+                    // 显示任务按钮
+                    document.getElementById('taskBtn1').style.display = 'inline-block';
+                    document.getElementById('taskBtn2').style.display = 'inline-block';
+                } else {
+                    openclawStatus.className = 'status-badge offline';
+                    openclawStatus.innerHTML = '<i class="fas fa-robot"></i> OpenClaw未启用';
+                    let reason = '';
+                    if (!data.openclaw?.envEnabled) reason += '环境变量未启用 ';
+                    if (!data.openclaw?.cliExists) reason += 'CLI文件不存在 ';
+                    if (!data.openclaw?.nodeExists) reason += 'Node文件不存在';
+                    openclawStatus.title = '原因: ' + (reason || '未知') + '。点击重新检查';
+                }
+            } catch (error) {
+                console.error('状态检查失败:', error);
+                apiStatus.className = 'status-badge offline';
+                apiStatus.innerHTML = '<i class="fas fa-times-circle"></i> 服务器离线';
+                openclawStatus.className = 'status-badge offline';
+                openclawStatus.innerHTML = '<i class="fas fa-robot"></i> 检查失败';
+            }
+        }
+        
+        // 点击状态徽章重新检查
+        openclawStatus.addEventListener('click', checkServerStatus);
+        
+        // 页面加载时检查状态
+        checkServerStatus();
+        // 每30秒检查一次状态
+        setInterval(checkServerStatus, 30000);
+        
+        let ttsEnabled = true;
+        let recognition = null;
+        let synthesis = window.speechSynthesis;
+        let apiKey = localStorage.getItem('zhipu_api_key') || '';
+        
+        // 加载保存的 API Key
+        if (apiKey) {
+            apiKeyInput.value = apiKey;
+        }
+        
+        // 保存 API Key
+        saveApiKeyBtn.addEventListener('click', () => {
+            const key = apiKeyInput.value.trim();
+            if (!key) {
+                alert('请输入 API Key');
+                return;
+            }
+            apiKey = key;
+            localStorage.setItem('zhipu_api_key', key);
+            alert('API Key 已保存！');
+        });
+        
+        // 初始化语音识别
+        if ('webkitSpeechRecognition' in window || 'SpeechRecognition' in window) {
+            const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+            recognition = new SpeechRecognition();
+            recognition.lang = 'zh-CN';
+            recognition.continuous = false;
+            recognition.interimResults = false;
+            
+            recognition.onresult = (event) => {
+                const transcript = event.results[0][0].transcript;
+                messageInput.value = transcript;
+                sendMessage();
+            };
+            
+            recognition.onerror = (event) => {
+                console.error('语音识别错误:', event.error);
+                micButton.classList.remove('recording');
+            };
+            
+            recognition.onend = () => {
+                micButton.classList.remove('recording');
+            };
+        }
+        
+        // 麦克风按钮
+        micButton.addEventListener('click', () => {
+            if (!recognition) {
+                alert('您的浏览器不支持语音识别');
+                return;
+            }
+            
+            if (micButton.classList.contains('recording')) {
+                recognition.stop();
+            } else {
+                recognition.start();
+                micButton.classList.add('recording');
+            }
+        });
+        
+        // TTS 开关
+        ttsToggle.addEventListener('click', () => {
+            ttsEnabled = !ttsEnabled;
+            ttsToggle.innerHTML = ttsEnabled ? 
+                '<i class="fas fa-volume-up"></i>' : 
+                '<i class="fas fa-volume-mute"></i>';
+            ttsToggle.style.background = ttsEnabled ? 
+                'rgba(255,255,255,0.2)' : 
+                'rgba(255,255,255,0.1)';
+        });
+        
+        // GPT-SoVITS TTS 配置
+        const GPT_SOVITS_URL = 'http://localhost:9880';  // API 服务端口
+        const GPT_SOVITS_WEBUI_URL = 'http://localhost:9874';  // WebUI 端口（备用）
+        const REF_AUDIO_PATH = 'D:/tool/skill/projects/xiaoyue-web/tts_audio/02_红人面对面_采访.wav';
+        const REF_TEXT = '大家好';
+        let currentAudio = null;
+        let useWebUI = true;  // 默认使用 WebUI 端口
+        let gptSoVITSAvailable = false;  // GPT-SoVITS 是否可用
+        
+        // 检查 GPT-SoVITS 服务状态
+        async function checkGPTSoVITS() {
+            try {
+                // 尝试连接 API 端口
+                const response = await fetch('http://localhost:9880/health', { 
+                    method: 'GET',
+                    signal: AbortSignal.timeout(2000)
+                });
+                if (response.ok) {
+                    gptSoVITSAvailable = true;
+                    console.log('GPT-SoVITS API 服务可用');
+                    return true;
+                }
+            } catch (e) {
+                console.log('GPT-SoVITS API 服务不可用，将使用浏览器 TTS');
+            }
+            
+            // 尝试连接 WebUI 端口
+            try {
+                const response = await fetch('http://localhost:9874/', { 
+                    method: 'GET',
+                    signal: AbortSignal.timeout(2000)
+                });
+                if (response.ok) {
+                    console.log('GPT-SoVITS WebUI 可用，但 API 模式可能不支持');
+                }
+            } catch (e) {
+                console.log('GPT-SoVITS WebUI 也不可用');
+            }
+            
+            gptSoVITSAvailable = false;
+            return false;
+        }
+        
+        // 页面加载时检查服务状态
+        checkGPTSoVITS();
+        
+        // 文本转语音 - 使用 GPT-SoVITS
+        async function speakText(text) {
+            if (!ttsEnabled) return;
+            
+            // 停止当前播放
+            if (currentAudio) {
+                currentAudio.pause();
+                currentAudio = null;
+            }
+            
+            // 清理文本：移�?emoji 和特殊符�?            const cleanText = text
+                .replace(/[\u{1F300}-\u{1F9FF}]/gu, '') // 移除 emoji
+                .replace(/[\u{2600}-\u{26FF}]/gu, '')   // 移除符号
+                .replace(/[\u{2700}-\u{27BF}]/gu, '')   // 移除装饰符号
+                .replace(/[📸💬🎤🔊👁️🎯🖼️]/g, '')      // 移除常见 emoji
+                .replace(/\s+/g, ' ')                    // 合并多余空格
+                .trim();
+            
+            if (!cleanText) return; // 如果清理后没有文本，不播�?            
+            try {
+                // 构建 GPT-SoVITS API URL
+                const params = new URLSearchParams({
+                    refer_wav_path: REF_AUDIO_PATH,
+                    prompt_text: REF_TEXT,
+                    prompt_language: 'zh',
+                    text: cleanText,
+                    text_language: 'zh'
+                });
+                
+                // 使用 API 端口 (9880)
+                const url = `${GPT_SOVITS_URL}/?${params.toString()}`;
+                
+                console.log('Generating TTS with GPT-SoVITS...');
+                
+                // 调用 GPT-SoVITS API
+                const response = await fetch(url);
+                
+                if (!response.ok) {
+                    throw new Error(`TTS API error: ${response.status}`);
+                }
+                
+                // 获取音频数据
+                const audioBlob = await response.blob();
+                const audioUrl = URL.createObjectURL(audioBlob);
+                
+                // 播放音频
+                currentAudio = new Audio(audioUrl);
+                
+                // 添加错误处理
+                currentAudio.onerror = (e) => {
+                    console.error('Audio playback error:', e);
+                    fallbackSpeakText(cleanText);
+                };
+                
+                // 尝试播放
+                const playPromise = currentAudio.play();
+                if (playPromise !== undefined) {
+                    playPromise.catch(error => {
+                        console.error('Audio play failed:', error);
+                        // 自动播放被阻止，使用回退方案
+                        fallbackSpeakText(cleanText);
+                    });
+                })
+                
+                // 播放完成后清理
+                currentAudio.onended = () => {
+                    URL.revokeObjectURL(audioUrl);
+                    currentAudio = null;
+                };
+                
+            } catch (error) {
+                console.error('GPT-SoVITS TTS error:', error);
+                // 如果 GPT-SoVITS 失败，回退到浏览器 TTS
+                fallbackSpeakText(cleanText);
+            }
+        }
+        
+        // 浏览器 TTS 回退方案
+        function fallbackSpeakText(text) {
+            if (!synthesis) return;
+            
+            synthesis.cancel();
+            
+            const utterance = new SpeechSynthesisUtterance(text);
+            utterance.lang = 'zh-CN';
+            utterance.rate = 1.0;
+            utterance.pitch = 1.1;
+            
+            const voices = synthesis.getVoices();
+            const chineseVoice = voices.find(voice => 
+                voice.lang.includes('zh') && voice.name.includes('Female')
+            ) || voices.find(voice => voice.lang.includes('zh'));
+            
+            if (chineseVoice) {
+                utterance.voice = chineseVoice;
+            }
+            
+            synthesis.speak(utterance);
+        }
+        
+        function addMessage(content, type, image = null) {
+            const messageDiv = document.createElement('div');
+            messageDiv.className = `message ${type}`;
+            
+            const avatar = document.createElement('div');
+            avatar.className = 'avatar';
+            // 用户显示 emoji，AI 显示图片（通过 CSS background-image）
+            if (type === 'user') {
+                avatar.textContent = '👤';
+            }
+            // AI 头像通过 CSS 显示图片，不设置 textContent
+            
+            const contentDiv = document.createElement('div');
+            contentDiv.className = 'message-content';
+            contentDiv.innerHTML = content.replace(/\n/g, '<br>');
+            
+            // 为 AI 消息添加语音播放按钮
+            if (type === 'ai') {
+                const audioBtn = document.createElement('button');
+                audioBtn.className = 'message-audio-btn';
+                audioBtn.innerHTML = '<i class="fas fa-volume-up"></i>';
+                audioBtn.onclick = () => speakText(content);
+                contentDiv.appendChild(audioBtn);
+                
+                // 自动播放
+                if (ttsEnabled) {
+                    setTimeout(() => speakText(content), 500);
+                }
+            }
+            
+            if (image) {
+                const img = document.createElement('img');
+                // 添加时间戳防止浏览器缓存
+                img.src = image + '?t=' + Date.now();
+                img.className = 'message-image';
+                img.alt = 'Generated image';
+                contentDiv.appendChild(img);
+            }
+            
+            messageDiv.appendChild(avatar);
+            messageDiv.appendChild(contentDiv);
+            chatMessages.appendChild(messageDiv);
+            
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+        }
+        
+        function showTyping() {
+            const typingDiv = document.createElement('div');
+            typingDiv.className = 'message ai';
+            typingDiv.id = 'typingIndicator';
+            
+            typingDiv.innerHTML = `
+                <div class="avatar"></div>
+                <div class="typing-indicator active">
+                    <div class="typing-dots">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            `;
+            
+            chatMessages.appendChild(typingDiv);
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+        }
+        
+        function hideTyping() {
+            const typingIndicator = document.getElementById('typingIndicator');
+            if (typingIndicator) {
+                typingIndicator.remove();
+            }
+        }
+        
+        async function sendMessage() {
+            const message = messageInput.value.trim();
+            if (!message) return;
+            
+            if (!apiKey) {
+                alert('请先输入并保存智谱 API Key');
+                apiKeyInput.focus();
+                return;
+            }
+            
+            addMessage(message, 'user');
+            messageInput.value = '';
+            sendButton.disabled = true;
+            micButton.disabled = true;
+            
+            showTyping();
+            
+            try {
+                // 生成唯一的请求ID（针对照片请求使用随机sessionId）
+                const isPhotoRequest = message.includes('照片') || message.includes('图片') || message.includes('自拍');
+                const sessionId = isPhotoRequest ? 'session-' + Date.now() : 'default';
+                
+                // 调用后端 API
+                const response = await fetch('/api/chat', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ 
+                        message: message,
+                        sessionId: sessionId,
+                        apiKey: apiKey
+                    })
+                });
+                
+                const data = await response.json();
+                
+                hideTyping();
+                
+                if (data.success) {
+                    const aiMessage = data.message || '收到回复';
+                    addMessage(aiMessage, 'ai');
+                    
+                    // 如果需要显示照�?                    if (data.needImage && data.photoUrl) {
+                        addMessage('', 'ai', data.photoUrl);
+                    }
+                } else {
+                    const errorMsg = data.error || data.message || '未知错误';
+                    addMessage('抱歉，出现了一些问题：' + errorMsg, 'ai');
+                }
+            } catch (error) {
+                hideTyping();
+                addMessage('抱歉，网络连接失败，请稍后重�?, 'ai');
+            }
+            
+            sendButton.disabled = false;
+            micButton.disabled = false;
+            messageInput.focus();
+        }
+        
+        function sendQuickMessage(message) {
+            messageInput.value = message;
+            sendMessage();
+        }
+        
+        function handleKeyPress(event) {
+            if (event.key === 'Enter') {
+                sendMessage();
+            }
+        }
+        
+        // 加载语音列表
+        if (synthesis) {
+            synthesis.onvoiceschanged = () => {
+                const voices = synthesis.getVoices();
+                console.log('可用语音:', voices.filter(v => v.lang.includes('zh')));
+            };
+        }
+        
+        messageInput.focus();
+    </script>
+</body>
+</html>
