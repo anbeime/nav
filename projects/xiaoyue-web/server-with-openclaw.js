@@ -515,6 +515,76 @@ async function checkOpenClawHealth() {
  * 执行内置任务（统一入口）
  * 优先调用 OpenClaw 获得真正的电脑操作能力，降级到简单命令执行
  */
+/**
+ * 任务规划器 - 将复杂任务分解为可执行步骤
+ */
+async function planTask(task) {
+    // 检查是否需要分解任务
+    const needsDecomposition = /打开.*网页?.*(搜索|查找|输入)|打开.*网页?.*搜索/.test(task);
+    
+    if (!needsDecomposition) {
+        return { steps: [task], needPlanning: false };
+    }
+    
+    console.log('[TaskPlanner] 检测到复杂任务，开始分解...');
+    
+    // 使用AI分解任务
+    try {
+        const planPrompt = `你是一个任务规划助手。请将以下任务分解为明确的执行步骤。
+
+任务：${task}
+
+要求：
+1. 每个步骤必须是可以直接执行的简单操作
+2. 步骤要具体明确（例如：打开网页URL、点击元素、输入文字）
+3. 只返回步骤列表，每行一个步骤，格式为：步骤N: 具体操作
+4. 不要添加任何解释或说明
+
+示例：
+任务：打开百度搜索伊朗新闻
+步骤1: 打开网页 https://www.baidu.com
+步骤2: 在搜索框输入 伊朗新闻
+步骤3: 点击搜索按钮
+
+现在请分解任务：`;
+
+        const response = await axios.post(
+            `${ZHIPU_API_BASE}/chat/completions`,
+            {
+                model: 'glm-4-flash',
+                messages: [{ role: 'user', content: planPrompt }],
+                temperature: 0.3,
+                max_tokens: 500
+            },
+            {
+                headers: {
+                    'Authorization': `Bearer ${ZHIPU_API_KEY}`,
+                    'Content-Type': 'application/json'
+                },
+                timeout: 10000
+            }
+        );
+
+        const planText = response.data.choices[0].message.content;
+        console.log('[TaskPlanner] AI规划结果:\n', planText);
+        
+        // 解析步骤
+        const steps = planText
+            .split('\n')
+            .filter(line => line.match(/^步骤\d+[:：]/))
+            .map(line => line.replace(/^步骤\d+[:：]\s*/, '').trim())
+            .filter(step => step.length > 0);
+        
+        console.log('[TaskPlanner] 分解步骤:', steps);
+        
+        return { steps, needPlanning: true };
+    } catch (error) {
+        console.error('[TaskPlanner] AI分解失败:', error.message);
+        // 降级：使用简单分解
+        return { steps: [task], needPlanning: false };
+    }
+}
+
 async function executeBuiltInTask(task) {
     console.log('[Executor] 执行任务:', task);
     
@@ -532,53 +602,125 @@ async function executeBuiltInTask(task) {
         return { success: false, error: '执行器未加载' };
     }
     
+    // 任务规划与分解
+    const plan = await planTask(task);
+    
+    if (plan.needPlanning && plan.steps.length > 1) {
+        console.log('[Executor] 执行分解任务，共', plan.steps.length, '步');
+        const results = [];
+        
+        for (let i = 0; i < plan.steps.length; i++) {
+            console.log(`[Executor] 步骤 ${i + 1}/${plan.steps.length}: ${plan.steps[i]}`);
+            const stepResult = await executeSingleStep(plan.steps[i]);
+            results.push(stepResult);
+            
+            // 如果某个步骤失败，询问是否继续
+            if (!stepResult.success && i < plan.steps.length - 1) {
+                console.log(`[Executor] 步骤 ${i + 1} 失败:`, stepResult.error);
+                // 可以选择继续或停止，这里选择继续
+            }
+            
+            // 步骤间添加延迟，让系统有时间响应
+            if (i < plan.steps.length - 1) {
+                await new Promise(resolve => setTimeout(resolve, 1000));
+            }
+        }
+        
+        return {
+            success: results.some(r => r.success),
+            result: results.map((r, i) => `步骤${i + 1}: ${r.success ? '成功' : r.error}`).join('\n'),
+            steps: results
+        };
+    }
+    
+    // 单步任务直接执行
+    return await executeSingleStep(task);
+}
+
+/**
+ * 执行单个步骤
+ */
+async function executeSingleStep(step) {
     try {
         let result;
         
-        if (task.includes('打开浏览器') || task.includes('打开网页')) {
-            const urlMatch = task.match(/(?:打开浏览器|打开网页)[输入\s]*(.+)/);
+        // 改进URL匹配逻辑
+        if (step.includes('打开网页') || step.includes('打开浏览器')) {
+            // 提取URL的多种模式
             let url = 'https://www.baidu.com';
-            if (urlMatch) {
-                let target = urlMatch[1].trim();
+            
+            // 模式1: 打开网页 URL
+            const urlMatch1 = step.match(/(?:打开网页|打开浏览器)\s+(https?:\/\/\S+)/i);
+            // 模式2: 打开网页 域名（如 www.baidu.com）
+            const urlMatch2 = step.match(/(?:打开网页|打开浏览器)\s+(www\.\S+)/i);
+            // 模式3: 打开 网站名 网页（如 打开百度网页）
+            const urlMatch3 = step.match(/打开(?:百度|Baidu)网页/);
+            // 模式4: 从原任务中提取URL（兼容旧格式）
+            const urlMatch4 = step.match(/(?:打开浏览器|打开网页)[输入\s]*(.+)/);
+            
+            if (urlMatch1) {
+                url = urlMatch1[1];
+            } else if (urlMatch2) {
+                url = 'https://' + urlMatch2[1];
+            } else if (urlMatch3) {
+                url = 'https://www.baidu.com';
+            } else if (urlMatch4) {
+                let target = urlMatch4[1].trim();
                 if (!target.startsWith('http')) {
                     target = 'https://' + target;
                 }
                 url = target;
             }
+            
+            console.log('[Executor] 提取URL:', url);
             result = await executor.runCommand(`start ${url}`);
-        } else if (task.includes('整理桌面')) {
+        } else if (step.includes('整理桌面')) {
             const desktopPath = path.join(require('os').homedir(), 'Desktop');
             result = await executor.runCommand(`powershell -Command "Get-ChildItem '${desktopPath}' | Sort-Object Extension | ForEach-Object { $ext = $_.Extension; if ($ext) { $folder = Join-Path '${desktopPath}' $ext.TrimStart('.'); if (!(Test-Path $folder)) { New-Item -ItemType Directory -Path $folder }; Move-Item $_.FullName $folder } }"`);
-        } else if (task.includes('打开')) {
+        } else if (step.includes('打开')) {
             // 支持 file:/// 本地文件路径
-            const fileUrlMatch = task.match(/file:\/\/\/([^\s]+)/i);
+            const fileUrlMatch = step.match(/file:\/\/\/([^\s]+)/i);
             if (fileUrlMatch) {
                 const filePath = fileUrlMatch[1].replace(/\//g, '\\');
                 result = await executor.runCommand(`start "" "${filePath}"`);
             } else {
-                const appMatch = task.match(/打开[：:]?\s*(\S+)/);
+                const appMatch = step.match(/打开[：:]?\s*(\S+)/);
                 if (appMatch) {
                     result = await executor.runCommand(`start "" "${appMatch[1]}"`);
                 } else {
-                    result = await executor.runCommand(task.replace(/帮我|请/g, ''));
+                    result = await executor.runCommand(step.replace(/帮我|请/g, ''));
                 }
             }
-        } else if (task.includes('创建文件')) {
-            const fileMatch = task.match(/创建文件[：:]?\s*(\S+)/);
+        } else if (step.includes('创建文件')) {
+            const fileMatch = step.match(/创建文件[：:]?\s*(\S+)/);
             if (fileMatch) {
                 result = await executor.fileOperation('write', fileMatch[1], '');
             } else {
                 result = { success: false, error: '请指定文件名' };
             }
-        } else if (task.includes('执行代码') || task.includes('运行代码')) {
-            const codeMatch = task.match(/```(\w+)?\n([\s\S]*?)```/);
+        } else if (step.includes('执行代码') || step.includes('运行代码')) {
+            const codeMatch = step.match(/```(\w+)?\n([\s\S]*?)```/);
             if (codeMatch) {
                 result = await executor.executeCode(codeMatch[2], codeMatch[1] || 'javascript');
             } else {
                 result = { success: false, error: '请提供代码块' };
             }
+        } else if (step.includes('在搜索框输入') || step.includes('输入文字')) {
+            // 提取要输入的文字
+            const inputMatch = step.match(/(?:在搜索框输入|输入文字)\\s+(.+)/i);
+            if (inputMatch) {
+                const text = inputMatch[1].trim();
+                // 使用剪贴板模拟输入
+                result = await executor.runCommand(`powershell -Command "Set-Clipboard -Value '${text}'; Add-Type -AssemblyName System.Windows.Forms; [System.Windows.Forms.SendKeys]::SendWait('^{v}{ENTER}')"` );
+            } else {
+                result = { success: false, error: '未指定输入内容' };
+            }
+        } else if (step.includes('点击搜索按钮') || step.includes('点击搜索')) {
+            // 模拟点击搜索按钮（通常是回车键）
+            result = await executor.runCommand(`powershell -Command "Add-Type -AssemblyName System.Windows.Forms; [System.Windows.Forms.SendKeys]::SendWait('{ENTER}')"` );
         } else {
-            result = await executor.runCommand(task.replace(/^(帮我|请|麻烦)/, ''));
+            // 默认尝试执行命令
+            result = await executor.runCommand(step.replace(/^(帮我|请|麻烦)/, ''));
         }
         
         return result;
