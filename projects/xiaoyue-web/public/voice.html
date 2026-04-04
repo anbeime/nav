@@ -86,8 +86,10 @@
             font-size: 1.2rem;
         }
         .message.ai .avatar { 
-            background: linear-gradient(135deg, #667eea, #764ba2); 
-            color: white; 
+            background: url('xiaoyi-avatar.png') center/cover;
+            font-size: 0;
+        }
+        .message.ai .avatar.has-star-avatar { 
             font-size: 0.9rem;
             font-weight: bold;
         }
@@ -749,20 +751,69 @@
             addMessage('飞书配置已保存！小易已接入飞书机器人。📱', 'ai');
         }
         
+        // 明星头像配置
+        const STAR_AVATARS = {
+            '马斯伦': { initials: '马', color: '#e74c3c', gradient: 'linear-gradient(135deg, #e74c3c, #c0392b)' },
+            '伦巴': { initials: '伦', color: '#27ae60', gradient: 'linear-gradient(135deg, #27ae60, #1e8449)' },
+            '索斯乔': { initials: '索', color: '#9b59b6', gradient: 'linear-gradient(135deg, #9b59b6, #7d3c98)' },
+            '唐特特': { initials: '唐', color: '#f39c12', gradient: 'linear-gradient(135deg, #f39c12, #d68910)' },
+            '雷君君': { initials: '雷', color: '#ff6700', gradient: 'linear-gradient(135deg, #ff6700, #e65c00)' },
+            '贾亭亭': { initials: '贾', color: '#00bcd4', gradient: 'linear-gradient(135deg, #00bcd4, #0097a7)' },
+            '泰乐乐': { initials: '泰', color: '#e91e63', gradient: 'linear-gradient(135deg, #e91e63, #c2185b)' },
+            '杨米米': { initials: '杨', color: '#ff4081', gradient: 'linear-gradient(135deg, #ff4081, #f50057)' },
+            '侯昊昊': { initials: '侯', color: '#00e676', gradient: 'linear-gradient(135deg, #00e676, #00c853)' },
+            '黎光光': { initials: '黎', color: '#3f51b5', gradient: 'linear-gradient(135deg, #3f51b5, #303f9f)' },
+            '周星星': { initials: '星', color: '#ffeb3b', textColor: '#333', gradient: 'linear-gradient(135deg, #ffeb3b, #fdd835)' },
+            '胡哥哥': { initials: '胡', color: '#795548', gradient: 'linear-gradient(135deg, #795548, #5d4037)' },
+            '任伦伦': { initials: '任', color: '#607d8b', gradient: 'linear-gradient(135deg, #607d8b, #455a64)' },
+            '张谋谋': { initials: '张', color: '#ff5722', gradient: 'linear-gradient(135deg, #ff5722, #e64a19)' },
+            '刘华华': { initials: '刘', color: '#2196f3', gradient: 'linear-gradient(135deg, #2196f3, #1976d2)' },
+            '古天天': { initials: '古', color: '#4caf50', gradient: 'linear-gradient(135deg, #4caf50, #388e3c)' },
+            'OpenClaw': { initials: 'OC', color: '#9c27b0', gradient: 'linear-gradient(135deg, #9c27b0, #7b1fa2)' },
+            '周伦伦': { initials: '伦', color: '#673ab7', gradient: 'linear-gradient(135deg, #673ab7, #512da8)' }
+        };
+        
+        // 当前活跃的明星
+        let currentStar = null;
+        
         // 更新状态
         function updateStatus(status) {
             statusBadge.className = 'status-badge ' + status;
             statusBadge.textContent = status === 'online' ? '在线' : status === 'config' ? '配置中' : '离线';
         }
         
+        // 获取明星头像样式
+        function getStarAvatarStyle(starName) {
+            const avatar = STAR_AVATARS[starName];
+            if (avatar) {
+                return {
+                    background: avatar.gradient,
+                    text: avatar.initials,
+                    color: avatar.textColor || 'white'
+                };
+            }
+            return { background: 'linear-gradient(135deg, #667eea, #764ba2)', text: '易', color: 'white' };
+        }
+        
         // 添加消息
-        function addMessage(content, type, image = null) {
+        function addMessage(content, type, image = null, starName = null) {
             const messageDiv = document.createElement('div');
             messageDiv.className = `message ${type}`;
             
             const avatar = document.createElement('div');
             avatar.className = 'avatar';
-            if (type === 'user') avatar.textContent = '👤';
+            
+            if (type === 'user') {
+                avatar.textContent = '👤';
+            } else if (starName && STAR_AVATARS[starName]) {
+                // 明星头像：添加 has-star-avatar 类并设置样式
+                avatar.classList.add('has-star-avatar');
+                const style = getStarAvatarStyle(starName);
+                avatar.style.background = style.background;
+                avatar.textContent = style.text;
+                avatar.style.color = style.color;
+            }
+            // 默认使用 CSS 中定义的 xiaoyi-avatar.png 图片（无需额外设置）
             
             const contentDiv = document.createElement('div');
             contentDiv.className = 'message-content';
@@ -783,16 +834,30 @@
         }
         
         // 显示输入中
-        function showTyping() {
+        function showTyping(starName = null) {
             const typingDiv = document.createElement('div');
             typingDiv.className = 'message ai';
             typingDiv.id = 'typingIndicator';
-            typingDiv.innerHTML = `
-                <div class="avatar"></div>
-                <div class="typing-indicator">
-                    <span></span><span></span><span></span>
-                </div>
-            `;
+            
+            const avatar = document.createElement('div');
+            avatar.className = 'avatar';
+            
+            if (starName && STAR_AVATARS[starName]) {
+                // 明星头像：添加 has-star-avatar 类并设置样式
+                avatar.classList.add('has-star-avatar');
+                const style = getStarAvatarStyle(starName);
+                avatar.style.background = style.background;
+                avatar.textContent = style.text;
+                avatar.style.color = style.color;
+            }
+            // 默认使用 CSS 中定义的 xiaoyi-avatar.png 图片（无需额外设置）
+            
+            const typingIndicator = document.createElement('div');
+            typingIndicator.className = 'typing-indicator';
+            typingIndicator.innerHTML = '<span></span><span></span><span></span>';
+            
+            typingDiv.appendChild(avatar);
+            typingDiv.appendChild(typingIndicator);
             chatMessages.appendChild(typingDiv);
             chatMessages.scrollTop = chatMessages.scrollHeight;
         }
@@ -815,11 +880,18 @@
             //     return;
             // }
             
+            // 检测消息中是否召唤了明星
+            const summonPattern = /\[召唤[:：](.+?)\]|召唤([马斯伦伦巴索斯乔唐特特雷君君贾亭亭泰乐乐杨米米侯昊昊黎光光周星星胡哥哥任伦伦张谋谋刘华华古天天OpenClaw周伦伦]+)/;
+            const summonMatch = message.match(summonPattern);
+            if (summonMatch) {
+                currentStar = summonMatch[1] || summonMatch[2];
+            }
+            
             addMessage(message, 'user', currentImageData);
             messageInput.value = '';
             sendButton.disabled = true;
             
-            showTyping();
+            showTyping(currentStar);
             
             try {
                 const response = await fetch('/api/chat', {
@@ -842,7 +914,9 @@
                 hideTyping();
                 
                 if (data.success) {
-                    addMessage(data.message || data.reply, 'ai', data.photoUrl || data.photo);
+                    // 检测召唤的明星
+                    const summonedStar = data.summonedAgent?.name || data.summonedAgent || currentStar;
+                    addMessage(data.message || data.reply, 'ai', data.photoUrl || data.photo, summonedStar);
                     // 语音播报回复（优先使用服务器返回的音色）
                     const voice = data.summonedVoice || getVoiceForAgent(data.summonedAgent);
                     console.log(`[TTS] 服务器音色: ${data.summonedVoice}, 前端映射: ${getVoiceForAgent(data.summonedAgent)}, 最终使用: ${voice}`);

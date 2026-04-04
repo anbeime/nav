@@ -7,6 +7,7 @@ const express = require('express');
 const router = express.Router();
 const SkillManager = require('../services/SkillManager');
 const SkillMarket = require('../services/SkillMarket');
+const EnhancedSkillMarket = require('../services/EnhancedSkillMarket');
 const path = require('path');
 
 // 初始化服务
@@ -16,6 +17,9 @@ const skillManager = new SkillManager({
 });
 
 const skillMarket = new SkillMarket();
+const enhancedMarket = new EnhancedSkillMarket({
+    localSkillPath: 'C:\\D\\工作流n8n-coze-dify\\skill'
+});
 
 // 中间件：确保初始化
 router.use(async (req, res, next) => {
@@ -48,11 +52,12 @@ router.get('/', async (req, res) => {
 
 /**
  * GET /api/skills/market
- * 获取技能市场列表
+ * 获取技能市场列表(包含本地技能)
  */
 router.get('/market', async (req, res) => {
     try {
-        const skills = await skillMarket.getMarketSkills();
+        // 使用增强版市场,包含本地技能
+        const skills = await enhancedMarket.getAllSkills();
         res.json({
             success: true,
             count: skills.length,
@@ -69,7 +74,7 @@ router.get('/market', async (req, res) => {
  */
 router.get('/categories', async (req, res) => {
     try {
-        const categories = await skillMarket.getSkillsByCategory();
+        const categories = await enhancedMarket.getSkillsByCategory();
         res.json({
             success: true,
             categories
@@ -90,7 +95,7 @@ router.get('/search', async (req, res) => {
             return res.status(400).json({ error: '请提供搜索关键词' });
         }
 
-        const skills = await skillMarket.searchSkills(q);
+        const skills = await enhancedMarket.searchSkills(q);
         res.json({
             success: true,
             query: q,
@@ -231,6 +236,7 @@ router.post('/:skillId/execute', async (req, res) => {
  */
 router.post('/refresh-cache', async (req, res) => {
     try {
+        enhancedMarket.refreshCache();
         skillMarket.refreshCache();
         res.json({
             success: true,

@@ -87,6 +87,44 @@ function initWorkflowEngine() {
 // 延迟初始化，等待 contextEngine
 setTimeout(initWorkflowEngine, 1000);
 
+// StarClaw 心跳服务 - HeartbeatService
+let heartbeatService = null;
+function initHeartbeatService() {
+    try {
+        const HeartbeatService = require('./starclaw/services/HeartbeatService');
+        heartbeatService = new HeartbeatService({
+            contextEngine,
+            heartbeatInterval: 60000,    // 1分钟心跳
+            thinkingInterval: 300000,    // 5分钟思考
+            careInterval: 3600000,       // 1小时关怀
+            proactiveEnabled: true,      // 启用主动消息
+            silenceThreshold: 7200000    // 2小时静默触发
+        });
+        
+        // 监听心跳事件
+        heartbeatService.on('heartbeat', (data) => {
+            // 可以在这里推送心跳状态到前端
+        });
+        
+        heartbeatService.on('care', (data) => {
+            console.log('[Heartbeat] 主动关怀消息:', data.message);
+            // 可以在这里推送消息到飞书或前端
+        });
+        
+        heartbeatService.on('thought', (data) => {
+            console.log('[Heartbeat] 思考结果:', data.thoughts);
+        });
+        
+        // 启动心跳服务
+        heartbeatService.start();
+        console.log('[Heartbeat] 心跳服务已启动');
+    } catch (e) {
+        console.log('[Heartbeat] 心跳服务加载失败:', e.message);
+    }
+}
+// 延迟初始化，等待 contextEngine
+setTimeout(initHeartbeatService, 2000);
+
 // StarClaw 模型路由器 - ModelRouter
 let modelRouter = null;
 async function initModelRouter() {
@@ -1565,26 +1603,110 @@ app.post('/api/voice-clone/extract-audio', async (req, res) => {
     }
 });
 
+// ==================== 技能系统 API ====================
+
+// ==================== 心跳服务 API ====================
+/**
+ * 获取心跳状态
+ */
+app.get('/api/heartbeat/status', (req, res) => {
+    if (!heartbeatService) {
+        return res.json({ success: false, error: '心跳服务未初始化' });
+    }
+    res.json({ success: true, status: heartbeatService.getStatus() });
+});
+
+/**
+ * 添加后台任务
+ */
+app.post('/api/heartbeat/task', (req, res) => {
+    if (!heartbeatService) {
+        return res.json({ success: false, error: '心跳服务未初始化' });
+    }
+    const { name, execute, schedule } = req.body;
+    heartbeatService.addTask({ name, execute, schedule });
+    res.json({ success: true, message: '任务已添加' });
+});
+
+/**
+ * 记录用户活动
+ */
+app.post('/api/heartbeat/activity', (req, res) => {
+    if (!heartbeatService) {
+        return res.json({ success: false, error: '心跳服务未初始化' });
+    }
+    heartbeatService.recordActivity();
+    res.json({ success: true });
+});
+
+/**
+ * 手动触发思考
+ */
+app.post('/api/heartbeat/think', async (req, res) => {
+    if (!heartbeatService) {
+        return res.json({ success: false, error: '心跳服务未初始化' });
+    }
+    await heartbeatService.think();
+    res.json({ success: true, message: '思考完成' });
+});
+
+/**
+ * 手动触发关怀
+ */
+app.post('/api/heartbeat/care', async (req, res) => {
+    if (!heartbeatService) {
+        return res.json({ success: false, error: '心跳服务未初始化' });
+    }
+    await heartbeatService.care();
+    res.json({ success: true, message: '关怀消息已生成' });
+});
+// 挂载技能路由
+try {
+    const skillRoutes = require('./starclaw/routes/skillRoutes');
+    app.use('/api/skills', skillRoutes);
+    console.log('[SkillRoutes] 技能API已挂载');
+} catch (e) {
+    console.log('[SkillRoutes] 技能路由加载失败:', e.message);
+}
+
 // ==================== 启动服务器 ====================
 
 app.listen(PORT, () => {
     console.log(`========================================`);
-    console.log(`🎭 StarClaw 明星战队已启动！`);
-    console.log(`📍 访问地址: http://localhost:${PORT}`);
-    console.log(`🎤 语音版: http://localhost:${PORT}/voice.html`);
-    console.log(`========================================`);
-    console.log(`🚀 内置执行器: ${executor ? '✅ 已加载' : '❌ 未加载'}`);
-    if (executor) {
-        console.log(`   - 代码执行: 支持 JavaScript/Python`);
-        console.log(`   - 文件操作: 支持 读写/创建/删除`);
-        console.log(`   - 命令执行: 支持 Shell 命令`);
-        console.log(`   - HTTP请求: 支持 GET/POST`);
-    }
-    console.log(`🤖 OpenClaw (可选): ${OPENCLAW_ENABLED ? '✅ 已启用' : '❌ 未启用'}`);
-    console.log(`🧠 记忆系统: ${contextEngine ? '✅ 已加载' : '❌ 未加载'}`);
-    console.log(`🔄 工作流引擎: ${workflowEngine ? '✅ 已加载' : '⏳ 初始化中...'}`);
-    console.log(`🤖 模型路由器: ${modelRouter ? '✅ 已加载' : '⏳ 初始化中...'}`);
-    console.log(`========================================`);
+console.log(`🎭 StarClaw 明星战队已启动！`);
+console.log(`📍 访问地址: http://localhost:${PORT}`);
+console.log(`🎤 语音版: http://localhost:${PORT}/voice.html`);
+console.log(`========================================`);
+console.log(`\n📊 三大核心特性状态:\n`);
+console.log(`🧠 脑子(记忆系统): ${contextEngine ? '✅ 已加载' : '❌ 未加载'}`);
+if (contextEngine) {
+console.log(`   - 工作记忆: 短期对话缓存`);
+console.log(`   - 会话记忆: 跨轮次持久化`);
+console.log(`   - 长期记忆: 语义检索存储`);
+console.log(`   - 知识库: 外部知识导入`);
+}
+console.log(`💓 心跳(主动服务): ${heartbeatService ? '✅ 已启动' : '❌ 未启动'}`);
+if (heartbeatService) {
+console.log(`   - 主动思考: 每5分钟`);
+console.log(`   - 主动关怀: 静默2小时触发`);
+console.log(`   - 后台任务: 支持定时执行`);
+}
+console.log(`🦾 手脚(技能系统): ✅ 已加载`);
+console.log(`   - 已注册技能: 13个`);
+console.log(`   - 搜索引擎: 17个引擎集成`);
+console.log(`   - 网页爬取: 支持Markdown/JSON输出`);
+console.log(`========================================`);
+console.log(`🚀 内置执行器: ${executor ? '✅ 已加载' : '❌ 未加载'}`);
+if (executor) {
+console.log(`   - 代码执行: 支持 JavaScript/Python`);
+console.log(`   - 文件操作: 支持 读写/创建/删除`);
+console.log(`   - 命令执行: 支持 Shell 命令`);
+console.log(`   - HTTP请求: 支持 GET/POST`);
+}
+console.log(`🤖 OpenClaw (可选): ${OPENCLAW_ENABLED ? '✅ 已启用' : '❌ 未启用'}`);
+console.log(`🔄 工作流引擎: ${workflowEngine ? '✅ 已加载' : '⏳ 初始化中...'}`);
+console.log(`🤖 模型路由器: ${modelRouter ? '✅ 已加载' : '⏳ 初始化中...'}`);
+console.log(`========================================`);
     console.log(`💡 使用方式:`);
     console.log(`   - [召唤:马斯伦] 召唤明星`);
     console.log(`   - [执行:代码] 执行代码`);

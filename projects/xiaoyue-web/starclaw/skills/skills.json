@@ -55,6 +55,16 @@
       "name": "代码开发",
       "agents": ["cto"],
       "description": "直接编写可运行代码"
+    },
+    "search_engine": {
+      "name": "搜索引擎",
+      "agents": ["cto", "ceo", "cmo_product"],
+      "description": "多搜索引擎集成，支持17个引擎、高级搜索、时间过滤、隐私搜索"
+    },
+    "web_crawler": {
+      "name": "网页爬取",
+      "agents": ["cto", "cmo_product"],
+      "description": "网页内容爬取，提取文本、图片、链接，支持Markdown/JSON输出"
     }
   }
 }

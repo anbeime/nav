@@ -1,0 +1,227 @@
+{
+  "id": "search_engine",
+  "name": "搜索引擎",
+  "version": "1.0.0",
+  "description": "多搜索引擎集成技能，整合17个搜索引擎（8个国内+9个国际），支持高级搜索操作符、时间过滤、站内搜索、隐私引擎和WolframAlpha知识查询",
+  "author": "gpyangyoujun",
+  "category": "information",
+  "tags": ["search", "engine", "web", "knowledge", "multi-engine"],
+  "engines": {
+    "domestic": [
+      {
+        "id": "baidu",
+        "name": "百度",
+        "url": "https://www.baidu.com/s?wd={keyword}",
+        "description": "中文搜索首选"
+      },
+      {
+        "id": "bing_cn",
+        "name": "必应中国",
+        "url": "https://cn.bing.com/search?q={keyword}&ensearch=0",
+        "description": "中英双语"
+      },
+      {
+        "id": "bing_int",
+        "name": "必应国际",
+        "url": "https://cn.bing.com/search?q={keyword}&ensearch=1",
+        "description": "英文搜索"
+      },
+      {
+        "id": "sogou",
+        "name": "搜狗",
+        "url": "https://www.sogou.com/web?query={keyword}",
+        "description": "微信内容搜索"
+      },
+      {
+        "id": "so360",
+        "name": "360搜索",
+        "url": "https://www.so.com/s?q={keyword}",
+        "description": "安全搜索"
+      },
+      {
+        "id": "sm",
+        "name": "神马",
+        "url": "https://m.sm.cn/s?q={keyword}",
+        "description": "移动端优化"
+      },
+      {
+        "id": "toutiao",
+        "name": "头条搜索",
+        "url": "https://www.toutiao.com/search/?keyword={keyword}",
+        "description": "资讯内容"
+      },
+      {
+        "id": "zhihu",
+        "name": "知乎搜索",
+        "url": "https://www.zhihu.com/search?type=content&q={keyword}",
+        "description": "知识问答"
+      }
+    ],
+    "international": [
+      {
+        "id": "google",
+        "name": "Google",
+        "url": "https://www.google.com/search?q={keyword}",
+        "description": "全球最大"
+      },
+      {
+        "id": "bing",
+        "name": "Bing",
+        "url": "https://www.bing.com/search?q={keyword}",
+        "description": "微软搜索"
+      },
+      {
+        "id": "duckduckgo",
+        "name": "DuckDuckGo",
+        "url": "https://duckduckgo.com/html/?q={keyword}",
+        "description": "隐私保护"
+      },
+      {
+        "id": "brave",
+        "name": "Brave",
+        "url": "https://search.brave.com/search?q={keyword}",
+        "description": "独立索引"
+      },
+      {
+        "id": "startpage",
+        "name": "Startpage",
+        "url": "https://www.startpage.com/do/search?q={keyword}",
+        "description": "Google结果+隐私"
+      },
+      {
+        "id": "qwant",
+        "name": "Qwant",
+        "url": "https://www.qwant.com/?q={keyword}",
+        "description": "欧盟GDPR合规"
+      },
+      {
+        "id": "yandex",
+        "name": "Yandex",
+        "url": "https://yandex.com/search/?text={keyword}",
+        "description": "俄语区域首选"
+      },
+      {
+        "id": "naver",
+        "name": "Naver",
+        "url": "https://search.naver.com/search.naver?query={keyword}",
+        "description": "韩语区域首选"
+      },
+      {
+        "id": "wolframalpha",
+        "name": "WolframAlpha",
+        "url": "https://www.wolframalpha.com/input?i={query}",
+        "description": "知识计算引擎"
+      }
+    ]
+  },
+  "operators": {
+    "site": {
+      "syntax": "site:domain.com keyword",
+      "description": "限定搜索特定网站"
+    },
+    "filetype": {
+      "syntax": "filetype:pdf keyword",
+      "description": "限定文件类型"
+    },
+    "exact": {
+      "syntax": "\"exact phrase\"",
+      "description": "精确匹配"
+    },
+    "exclude": {
+      "syntax": "keyword -exclude",
+      "description": "排除关键词"
+    },
+    "or": {
+      "syntax": "keyword1 OR keyword2",
+      "description": "或运算"
+    }
+  },
+  "timeFilters": {
+    "hour": "tbs=qdr:h",
+    "day": "tbs=qdr:d",
+    "week": "tbs=qdr:w",
+    "month": "tbs=qdr:m",
+    "year": "tbs=qdr:y"
+  },
+  "bangs": {
+    "!g": "Google",
+    "!gh": "GitHub",
+    "!so": "Stack Overflow",
+    "!w": "Wikipedia",
+    "!yt": "YouTube",
+    "!r": "Reddit",
+    "!mdn": "MDN",
+    "!npm": "npm"
+  },
+  "requires": [],
+  "permissions": ["web_fetch"],
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "query": {
+        "type": "string",
+        "description": "搜索关键词"
+      },
+      "engines": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "default": ["baidu", "google"],
+        "description": "使用的搜索引擎列表"
+      },
+      "filters": {
+        "type": "object",
+        "properties": {
+          "site": {
+            "type": "string"
+          },
+          "filetype": {
+            "type": "string"
+          },
+          "time": {
+            "type": "string",
+            "enum": ["hour", "day", "week", "month", "year"]
+          },
+          "exact": {
+            "type": "boolean"
+          }
+        }
+      },
+      "options": {
+        "type": "object",
+        "properties": {
+          "maxResults": {
+            "type": "number",
+            "default": 10
+          },
+          "includeSnippets": {
+            "type": "boolean",
+            "default": true
+          }
+        }
+      }
+    },
+    "required": ["query"]
+  },
+  "outputSchema": {
+    "type": "object",
+    "properties": {
+      "query": {
+        "type": "string"
+      },
+      "engines": {
+        "type": "array"
+      },
+      "results": {
+        "type": "object"
+      },
+      "totalResults": {
+        "type": "number"
+      },
+      "searchTime": {
+        "type": "number"
+      }
+    }
+  }
+}

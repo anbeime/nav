@@ -16,6 +16,8 @@ const fs = require('fs');
 const path = require('path');
 const axios = require('axios');
 const util = require('util');
+// cheerio 是可选依赖，如果需要网页爬取功能，请运行: npm install cheerio
+// const cheerio = require('cheerio');
 
 const execAsync = util.promisify(exec);
 

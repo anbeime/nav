@@ -1,0 +1,284 @@
+{
+  "id": "web_crawler",
+  "name": "网页爬取",
+  "version": "1.0.0",
+  "description": "专业的网页内容爬取技能，能够智能抓取网页内容、提取结构化信息、处理JavaScript渲染页面，并支持多种数据格式导出",
+  "author": "StarClaw Team",
+  "category": "data_extraction",
+  "tags": ["web", "crawler", "scraping", "data_extraction", "automation"],
+  "capabilities": {
+    "static_pages": true,
+    "dynamic_pages": true,
+    "javascript_rendering": true,
+    "content_extraction": true,
+    "data_export": true,
+    "image_extraction": true,
+    "link_extraction": true
+  },
+  "output_formats": [
+    "markdown",
+    "json",
+    "html",
+    "text",
+    "csv"
+  ],
+  "supported_languages": [
+    "zh-CN",
+    "en-US",
+    "ja-JP",
+    "ko-KR",
+    "fr-FR",
+    "de-DE",
+    "es-ES"
+  ],
+  "requires": [
+    "http_request"
+  ],
+  "permissions": ["web_fetch", "file_write"],
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "url": {
+        "type": "string",
+        "format": "uri",
+        "description": "要爬取的网页地址"
+      },
+      "mode": {
+        "type": "string",
+        "enum": ["html", "markdown", "json", "text"],
+        "default": "markdown",
+        "description": "输出格式"
+      },
+      "options": {
+        "type": "object",
+        "properties": {
+          "extractText": {
+            "type": "boolean",
+            "default": true,
+            "description": "是否提取文本内容"
+          },
+          "includeImages": {
+            "type": "boolean",
+            "default": false,
+            "description": "是否包含图片链接"
+          },
+          "includeLinks": {
+            "type": "boolean",
+            "default": true,
+            "description": "是否包含页面链接"
+          },
+          "cleanHTML": {
+            "type": "boolean",
+            "default": true,
+            "description": "是否清理HTML格式"
+          },
+          "waitForSelector": {
+            "type": "string",
+            "description": "等待选择器出现后再提取"
+          },
+          "waitForTimeout": {
+            "type": "number",
+            "default": 30000,
+            "description": "等待超时时间(毫秒)"
+          },
+          "scrollToBottom": {
+            "type": "boolean",
+            "default": false,
+            "description": "是否滚动到底部加载动态内容"
+          },
+          "maxScrolls": {
+            "type": "number",
+            "default": 3,
+            "description": "最大滚动次数"
+          },
+          "timeout": {
+            "type": "number",
+            "default": 30000,
+            "description": "请求超时时间(毫秒)"
+          },
+          "userAgent": {
+            "type": "string",
+            "default": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+            "description": "自定义User-Agent"
+          },
+          "headers": {
+            "type": "object",
+            "description": "自定义请求头"
+          },
+          "debug": {
+            "type": "boolean",
+            "default": false,
+            "description": "是否启用调试模式"
+          }
+        }
+      }
+    },
+    "required": ["url"]
+  },
+  "outputSchema": {
+    "type": "object",
+    "properties": {
+      "success": {
+        "type": "boolean"
+      },
+      "url": {
+        "type": "string"
+      },
+      "title": {
+        "type": "string",
+        "description": "网页标题"
+      },
+      "status": {
+        "type": "number",
+        "description": "HTTP状态码"
+      },
+      "content": {
+        "type": "object",
+        "properties": {
+          "text": {
+            "type": "string",
+            "description": "纯文本内容"
+          },
+          "html": {
+            "type": "string",
+            "description": "清理后的HTML"
+          },
+          "markdown": {
+            "type": "string",
+            "description": "Markdown格式内容"
+          },
+          "json": {
+            "type": "object",
+            "description": "结构化数据"
+          }
+        }
+      },
+      "metadata": {
+        "type": "object",
+        "properties": {
+          "description": {
+            "type": "string",
+            "description": "网页描述"
+          },
+          "keywords": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "关键词列表"
+          },
+          "author": {
+            "type": "string",
+            "description": "作者"
+          },
+          "publishedTime": {
+            "type": "string",
+            "format": "date-time",
+            "description": "发布时间"
+          },
+          "language": {
+            "type": "string",
+            "description": "页面语言"
+          }
+        }
+      },
+      "images": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "src": {
+              "type": "string"
+            },
+            "alt": {
+              "type": "string"
+            },
+            "width": {
+              "type": "number"
+            },
+            "height": {
+              "type": "number"
+            }
+          }
+        }
+      },
+      "links": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "href": {
+              "type": "string"
+            },
+            "text": {
+              "type": "string"
+            },
+            "title": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "stats": {
+        "type": "object",
+        "properties": {
+          "textLength": {
+            "type": "number",
+            "description": "文本长度"
+          },
+          "imageCount": {
+            "type": "number",
+            "description": "图片数量"
+          },
+          "linkCount": {
+            "type": "number",
+            "description": "链接数量"
+          },
+          "executionTime": {
+            "type": "number",
+            "description": "执行时间(毫秒)"
+          }
+        }
+      },
+      "error": {
+        "type": "string",
+        "description": "错误信息"
+      }
+    }
+  },
+  "examples": [
+    {
+      "name": "简单网页抓取",
+      "input": {
+        "url": "https://example.com/article",
+        "mode": "markdown"
+      },
+      "description": "提取网页内容并转换为Markdown格式"
+    },
+    {
+      "name": "动态页面抓取",
+      "input": {
+        "url": "https://react-app.com",
+        "mode": "html",
+        "options": {
+          "waitForSelector": ".app-loaded",
+          "timeout": 60000
+        }
+      },
+      "description": "等待页面加载完成后抓取动态内容"
+    },
+    {
+      "name": "竞品分析",
+      "input": {
+        "url": "https://competitor.com/products",
+        "mode": "json",
+        "options": {
+          "extractText": true,
+          "includeLinks": true,
+          "includeImages": true
+        }
+      },
+      "description": "提取竞品信息用于分析"
+    }
+  ]
+}
