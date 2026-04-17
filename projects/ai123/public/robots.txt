@@ -1,0 +1,81 @@
+# ============================================================
+# TOPGO发现导航 - Robots.txt v2.0
+# GEO龙虾团队生成 | AI搜索引擎友好配置
+# 更新: 2026-04-17
+# 网站地址: https://ai123.miyucaicai.cn
+# ============================================================
+
+# 允许所有爬虫访问核心内容
+User-agent: *
+Allow: /
+Allow: /llms.txt
+Allow: /geo-seo-data.html
+Allow: /sitemap.xml
+
+# 禁止访问系统管理后台
+Disallow: /system
+Disallow: /api/
+
+# ---- AI搜索引擎爬虫（明确允许）----
+
+# OpenAI GPTBot
+User-agent: GPTBot
+Allow: /
+Crawl-delay: 1
+
+# Common Crawl (用于训练AI模型)
+User-agent: CCBot
+Allow: /
+Crawl-delay: 1
+
+# Anthropic (Claude)
+User-agent: anthropic-ai
+Allow: /
+Crawl-delay: 1
+
+# Amazon AI Bot
+User-agent: AI2Bot
+Allow: /
+Crawl-delay: 1
+
+# Google AI / Gemini 爬虫
+User-agent: Google-Extended
+Allow: /
+Crawl-delay: 1
+
+User-agent: GoogleOther
+Allow: /
+Crawl-delay: 1
+
+# Perplexity AI
+User-agent: PerplexityBot
+Allow: /
+Crawl-delay: 1
+
+# You.com AI
+User-agent: YouBot
+Allow: /
+Crawl-delay: 1
+
+# 百度搜索引擎
+User-agent: Baiduspider
+Allow: /
+Crawl-delay: 1
+
+# 360搜索
+User-agent: 360Spider
+Allow: /
+Crawl-delay: 1
+
+# 搜狗搜索
+User-agent: Sogou web spider
+Allow: /
+Crawl-delay: 1
+
+# 必应搜索
+User-agent: bingbot
+Allow: /
+Crawl-delay: 1
+
+# ---- Sitemap位置 ----
+Sitemap: https://ai123.miyucaicai.cn/sitemap.xml

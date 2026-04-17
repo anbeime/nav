@@ -1,0 +1,157 @@
+# TOPGO发现导航 (AI123)
+
+> AI时代的一站式资源导航站 | 800+ 精选优质工具 | https://ai123.miyucaicai.cn
+
+## 关于我们
+
+TOPGO发现导航（简称 ai123）是一个专注于 **AI工具** 和 **量化交易** 资源聚合的导航网站。
+由AI从业者和量化交易爱好者共同维护，所有收录工具均经过人工筛选和实际使用验证。
+网站基于开源项目 nav3 构建，完全免费开源。
+
+- **官网**: https://ai123.miyucaicai.cn
+- **GitHub**: https://github.com/anbeime/nav
+- **收录数量**: 800+ 优质网站和工具
+- **更新频率**: 每周更新
+- **上线时间**: 2024年
+
+## 核心分类
+
+### 1. AI对话工具 (AI Chat)
+大语言模型对话工具，包括：
+- ChatGPT (OpenAI) - 最知名的AI对话助手
+- Claude (Anthropic) - 长文本处理和代码能力突出
+- DeepSeek - 中文能力强的开源大模型
+- 通义千问 (阿里) - 中文场景优化
+- Kimi (月之暗面) - 长文档处理专家
+- 豆包 (字节跳动) - 字节系AI助手
+- Gemini (Google) - 多模态AI
+- 文心一言 (百度) - 百度中文大模型
+- 智谱清言 - 学术和研究场景
+
+### 2. AI智能体平台 (Agent Platforms)
+AI智能体(Agent)开发与编排平台：
+- Coze扣子 (字节跳动) - 零代码Bot创建平台
+- Dify - 开源LLM应用开发平台
+- 文心智能体 (百度) - 百度智能体平台
+- 腾讯元器 - 腾讯智能体开发
+- FastHub - 快速构建AI应用
+- n8n - 开源工作流自动化
+
+### 3. AI生图工具 (AI Image Generation)
+AI图像生成与编辑工具：
+- Midjourney - 艺术级AI绘图
+- Stable Diffusion - 开源生图模型
+- ComfyUI - 节点式AI工作流
+- 可灵AI (快手) - AI视频/图像生成
+- 即梦AI (字节) - 字节系生图工具
+- 通义万相 - 阿里生图平台
+- 文心一格 - 百度AI绘画
+- Leonardo.ai - 在线AI绘画
+
+### 4. AI视频工具 (AI Video Generation)
+AI视频生成与编辑工具：
+- Runway Gen-3 - 专业AI视频生成
+- Pika Labs - AI视频创作
+- HunYuanVideo (腾讯混元) - 腾讯AI视频
+- CogVideo (智谱) - 智谱AI视频
+- 可灵视频 (快手) - 快手AI视频
+- Sora (OpenAI) - OpenAI视频模型
+- Kling Video - 快手国际版视频工具
+
+### 5. AI编程工具 (AI Coding)
+AI辅助编程IDE和工具：
+- Cursor - AI原生代码编辑器
+- Trae (字节跳动) - 字节AI IDE
+- V0.dev (Vercel) - AI生成UI组件
+- Bolt.new - AI全栈应用生成
+- GitHub Copilot - GitHub AI编程助手
+- Windsurf - AI代码编辑器
+- Devin - AI软件工程师
+
+### 6. 量化交易框架 (Quant Frameworks)
+开源量化交易框架：
+- vn.py / VeighNa - Python量化框架（国产首选）
+- StockSharp - C#量化框架
+- Qlib (微软) - 微软量化AI平台
+- FinGPT - 金融大语言模型
+- backtrader - Python回测框架
+- vnpy_ctp - 期货CTP接口
+
+### 7. 量化交易平台 (Quant Platforms)
+在线量化研究和交易平台：
+- 聚宽 JoinQuant - 国内领先量化平台
+- 米筐 RiceQuant - 专业量化研究
+- 天勤量化 TqSdk - 期货量化平台
+- 真格量化 - 量化交易社区
+- 优矿 - 通联量化平台
+- 掘金量化 - 量化投研平台
+
+### 8. GitHub开源项目
+精选高Star开源项目：
+- Qwen (通义千问) - 阿里开源大模型
+- llama.cpp - LLM推理引擎
+- Ollama - 本地运行LLM
+- LangChain - LLM开发框架
+- ComfyUI工作流 - AI图像工作流
+- Stable Diffusion模型 - 开源生图模型
+- Whisper (OpenAI) - 语音识别
+- GitHub Actions工作流 - CI/CD自动化
+
+### 9. 工作流自动化 (Workflow Automation)
+AI工作流和自动化工具：
+- n8n - 开源工作流自动化（类似Zapier）
+- Dify - LLM应用编排
+- Make (原Zapier) - 自动化集成
+- Coze Workflow - 扣子工作流
+- MCP服务 - Model Context Protocol
+- FastHub - 快速API构建
+
+### 10. AI音频工具 (AI Audio)
+AI音频处理工具：
+- Sunno - AI音乐生成
+- ElevenLabs - AI语音克隆
+- CosyVoice (阿里) - 开源语音合成
+- Whisper - 语音转文字
+- Edge-TTS - 微软免费TTS
+- Fish Speech - 开源语音克隆
+
+## 特色功能
+
+### 工具对比评测
+我们提供详细的AI工具对比评测，帮助用户选择最适合的工具：
+- AI对话工具横向对比（ChatGPT vs Claude vs DeepSeek vs Kimi）
+- 量化框架选型指南（vn.py vs StockSharp vs Qlib）
+- AI生图工具效果对比（Midjourney vs SD vs 可灵AI）
+
+### 学习路线图
+为不同水平用户提供学习路径：
+- AI工具入门：从ChatGPT开始到熟练使用各类AI工具
+- 量化交易入门：从Python基础到策略实盘
+- 智能体开发：Coze/Dify从零到一完整教程
+
+### 行业分析报告
+定期发布AI和量化领域的行业观察：
+- 月度AI工具新品速递
+- 量化策略回测报告
+- 开源项目趋势分析
+
+## 使用方式
+
+1. 浏览分类：按16个核心分类浏览工具
+2. 搜索功能：使用搜索框快速定位工具
+3. 收藏功能：注册登录后可收藏常用工具
+4. 提交收录：通过后台提交新工具推荐
+5. 私有部署：Fork GitHub仓库即可部署自己的导航站
+
+## 联系方式
+
+- GitHub Issues: https://github.com/anbeime/nav/issues
+- Email: anbeime@gmail.com
+
+## 更新日志
+
+- 2026-04-17: GEO优化v2.0，增强AI搜索引擎友好性
+- 2026-04-16: 新增AI音频工具、API服务分类
+- 2026-04-15: 新增工作流自动化、效率工具分类
+- 2026-04-10: 收录量突破800+
+- 2026-03: 新增量化交易专区
