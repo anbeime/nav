@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StarClaw OS - AI智能体自我进化控制台 | GEO龙虾团队</title>
+    <meta name="description" content="StarClaw AI智能体操作系统 - 基于五层生存驱动架构的自我进化平台。GEO龙虾团队控制台，支持动态创建AI团队、技能自生长、多智能体协作。">
+    <meta name="keywords" content="StarClaw,AI Agent,智能体,自我进化,GEO龙虾,五层架构,AI团队,多智能体协作,数字生命体">
+    <meta property="og:title" content="StarClaw OS - AI智能体自我进化控制台">
+    <meta property="og:description" content="基于五层生存驱动架构的AI Agent平台，支持动态团队创建、技能自生长、多智能体协作。">
+    <meta property="og:type" content="website">
+    <link rel="canonical" href="https://ai123.miyucaicai.cn/starclaw.html">
+
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC',sans-serif;background:#0a0a1a;color:#e2e8f0;line-height:1.6;overflow-x:hidden}
+
+        /* ===== Header ===== */
+        .header{padding:14px 40px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid rgba(255,255,255,.06);backdrop-filter:blur(20px);position:sticky;top:0;z-index:100;background:rgba(10,10,26,.9)}
+        .logo-area{display:flex;align-items:center;gap:10px;text-decoration:none;color:inherit}
+        .logo-icon{width:36px;height:36px;border-radius:10px;background:linear-gradient(135deg,#e65100,#ff6d00);display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:900;color:#fff}
+        .logo-text{font-size:18px;font-weight:800}
+        .logo-text span{color:#e65100}
+        .logo-badge{font-size:10px;padding:2px 8px;border-radius:10px;background:rgba(230,81,0,.15);color:#fb8c00;font-weight:600;margin-left:6px}
+        .header-right{display:flex;align-items:center;gap:12px}
+        .nav-btn{padding:6px 14px;border-radius:20px;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.04);color:#94a3b8;font-size:12px;cursor:pointer;transition:all .25s;text-decoration:none;white-space:nowrap;font-family:inherit}
+        .nav-btn:hover{background:rgba(230,81,0,.12);border-color:rgba(230,81,0,.35);color:#fb8c00}
+        .nav-btn.primary{background:linear-gradient(135deg,#e65100,#ff6d00);color:#fff;border-color:transparent}
+        .nav-btn.primary:hover{box-shadow:0 4px 16px rgba(230,81,0,.4)}
+
+        /* ===== Hero ===== */
+        .hero{text-align:center;padding:60px 20px 44px;max-width:860px;margin:0 auto;position:relative}
+        .hero::before{content:'';position:absolute;top:-80px;left:50%;transform:translateX(-50%);width:560px;height:560px;background:radial-gradient(circle,rgba(230,81,0,.12) 0%,transparent 70%);pointer-events:none}
+        .hero-badge{display:inline-flex;align-items:center;gap:6px;padding:6px 16px;border-radius:20px;background:rgba(230,81,0,.1);border:1px solid rgba(230,81,0,.25);font-size:12px;font-weight:600;color:#fb8c00;margin-bottom:20px}
+        .hero h1{font-size:clamp(28px,4.5vw,42px);font-weight:800;line-height:1.2;margin-bottom:16px;background:linear-gradient(135deg,#fff 30%,#e65100 70%,#ff6d00 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+        .hero p{font-size:16px;opacity:.7;max-width:620px;margin:0 auto 28px;line-height:1.7}
+        .hero-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+        .btn{display:inline-flex;align-items:center;gap:7px;padding:12px 26px;border-radius:12px;font-size:14px;font-weight:600;cursor:pointer;text-decoration:none;transition:all .25s;font-family:inherit;border:none}
+        .btn-primary{background:linear-gradient(135deg,#e65100,#ff6d00);color:#fff;box-shadow:0 4px 20px rgba(230,81,0,.3)}
+        .btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(230,81,0,.45)}
+        .btn-outline{background:rgba(255,255,255,.05);color:#e2e8f0;border:1px solid rgba(255,255,255,.12)}
+        .btn-outline:hover{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.22)}
+        .btn-sm{padding:9px 18px;font-size:13px;border-radius:10px}
+
+        /* ===== Architecture Section ===== */
+        .section{max-width:1160px;margin:0 auto;padding:0 32px 48px}
+        .sec-title{font-size:22px;font-weight:800;margin-bottom:24px;display:flex;align-items:center;gap:10px}
+        .sec-title::before{content:'';width:4px;height:22px;background:linear-gradient(180deg,#e65100,#ff6d00);border-radius:2px}
+
+        /* Architecture Flow */
+        .arch-flow{display:flex;flex-direction:column;gap:4px;margin-bottom:40px}
+        .arch-layer{display:flex;align-items:stretch;gap:10px;animation:fadeUp .4s ease both}
+        .arch-label{width:110px;flex-shrink:0;display:flex;align-items:center;justify-content:center;border-radius:10px;font-size:11px;font-weight:700;text-align:center;color:#fff;padding:10px 6px}
+        .al-perception{background:linear-gradient(135deg,#00bcd4,#0097a7)}
+        .al-cognition{background:linear-gradient(135deg,#673ab7,#512da8)}
+        .al-execution{background:linear-gradient(135deg,#ff9800,#f57c00)}
+        .al-monitoring{background:linear-gradient(135deg,#4caf50,#388e3c)}
+        .al-compliance{background:linear-gradient(135deg,#f44336,#d32f2f)}
+        .al-evolution{background:linear-gradient(135deg,#e65100,#bf360c)}
+        .arch-nodes{flex:1;display:flex;gap:8px}
+        .arch-node{flex:1;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);border-radius:10px;padding:14px 10px;text-align:center;transition:all .25s;cursor:default}
+        .arch-node:hover{background:rgba(255,255,255,.07);border-color:rgba(230,81,0,.3);transform:translateY(-2px)}
+        .node-icon{font-size:24px;margin-bottom:4px}
+        .node-name{font-size:13px;font-weight:700;color:#fff;margin-bottom:2px}
+        .node-role{font-size:10.5px;color:#94a3b8}
+        .arch-arrow{text-align:center;color:#334155;font-size:14px;letter-spacing:4px;padding:2px 0}
+
+        /* ===== Team Cards ===== */
+        .team-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px;margin-bottom:40px}
+        .team-card{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:16px;padding:24px;transition:all .35s;position:relative;overflow:hidden;text-decoration:none;color:inherit;display:block}
+        .team-card:hover{transform:translateY(-5px);background:rgba(255,255,255,.06);border-color:var(--cc);box-shadow:0 16px 40px rgba(0,0,0,.3)}
+        .team-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--cc)}
+        .tc-head{display:flex;align-items:center;gap:12px;margin-bottom:12px}
+        .tc-avatar{width:46px;height:46px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0;color:#fff;font-weight:700}
+        .tc-info h3{font-size:16px;font-weight:700;color:#fff}
+        .tc-info p{font-size:11.5px;color:#94a3b8;margin-top:2px}
+        .tc-desc{font-size:13px;color:rgba(226,232,240,.6);line-height:1.6;margin-bottom:14px}
+        .tc-tags{display:flex;flex-wrap:wrap;gap:5px}
+        .tag{padding:3px 9px;border-radius:8px;font-size:10.5px;background:rgba(255,255,255,.06);opacity:.85}
+
+        /* ===== Feature Grid ===== */
+        .feat-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:14px;margin-bottom:40px}
+        .feat-item{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);border-radius:14px;padding:22px;transition:all .25s}
+        .feat-item:hover{background:rgba(255,255,255,.06);border-color:rgba(230,81,0,.2)}
+        .feat-icon{font-size:28px;margin-bottom:10px}
+        .feat-item h4{font-size:15px;font-weight:700;color:#fff;margin-bottom:6px}
+        .feat-item p{font-size:12.5px;color:#94a3b8;line-height:1.55}
+
+        /* ===== CTA ===== */
+        .cta-section{text-align:center;padding:44px 20px 56px}
+        .cta-box{background:linear-gradient(135deg,#1a1200 0%,#2d1800 50%,#1a0a00 100%);border-radius:20px;padding:44px 32px;max-width:800px;margin:0 auto;border:1px solid rgba(230,81,0,.2);position:relative;overflow:hidden}
+        .cta-box::before{content:'';position:absolute;top:-40%;left:-40%;width:180%;height:180%;background:radial-gradient(circle at center,rgba(230,81,0,.07) 0%,transparent 60%);pointer-events:none}
+        .cta-box h2{font-size:22px;font-weight:800;margin-bottom:8px;position:relative}
+        .cta-box p{opacity:.65;margin-bottom:24px;font-size:14px;position:relative}
+
+        /* ===== Footer ===== */
+        footer{text-align:center;padding:28px 20px;border-top:1px solid rgba(255,255,255,.05);opacity:.35;font-size:12px}
+        footer a{color:#e65100;text-decoration:none}
+        .footer-links{display:flex;gap:18px;justify-content:center;margin-bottom:8px;flex-wrap:wrap}
+
+        @media(max-width:768px){
+            .header{padding:12px 16px}.section{padding:0 16px 36px}
+            .hero{padding:40px 16px 32px}.hero h1{font-size:24px}
+            .arch-label{width:80px;font-size:9.5px}.team-grid{grid-template-columns:1fr}
+            .feat-grid{grid-template-columns:1fr 1fr}.arch-nodes{flex-wrap:wrap}
+        }
+        @keyframes fadeUp{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+    </style>
+</head>
+<body>
+
+<!-- Header -->
+<header class="header">
+    <a href="/" class="logo-area">
+        <div class="logo-icon">S</div>
+        <div class="logo-text"><span>StarClaw</span> OS</div>
+        <span class="logo-badge">v2.0</span>
+    </a>
+    <div class="header-right">
+        <a href="#architecture" class="nav-btn">架构设计</a>
+        <a href="#team" class="nav-btn">龙虾团队</a>
+        <a href="#features" class="nav-btn">核心能力</a>
+        <a href="/" class="nav-btn">返回导航站</a>
+        <a href="https://xiaoyue.miyucaicai.cn/lobster-dashboard.html" target="_blank" rel="noopener noreferrer" class="nav-btn primary">打开控制台</a>
+    </div>
+</header>
+
+<!-- Hero -->
+<section class="hero">
+    <div class="badge">&#x2728; Self-Evolution Enabled | 五层生存驱动架构</div>
+    <h1>AI 智能体<br><span style="-webkit-text-fill-color:#e65100">自我进化</span>操作系统</h1>
+    <p>基于 SeaClaw 出海龙虾的五层生存驱动架构，让 AI 不再是工具，而是能够自主感知、决策、执行、监控、进化的数字生命体。</p>
+    <div class="hero-btns">
+        <a href="https://xiaoyue.miyucaicai.cn/lobster-dashboard.html" target="_blank" rel="noopener noreferrer" class="btn btn-primary">进入龙虾控制台</a>
+        <a href="#architecture" class="btn btn-outline">查看架构设计</a>
+        <a href="#team" class="btn btn-outline btn-sm">团队成员</a>
+    </div>
+</section>
+
+<!-- Five-Layer Architecture -->
+<section class="section" id="architecture">
+    <h2 class="sec-title">五层生存驱动架构</h2>
+    <p style="color:#94a3b8;font-size:14px;margin-bottom:24px">数据流：感知采集 &rarr; 决策策略 &rarr; 执行部署 &rarr; 监控分析 &rarr; 风控审核 &rarr; 进化迭代</p>
+
+    <div class="arch-flow">
+        <!-- L1 -->
+        <div class="arch-layer" style="animation-delay:0s">
+            <div class="arch-label al-perception">L1 感知<br>Perception</div>
+            <div class="arch-nodes">
+                <div class="arch-node">
+                    <div class="node-icon">&#x1F50D;</div>
+                    <div class="node-name">龙探探</div>
+                    <div class="node-role">geo_scout | GEO感知雷达</div>
+                </div>
+            </div>
+        </div>
+        <div class="arch-arrow">&#x2B07;</div>
+
+        <!-- L2 -->
+        <div class="arch-layer" style="animation-delay:.08s">
+            <div class="arch-label al-cognition">L2 决策<br>Cognition</div>
+            <div class="arch-nodes">
+                <div class="arch-node">
+                    <div class="node-icon">&#x1F9E0;</div>
+                    <div class="node-name">龙策策</div>
+                    <div class="node-role">geo_strategist | 策略架构师</div>
+                </div>
+                <div class="arch-node">
+                    <div class="node-icon">&#x270F;</div>
+                    <div class="node-name">龙工工</div>
+                    <div class="node-role">content_engineer | 内容重构工程师</div>
+                </div>
+            </div>
+        </div>
+        <div class="arch-arrow">&#x2B07;</div>
+
+        <!-- L3 -->
+        <div class="arch-layer" style="animation-delay:.16s">
+            <div class="arch-label al-execution">L3 执行<br>Execution</div>
+            <div class="arch-nodes">
+                <div class="arch-node">
+                    <div class="node-icon">&#x1F4E6;</div>
+                    <div class="node-name">龙部部</div>
+                    <div class="node-role">source_deployer | 信源部署专员</div>
+                </div>
+            </div>
+        </div>
+        <div class="arch-arrow">&#x2B07;</div>
+
+        <!-- L4 + Compliance -->
+        <div class="arch-layer" style="animation-delay:.24s">
+            <div class="arch-label al-monitoring">L4 监控<br>Monitoring</div>
+            <div class="arch-nodes">
+                <div class="arch-node">
+                    <div class="node-icon">&#x1F4CA;</div>
+                    <div class="node-name">龙分分</div>
+                    <div class="node-role">geo_analyst | 效果监测分析师</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="arch-layer" style="animation-delay:.28s;margin-top:-12px">
+            <div class="arch-label al-compliance">风控<br>Compliance</div>
+            <div class="arch-nodes">
+                <div class="arch-node">
+                    <div class="node-icon">&#x1F6E1;</div>
+                    <div class="node-name">龙规规</div>
+                    <div class="node-role">compliance_officer | 合规风控官</div>
+                </div>
+            </div>
+        </div>
+        <div class="arch-arrow">&#x2B07;</div>
+
+        <!-- L5 -->
+        <div class="arch-layer" style="animation-delay:.32s">
+            <div class="arch-label al-evolution">L5 进化<br>Evolution</div>
+            <div class="arch-nodes">
+                <div class="arch-node" style="border-color:rgba(230,81,0,.3);background:rgba(230,81,0,.05)">
+                    <div class="node-icon">&#x2728;</div>
+                    <div class="node-name" style="color:#fb8c00">元架构师</div>
+                    <div class="node-role">meta_architect | 自我进化引擎</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Team Members -->
+<section class="section" id="team">
+    <h2 class="sec-title">GEO龙虾团队成员</h2>
+    <div class="team-grid">
+
+        <div class="team-card" style="--cc:linear-gradient(90deg,#00bcd4,#0097a7)">
+            <div class="tc-head">
+                <div class="tc-avatar" style="background:linear-gradient(135deg,#00bcd4,#0097a7)">&#x1F50D;</div>
+                <div class="tc-info"><h3>龙探探</h3><p>geo_scout | 感知层</p></div>
+            </div>
+            <div class="tc-desc">GEO感知雷达，负责扫描品牌在 ChatGPT Search、Perplexity 等 AI 引擎中的引用情况和品牌曝光度。</div>
+            <div class="tc-tags"><span class="tag">AI引擎扫描</span><span class="tag">引用监测</span><span class="tag">品牌曝光</span></div>
+        </div>
+
+        <div class="team-card" style="--cc:linear-gradient(90deg,#673ab7,#512da8)">
+            <div class="tc-head">
+                <div class="tc-avatar" style="background:linear-gradient(135deg,#673ab7,#512da8)">&#x1F9E0;</div>
+                <div class="tc-info"><h3>龙策策</h3><p>geo_strategist | 决策层</p></div>
+            </div>
+            <div class="tc-desc">策略架构师，制定 GEO 关键词策略、内容规划路线图和 E-E-A-T 权威性建设方案。</div>
+            <div class="tc-tags"><span class="tag">关键词策略</span><span class="tag">E-E-A-T</span><span class="tag">内容规划</span></div>
+        </div>
+
+        <div class="team-card" style="--cc:linear-gradient(90deg,#673ab7,#512da8)">
+            <div class="tc-head">
+                <div class="tc-avatar" style="background:linear-gradient(135deg,#7c4dff,#651fff)">&#x270F;</div>
+                <div class="tc-info"><h3>龙工工</h3><p>content_engineer | 决策层</p></div>
+            </div>
+            <div class="tc-desc">内容重构工程师，将现有内容转换为 AI 友好的结构化格式，优化 AI 引擎可引用的信源质量。</div>
+            <div class="tc-tags"><span class="tag">AI友好格式</span><span class="tag">内容重构</span><span class="tag">信源优化</span></div>
+        </div>
+
+        <div class="team-card" style="--cc:linear-gradient(90deg,#ff9800,#f57c00)">
+            <div class="tc-head">
+                <div class="tc-avatar" style="background:linear-gradient(135deg,#ff9800,#f57c00)">&#x1F4E6;</div>
+                <div class="tc-info"><h3>龙部部</h3><p>source_deployer | 执行层</p></div>
+            </div>
+            <div class="tc-desc">信源部署专员，将优化后的内容部署到各渠道，包括官网、博客、社交媒体、知识库等触点。</div>
+            <div class="tc-tags"><span class="tag">多渠道部署</span><span class="tag">发布管理</span><span class="tag">信源矩阵</span></div>
+        </div>
+
+        <div class="team-card" style="--cc:linear-gradient(90deg,#4caf50,#388e3c)">
+            <div class="tc-head">
+                <div class="tc-avatar" style="background:linear-gradient(135deg,#4caf50,#388e3c)">&#x1F4CA;</div>
+                <div class="tc-info"><h3>龙分分</h3><p>geo_analyst | 监控层</p></div>
+            </div>
+            <div class="tc-desc">效果监测分析师，追踪 GEO 核心指标（引用量、排名变化、流量来源），生成周报/月报并反馈给决策层。</div>
+            <div class="tc-tags"><span class="tag">数据分析</span><span class="tag">ROI追踪</span><span class="tag">报告生成</span></div>
+        </div>
+
+        <div class="team-card" style="--cc:linear-gradient(90deg,#f44336,#d32f2f)">
+            <div class="tc-head">
+                <div class="tc-avatar" style="background:linear-gradient(135deg,#f44336,#d32f2f)">&#x1F6E1;</div>
+                <div class="tc-info"><h3>龙规规</h3><p>compliance_officer | 风控层</p></div>
+            </div>
+            <div class="tc-desc">合规风控官，审核所有输出内容的准确性、合法性和品牌安全性，确保符合各平台规范。</div>
+            <div class="tc-tags"><span class="tag">内容审核</span><span class="tag">合规检查</span><span class="tag">风险管控</span></div>
+        </div>
+
+    </div>
+</section>
+
+<!-- Core Features -->
+<section class="section" id="features">
+    <h2 class="sec-title">核心能力</h2>
+    <div class="feat-grid">
+        <div class="feat-item">
+            <div class="feat-icon">&#x1F916;</div>
+            <h4>动态团队创建</h4>
+            <p>通过自然语言描述需求，meta_architect 自动分析、设计并创建完整的 AI 团队，无需手动编码。</p>
+        </div>
+        <div class="feat-item">
+            <div class="feat-icon">&#x1F4BB;</div>
+            <h4>技能自生长</h4>
+            <p>系统可根据任务需求自动生成新技能（SKILL.md），注册到技能库后立即可用。</p>
+        </div>
+        <div class="feat-item">
+            <div class="feat-icon">&#x1F504;</div>
+            <h4>资源编排中心</h4>
+            <p>统一调度 StarClaw 智能体、Coze Bot、N8N 工作流等外部资源，自动匹配最优执行路径。</p>
+        </div>
+        <div class="feat-item">
+            <div class="feat-icon">&#x1F4CA;</div>
+            <h4>多层记忆系统</h4>
+            <p>工作记忆 + 会话记忆 + 长期记忆三层架构，结合 SQLite 和向量检索实现语义级记忆召回。</p>
+        </div>
+        <div class="feat-item">
+            <div class="feat-icon">&#x2699;</div>
+            <h4>工作流引擎</h4>
+            <p>从自然语言到工作流的自动解析与执行，支持条件分支、并行任务、错误重试等复杂流程。</p>
+        </div>
+        <div class="feat-item">
+            <div class="feat-icon">&#x1F680;</div>
+            <h4>模型路由器</h4>
+            <p>多模型智能路由，根据任务复杂度和成本自动选择最优模型（智谱/Claude/GPT/方舟）。</p>
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+    <div class="cta-box">
+        <h2>准备好让你的 AI 自我进化了吗？</h2>
+        <p>打开龙虾控制台，体验完整的五层架构 AI Agent 操作系统</p>
+        <div class="hero-btns">
+            <a href="https://xiaoyue.miyucaicai.cn/lobster-dashboard.html" target="_blank" rel="noopener noreferrer" class="btn btn-primary">打开控制台</a>
+            <a href="/" class="btn btn-outline">返回 TOPGO 导航站</a>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="footer-links">
+        <a href="/">TOPGO 导航</a>
+        <a href="starclaw.html">StarClaw 控制台</a>
+        <a href="ai-guide.html">AI 选型指南</a>
+        <a href="geo-region.html">地区推荐</a>
+    </div>
+    <p>StarClaw OS - AI Agent Self-Evolution System | Powered by GEO龙虾团队</p>
+    <p style="margin-top:4px">更新于 2026-04-18</p>
+</footer>
+
+<script>
+// Smooth scroll
+document.querySelectorAll('a[href^="#"]').forEach(a => a.addEventListener('click', e => {
+    const t = document.querySelector(a.getAttribute('href'));
+    if (t) { e.preventDefault(); t.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+}));
+</script>
+
+</body>
+</html>
