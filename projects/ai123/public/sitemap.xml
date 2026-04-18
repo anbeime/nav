@@ -21,16 +21,24 @@
   <!-- ========== GEO优化资源页（AI爬虫关键入口）========== -->
   <url>
     <loc>https://ai123.miyucaicai.cn/llms.txt</loc>
-    <lastmod>2026-04-17</lastmod>
+    <lastmod>2026-04-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
   </url>
 
   <url>
     <loc>https://ai123.miyucaicai.cn/geo-seo-data.html</loc>
-    <lastmod>2026-04-17</lastmod>
+    <lastmod>2026-04-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
+  </url>
+
+  <!-- ========== StarClaw 龙虾团队控制台 (NEW) ========== -->
+  <url>
+    <loc>https://ai123.miyucaicai.cn/starclaw.html</loc>
+    <lastmod>2026-04-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.92</priority>
   </url>
 
   <!-- ========== AI工具分类（高优先级）========== -->
