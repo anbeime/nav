@@ -1,0 +1,2187 @@
+{
+  "version": "2026.04",
+  "lastUpdated": "2026-04-18",
+  "totalTools": 843,
+  "scenarios": [
+    {
+      "id": "smart-office",
+      "name": "智能办公",
+      "icon": "💼",
+      "description": "AI赋能的高效办公体验",
+      "tools": [
+        {
+          "name": "ChatGPT",
+          "url": "https://chat.openai.com",
+          "region": ["global"],
+          "tags": ["LLM", "写作", "编程"],
+          "free": true
+        },
+        {
+          "name": "Claude",
+          "url": "https://claude.ai",
+          "region": ["global"],
+          "tags": ["LLM", "分析", "编码"],
+          "free": true
+        },
+        {
+          "name": "Gemini",
+          "url": "https://gemini.google.com",
+          "region": ["global"],
+          "tags": ["LLM", "多模态", "搜索"],
+          "free": true
+        },
+        {
+          "name": "Microsoft Copilot",
+          "url": "https://copilot.microsoft.com",
+          "region": ["global"],
+          "tags": ["LLM", "Office", "办公"],
+          "free": true
+        },
+        {
+          "name": "Perplexity",
+          "url": "https://perplexity.ai",
+          "region": ["global"],
+          "tags": ["AI搜索", "研究", "问答"],
+          "free": true
+        },
+        {
+          "name": "Notion AI",
+          "url": "https://notion.so",
+          "region": ["global"],
+          "tags": ["笔记", "写作", "整理"],
+          "free": false
+        },
+        {
+          "name": "Otter.ai",
+          "url": "https://otter.ai",
+          "region": ["global"],
+          "tags": ["会议转录", "语音识别"],
+          "free": true
+        },
+        {
+          "name": "Fireflies.ai",
+          "url": "https://fireflies.ai",
+          "region": ["global"],
+          "tags": ["会议记录", "AI分析"],
+          "free": true
+        },
+        {
+          "name": "Grammarly",
+          "url": "https://grammarly.com",
+          "region": ["global"],
+          "tags": ["写作助手", "语法检查"],
+          "free": true
+        },
+        {
+          "name": "Jasper",
+          "url": "https://jasper.ai",
+          "region": ["global"],
+          "tags": ["营销写作", "内容创作"],
+          "free": false
+        },
+        {
+          "name": "Copy.ai",
+          "url": "https://copy.ai",
+          "region": ["global"],
+          "tags": ["文案生成", "营销"],
+          "free": true
+        },
+        {
+          "name": "Wordtune",
+          "url": "https://wordtune.com",
+          "region": ["global"],
+          "tags": ["改写", "润色"],
+          "free": true
+        },
+        {
+          "name": "Gamma",
+          "url": "https://gamma.app",
+          "region": ["global"],
+          "tags": ["PPT生成", "演示"],
+          "free": true
+        },
+        {
+          "name": "Tome",
+          "url": "https://tome.app",
+          "region": ["global"],
+          "tags": ["故事创作", "PPT"],
+          "free": true
+        },
+        {
+          "name": "Beautiful.ai",
+          "url": "https://beautiful.ai",
+          "region": ["global"],
+          "tags": ["智能PPT", "设计"],
+          "free": false
+        },
+        {
+          "name": " Canva AI",
+          "url": "https://canva.com",
+          "region": ["global"],
+          "tags": ["设计", "AI生成"],
+          "free": true
+        },
+        {
+          "name": "WPS AI",
+          "url": "https://wps.cn",
+          "region": ["cn"],
+          "tags": ["办公", "文档"],
+          "free": true
+        },
+        {
+          "name": "讯飞文档",
+          "url": "https://doc.xfyun.cn",
+          "region": ["cn"],
+          "tags": ["智能写作", "办公"],
+          "free": true
+        },
+        {
+          "name": "腾讯文档AI",
+          "url": "https://docs.qq.com",
+          "region": ["cn"],
+          "tags": ["在线文档", "AI助手"],
+          "free": true
+        },
+        {
+          "name": "钉钉AI",
+          "url": "https://dingtalk.com",
+          "region": ["cn"],
+          "tags": ["企业办公", "协作"],
+          "free": true
+        },
+        {
+          "name": "飞书AI",
+          "url": "https://feishu.cn",
+          "region": ["cn"],
+          "tags": ["协作", "智能助手"],
+          "free": true
+        },
+        {
+          "name": "通义千问",
+          "url": "https://tongyi.aliyun.com",
+          "region": ["cn"],
+          "tags": ["LLM", "阿里"],
+          "free": true
+        },
+        {
+          "name": "文心一言",
+          "url": "https://yiyan.baidu.com",
+          "region": ["cn"],
+          "tags": ["LLM", "百度"],
+          "free": true
+        },
+        {
+          "name": "Kimi",
+          "url": "https://kimi.moonshot.cn",
+          "region": ["cn"],
+          "tags": ["长文本", "LLM"],
+          "free": true
+        },
+        {
+          "name": "秘塔AI搜索",
+          "url": "https://metaso.cn",
+          "region": ["cn"],
+          "tags": ["AI搜索", "无广告"],
+          "free": true
+        },
+        {
+          "name": "DeepSeek",
+          "url": "https://deepseek.com",
+          "region": ["global"],
+          "tags": ["LLM", "开源", "编程"],
+          "free": true
+        },
+        {
+          "name": "Groq",
+          "url": "https://groq.com",
+          "region": ["global"],
+          "tags": ["快速LLM", "API"],
+          "free": true
+        },
+        {
+          "name": "Poe",
+          "url": "https://poe.com",
+          "region": ["global"],
+          "tags": ["多模型", "聚合"],
+          "free": true
+        },
+        {
+          "name": "YouChat",
+          "url": "https://you.com",
+          "region": ["global"],
+          "tags": ["AI搜索", "聊天"],
+          "free": true
+        },
+        {
+          "name": "Coze",
+          "url": "https://coze.com",
+          "region": ["global"],
+          "tags": ["AI开发", "工作流"],
+          "free": true
+        }
+      ]
+    },
+    {
+      "id": "quant-research",
+      "name": "量化投研",
+      "icon": "📊",
+      "description": "AI驱动的金融分析与量化交易",
+      "tools": [
+        {
+          "name": "AlphaSense",
+          "url": "https://alphasense.com",
+          "region": ["global"],
+          "tags": ["市场情报", "AI分析"],
+          "free": false
+        },
+        {
+          "name": "Kensho",
+          "url": "https://kensho.com",
+          "region": ["global"],
+          "tags": ["数据分析", "金融"],
+          "free": false
+        },
+        {
+          "name": "Bloomberg AI",
+          "url": "https://bloomberg.com",
+          "region": ["global"],
+          "tags": ["金融终端", "AI"],
+          "free": false
+        },
+        {
+          "name": "Sentiment Investor",
+          "url": "https://sentimentinvestor.com",
+          "region": ["global"],
+          "tags": ["情绪分析", "股票"],
+          "free": false
+        },
+        {
+          "name": "Finchat",
+          "url": "https://finchat.io",
+          "region": ["global"],
+          "tags": ["金融问答", "数据分析"],
+          "free": false
+        },
+        {
+          "name": "StockAI",
+          "url": "https://stockai.com",
+          "region": ["global"],
+          "tags": ["股票分析", "AI预测"],
+          "free": false
+        },
+        {
+          "name": "Numerai",
+          "url": "https://numerai.com",
+          "region": ["global"],
+          "tags": ["量化大赛", "数据"],
+          "free": true
+        },
+        {
+          "name": "QuantConnect",
+          "url": "https://quantconnect.com",
+          "region": ["global"],
+          "tags": ["量化平台", "回测"],
+          "free": true
+        },
+        {
+          "name": "Backtrader",
+          "url": "https://backtrader.com",
+          "region": ["global"],
+          "tags": ["回测框架", "Python"],
+          "free": true
+        },
+        {
+          "name": "Zipline",
+          "url": "https://quantopian.com",
+          "region": ["global"],
+          "tags": ["量化策略", "回测"],
+          "free": true
+        },
+        {
+          "name": "TensorTrade",
+          "url": "https://tensortrade.io",
+          "region": ["global"],
+          "tags": ["强化学习", "交易"],
+          "free": true
+        },
+        {
+          "name": "SuperTrend",
+          "url": "https://supertrend.ai",
+          "region": ["global"],
+          "tags": ["AI选股", "信号"],
+          "free": false
+        },
+        {
+          "name": "ThinkScript",
+          "url": "https://thinkorswim.com",
+          "region": ["global"],
+          "tags": ["交易策略", "编程"],
+          "free": false
+        },
+        {
+          "name": "TrendSpider",
+          "url": "https://trendspider.com",
+          "region": ["global"],
+          "tags": ["技术分析", "AI"],
+          "free": false
+        },
+        {
+          "name": "TradingView",
+          "url": "https://tradingview.com",
+          "region": ["global"],
+          "tags": ["图表", "社区"],
+          "free": true
+        },
+        {
+          "name": "Yahoo Finance",
+          "url": "https://finance.yahoo.com",
+          "region": ["global"],
+          "tags": ["数据", "分析"],
+          "free": true
+        },
+        {
+          "name": "Wind",
+          "url": "https://wind.com.cn",
+          "region": ["cn"],
+          "tags": ["金融数据", "终端"],
+          "free": false
+        },
+        {
+          "name": "Choice",
+          "url": "https://choice.eastmoney.com",
+          "region": ["cn"],
+          "tags": ["金融终端", "投研"],
+          "free": false
+        },
+        {
+          "name": "同花顺",
+          "url": "https://10jqka.com.cn",
+          "region": ["cn"],
+          "tags": ["行情", "交易"],
+          "free": true
+        },
+        {
+          "name": "东方财富",
+          "url": "https://eastmoney.com",
+          "region": ["cn"],
+          "tags": ["财经", "数据"],
+          "free": true
+        },
+        {
+          "name": "雪球",
+          "url": "https://xueqiu.com",
+          "region": ["cn"],
+          "tags": ["投资", "社区"],
+          "free": true
+        },
+        {
+          "name": "聚源数据",
+          "url": "https://jy Daten.cn",
+          "region": ["cn"],
+          "tags": ["金融数据", "API"],
+          "free": false
+        },
+        {
+          "name": "BigQuant",
+          "url": "https://bigquant.com",
+          "region": ["cn"],
+          "tags": ["量化平台", "AI"],
+          "free": true
+        },
+        {
+          "name": "MindGo",
+          "url": "https://mindgo.com",
+          "region": ["cn"],
+          "tags": ["量化回测", "社区"],
+          "free": true
+        },
+        {
+          "name": "JoinQuant",
+          "url": "https://joinquant.com",
+          "region": ["cn"],
+          "tags": ["量化平台", "云端"],
+          "free": true
+        },
+        {
+          "name": "AkShare",
+          "url": "https://akshare.xyz",
+          "region": ["cn"],
+          "tags": ["开源", "数据"],
+          "free": true
+        },
+        {
+          "name": "Tushare",
+          "url": "https://tushare.pro",
+          "region": ["cn"],
+          "tags": ["数据接口", "Python"],
+          "free": true
+        },
+        {
+          "name": "Baostock",
+          "url": "https://baostock.com",
+          "region": ["cn"],
+          "tags": ["开源数据", "量化"],
+          "free": true
+        },
+        {
+          "name": "DataYes",
+          "url": "https://datayes.com",
+          "region": ["cn"],
+          "tags": ["金融科技", "数据"],
+          "free": false
+        },
+        {
+          "name": "恒生电子",
+          "url": "https://hundsun.com",
+          "region": ["cn"],
+          "tags": ["金融IT", "系统"],
+          "free": false
+        }
+      ]
+    },
+    {
+      "id": "content-creation",
+      "name": "内容创作",
+      "icon": "✍️",
+      "description": "AI赋能的内容创作与营销",
+      "tools": [
+        {
+          "name": "Midjourney",
+          "url": "https://midjourney.com",
+          "region": ["global"],
+          "tags": ["AI绘画", "艺术"],
+          "free": false
+        },
+        {
+          "name": "DALL-E 3",
+          "url": "https://openai.com/dall-e-3",
+          "region": ["global"],
+          "tags": ["AI绘画", "设计"],
+          "free": false
+        },
+        {
+          "name": "Stable Diffusion",
+          "url": "https://stability.ai",
+          "region": ["global"],
+          "tags": ["开源", "图像生成"],
+          "free": true
+        },
+        {
+          "name": "Adobe Firefly",
+          "url": "https://firefly.adobe.com",
+          "region": ["global"],
+          "tags": ["设计", "商业安全"],
+          "free": true
+        },
+        {
+          "name": "Leonardo AI",
+          "url": "https://leonardo.ai",
+          "region": ["global"],
+          "tags": ["游戏资产", "概念艺术"],
+          "free": true
+        },
+        {
+          "name": "Ideogram",
+          "url": "https://ideogram.ai",
+          "region": ["global"],
+          "tags": ["文字生成", "设计"],
+          "free": true
+        },
+        {
+          "name": "Runway",
+          "url": "https://runwayml.com",
+          "region": ["global"],
+          "tags": ["视频生成", "AI工具"],
+          "free": true
+        },
+        {
+          "name": "Pika",
+          "url": "https://pika.art",
+          "region": ["global"],
+          "tags": ["视频生成", "AI"],
+          "free": true
+        },
+        {
+          "name": "Synthesia",
+          "url": "https://synthesia.io",
+          "region": ["global"],
+          "tags": ["数字人", "视频"],
+          "free": false
+        },
+        {
+          "name": "HeyGen",
+          "url": "https://heygen.com",
+          "region": ["global"],
+          "tags": ["数字人", "翻译"],
+          "free": true
+        },
+        {
+          "name": "Luma AI",
+          "url": "https://lumalabs.ai",
+          "region": ["global"],
+          "tags": ["3D生成", "视频"],
+          "free": true
+        },
+        {
+          "name": "Kaiber",
+          "url": "https://kaiber.ai",
+          "region": ["global"],
+          "tags": ["动画生成", "创意"],
+          "free": true
+        },
+        {
+          "name": "InVideo",
+          "url": "https://invideo.io",
+          "region": ["global"],
+          "tags": ["视频制作", "AI"],
+          "free": true
+        },
+        {
+          "name": "Fliki",
+          "url": "https://fliki.ai",
+          "region": ["global"],
+          "tags": ["文字转视频", "AI"],
+          "free": true
+        },
+        {
+          "name": "Murf AI",
+          "url": "https://murf.ai",
+          "region": ["global"],
+          "tags": ["AI配音", "语音合成"],
+          "free": false
+        },
+        {
+          "name": "ElevenLabs",
+          "url": "https://elevenlabs.io",
+          "region": ["global"],
+          "tags": ["语音合成", "配音"],
+          "free": true
+        },
+        {
+          "name": "Respeecher",
+          "url": "https://respeecher.com",
+          "region": ["global"],
+          "tags": ["语音克隆", "AI"],
+          "free": false
+        },
+        {
+          "name": "WellSaid Labs",
+          "url": "https://wellsaidlabs.com",
+          "region": ["global"],
+          "tags": ["AI语音", "配音"],
+          "free": false
+        },
+        {
+          "name": "Descript",
+          "url": "https://descript.com",
+          "region": ["global"],
+          "tags": ["视频编辑", "转录"],
+          "free": true
+        },
+        {
+          "name": "CapCut",
+          "url": "https://capcut.com",
+          "region": ["global"],
+          "tags": ["视频编辑", "AI"],
+          "free": true
+        },
+        {
+          "name": "快影",
+          "url": "https://kuaishou.com",
+          "region": ["cn"],
+          "tags": ["视频剪辑", "AI"],
+          "free": true
+        },
+        {
+          "name": "剪映",
+          "url": "https://jianying.com",
+          "region": ["cn"],
+          "tags": ["视频编辑", "字节"],
+          "free": true
+        },
+        {
+          "name": "通义万相",
+          "url": "https://tongyi.aliyun.com/wanxiang",
+          "region": ["cn"],
+          "tags": ["AI绘画", "阿里"],
+          "free": true
+        },
+        {
+          "name": "文心一格",
+          "url": "https://yige.baidu.com",
+          "region": ["cn"],
+          "tags": ["AI绘画", "百度"],
+          "free": true
+        },
+        {
+          "name": "无界AI",
+          "url": "https://wujieai.com",
+          "region": ["cn"],
+          "tags": ["AI绘画", "社区"],
+          "free": true
+        },
+        {
+          "name": "秒画",
+          "url": "https://miaohua.sensetime.com",
+          "region": ["cn"],
+          "tags": ["AI绘画", "商汤"],
+          "free": true
+        },
+        {
+          "name": "盗梦师",
+          "url": "https://printidea.com",
+          "region": ["cn"],
+          "tags": ["AI绘画", "应用"],
+          "free": true
+        },
+        {
+          "name": "Tiamat",
+          "url": "https://tiamat.com",
+          "region": ["cn"],
+          "tags": ["AI绘画", "国产"],
+          "free": true
+        },
+        {
+          "name": "站酷AI",
+          "url": "https://zCOOL.com",
+          "region": ["cn"],
+          "tags": ["设计社区", "AI"],
+          "free": true
+        },
+        {
+          "name": "Loom",
+          "url": "https://loom.com",
+          "region": ["global"],
+          "tags": ["视频消息", "异步沟通"],
+          "free": true
+        }
+      ]
+    },
+    {
+      "id": "ecommerce-operation",
+      "name": "电商运营",
+      "icon": "🛒",
+      "description": "AI驱动的电商运营与增长",
+      "tools": [
+        {
+          "name": "Shopify Magic",
+          "url": "https://shopify.com",
+          "region": ["global"],
+          "tags": ["电商建站", "AI助手"],
+          "free": false
+        },
+        {
+          "name": "Reveal",
+          "url": "https://reveal.io",
+          "region": ["global"],
+          "tags": ["电商分析", "数据"],
+          "free": false
+        },
+        {
+          "name": "Nosto",
+          "url": "https://nosto.com",
+          "region": ["global"],
+          "tags": ["个性化", "推荐"],
+          "free": false
+        },
+        {
+          "name": "Yotpo",
+          "url": "https://yotpo.com",
+          "region": ["global"],
+          "tags": ["评论管理", "营销"],
+          "free": false
+        },
+        {
+          "name": "Klaviyo",
+          "url": "https://klaviyo.com",
+          "region": ["global"],
+          "tags": ["邮件营销", "AI"],
+          "free": false
+        },
+        {
+          "name": "ShopRunner",
+          "url": "https://shoprunner.com",
+          "region": ["global"],
+          "tags": ["物流", "电商"],
+          "free": false
+        },
+        {
+          "name": "AMZ123",
+          "url": "https://amz123.com",
+          "region": ["cn"],
+          "tags": ["亚马逊", "工具"],
+          "free": true
+        },
+        {
+          "name": "Jungle Scout",
+          "url": "https://junglescout.com",
+          "region": ["global"],
+          "tags": ["亚马逊运营", "数据分析"],
+          "free": false
+        },
+        {
+          "name": "Helium 10",
+          "url": "https://helium10.com",
+          "region": ["global"],
+          "tags": ["亚马逊工具", "SEO"],
+          "free": false
+        },
+        {
+          "name": "Sellics",
+          "url": "https://sellics.com",
+          "region": ["global"],
+          "tags": ["亚马逊广告", "优化"],
+          "free": false
+        },
+        {
+          "name": "Perpetua",
+          "url": "https://perpetua.io",
+          "region": ["global"],
+          "tags": ["广告自动化", "电商"],
+          "free": false
+        },
+        {
+          "name": "Sellzone",
+          "url": "https://sellzone.io",
+          "region": ["global"],
+          "tags": ["亚马逊运营", "工具"],
+          "free": true
+        },
+        {
+          "name": "SellerApp",
+          "url": "https://sellerapp.io",
+          "region": ["global"],
+          "tags": ["电商店铺", "管理"],
+          "free": false
+        },
+        {
+          "name": "Shopline",
+          "url": "https://shopline.com",
+          "region": ["cn"],
+          "tags": ["独立站", "建站"],
+          "free": false
+        },
+        {
+          "name": "有赞",
+          "url": "https://youzan.com",
+          "region": ["cn"],
+          "tags": ["微商城", "SaaS"],
+          "free": false
+        },
+        {
+          "name": "微盟",
+          "url": "https://weimob.com",
+          "region": ["cn"],
+          "tags": ["电商SaaS", "私域"],
+          "free": false
+        },
+        {
+          "name": "快手电商",
+          "url": "https://kuaishou.com",
+          "region": ["cn"],
+          "tags": ["直播电商", "短视频"],
+          "free": true
+        },
+        {
+          "name": "抖音电商",
+          "url": "https://douyin.com",
+          "region": ["cn"],
+          "tags": ["兴趣电商", "直播"],
+          "free": true
+        },
+        {
+          "name": "拼多多",
+          "url": "https://pinduoduo.com",
+          "region": ["cn"],
+          "tags": ["社交电商", "团购"],
+          "free": true
+        },
+        {
+          "name": "淘客联盟",
+          "url": "https://alimama.com",
+          "region": ["cn"],
+          "tags": ["推广平台", "佣金"],
+          "free": true
+        },
+        {
+          "name": "生意参谋",
+          "url": "https://sycm.com",
+          "region": ["cn"],
+          "tags": ["淘宝数据", "分析"],
+          "free": false
+        },
+        {
+          "name": "情报通",
+          "url": "https://qbt.com",
+          "region": ["cn"],
+          "tags": ["电商数据", "监控"],
+          "free": false
+        },
+        {
+          "name": "电霸",
+          "url": "https://dianba.com",
+          "region": ["cn"],
+          "tags": ["拼多多数据", "分析"],
+          "free": false
+        },
+        {
+          "name": "多多情报",
+          "url": "https://duoduobao.com",
+          "region": ["cn"],
+          "tags": ["拼多多", "工具"],
+          "free": false
+        },
+        {
+          "name": "京东京麦",
+          "url": "https://jmix.com",
+          "region": ["cn"],
+          "tags": ["京东商家", "工具"],
+          "free": false
+        },
+        {
+          "name": "店宝宝",
+          "url": "https://dianbaobao.com",
+          "region": ["cn"],
+          "tags": ["电商工具", "开店"],
+          "free": false
+        },
+        {
+          "name": "千牛",
+          "url": "https://qianniuk.com",
+          "region": ["cn"],
+          "tags": ["淘宝卖家", "工作台"],
+          "free": true
+        },
+        {
+          "name": "小红书",
+          "url": "https://xiaohongshu.com",
+          "region": ["cn"],
+          "tags": ["种草社区", "电商"],
+          "free": true
+        },
+        {
+          "name": "得物",
+          "url": "https://dewu.com",
+          "region": ["cn"],
+          "tags": ["潮流电商", "鉴别"],
+          "free": true
+        },
+        {
+          "name": "1688",
+          "url": "https://1688.com",
+          "region": ["cn"],
+          "tags": ["批发", "货源"],
+          "free": true
+        }
+      ]
+    },
+    {
+      "id": "ai-programming",
+      "name": "AI编程",
+      "icon": "💻",
+      "description": "智能编程辅助与开发工具",
+      "tools": [
+        {
+          "name": "GitHub Copilot",
+          "url": "https://github.com/features/copilot",
+          "region": ["global"],
+          "tags": ["代码补全", "AI编程"],
+          "free": false
+        },
+        {
+          "name": "Cursor",
+          "url": "https://cursor.sh",
+          "region": ["global"],
+          "tags": ["AI代码编辑器", "VSCode替代"],
+          "free": true
+        },
+        {
+          "name": "Codeium",
+          "url": "https://codeium.com",
+          "region": ["global"],
+          "tags": ["代码补全", "免费"],
+          "free": true
+        },
+        {
+          "name": "Tabnine",
+          "url": "https://tabnine.com",
+          "region": ["global"],
+          "tags": ["AI代码补全"],
+          "free": true
+        },
+        {
+          "name": "Amazon CodeWhisperer",
+          "url": "https://aws.amazon.com/codewhisperer",
+          "region": ["global"],
+          "tags": ["AWS", "代码"],
+          "free": true
+        },
+        {
+          "name": "CodeGeex",
+          "url": "https://codegeex.cn",
+          "region": ["cn"],
+          "tags": ["智谱AI", "编程"],
+          "free": true
+        },
+        {
+          "name": "iFlyCode",
+          "url": "https://iflycode.com",
+          "region": ["cn"],
+          "tags": ["科大讯飞", "编程"],
+          "free": true
+        },
+        {
+          "name": "Comate",
+          "url": "https://comate.baidu.com",
+          "region": ["cn"],
+          "tags": ["百度", "代码"],
+          "free": true
+        },
+        {
+          "name": "通义灵码",
+          "url": "https://lingma.aliyun.com",
+          "region": ["cn"],
+          "tags": ["阿里", "编程"],
+          "free": true
+        },
+        {
+          "name": "Windsurf",
+          "url": "https://windsurf.ai",
+          "region": ["global"],
+          "tags": ["AI IDE", "MCP"],
+          "free": true
+        },
+        {
+          "name": "Cline",
+          "url": "https://cline.dev",
+          "region": ["global"],
+          "tags": ["VSCode插件", "AI"],
+          "free": true
+        },
+        {
+          "name": "Roo Code",
+          "url": "https://roo.ai",
+          "region": ["global"],
+          "tags": ["VSCode", "AI编程"],
+          "free": true
+        },
+        {
+          "name": "AskCodi",
+          "url": "https://askcodi.com",
+          "region": ["global"],
+          "tags": ["编程助手", "QA"],
+          "free": true
+        },
+        {
+          "name": "Mutable AI",
+          "url": "https://mutable.ai",
+          "region": ["global"],
+          "tags": ["AI开发", "全栈"],
+          "free": true
+        },
+        {
+          "name": "BlackBox AI",
+          "url": "https://blackbox.ai",
+          "region": ["global"],
+          "tags": ["代码助手", "聊天"],
+          "free": true
+        },
+        {
+          "name": "Sourcegraph",
+          "url": "https://sourcegraph.com",
+          "region": ["global"],
+          "tags": ["代码搜索", "AI"],
+          "free": true
+        },
+        {
+          "name": "Mintlify",
+          "url": "https://mintlify.com",
+          "region": ["global"],
+          "tags": ["文档生成", "AI"],
+          "free": true
+        },
+        {
+          "name": "DocuWriter",
+          "url": "https://docuwriter.ai",
+          "region": ["global"],
+          "tags": ["代码文档", "生成"],
+          "free": true
+        },
+        {
+          "name": "StackBlitz",
+          "url": "https://stackblitz.com",
+          "region": ["global"],
+          "tags": ["在线IDE", "Web开发"],
+          "free": true
+        },
+        {
+          "name": "Replit",
+          "url": "https://replit.com",
+          "region": ["global"],
+          "tags": ["在线编程", "AI"],
+          "free": true
+        },
+        {
+          "name": "CodeSandbox",
+          "url": "https://codesandbox.io",
+          "region": ["global"],
+          "tags": ["在线沙盒", "前端"],
+          "free": true
+        },
+        {
+          "name": "Gitpod",
+          "url": "https://gitpod.io",
+          "region": ["global"],
+          "tags": ["云IDE", "协作"],
+          "free": true
+        },
+        {
+          "name": "Vercel",
+          "url": "https://vercel.com",
+          "region": ["global"],
+          "tags": ["部署", "前端"],
+          "free": true
+        },
+        {
+          "name": "V0.dev",
+          "url": "https://v0.dev",
+          "region": ["global"],
+          "tags": ["AI生成UI", "React"],
+          "free": true
+        },
+        {
+          "name": "Raycast AI",
+          "url": "https://raycast.com",
+          "region": ["global"],
+          "tags": ["Mac工具", "AI"],
+          "free": true
+        },
+        {
+          "name": "Devin",
+          "url": "https://devin.ai",
+          "region": ["global"],
+          "tags": ["AI程序员", "自主"],
+          "free": false
+        },
+        {
+          "name": "Artillery",
+          "url": "https://artillery.io",
+          "region": ["global"],
+          "tags": ["AI测试", "性能"],
+          "free": true
+        },
+        {
+          "name": "Wallaby",
+          "url": "https://wallaby.dev",
+          "region": ["global"],
+          "tags": ["AI测试", "实时"],
+          "free": false
+        },
+        {
+          "name": "Stepsize",
+          "url": "https://stepsize.com",
+          "region": ["global"],
+          "tags": ["代码健康", "分析"],
+          "free": false
+        },
+        {
+          "name": "Snyk",
+          "url": "https://snyk.io",
+          "region": ["global"],
+          "tags": ["安全扫描", "AI"],
+          "free": true
+        }
+      ]
+    },
+    {
+      "id": "design-creative",
+      "name": "设计创意",
+      "icon": "🎨",
+      "description": "AI驱动的设计与创意工具",
+      "tools": [
+        {
+          "name": "Figma AI",
+          "url": "https://figma.com",
+          "region": ["global"],
+          "tags": ["UI设计", "AI功能"],
+          "free": false
+        },
+        {
+          "name": "Canva AI",
+          "url": "https://canva.com",
+          "region": ["global"],
+          "tags": ["在线设计", "AI"],
+          "free": true
+        },
+        {
+          "name": "Adobe Express",
+          "url": "https://express.adobe.com",
+          "region": ["global"],
+          "tags": ["设计工具", "AI"],
+          "free": true
+        },
+        {
+          "name": "Remove.bg",
+          "url": "https://remove.bg",
+          "region": ["global"],
+          "tags": ["抠图", "AI"],
+          "free": true
+        },
+        {
+          "name": "Photoroom",
+          "url": "https://photoroom.com",
+          "region": ["global"],
+          "tags": ["背景去除", "AI"],
+          "free": true
+        },
+        {
+          "name": "ClipDrop",
+          "url": "https://clipdrop.co",
+          "region": ["global"],
+          "tags": ["AI图像", "工具"],
+          "free": true
+        },
+        {
+          "name": "Magnific AI",
+          "url": "https://magnific.ai",
+          "region": ["global"],
+          "tags": ["图像放大", "AI"],
+          "free": false
+        },
+        {
+          "name": "Upscale.media",
+          "url": "https://upscale.media",
+          "region": ["global"],
+          "tags": ["图片放大", "AI"],
+          "free": true
+        },
+        {
+          "name": "Waifu2x",
+          "url": "https://waifu2x.net",
+          "region": ["global"],
+          "tags": ["图片放大", "动漫"],
+          "free": true
+        },
+        {
+          "name": "DeepAI",
+          "url": "https://deepai.org",
+          "region": ["global"],
+          "tags": ["AI工具", "生成"],
+          "free": true
+        },
+        {
+          "name": "Artbreeder",
+          "url": "https://artbreeder.com",
+          "region": ["global"],
+          "tags": ["AI绘画", "人像"],
+          "free": true
+        },
+        {
+          "name": "StarryAI",
+          "url": "https://starryai.com",
+          "region": ["global"],
+          "tags": ["AI生成艺术"],
+          "free": true
+        },
+        {
+          "name": "Dreamlike",
+          "url": "https://dreamlike.art",
+          "region": ["global"],
+          "tags": ["AI绘画", "艺术"],
+          "free": true
+        },
+        {
+          "name": "BlueWillow",
+          "url": "https://bluewillow.ai",
+          "region": ["global"],
+          "tags": ["AI绘画", "社区"],
+          "free": true
+        },
+        {
+          "name": "PixAI",
+          "url": "https://pixai.art",
+          "region": ["global"],
+          "tags": ["AI绘画", "二次元"],
+          "free": true
+        },
+        {
+          "name": "LiblibAI",
+          "url": "https://liblibai.com",
+          "region": ["cn"],
+          "tags": ["AI绘画", "模型"],
+          "free": true
+        },
+        {
+          "name": "哩布哩布",
+          "url": "https://liblib.com",
+          "region": ["cn"],
+          "tags": ["AI绘画", "社区"],
+          "free": true
+        },
+        {
+          "name": "秒创",
+          "url": "https://aigc.cn",
+          "region": ["cn"],
+          "tags": ["AI创作", "工具"],
+          "free": true
+        },
+        {
+          "name": "一帧秒创",
+          "url": "https://yizh.mn",
+          "region": ["cn"],
+          "tags": ["AI视频", "创作"],
+          "free": true
+        },
+        {
+          "name": "美图AI",
+          "url": "https://meitu.com",
+          "region": ["cn"],
+          "tags": ["图片处理", "AI"],
+          "free": true
+        },
+        {
+          "name": "醒图",
+          "url": "https://xingtu.cn",
+          "region": ["cn"],
+          "tags": ["修图", "AI"],
+          "free": true
+        },
+        {
+          "name": "稿定AI",
+          "url": "https://gaoding.com",
+          "region": ["cn"],
+          "tags": ["设计工具", "AI"],
+          "free": true
+        },
+        {
+          "name": "创客贴",
+          "url": "https://chuangkit.com",
+          "region": ["cn"],
+          "tags": ["在线设计", "AI"],
+          "free": true
+        },
+        {
+          "name": "图怪兽",
+          "url": "https://gu怪兽.com",
+          "region": ["cn"],
+          "tags": ["设计", "模板"],
+          "free": true
+        },
+        {
+          "name": "Fotor AI",
+          "url": "https://fotor.com",
+          "region": ["global"],
+          "tags": ["图片编辑", "AI"],
+          "free": true
+        },
+        {
+          "name": "Pikazo",
+          "url": "https://pikazo.ai",
+          "region": ["global"],
+          "tags": ["艺术风格", "AI"],
+          "free": true
+        },
+        {
+          "name": "Runway ML",
+          "url": "https://runwayml.com",
+          "region": ["global"],
+          "tags": ["AI视频", "创意"],
+          "free": true
+        },
+        {
+          "name": "Kaiber",
+          "url": "https://kaiber.ai",
+          "region": ["global"],
+          "tags": ["AI动画", "创意"],
+          "free": true
+        },
+        {
+          "name": "Pika Labs",
+          "url": "https://pika.art",
+          "region": ["global"],
+          "tags": ["AI视频", "生成"],
+          "free": true
+        }
+      ]
+    },
+    {
+      "id": "video-production",
+      "name": "视频制作",
+      "icon": "🎬",
+      "description": "AI赋能的视频创作与处理",
+      "tools": [
+        {
+          "name": "Sora",
+          "url": "https://sora.openai.com",
+          "region": ["global"],
+          "tags": ["文生视频", "AI"],
+          "free": false
+        },
+        {
+          "name": "Veo 3",
+          "url": "https://deepmind.google/technologies/veo",
+          "region": ["global"],
+          "tags": ["Google", "视频"],
+          "free": false
+        },
+        {
+          "name": "Runway Gen-3",
+          "url": "https://runwayml.com",
+          "region": ["global"],
+          "tags": ["视频生成", "AI"],
+          "free": true
+        },
+        {
+          "name": "Pika",
+          "url": "https://pika.art",
+          "region": ["global"],
+          "tags": ["AI视频", "生成"],
+          "free": true
+        },
+        {
+          "name": "Luma Dream Machine",
+          "url": "https://lumalabs.ai",
+          "region": ["global"],
+          "tags": ["视频生成", "AI"],
+          "free": true
+        },
+        {
+          "name": "Kling AI",
+          "url": "https://klingai.com",
+          "region": ["cn"],
+          "tags": ["快手", "视频生成"],
+          "free": true
+        },
+        {
+          "name": "可灵",
+          "url": "https://klingai.com",
+          "region": ["cn"],
+          "tags": ["视频生成", "AI"],
+          "free": true
+        },
+        {
+          "name": "海螺AI",
+          "url": "https://hailuoai.com",
+          "region": ["cn"],
+          "tags": ["MiniMax", "视频"],
+          "free": true
+        },
+        {
+          "name": "Runway",
+          "url": "https://runwayml.com",
+          "region": ["global"],
+          "tags": ["视频编辑", "AI"],
+          "free": true
+        },
+        {
+          "name": "Descript",
+          "url": "https://descript.com",
+          "region": ["global"],
+          "tags": ["视频编辑", "AI转录"],
+          "free": true
+        },
+        {
+          "name": "CapCut",
+          "url": "https://capcut.com",
+          "region": ["global"],
+          "tags": ["视频编辑", "AI"],
+          "free": true
+        },
+        {
+          "name": "Premiere Pro AI",
+          "url": "https://adobe.com/premiere",
+          "region": ["global"],
+          "tags": ["Adobe", "AI功能"],
+          "free": false
+        },
+        {
+          "name": "Final Cut Pro AI",
+          "url": "https://apple.com/final-cut",
+          "region": ["global"],
+          "tags": ["苹果", "视频"],
+          "free": false
+        },
+        {
+          "name": "DaVinci Resolve AI",
+          "url": "https://blackmagicdesign.com",
+          "region": ["global"],
+          "tags": ["调色", "AI"],
+          "free": true
+        },
+        {
+          "name": "Synthesia",
+          "url": "https://synthesia.io",
+          "region": ["global"],
+          "tags": ["数字人", "视频"],
+          "free": false
+        },
+        {
+          "name": "HeyGen",
+          "url": "https://heygen.com",
+          "region": ["global"],
+          "tags": ["数字人", "AI"],
+          "free": true
+        },
+        {
+          "name": "D-ID",
+          "url": "https://d-id.com",
+          "region": ["global"],
+          "tags": ["数字人", "AI"],
+          "free": true
+        },
+        {
+          "name": "Colossyan",
+          "url": "https://colossyan.com",
+          "region": ["global"],
+          "tags": ["数字人", "视频"],
+          "free": false
+        },
+        {
+          "name": "Elai",
+          "url": "https://elai.io",
+          "region": ["global"],
+          "tags": ["AI视频", "数字人"],
+          "free": true
+        },
+        {
+          "name": "InVideo AI",
+          "url": "https://invideo.io",
+          "region": ["global"],
+          "tags": ["AI视频", "生成"],
+          "free": true
+        },
+        {
+          "name": "Fliki",
+          "url": "https://fliki.ai",
+          "region": ["global"],
+          "tags": ["文字转视频", "AI"],
+          "free": true
+        },
+        {
+          "name": "Steve AI",
+          "url": "https://steve.ai",
+          "region": ["global"],
+          "tags": ["AI视频", "动画"],
+          "free": true
+        },
+        {
+          "name": "Pictory",
+          "url": "https://pictory.ai",
+          "region": ["global"],
+          "tags": ["视频生成", "AI"],
+          "free": true
+        },
+        {
+          "name": "Lumen5",
+          "url": "https://lumen5.com",
+          "region": ["global"],
+          "tags": ["文字转视频", "AI"],
+          "free": true
+        },
+        {
+          "name": "opus.pro",
+          "url": "https://opus.pro",
+          "region": ["global"],
+          "tags": ["视频放大", "AI"],
+          "free": false
+        },
+        {
+          "name": "Topaz Video AI",
+          "url": "https://topazlabs.com",
+          "region": ["global"],
+          "tags": ["视频增强", "AI"],
+          "free": false
+        },
+        {
+          "name": "Uni Converter",
+          "url": "https://wondershare.com",
+          "region": ["global"],
+          "tags": ["视频工具", "AI"],
+          "free": true
+        },
+        {
+          "name": "剪映专业版",
+          "url": "https://capcut.cn",
+          "region": ["cn"],
+          "tags": ["视频编辑", "AI"],
+          "free": true
+        },
+        {
+          "name": "快影",
+          "url": "https://kuaishou.com",
+          "region": ["cn"],
+          "tags": ["短视频", "剪辑"],
+          "free": true
+        },
+        {
+          "name": "必剪",
+          "url": "https://bcut.com",
+          "region": ["cn"],
+          "tags": ["B站", "剪辑"],
+          "free": true
+        }
+      ]
+    },
+    {
+      "id": "marketing-seo",
+      "name": "营销SEO",
+      "icon": "📈",
+      "description": "AI驱动的营销增长与SEO优化",
+      "tools": [
+        {
+          "name": "SEMrush",
+          "url": "https://semrush.com",
+          "region": ["global"],
+          "tags": ["SEO", "竞品分析"],
+          "free": false
+        },
+        {
+          "name": "Ahrefs",
+          "url": "https://ahrefs.com",
+          "region": ["global"],
+          "tags": ["SEO", "外链"],
+          "free": false
+        },
+        {
+          "name": "Moz Pro",
+          "url": "https://moz.com",
+          "region": ["global"],
+          "tags": ["SEO工具", "分析"],
+          "free": false
+        },
+        {
+          "name": "Google Analytics",
+          "url": "https://analytics.google.com",
+          "region": ["global"],
+          "tags": ["数据分析", "流量"],
+          "free": true
+        },
+        {
+          "name": "HubSpot",
+          "url": "https://hubspot.com",
+          "region": ["global"],
+          "tags": ["营销自动化", "CRM"],
+          "free": true
+        },
+        {
+          "name": "Marketo",
+          "url": "https://marketo.com",
+          "region": ["global"],
+          "tags": ["企业营销", "自动化"],
+          "free": false
+        },
+        {
+          "name": "Salesforce Einstein",
+          "url": "https://salesforce.com",
+          "region": ["global"],
+          "tags": ["CRM", "AI"],
+          "free": false
+        },
+        {
+          "name": "Sprout Social",
+          "url": "https://sproutsocial.com",
+          "region": ["global"],
+          "tags": ["社媒管理", "AI"],
+          "free": false
+        },
+        {
+          "name": "Buffer",
+          "url": "https://buffer.com",
+          "region": ["global"],
+          "tags": ["社媒发布", "管理"],
+          "free": true
+        },
+        {
+          "name": "Hootsuite",
+          "url": "https://hootsuite.com",
+          "region": ["global"],
+          "tags": ["社媒管理", "调度"],
+          "free": false
+        },
+        {
+          "name": "Mailchimp",
+          "url": "https://mailchimp.com",
+          "region": ["global"],
+          "tags": ["邮件营销", "AI"],
+          "free": true
+        },
+        {
+          "name": "Klaviyo",
+          "url": "https://klaviyo.com",
+          "region": ["global"],
+          "tags": ["邮件自动化", "电商"],
+          "free": false
+        },
+        {
+          "name": "ConvertKit",
+          "url": "https://convertkit.com",
+          "region": ["global"],
+          "tags": ["邮件营销", "创作者"],
+          "free": true
+        },
+        {
+          "name": "ActiveCampaign",
+          "url": "https://activecampaign.com",
+          "region": ["global"],
+          "tags": ["营销自动化", "CRM"],
+          "free": false
+        },
+        {
+          "name": "Zapier",
+          "url": "https://zapier.com",
+          "region": ["global"],
+          "tags": ["自动化", "工作流"],
+          "free": true
+        },
+        {
+          "name": "Make",
+          "url": "https://make.com",
+          "region": ["global"],
+          "tags": ["自动化", "无代码"],
+          "free": true
+        },
+        {
+          "name": "Notion AI",
+          "url": "https://notion.so",
+          "region": ["global"],
+          "tags": ["内容管理", "AI"],
+          "free": true
+        },
+        {
+          "name": "Surfer SEO",
+          "url": "https://surferseo.com",
+          "region": ["global"],
+          "tags": ["内容优化", "AI"],
+          "free": false
+        },
+        {
+          "name": "Clearscope",
+          "url": "https://clearscope.com",
+          "region": ["global"],
+          "tags": ["SEO内容", "AI"],
+          "free": false
+        },
+        {
+          "name": "Frase",
+          "url": "https://frase.io",
+          "region": ["global"],
+          "tags": ["内容SEO", "AI"],
+          "free": true
+        },
+        {
+          "name": "MarketMuse",
+          "url": "https://marketmuse.com",
+          "region": ["global"],
+          "tags": ["内容规划", "AI"],
+          "free": false
+        },
+        {
+          "name": "ChatGPT for SEO",
+          "url": "https://openai.com",
+          "region": ["global"],
+          "tags": ["SEO", "内容"],
+          "free": true
+        },
+        {
+          "name": "5118",
+          "url": "https://5118.com",
+          "region": ["cn"],
+          "tags": ["SEO工具", "数据分析"],
+          "free": true
+        },
+        {
+          "name": "爱站",
+          "url": "https://aizhan.com",
+          "region": ["cn"],
+          "tags": ["SEO", "查询"],
+          "free": true
+        },
+        {
+          "name": "站长工具",
+          "url": "https://tool.chinaz.com",
+          "region": ["cn"],
+          "tags": ["SEO", "工具"],
+          "free": true
+        },
+        {
+          "name": "神策数据",
+          "url": "https://sensorsdata.cn",
+          "region": ["cn"],
+          "tags": ["数据分析", "埋点"],
+          "free": false
+        },
+        {
+          "name": "GrowingIO",
+          "url": "https://growingio.com",
+          "region": ["cn"],
+          "tags": ["数据分析", "增长"],
+          "free": false
+        },
+        {
+          "name": "神策",
+          "url": "https://sensorsdata.com",
+          "region": ["cn"],
+          "tags": ["数据埋点", "分析"],
+          "free": false
+        },
+        {
+          "name": "友盟",
+          "url": "https://umeng.com",
+          "region": ["cn"],
+          "tags": ["移动统计", "分析"],
+          "free": true
+        },
+        {
+          "name": "七牛云",
+          "url": "https://qiniu.com",
+          "region": ["cn"],
+          "tags": ["CDN", "云存储"],
+          "free": true
+        }
+      ]
+    },
+    {
+      "id": "data-analysis",
+      "name": "数据分析",
+      "icon": "📉",
+      "description": "AI赋能的数据科学与分析",
+      "tools": [
+        {
+          "name": "ChatGPT Advanced Data Analysis",
+          "url": "https://chat.openai.com",
+          "region": ["global"],
+          "tags": ["数据分析", "Python"],
+          "free": false
+        },
+        {
+          "name": "Wolfram Alpha",
+          "url": "https://wolframalpha.com",
+          "region": ["global"],
+          "tags": ["计算", "知识"],
+          "free": true
+        },
+        {
+          "name": "Tableau AI",
+          "url": "https://tableau.com",
+          "region": ["global"],
+          "tags": ["可视化", "BI"],
+          "free": false
+        },
+        {
+          "name": "Power BI",
+          "url": "https://powerbi.com",
+          "region": ["global"],
+          "tags": ["BI", "微软"],
+          "free": true
+        },
+        {
+          "name": "Looker",
+          "url": "https://looker.com",
+          "region": ["global"],
+          "tags": ["BI", "Google"],
+          "free": false
+        },
+        {
+          "name": "Metabase",
+          "url": "https://metabase.com",
+          "region": ["global"],
+          "tags": ["开源", "BI"],
+          "free": true
+        },
+        {
+          "name": "Superset",
+          "url": "https://superset.apache.org",
+          "region": ["global"],
+          "tags": ["开源BI", "Apache"],
+          "free": true
+        },
+        {
+          "name": "Mode",
+          "url": "https://mode.com",
+          "region": ["global"],
+          "tags": ["数据分析", "SQL"],
+          "free": true
+        },
+        {
+          "name": "DataRobot",
+          "url": "https://datarobot.com",
+          "region": ["global"],
+          "tags": ["AutoML", "ML"],
+          "free": false
+        },
+        {
+          "name": "H2O.ai",
+          "url": "https://h2o.ai",
+          "region": ["global"],
+          "tags": ["AutoML", "开源"],
+          "free": true
+        },
+        {
+          "name": "Google Colab",
+          "url": "https://colab.research.google.com",
+          "region": ["global"],
+          "tags": ["Python", "Notebook"],
+          "free": true
+        },
+        {
+          "name": "Kaggle",
+          "url": "https://kaggle.com",
+          "region": ["global"],
+          "tags": ["数据科学", "竞赛"],
+          "free": true
+        },
+        {
+          "name": "Weights & Biases",
+          "url": "https://wandb.ai",
+          "region": ["global"],
+          "tags": ["MLOps", "追踪"],
+          "free": true
+        },
+        {
+          "name": "MLflow",
+          "url": "https://mlflow.org",
+          "region": ["global"],
+          "tags": ["MLOps", "开源"],
+          "free": true
+        },
+        {
+          "name": "Pandas AI",
+          "url": "https://pandas-ai.com",
+          "region": ["global"],
+          "tags": ["Pandas", "AI"],
+          "free": true
+        },
+        {
+          "name": "SQL AI",
+          "url": "https://sqlai.ai",
+          "region": ["global"],
+          "tags": ["SQL", "生成"],
+          "free": true
+        },
+        {
+          "name": "AI Query",
+          "url": "https://aiquery.io",
+          "region": ["global"],
+          "tags": ["自然语言", "SQL"],
+          "free": true
+        },
+        {
+          "name": "Seek AI",
+          "url": "https://seek.ai",
+          "region": ["global"],
+          "tags": ["数据查询", "AI"],
+          "free": false
+        },
+        {
+          "name": "Vanna AI",
+          "url": "https://vanna.ai",
+          "region": ["global"],
+          "tags": ["SQL", "LLM"],
+          "free": true
+        },
+        {
+          "name": "Python Assistant",
+          "url": "https://jupyter.org",
+          "region": ["global"],
+          "tags": ["数据分析", "Notebook"],
+          "free": true
+        },
+        {
+          "name": "Excel AI",
+          "url": "https://microsoft.com/excel",
+          "region": ["global"],
+          "tags": ["Excel", "AI功能"],
+          "free": false
+        },
+        {
+          "name": "FineBI",
+          "url": "https://fanruan.com",
+          "region": ["cn"],
+          "tags": ["BI", "国产"],
+          "free": false
+        },
+        {
+          "name": "FineReport",
+          "url": "https://fanruan.com",
+          "region": ["cn"],
+          "tags": ["报表", "BI"],
+          "free": false
+        },
+        {
+          "name": "Tableau",
+          "url": "https://tableau.com",
+          "region": ["cn"],
+          "tags": ["可视化", "BI"],
+          "free": false
+        },
+        {
+          "name": "PowerBI",
+          "url": "https://powerbi.com",
+          "region": ["cn"],
+          "tags": ["微软", "BI"],
+          "free": true
+        },
+        {
+          "name": "Quick BI",
+          "url": "https://data.aliyun.com",
+          "region": ["cn"],
+          "tags": ["阿里云", "BI"],
+          "free": false
+        },
+        {
+          "name": "网易有数",
+          "url": "https://youda.com",
+          "region": ["cn"],
+          "tags": ["BI", "可视化"],
+          "free": false
+        },
+        {
+          "name": "帆软",
+          "url": "https://fanruan.com",
+          "region": ["cn"],
+          "tags": ["BI", "报表"],
+          "free": false
+        },
+        {
+          "name": "神策数据",
+          "url": "https://sensorsdata.cn",
+          "region": ["cn"],
+          "tags": ["用户分析", "行为"],
+          "free": false
+        },
+        {
+          "name": "GrowingIO",
+          "url": "https://growingio.com",
+          "region": ["cn"],
+          "tags": ["增长分析", "产品"],
+          "free": false
+        }
+      ]
+    },
+    {
+      "id": "education-learning",
+      "name": "教育学习",
+      "icon": "📚",
+      "description": "AI赋能的个性化学习与教育",
+      "tools": [
+        {
+          "name": "Khanmigo",
+          "url": "https://khanacademy.org",
+          "region": ["global"],
+          "tags": ["AI导师", "教育"],
+          "free": true
+        },
+        {
+          "name": "Duolingo Max",
+          "url": "https://duolingo.com",
+          "region": ["global"],
+          "tags": ["语言学习", "AI"],
+          "free": false
+        },
+        {
+          "name": "Quizlet AI",
+          "url": "https://quizlet.com",
+          "region": ["global"],
+          "tags": ["记忆卡片", "AI"],
+          "free": true
+        },
+        {
+          "name": "Chegg AI",
+          "url": "https://chegg.com",
+          "region": ["global"],
+          "tags": ["作业辅导", "AI"],
+          "free": false
+        },
+        {
+          "name": "Copilot for Education",
+          "url": "https://microsoft.com/education",
+          "region": ["global"],
+          "tags": ["教育版", "AI"],
+          "free": true
+        },
+        {
+          "name": "Google Bard for Education",
+          "url": "https://bard.google.com",
+          "region": ["global"],
+          "tags": ["教育", "学习"],
+          "free": true
+        },
+        {
+          "name": "Grammarly for Education",
+          "url": "https://grammarly.com",
+          "region": ["global"],
+          "tags": ["写作辅助", "教育"],
+          "free": true
+        },
+        {
+          "name": "Turnitin",
+          "url": "https://turnitin.com",
+          "region": ["global"],
+          "tags": ["查重", "AI检测"],
+          "free": false
+        },
+        {
+          "name": "GPTZero",
+          "url": "https://gptzero.me",
+          "region": ["global"],
+          "tags": ["AI检测", "教育"],
+          "free": true
+        },
+        {
+          "name": "ZeroGPT",
+          "url": "https://zerogpt.com",
+          "region": ["global"],
+          "tags": ["AI内容检测"],
+          "free": true
+        },
+        {
+          "name": "Coursera",
+          "url": "https://coursera.org",
+          "region": ["global"],
+          "tags": ["在线课程", "AI"],
+          "free": true
+        },
+        {
+          "name": "edX",
+          "url": "https://edx.org",
+          "region": ["global"],
+          "tags": ["MOOC", "课程"],
+          "free": true
+        },
+        {
+          "name": "Udacity",
+          "url": "https://udacity.com",
+          "region": ["global"],
+          "tags": ["编程课程", "AI"],
+          "free": true
+        },
+        {
+          "name": "Skillshare",
+          "url": "https://skillshare.com",
+          "region": ["global"],
+          "tags": ["技能学习", "创意"],
+          "free": true
+        },
+        {
+          "name": "MasterClass",
+          "url": "https://masterclass.com",
+          "region": ["global"],
+          "tags": ["大师课", "教育"],
+          "free": false
+        },
+        {
+          "name": "Wolfram Alpha",
+          "url": "https://wolframalpha.com",
+          "region": ["global"],
+          "tags": ["计算知识", "学习"],
+          "free": true
+        },
+        {
+          "name": "Symbolab",
+          "url": "https://symbolab.com",
+          "region": ["global"],
+          "tags": ["数学求解", "AI"],
+          "free": true
+        },
+        {
+          "name": "Mathway",
+          "url": "https://mathway.com",
+          "region": ["global"],
+          "tags": ["数学", "解题"],
+          "free": true
+        },
+        {
+          "name": "Photomath",
+          "url": "https://photomath.com",
+          "region": "global",
+          "tags": ["数学拍照", "解题"],
+          "free": true
+        },
+        {
+          "name": "有道云笔记",
+          "url": "https://note.youdao.com",
+          "region": ["cn"],
+          "tags": ["笔记", "学习"],
+          "free": true
+        },
+        {
+          "name": "印象笔记",
+          "url": "https://yinxiang.com",
+          "region": ["cn"],
+          "tags": ["笔记", "知识管理"],
+          "free": true
+        },
+        {
+          "name": "幕布",
+          "url": "https://mubu.com",
+          "region": ["cn"],
+          "tags": ["思维导图", "笔记"],
+          "free": true
+        },
+        {
+          "name": "Xmind",
+          "url": "https://xmind.cn",
+          "region": ["cn"],
+          "tags": ["思维导图", "工具"],
+          "free": true
+        },
+        {
+          "name": "飞书文档",
+          "url": "https://feishu.cn",
+          "region": ["cn"],
+          "tags": ["协作", "知识库"],
+          "free": true
+        },
+        {
+          "name": "Notion",
+          "url": "https://notion.so",
+          "region": ["cn"],
+          "tags": ["知识管理", "笔记"],
+          "free": true
+        },
+        {
+          "name": "钉钉学习",
+          "url": "https://dingtalk.com",
+          "region": ["cn"],
+          "tags": ["企业学习", "培训"],
+          "free": true
+        },
+        {
+          "name": "腾讯课堂",
+          "url": "https://ke.qq.com",
+          "region": ["cn"],
+          "tags": ["在线课程", "教育"],
+          "free": true
+        },
+        {
+          "name": "网易云课堂",
+          "url": "https://study.163.com",
+          "region": ["cn"],
+          "tags": ["课程", "学习"],
+          "free": true
+        },
+        {
+          "name": "中国大学MOOC",
+          "url": "https://icourse163.org",
+          "region": ["cn"],
+          "tags": ["高校课程", "免费"],
+          "free": true
+        },
+        {
+          "name": "学而思",
+          "url": "https://xueersi.com",
+          "region": ["cn"],
+          "tags": ["K12", "教育"],
+          "free": false
+        }
+      ]
+    }
+  ],
+  "regions": [
+    { "id": "global", "name": "全球", "icon": "🌍" },
+    { "id": "cn", "name": "中国", "icon": "🇨🇳" },
+    { "id": "us", "name": "美国", "icon": "🇺🇸" },
+    { "id": "jp", "name": "日本", "icon": "🇯🇵" },
+    { "id": "eu", "name": "欧洲", "icon": "🇪🇺" }
+  ]
+}

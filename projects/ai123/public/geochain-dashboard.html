@@ -1,0 +1,736 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GEO智链统一工作台</title>
+    <meta name="description" content="GEO智链 - 您的AI数字战队管理平台" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <style>
+      :root {
+        --primary: #2563eb;
+        --secondary: #7c3aed;
+        --success: #10b981;
+        --warning: #f59e0b;
+        --danger: #ef4444;
+        --dark: #1e293b;
+        --light: #f8fafc;
+      }
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        background: var(--light);
+      }
+      .sidebar {
+        background: linear-gradient(180deg, #1e293b 0%, #0f172a 100%);
+      }
+      .stat-card {
+        transition: all 0.2s ease;
+      }
+      .stat-card:hover {
+        transform: translateY(-2px);
+      }
+      .status-dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        display: inline-block;
+      }
+      .status-running {
+        background: var(--success);
+        animation: pulse 2s infinite;
+      }
+      .status-stopped {
+        background: var(--danger);
+      }
+      .status-creating {
+        background: var(--warning);
+      }
+      @keyframes pulse {
+        0%,
+        100% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0.5;
+        }
+      }
+      .nav-item.active {
+        background: rgba(255, 255, 255, 0.1);
+        border-left: 3px solid var(--primary);
+      }
+    </style>
+  </head>
+  <body class="flex">
+    <!-- 侧边栏 -->
+    <aside class="sidebar w-64 min-h-screen text-white flex flex-col">
+      <div class="p-6 border-b border-gray-700">
+        <div class="flex items-center space-x-3">
+          <i class="fas fa-link text-2xl text-blue-400"></i>
+          <div>
+            <h1 class="text-xl font-bold">GEO智链</h1>
+            <p class="text-xs text-gray-400">统一工作台</p>
+          </div>
+        </div>
+      </div>
+
+      <nav class="flex-1 p-4 space-y-2">
+        <a
+          href="#"
+          onclick="showSection('dashboard')"
+          class="nav-item active flex items-center space-x-3 px-4 py-3 rounded-lg text-gray-300 hover:text-white hover:bg-gray-700/50 transition"
+          data-section="dashboard"
+        >
+          <i class="fas fa-th-large w-5"></i>
+          <span>工作台</span>
+        </a>
+        <a
+          href="#"
+          onclick="showSection('teams')"
+          class="nav-item flex items-center space-x-3 px-4 py-3 rounded-lg text-gray-300 hover:text-white hover:bg-gray-700/50 transition"
+          data-section="teams"
+        >
+          <i class="fas fa-users w-5"></i>
+          <span>我的战队</span>
+        </a>
+        <a
+          href="#"
+          onclick="showSection('orders')"
+          class="nav-item flex items-center space-x-3 px-4 py-3 rounded-lg text-gray-300 hover:text-white hover:bg-gray-700/50 transition"
+          data-section="orders"
+        >
+          <i class="fas fa-shopping-cart w-5"></i>
+          <span>订阅订单</span>
+        </a>
+        <a
+          href="#"
+          onclick="showSection('trends')"
+          class="nav-item flex items-center space-x-3 px-4 py-3 rounded-lg text-gray-300 hover:text-white hover:bg-gray-700/50 transition"
+          data-section="trends"
+        >
+          <i class="fas fa-chart-line w-5"></i>
+          <span>热点趋势</span>
+        </a>
+        <a
+          href="#"
+          onclick="showSection('settings')"
+          class="nav-item flex items-center space-x-3 px-4 py-3 rounded-lg text-gray-300 hover:text-white hover:bg-gray-700/50 transition"
+          data-section="settings"
+        >
+          <i class="fas fa-cog w-5"></i>
+          <span>设置</span>
+        </a>
+      </nav>
+
+      <div class="p-4 border-t border-gray-700">
+        <div class="flex items-center space-x-3">
+          <div
+            class="w-10 h-10 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center"
+          >
+            <i class="fas fa-user"></i>
+          </div>
+          <div class="flex-1">
+            <p id="userName" class="text-sm font-medium">访客用户</p>
+            <p class="text-xs text-gray-400">免费版</p>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- 主内容区 -->
+    <main class="flex-1 overflow-auto">
+      <!-- 顶部栏 -->
+      <header
+        class="bg-white shadow-sm border-b border-gray-200 px-8 py-4 flex items-center justify-between"
+      >
+        <div class="flex items-center space-x-4">
+          <h2 id="pageTitle" class="text-xl font-bold text-gray-800">
+            工作台概览
+          </h2>
+        </div>
+        <div class="flex items-center space-x-4">
+          <button class="p-2 text-gray-500 hover:text-blue-600 transition">
+            <i class="fas fa-bell"></i>
+          </button>
+          <button
+            onclick="login()"
+            class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition"
+          >
+            <i class="fas fa-sign-in-alt mr-2"></i>登录
+          </button>
+        </div>
+      </header>
+
+      <!-- 内容区域 -->
+      <div class="p-8">
+        <!-- 工作台 -->
+        <section id="section-dashboard" class="section">
+          <!-- 统计卡片 -->
+          <div
+            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8"
+          >
+            <div
+              class="stat-card bg-white rounded-xl p-6 shadow-sm border border-gray-100"
+            >
+              <div class="flex items-center justify-between">
+                <div>
+                  <p class="text-sm text-gray-500 mb-1">活跃战队</p>
+                  <p id="statTeams" class="text-3xl font-bold text-gray-800">
+                    0
+                  </p>
+                </div>
+                <div
+                  class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center"
+                >
+                  <i class="fas fa-users text-blue-600 text-xl"></i>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="stat-card bg-white rounded-xl p-6 shadow-sm border border-gray-100"
+            >
+              <div class="flex items-center justify-between">
+                <div>
+                  <p class="text-sm text-gray-500 mb-1">订单总数</p>
+                  <p id="statOrders" class="text-3xl font-bold text-gray-800">
+                    0
+                  </p>
+                </div>
+                <div
+                  class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center"
+                >
+                  <i class="fas fa-shopping-cart text-purple-600 text-xl"></i>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="stat-card bg-white rounded-xl p-6 shadow-sm border border-gray-100"
+            >
+              <div class="flex items-center justify-between">
+                <div>
+                  <p class="text-sm text-gray-500 mb-1">运行任务</p>
+                  <p id="statTasks" class="text-3xl font-bold text-gray-800">
+                    0
+                  </p>
+                </div>
+                <div
+                  class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center"
+                >
+                  <i class="fas fa-tasks text-green-600 text-xl"></i>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="stat-card bg-white rounded-xl p-6 shadow-sm border border-gray-100"
+            >
+              <div class="flex items-center justify-between">
+                <div>
+                  <p class="text-sm text-gray-500 mb-1">告警数量</p>
+                  <p id="statAlerts" class="text-3xl font-bold text-gray-800">
+                    0
+                  </p>
+                </div>
+                <div
+                  class="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center"
+                >
+                  <i
+                    class="fas fa-exclamation-triangle text-red-600 text-xl"
+                  ></i>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 最近部署 -->
+          <div
+            class="bg-white rounded-xl shadow-sm border border-gray-100 p-6 mb-8"
+          >
+            <div class="flex items-center justify-between mb-6">
+              <h3 class="text-lg font-bold text-gray-800">最近部署</h3>
+              <a
+                href="#"
+                onclick="showSection('teams')"
+                class="text-blue-600 hover:text-blue-700 text-sm"
+                >查看全部 →</a
+              >
+            </div>
+            <div id="recentDeployments" class="space-y-4">
+              <p class="text-gray-500 text-center py-8">暂无部署记录</p>
+            </div>
+          </div>
+
+          <!-- 快速入口 -->
+          <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
+            <h3 class="text-lg font-bold text-gray-800 mb-6">快速入口</h3>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+              <a
+                href="../ai123/public/geo-solutions.html"
+                target="_blank"
+                class="p-4 bg-gradient-to-br from-blue-50 to-blue-100 rounded-lg hover:from-blue-100 hover:to-blue-150 transition text-center"
+              >
+                <i class="fas fa-store text-2xl text-blue-600 mb-2"></i>
+                <p class="text-sm font-medium text-gray-800">方案市场</p>
+              </a>
+              <a
+                href="../ai123/public/starclaw.html"
+                target="_blank"
+                class="p-4 bg-gradient-to-br from-purple-50 to-purple-100 rounded-lg hover:from-purple-100 hover:to-purple-150 transition text-center"
+              >
+                <i class="fas fa-robot text-2xl text-purple-600 mb-2"></i>
+                <p class="text-sm font-medium text-gray-800">StarClaw</p>
+              </a>
+              <a
+                href="#"
+                class="p-4 bg-gradient-to-br from-teal-50 to-teal-100 rounded-lg hover:from-teal-100 hover:to-teal-150 transition text-center"
+              >
+                <i class="fas fa-store-alt text-2xl text-teal-600 mb-2"></i>
+                <p class="text-sm font-medium text-gray-800">技能商店</p>
+              </a>
+              <a
+                href="#"
+                class="p-4 bg-gradient-to-br from-orange-50 to-orange-100 rounded-lg hover:from-orange-100 hover:to-orange-150 transition text-center"
+              >
+                <i class="fas fa-book text-2xl text-orange-600 mb-2"></i>
+                <p class="text-sm font-medium text-gray-800">使用文档</p>
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <!-- 我的战队 -->
+        <section id="section-teams" class="section hidden">
+          <div class="flex items-center justify-between mb-6">
+            <h3 class="text-lg font-bold text-gray-800">我的战队</h3>
+            <button
+              onclick="refreshTeams()"
+              class="px-4 py-2 text-blue-600 hover:bg-blue-50 rounded-lg transition"
+            >
+              <i class="fas fa-sync-alt mr-2"></i>刷新
+            </button>
+          </div>
+          <div id="teamsList" class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <p class="text-gray-500 col-span-full text-center py-12">
+              暂无战队，点击下方按钮创建或购买
+            </p>
+          </div>
+          <div class="mt-8 text-center">
+            <a
+              href="../ai123/public/geo-solutions.html"
+              class="px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg inline-block hover:opacity-90 transition"
+            >
+              <i class="fas fa-plus mr-2"></i>获取更多战队
+            </a>
+          </div>
+        </section>
+
+        <!-- 订单 -->
+        <section id="section-orders" class="section hidden">
+          <h3 class="text-lg font-bold text-gray-800 mb-6">我的订单</h3>
+          <div
+            class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden"
+          >
+            <table class="w-full">
+              <thead class="bg-gray-50 border-b">
+                <tr>
+                  <th
+                    class="px-6 py-3 text-left text-sm font-medium text-gray-500"
+                  >
+                    订单号
+                  </th>
+                  <th
+                    class="px-6 py-3 text-left text-sm font-medium text-gray-500"
+                  >
+                    商品
+                  </th>
+                  <th
+                    class="px-6 py-3 text-left text-sm font-medium text-gray-500"
+                  >
+                    金额
+                  </th>
+                  <th
+                    class="px-6 py-3 text-left text-sm font-medium text-gray-500"
+                  >
+                    状态
+                  </th>
+                  <th
+                    class="px-6 py-3 text-left text-sm font-medium text-gray-500"
+                  >
+                    时间
+                  </th>
+                </tr>
+              </thead>
+              <tbody id="ordersTable">
+                <tr>
+                  <td colspan="5" class="px-6 py-12 text-center text-gray-500">
+                    暂无订单记录
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- 热点趋势 -->
+        <section id="section-trends" class="section hidden">
+          <h3 class="text-lg font-bold text-gray-800 mb-6">热点趋势</h3>
+          <div class="grid md:grid-cols-2 gap-6">
+            <div
+              class="bg-white rounded-xl shadow-sm border border-gray-100 p-6"
+            >
+              <h4 class="font-bold text-gray-800 mb-4">当前热词</h4>
+              <div id="trendList" class="space-y-4">
+                <p class="text-gray-500">加载中...</p>
+              </div>
+            </div>
+            <div
+              class="bg-white rounded-xl shadow-sm border border-gray-100 p-6"
+            >
+              <h4 class="font-bold text-gray-800 mb-4">趋势分析</h4>
+              <div class="text-center py-12 text-gray-500">
+                <i class="fas fa-chart-line text-4xl mb-4"></i>
+                <p>登录后查看详细分析</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 设置 -->
+        <section id="section-settings" class="section hidden">
+          <h3 class="text-lg font-bold text-gray-800 mb-6">设置</h3>
+          <div
+            class="bg-white rounded-xl shadow-sm border border-gray-100 p-6 max-w-2xl"
+          >
+            <div class="space-y-6">
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2"
+                  >通知设置</label
+                >
+                <div class="space-y-3">
+                  <label class="flex items-center">
+                    <input type="checkbox" class="mr-3" checked />
+                    <span class="text-gray-600">邮件通知</span>
+                  </label>
+                  <label class="flex items-center">
+                    <input type="checkbox" class="mr-3" checked />
+                    <span class="text-gray-600">告警推送</span>
+                  </label>
+                  <label class="flex items-center">
+                    <input type="checkbox" class="mr-3" />
+                    <span class="text-gray-600">营销推送</span>
+                  </label>
+                </div>
+              </div>
+              <div class="pt-4 border-t">
+                <button
+                  class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition"
+                >
+                  保存设置
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <!-- 登录弹窗 -->
+    <div
+      id="loginModal"
+      class="fixed inset-0 bg-black/50 hidden z-50 flex items-center justify-center"
+    >
+      <div class="bg-white rounded-2xl p-8 max-w-md w-full mx-4">
+        <div class="flex justify-between items-center mb-6">
+          <h3 class="text-xl font-bold">登录 / 注册</h3>
+          <button
+            onclick="closeLoginModal()"
+            class="text-gray-400 hover:text-gray-600"
+          >
+            <i class="fas fa-times text-xl"></i>
+          </button>
+        </div>
+        <form onsubmit="handleLogin(event)">
+          <div class="mb-4">
+            <label class="block text-sm font-medium text-gray-700 mb-2"
+              >邮箱</label
+            >
+            <input
+              type="email"
+              id="loginEmail"
+              required
+              class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+              placeholder="your@email.com"
+            />
+          </div>
+          <div class="mb-6">
+            <label class="block text-sm font-medium text-gray-700 mb-2"
+              >昵称（可选）</label
+            >
+            <input
+              type="text"
+              id="loginName"
+              class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+              placeholder="请输入昵称"
+            />
+          </div>
+          <button
+            type="submit"
+            class="w-full px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg font-medium hover:opacity-90 transition"
+          >
+            登录
+          </button>
+        </form>
+        <p class="text-xs text-gray-500 mt-4 text-center">
+          登录后可查看订单、战队等完整功能
+        </p>
+      </div>
+    </div>
+
+    <script>
+      // 状态
+      let currentUser = null;
+      let currentSection = "dashboard";
+
+      // 模拟数据
+      const mockData = {
+        teams: [],
+        orders: [],
+        trends: [
+          { keyword: "AI监管", heat: 85, trend: "up" },
+          { keyword: "大模型幻觉", heat: 72, trend: "up" },
+          { keyword: "AI内容检测", heat: 68, trend: "stable" },
+          { keyword: "智能客服", heat: 65, trend: "down" },
+          { keyword: "AIGC版权", heat: 58, trend: "up" },
+        ],
+      };
+
+      // 显示区块
+      function showSection(section) {
+        currentSection = section;
+
+        // 更新导航
+        document.querySelectorAll(".nav-item").forEach((el) => {
+          el.classList.remove("active");
+          if (el.dataset.section === section) {
+            el.classList.add("active");
+          }
+        });
+
+        // 更新标题
+        const titles = {
+          dashboard: "工作台概览",
+          teams: "我的战队",
+          orders: "订阅订单",
+          trends: "热点趋势",
+          settings: "设置",
+        };
+        document.getElementById("pageTitle").textContent = titles[section];
+
+        // 显示/隐藏区块
+        document
+          .querySelectorAll(".section")
+          .forEach((el) => el.classList.add("hidden"));
+        document
+          .getElementById("section-" + section)
+          .classList.remove("hidden");
+
+        // 加载数据
+        loadSectionData(section);
+      }
+
+      // 加载区块数据
+      function loadSectionData(section) {
+        if (!currentUser) {
+          if (section === "trends") loadTrends();
+          return;
+        }
+
+        switch (section) {
+          case "dashboard":
+            loadDashboard();
+            break;
+          case "teams":
+            loadTeams();
+            break;
+          case "orders":
+            loadOrders();
+            break;
+          case "trends":
+            loadTrends();
+            break;
+        }
+      }
+
+      // 加载工作台
+      function loadDashboard() {
+        if (!currentUser) return;
+
+        // 更新统计
+        document.getElementById("statTeams").textContent =
+          mockData.teams.length;
+        document.getElementById("statOrders").textContent =
+          mockData.orders.length;
+        document.getElementById("statTasks").textContent = Math.floor(
+          Math.random() * 50,
+        );
+        document.getElementById("statAlerts").textContent = Math.floor(
+          Math.random() * 10,
+        );
+
+        // 最近部署
+        const container = document.getElementById("recentDeployments");
+        if (mockData.teams.length === 0) {
+          container.innerHTML =
+            '<p class="text-gray-500 text-center py-8">暂无部署记录</p>';
+        } else {
+          container.innerHTML = mockData.teams
+            .map(
+              (team) => `
+                    <div class="flex items-center justify-between p-4 bg-gray-50 rounded-lg">
+                        <div class="flex items-center space-x-4">
+                            <span class="text-2xl">${team.icon}</span>
+                            <div>
+                                <p class="font-medium text-gray-800">${team.name}</p>
+                                <p class="text-sm text-gray-500">${team.templateName}</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <span class="status-dot status-${team.status}"></span>
+                            <span class="text-sm text-gray-600 capitalize">${team.status}</span>
+                            <button class="px-3 py-1 text-sm ${team.status === "running" ? "bg-red-100 text-red-600" : "bg-green-100 text-green-600"} rounded">
+                                ${team.status === "running" ? "停止" : "启动"}
+                            </button>
+                        </div>
+                    </div>
+                `,
+            )
+            .join("");
+        }
+      }
+
+      // 加载战队
+      function loadTeams() {
+        const container = document.getElementById("teamsList");
+        if (!currentUser || mockData.teams.length === 0) {
+          container.innerHTML =
+            '<p class="text-gray-500 col-span-full text-center py-12">暂无战队，点击下方按钮创建或购买</p>';
+          return;
+        }
+
+        container.innerHTML = mockData.teams
+          .map(
+            (team) => `
+                <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-4xl">${team.icon}</span>
+                        <span class="status-dot status-${team.status}"></span>
+                    </div>
+                    <h4 class="font-bold text-gray-800 mb-2">${team.name}</h4>
+                    <p class="text-sm text-gray-500 mb-4">${team.templateName}</p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-sm text-gray-600 capitalize">${team.status}</span>
+                        <button class="px-3 py-1 text-sm ${team.status === "running" ? "bg-red-100 text-red-600 rounded hover:bg-red-200" : "bg-green-100 text-green-600 rounded hover:bg-green-200"} transition">
+                            ${team.status === "running" ? "停止" : "启动"}
+                        </button>
+                    </div>
+                </div>
+            `,
+          )
+          .join("");
+      }
+
+      // 加载订单
+      function loadOrders() {
+        const tbody = document.getElementById("ordersTable");
+        if (!currentUser || mockData.orders.length === 0) {
+          tbody.innerHTML =
+            '<tr><td colspan="5" class="px-6 py-12 text-center text-gray-500">暂无订单记录</td></tr>';
+          return;
+        }
+
+        tbody.innerHTML = mockData.orders
+          .map(
+            (order) => `
+                <tr class="border-b">
+                    <td class="px-6 py-4 text-sm text-gray-800">${order.id}</td>
+                    <td class="px-6 py-4 text-sm text-gray-800">${order.productName}</td>
+                    <td class="px-6 py-4 text-sm text-gray-800">¥${order.amount}</td>
+                    <td class="px-6 py-4">
+                        <span class="px-2 py-1 text-xs rounded-full ${order.status === "paid" ? "bg-green-100 text-green-700" : "bg-yellow-100 text-yellow-700"}">
+                            ${order.status === "paid" ? "已支付" : "待支付"}
+                        </span>
+                    </td>
+                    <td class="px-6 py-4 text-sm text-gray-500">${new Date(order.createdAt).toLocaleDateString()}</td>
+                </tr>
+            `,
+          )
+          .join("");
+      }
+
+      // 加载趋势
+      function loadTrends() {
+        const container = document.getElementById("trendList");
+        container.innerHTML = mockData.trends
+          .map(
+            (t, i) => `
+                <div class="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
+                    <div class="flex items-center space-x-3">
+                        <span class="w-6 h-6 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-xs font-bold">${i + 1}</span>
+                        <span class="font-medium text-gray-800">${t.keyword}</span>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <span class="text-sm text-gray-500">${t.heat}°</span>
+                        <i class="fas fa-arrow-${t.trend === "up" ? "up text-red-500" : t.trend === "down" ? "down text-green-500" : "right text-gray-400"}"></i>
+                    </div>
+                </div>
+            `,
+          )
+          .join("");
+      }
+
+      // 刷新战队
+      function refreshTeams() {
+        loadTeams();
+      }
+
+      // 登录相关
+      function login() {
+        document.getElementById("loginModal").classList.remove("hidden");
+      }
+
+      function closeLoginModal() {
+        document.getElementById("loginModal").classList.add("hidden");
+      }
+
+      async function handleLogin(e) {
+        e.preventDefault();
+        const email = document.getElementById("loginEmail").value;
+        const name =
+          document.getElementById("loginName").value || email.split("@")[0];
+
+        // 模拟登录
+        currentUser = { id: "user_" + Date.now(), email, name };
+
+        // 更新UI
+        document.getElementById("userName").textContent = name;
+        closeLoginModal();
+
+        // 加载数据
+        showSection(currentSection);
+      }
+
+      // 初始化
+      document.addEventListener("DOMContentLoaded", () => {
+        loadTrends();
+      });
+    </script>
+  </body>
+</html>
