@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI技能场景中心 | TOPGO发现导航 - 按业务场景找AI工具</title>
+    <meta name="description" content="TOPGO发现导航AI技能场景中心：按业务场景智能匹配AI工具。涵盖智能办公、代码开发、量化投研、内容创作、电商运营等9大核心场景，800+精选工具一键直达。">
+    <meta name="keywords" content="AI技能场景,业务场景导航,智能办公AI,量化投研工具,电商AI工具,内容创作AI,AI编程助手,工作流自动化,数字员工">
+    <link rel="canonical" href="https://ai123.miyucaicai.cn/scenario-hub.html">
+    <meta property="og:title" content="AI技能场景中心 - TOPGO发现导航">
+    <meta property="og:description" content="按业务场景找AI工具，不再为选型发愁。9大核心场景，800+精选工具。">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ai123.miyucaicai.cn/scenario-hub.html">
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"WebPage","name":"TOPGO发现导航 - AI技能场景中心","url":"https://ai123.miyucaicai.cn/scenario-hub.html","dateModified":"2026-04-17"}
+    </script>
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC',sans-serif;background:linear-gradient(135deg,#0f0c29,#302b63,#24243e);min-height:100vh;color:#fff;line-height:1.6}
+        .header{padding:20px 40px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid rgba(255,255,255,.1);backdrop-filter:blur(10px);position:sticky;top:0;z-index:100;background:rgba(15,12,41,.9)}
+        .logo{font-size:22px;font-weight:800}.logo span{color:#4fc3f7}
+        .geo-selector{display:flex;align-items:center;gap:8px}
+        .geo-btn{padding:6px 14px;border-radius:20px;border:1px solid rgba(255,255,255,.3);background:rgba(255,255,255,.08);color:#ccc;font-size:13px;cursor:pointer;transition:all .3s;text-decoration:none}
+        .geo-btn:hover,.geo-btn.active{background:rgba(79,195,247,.2);border-color:#4fc3f7;color:#4fc3f7}
+        .hero{text-align:center;padding:60px 20px 50px;max-width:900px;margin:0 auto}
+        .hero h1{font-size:clamp(28px,4vw,42px);font-weight:800;margin-bottom:16px;background:linear-gradient(135deg,#4fc3f7,#7c4dff,#f50057);-webkit-background-clip:text;-webkit-text-fill-color:transparent;line-height:1.3}
+        .hero p{font-size:17px;opacity:.8;max-width:700px;margin:0 auto 30px}
+        .search-box{max-width:600px;margin:0 auto;position:relative}
+        .search-box input{width:100%;padding:16px 24px;border-radius:50px;border:2px solid rgba(255,255,255,.2);background:rgba(255,255,255,.08);color:#fff;font-size:16px;outline:none;transition:all .3s}
+        .search-box input:focus{border-color:#4fc3f7;background:rgba(255,255,255,.12)}
+        .quick-tags{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-top:16px}
+        .quick-tags span{padding:5px 14px;border-radius:15px;background:rgba(255,255,255,.08);font-size:13px;cursor:pointer;transition:all .2s}
+        .quick-tags span:hover{background:rgba(79,195,247,.25)}
+        .scenarios{max-width:1200px;margin:0 auto;padding:20px 40px 60px;display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:24px}
+        .scenario-card{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:16px;padding:28px;transition:all .35s cubic-bezier(.4,0,.2,1);cursor:pointer;position:relative;overflow:hidden}
+        .scenario-card:hover{transform:translateY(-6px);background:rgba(255,255,255,.09);border-color:rgba(79,195,247,.4);box-shadow:0 20px 50px rgba(0,0,0,.3)}
+        .scenario-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--card-gradient)}
+        .card-icon{font-size:36px;margin-bottom:14px}
+        .card-title{font-size:20px;font-weight:700;margin-bottom:8px}
+        .card-desc{font-size:14px;opacity:.7;margin-bottom:16px;line-height:1.6}
+        .card-stats{display:flex;gap:16px;margin-bottom:16px}
+        .stat{font-size:13px;opacity:.6}.stat strong{color:#4fc3f7;font-weight:700}
+        .card-tags{display:flex;flex-wrap:wrap;gap:6px}
+        .tag{padding:3px 10px;border-radius:10px;font-size:11px;background:rgba(255,255,255,.08)}
+        .card-enter{display:inline-flex;align-items:center;gap:6px;color:#4fc3f7;font-size:14px;font-weight:600;margin-top:14px}
+        .role-filter{max-width:1200px;margin:0 auto;padding:0 40px 20px;display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+        .role-label{font-size:14px;opacity:.6}
+        .role-btn{padding:7px 18px;border-radius:20px;border:1px solid rgba(255,255,255,.15);background:transparent;color:#bbb;font-size:13px;cursor:pointer;transition:all .2s}
+        .role-btn:hover,.role-btn.active{background:rgba(124,77,255,.2);border-color:#7c4dff;color:#fff}
+        .solution-section{max-width:1200px;margin:0 auto;padding:0 40px 60px}
+        .section-title{font-size:26px;font-weight:800;margin-bottom:8px}
+        .section-subtitle{opacity:.6;margin-bottom:30px;font-size:15px}
+        .pack-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:18px}
+        .pack-card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:20px;transition:all .3s}
+        .pack-card:hover{background:rgba(255,255,255,.07);border-color:rgba(124,77,255,.3)}
+        .pack-badge{display:inline-block;padding:3px 10px;border-radius:8px;font-size:11px;font-weight:600;margin-bottom:10px}
+        .badge-hot{background:rgba(245,0,87,.2);color:#f50057}
+        .badge-new{background:rgba(76,175,80,.2);color:#81c784}
+        .badge-pro{background:rgba(255,193,7,.2);color:#ffc107}
+        .pack-title{font-size:16px;font-weight:700;margin-bottom:6px}
+        .pack-desc{font-size:13px;opacity:.65;margin-bottom:12px;line-height:1.5}
+        .pack-tools{display:flex;flex-wrap:wrap;gap:5px}
+        .pack-tool{padding:2px 8px;border-radius:6px;font-size:11px;background:rgba(79,195,247,.12);color:#4fc3f7}
+        .footer{text-align:center;padding:30px;border-top:1px solid rgba(255,255,255,.08);opacity:.5;font-size:13px}
+        .footer a{color:#4fc3f7;text-decoration:none}
+        @media(max-width:768px){.header{padding:15px 20px}.scenarios{padding:20px 16px 40px;grid-template-columns:1fr}.solution-section,.role-filter{padding-left:16px;padding-right:16px}.hero{padding:40px 16px}.hero h1{font-size:24px}}
+        @keyframes fadeIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+    </style>
+</head>
+<body>
+<header class="header">
+    <div class="logo"><span>TOPGO</span> 发现导航</div>
+    <nav class="geo-selector">
+        <a href="?region=cn" class="geo-btn active">CN 中国</a>
+        <a href="?region=us" class="geo-btn">US 北美</a>
+        <a href="?region=jp" class="geo-btn">JP 日本</a>
+        <a href="?region=eu" class="geo-btn">EU 欧洲</a>
+        <a href="?region=sg" class="geo-btn">SG 东南亚</a>
+        <a href="https://ai123.miyucaicai.cn/" style="color:#4fc3f7;text-decoration:none;font-size:13px;margin-left:12px">返回首页</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <h1>按业务场景找 AI 工具<br>不再为选型发愁</h1>
+    <p>从"找技术"到"解决问题"。告诉我们要做什么，我们为你匹配最合适的 AI 工具组合。</p>
+    <div class="search-box">
+        <input type="text" placeholder="描述你的需求，如：帮我写周报 / 做数据分析 / 自动化客服..." id="scenarioSearch">
+    </div>
+    <div class="quick-tags">
+        <span>写周报</span><span>做PPT</span><span>数据分析</span><span>客服自动化</span><span>电商上货</span><span>代码审查</span><span>生成文案</span><span>翻译文档</span>
+    </div>
+</section>
+
+<div class="role-filter">
+    <span class="role-label">我是:</span>
+    <button class="role-btn active" onclick="filterRole(this)">全部</button>
+    <button class="role-btn" onclick="filterRole(this)">产品/运营</button>
+    <button class="role-btn" onclick="filterRole(this)">开发者</button>
+    <button class="role-btn" onclick="filterRole(this)">电商卖家</button>
+    <button class="role-btn" onclick="filterRole(this)">销售/市场</button>
+    <button class="role-btn" onclick="filterRole(this)">管理者</button>
+    <button class="role-btn" onclick="filterRole(this)">创作者</button>
+    <button class="role-btn" onclick="filterRole(this)">学生/研究者</button>
+</div>
+
+<main class="scenarios">
+    <article class="scenario-card" style="--card-gradient:linear-gradient(90deg,#4fc3f7,#7c4dff)" data-role="developer,product,manager">
+        <div class="card-icon">&#129302;</div><h2 class="card-title">AI 智能体应用中心</h2>
+        <p class="card-desc">构建和部署 AI Agent，让 AI 自主完成复杂任务链。从对话机器人到全自动工作流。</p>
+        <div class="card-stats"><span class="stat"><strong>85+</strong> 工具</span><span class="stat"><strong>12</strong> 方案包</span></div>
+        <div class="card-tags"><span class="tag">Coze扣子</span><span class="tag">Dify</span><span class="tag">n8n</span><span class="tag">MCP服务</span></div>
+        <div class="card-enter" onclick="location.href='https://ai123.miyucaicai.cn/#/'">进入场景 &rarr;</div>
+    </article>
+    <article class="scenario-card" style="--card-gradient:linear-gradient(90deg,#66bb6a,#43a047)" data-role="developer,product,manager,creator">
+        <div class="card-icon">&#128187;</div><h2 class="card-title">智能办公与代码助手</h2>
+        <p class="card-desc">用 AI 提升工作效率 10x。写代码、写文档、做 PPT 到自动化办公流程。</p>
+        <div class="card-stats"><span class="stat"><strong>120+</strong> 工具</span><span class="stat"><strong>18</strong> 方案包</span></div>
+        <div class="card-tags"><span class="tag">Cursor</span><span class="tag">ChatGPT</span><span class="tag">Claude</span><span class="tag">Trae</span><span class="tag">V0.dev</span></div>
+        <div class="card-enter" onclick="location.href='https://ai123.miyucaicai.cn/#/'">进入场景 &rarr;</div>
+    </article>
+    <article class="scenario-card" style="--card-gradient:linear-gradient(90deg,#ffa726,#ef6c00)" data-role="developer,student,researcher">
+        <div class="card-icon">&#128200;</div><h2 class="card-title">量化投研引擎</h2>
+        <p class="card-desc">从策略回测到实盘交易的全栈量化工具。vn.py、Qlib、JoinQuant 等。</p>
+        <div class="card-stats"><span class="stat"><strong>95+</strong> 工具</span><span class="stat"><strong>8</strong> 方案包</span></div>
+        <div class="card-tags"><span class="tag">vn.py</span><span class="tag">StockSharp</span><span class="tag">JoinQuant</span><span class="tag">Qlib</span><span class="tag">FinGPT</span></div>
+        <div class="card-enter" onclick="location.href='https://ai123.miyucaicai.cn/#/'">进入场景 &rarr;</div>
+    </article>
+    <article class="scenario-card" style="--card-gradient:linear-gradient(90deg,#ab47bc,#7b1fa2)" data-role="creator,product,sales,ecommerce">
+        <div class="card-icon">&#127912;</div><h2 class="card-title">运营与增长引擎</h2>
+        <p class="card-desc">AI 驱动的内容创作与社媒运营。批量生成爆款文案、小红书/抖音素材。</p>
+        <div class="card-stats"><span class="stat"><strong>110+</strong> 工具</span><span class="stat"><strong>15</strong> 方案包</span></div>
+        <div class="card-tags"><span class="tag">Midjourney</span><span class="tag">可灵AI</span><span class="tag">即梦AI</span><span class="tag">Suno</span><span class="tag">SEO工具</span></div>
+        <div class="card-enter" onclick="location.href='https://ai123.miyucaicai.cn/#/'">进入场景 &rarr;</div>
+    </article>
+    <article class="scenario-card" style="--card-gradient:linear-gradient(90deg,#ef5350,#c62828)" data-role="ecommerce,sales,product">
+        <div class="card-icon">&#128722;</div><h2 class="card-title">电商与跨境实战</h2>
+        <p class="card-desc">跨境电商全链路 AI 工具箱。选品调研、多平台上架、跨境物流。</p>
+        <div class="card-stats"><span class="stat"><strong>70+</strong> 工具</span><span class="stat"><strong>10</strong> 方案包</span></div>
+        <div class="card-tags"><span class="tag">Shopify</span><span class="tag">Amazon</span><span class="tag">TikTok Shop</span><span class="tag">ERP集成</span></div>
+        <div class="card-enter" onclick="location.href='https://ai123.miyucaicai.cn/#/'">进入场景 &rarr;</div>
+    </article>
+    <article class="scenario-card" style="--card-gradient:linear-gradient(90deg,#26c6da,#00acc1)" data-role="sales,manager,product">
+        <div class="card-icon">&#128172;</div><h2 class="card-title">销售与客户成功</h2>
+        <p class="card-desc">AI 赋能的销售全流程。线索挖掘、客户背调、私域运营、CRM自动化。</p>
+        <div class="card-stats"><span class="stat"><strong>55+</strong> 工具</span><span class="stat"><strong>7</strong> 方案包</span></div>
+        <div class="card-tags"><span class="tag">CRM</span><span class="tag">线索挖掘</span><span class="tag">客户背调</span><span class="tag">私域运营</span></div>
+        <div class="card-enter" onclick="location.href='https://ai123.miyucaicai.cn/#/'">进入场景 &rarr;</div>
+    </article>
+    <article class="scenario-card" style="--card-gradient:linear-gradient(90deg,#ffd54f,#ff8f00)" data-role="manager,product,all">
+        <div class="card-icon">&#9881;</div><h2 class="card-title">行政与效率工具</h2>
+        <p class="card-desc">办公自动化、文档处理、日程管理、团队协作、低代码开发。</p>
+        <div class="card-stats"><span class="stat"><strong>80+</strong> 工具</span><span class="stat"><strong>9</strong> 方案包</span></div>
+        <div class="card-tags"><span class="tag">Notion</span><span class="tag">飞书</span><span class="tag">Zapier</span><span class="tag">低代码</span></div>
+        <div class="card-enter" onclick="location.href='https://ai123.miyucaicai.cn/#/'">进入场景 &rarr;</div>
+    </article>
+    <article class="scenario-card" style="--card-gradient:linear-gradient(90deg,#ce93d8,#ab47bc)" data-role="student,creator,developer,all">
+        <div class="card-icon">&#128218;</div><h2 class="card-title">个人发展与学习</h2>
+        <p class="card-desc">AI 时代的学习加速器。在线课程、技能学习、求职面试、知识管理。</p>
+        <div class="card-stats"><span class="stat"><strong>90+</strong> 工具</span><span class="stat"><strong>11</strong> 方案包</span></div>
+        <div class="card-tags"><span class="tag">在线课程</span><span class="tag">面试准备</span><span class="tag">知识管理</span><span class="tag">开源项目</span></div>
+        <div class="card-enter" onclick="location.href='https://ai123.miyucaicai.cn/#/'">进入场景 &rarr;</div>
+    </article>
+    <article class="scenario-card" style="--card-gradient:linear-gradient(90deg,#90a4aa,#546e7a)" data-role="developer">
+        <div class="card-icon">&#128187;</div><h2 class="card-title">开发者资源库</h2>
+        <p class="card-desc">面向开发者的技术资源集合。前端/后端框架、DevOps、API接口、GitHub开源。</p>
+        <div class="card-stats"><span class="stat"><strong>130+</strong> 工具</span><span class="stat"><strong>6</strong> 方案包</span></div>
+        <div class="card-tags"><span class="tag">前端框架</span><span class="tag">后端技术</span><span class="tag">DevOps</span><span class="tag">API接口</span></div>
+        <div class="card-enter" onclick="location.href='https://ai123.miyucaicai.cn/#/'">进入场景 &rarr;</div>
+    </article>
+</main>
+
+<section class="solution-section">
+    <h2 class="section-title">热门解决方案包</h2>
+    <p class="section-subtitle">经过验证的工具组合，开箱即用</p>
+    <div class="pack-grid">
+        <div class="pack-card"><span class="pack-badge badge-hot">最热</span><h3 class="pack-title">小红书爆款内容生产线</h3><p class="pack-desc">AI选题 + 文案生成 + 配图制作 + 一键多平台分发</p><div class="pack-tools"><span class="pack-tool">ChatGPT</span><span class="pack-tool">Midjourney</span><span class="pack-tool">可灵AI</span><span class="pack-tool">Coze Bot</span></div></div>
+        <div class="pack-card"><span class="pack-badge badge-new">新品</span><h3 class="pack-title">TikTok Shop 自动化上货套件</h3><p class="pack-desc">批量采集 + AI翻译描述 + 自动上架 + 库存同步</p><div class="pack-tools"><span class="pack-tool">n8n</span><span class="pack-tool">DeepSeek</span><span class="pack-tool">Shopify API</span></div></div>
+        <div class="pack-card"><span class="pack-badge badge-pro">专业版</span><h3 class="pack-title">量化策略从零到实盘</h3><p class="pack-desc">Python基础 + vn.py + 策略回测 + SimNow仿真 + 实盘对接</p><div class="pack-tools"><span class="pack-tool">vn.py</span><span class="pack-tool">JoinQuant</span><span class="pack-tool">Qlib</span></div></div>
+        <div class="pack-card"><span class="pack-badge badge-hot">最热</span><h3 class="pack-title">AI 编程助手全家桶</h3><p class="pack-desc">Cursor写代码 + Claude Review + Copilot补全 + V0.dev UI</p><div class="pack-tools"><span class="pack-tool">Cursor</span><span class="pack-tool">Claude</span><span class="pack-tool">Copilot</span><span class="pack-tool">V0.dev</span></div></div>
+        <div class="pack-card"><span class="pack-badge badge-new">新品</span><h3 class="pack-title">智能客服全自动化</h3><p class="pack-desc">知识库构建 + 多渠道接入 + 意图识别 + 自动工单</p><div class="pack-tools"><span class="pack-tool">Dify</span><span class="pack-tool">Coze</span><span class="pack-tool">FastHub</span></div></div>
+        <div class="pack-card"><span class="pack-badge badge-pro">专业版</span><h3 class="pack-title">独立站 SEO + 引流工作流</h3><p class="pack-desc">AI landing page + SEO优化 + 社媒引流 + 邮件营销</p><div class="pack-tools"><span class="pack-tool">V0.dev</span><span class="pack-tool">ChatGPT</span><span class="pack-tool">Ahrefs</span></div></div>
+    </div>
+</section>
+
+<div style="text-align:center;padding:40px 20px 60px">
+    <div style="background:linear-gradient(135deg,#4fc3f7,#7c4dff);border-radius:16px;padding:40px;max-width:800px;margin:0 auto">
+        <h3 style="font-size:22px;margin-bottom:10px">还没找到需要的工具？</h3>
+        <p style="opacity:.85;margin-bottom:20px">访问 TOPGO发现导航 主站，浏览 800+ 精选工具的完整目录</p>
+        <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
+            <a href="https://ai123.miyucaicai.cn/" style="display:inline-block;padding:12px 28px;background:#fff;color:#302b63;border-radius:30px;text-decoration:none;font-weight:700">浏览全部 800+ 工具</a>
+            <a href="https://ai123.miyucaicai.cn/geo-region.html" style="display:inline-block;padding:12px 28px;background:rgba(255,255,255,.15);color:#fff;border-radius:30px;text-decoration:none;font-weight:700;border:1px solid rgba(255,255,255,.3)">查看地区推荐</a>
+        </div>
+    </div>
+</div>
+
+<footer class="footer">
+    <p><a href="https://ai123.miyucaicai.cn/">TOPGO发现导航</a> (ai123) - AI时代的技能App Store</p>
+    <p>GitHub: <a href="https://github.com/anbeime/nav">anbeime/nav</a> | Powered by GEO龙虾团队 | 2026-04-17</p>
+</footer>
+
+<script>
+document.querySelectorAll('.quick-tags span').forEach(tag => { tag.addEventListener('click', () => { document.getElementById('scenarioSearch').value = tag.textContent }) });
+function filterRole(btn) { document.querySelectorAll('.role-btn').forEach(b => b.classList.remove('active')); btn.classList.add('active'); const role = btn.textContent.trim(); document.querySelectorAll('.scenario-card').forEach(card => { const roles = (card.dataset.role || '').toLowerCase(); card.style.display = role === '全部' || roles.includes('all') || roles.includes(role.toLowerCase().replace('/','')) ? '' : 'none'; if(card.style.display !== 'none') card.style.animation = 'fadeIn .3s ease' }) }
+document.getElementById('scenarioSearch').addEventListener('input', e => { const q = e.target.value.toLowerCase(); document.querySelectorAll('.scenario-card').forEach(c => c.style.display = c.textContent.toLowerCase().includes(q) ? '' : 'none') });
+const p = new URLSearchParams(window.location.search); const r = p.get('region') || 'cn'; document.querySelectorAll('.geo-btn').forEach(b => b.classList.toggle('active', b.getAttribute('href').includes('region='+r)));
+</script>
+</body>
+</html>

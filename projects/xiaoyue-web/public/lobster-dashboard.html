@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>StarClaw 龙虾团队控制台</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+:root{--p:#e65100;--pd:#bf360c;--pl:#fbe9e7;--pg:rgba(230,81,0,.15);--a:#1a73e8;--s:#34a853;--sb:#e6f4ea;--w:#fbbc04;--wb:#fef7e0;--d:#ea4335;--db:#fce8e6;--g50:#f8fafc;--g100:#f1f5f9;--g200:#e2e8f0;--g300:#cbd5e1;--g400:#94a3b8;--g500:#64748b;--g600:#475569;--g700:#334155;--g800:#1e293b;--r:10px;--rl:16px;--sh:0 1px 3px rgba(0,0,0,.08);--sm:0 4px 6px rgba(0,0,0,.07);--sl:0 8px 32px rgba(230,81,0,.2);--t:all .25s ease}
+*{margin:0;padding:0;box-sizing:border-box}body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;background:var(--g50);color:var(--g800);line-height:1.6;min-height:100vh}
+.al{display:flex;min-height:100vh}.sb{width:250px;background:linear-gradient(180deg,#111,#1a1a2e);color:#fff;position:fixed;top:0;left:0;bottom:0;z-index:100;display:flex;flex-direction:column;overflow-y:auto}
+.sbb{padding:20px 18px;border-bottom:1px solid rgba(255,255,255,.08);background:linear-gradient(135deg,var(--p),#ff6d00)}
+.sbb h1{font-size:18px;font-weight:800;display:flex;align-items:center;gap:10px}
+.bi{width:34px;height:34px;background:rgba(255,255,255,.2);border-radius:9px;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:900;font-size:17px}
+.bt{font-size:10px;opacity:.85;margin-top:4px}.ns{padding:12px 0}
+.nl{font-size:10px;text-transform:uppercase;letter-spacing:1.5px;color:var(--g500);padding:0 18px;margin-bottom:7px;font-weight:600}
+.ni{display:flex;align-items:center;gap:10px;padding:9px 18px;color:var(--g400);font-size:13px;transition:var(--t);border-left:3px solid transparent;cursor:pointer}
+.ni:hover{color:#fff;background:rgba(255,255,255,.05)}.ni.on{color:#fff;background:var(--pg);border-left-color:var(--p)}
+.ni .nb{margin-left:auto;background:var(--p);color:#fff;font-size:10px;padding:2px 7px;border-radius:10px;font-weight:600}
+.nic{width:20px;text-align:center;font-size:14px}.sbf{margin-top:auto;padding:14px 18px;border-top:1px solid rgba(255,255,255,.08);font-size:11px;color:var(--g500)}
+.mc{flex:1;margin-left:250px;min-height:100vh}
+.tb{background:#fff;padding:15px 26px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--g200);position:sticky;top:0;z-index:50}
+.tbt{font-size:17px;font-weight:700}.tbs{font-size:12px;color:var(--g500)}.tba{display:flex;align-items:center;gap:12px}.pb{padding:22px 26px}
+.cd{background:#fff;border-radius:var(--rl);box-shadow:var(--sh);overflow:hidden}
+.ch{padding:17px 20px;border-bottom:1px solid var(--g100);display:flex;align-items:center;justify-content:space-between}
+.ch h3{font-size:14.5px;font-weight:600}.cb{padding:18px 20px}
+.kg{display:grid;grid-template-columns:repeat(auto-fit,minmax(195px,1fr));gap:14px;margin-bottom:22px}
+.kc{background:#fff;border-radius:var(--r);padding:18px;box-shadow:var(--sh)}
+.kh{display:flex;align-items:center;justify-content:space-between;margin-bottom:8px}
+.kl{font-size:12px;color:var(--g500)}.ki{width:30px;height:30px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:13px}
+.kip{background:var(--pl);color:var(--p)}.kia{background:#e8f0fe;color:var(--a)}.kis{background:var(--sb);color:var(--s)}.kiw{background:var(--wb);color:#b8860b}
+.kv{font-size:26px;font-weight:800;line-height:1.2}.kc2{font-size:11.5px;font-weight:600;margin-top:4px}.up{color:var(--s)}.down{color:var(--d)}.nl2{color:var(--g400)}
+.bn{display:inline-flex;align-items:center;gap:6px;padding:8px 16px;border:none;border-radius:8px;font-size:13px;font-weight:500;cursor:pointer;transition:var(--t);text-decoration:none}
+.bp{background:var(--p);color:#fff}.bp:hover{background:var(--pd)}.ba{background:var(--a);color:#fff}.bo{background:transparent;color:var(--p);border:1.5px solid var(--p)}.bs{background:var(--s);color:#fff}
+.bnsm{padding:5px 11px;font-size:11.5px}.bnlg{padding:11px 22px;font-size:14px;border-radius:10px}
+.bg{display:inline-flex;align-items:center;padding:3px 9px;border-radius:20px;font-size:10.5px;font-weight:600}
+.bg1{background:var(--pl);color:var(--pd)}.bg2{background:var(--sb);color:#166534}.bg3{background:var(--wb);color:#936600}.bg4{background:var(--db);color:#b91c1c}.bg5{background:#f0f9ff;color:#0369a1}
+.ag{display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:16px;margin-bottom:22px}
+.ac{background:#fff;border-radius:var(--rl);box-shadow:var(--sh);overflow:hidden;transition:all .25s ease;border:1px solid transparent;cursor:pointer}
+.ac:hover{box-shadow:var(--sl);transform:translateY(-3px);border-color:var(--pl)}
+.ach{padding:16px 18px;display:flex;align-items:center;gap:12px;border-bottom:1px solid var(--g100)}
+.aa{width:44px;height:44px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:20px;font-weight:800;color:#fff;flex-shrink:0}
+.a0{background:linear-gradient(135deg,var(--p),var(--pd))}.a1{background:linear-gradient(135deg,#00bcd4,#0097a7)}.a2{background:linear-gradient(135deg,#673ab7,#512da8)}.a3{background:linear-gradient(135deg,#e91e63,#c2185b)}.a4{background:linear-gradient(135deg,#ff9800,#f57c00)}.a5{background:linear-gradient(135deg,#4caf50,#388e3c)}.a6{background:linear-gradient(135deg,#f44336,#d32f2f)}
+.ai{flex:1;min-width:0}.an{font-size:14.5px;font-weight:700}.ar{font-size:11.5px;color:var(--g500);margin-top:2px}
+.sd{width:9px;height:9px;border-radius:50%;background:var(--s);box-shadow:0 0 5px rgba(52,168,83,.4);flex-shrink:0}
+.acb{padding:14px 18px}.ad{font-size:12.5px;color:var(--g600);line-height:1.55;margin-bottom:12px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.ask{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:12px}.sk{font-size:10.5px;padding:2px 7px;border-radius:5px;background:var(--g100);color:var(--g600);font-weight:500}
+.acf{padding:10px 18px;border-top:1px solid var(--g100);display:flex;align-items:center;justify-content:space-between;background:var(--g50)}
+.asig{font-size:11.5px;color:var(--g400);font-style:italic}
+.smb{font-size:11px;padding:5px 11px;border-radius:6px;background:var(--p);color:#fff;border:none;cursor:pointer;font-weight:600}.smb:hover{background:var(--pd)}
+.adm{background:#fff;border-radius:var(--rl);box-shadow:var(--sh);padding:24px;margin-bottom:22px}
+.alr{margin-bottom:14px;display:flex;align-items:stretch;gap:10px}
+.all{width:96px;flex-shrink:0;display:flex;align-items:center;justify-content:center;border-radius:8px;font-size:10px;font-weight:700;text-align:center;color:#fff;padding:9px 6px}
+.lp{background:linear-gradient(135deg,#00bcd4,#0097a7)}.ld{background:linear-gradient(135deg,#673ab7,#512da8)}.le{background:linear-gradient(135deg,#ff9800,#f57c00)}.lm{background:linear-gradient(135deg,#4caf50,#388e3c)}.lc{background:linear-gradient(135deg,#f44336,#d32f2f)}.lv{background:linear-gradient(135deg,var(--p),var(--pd))}
+.anodes{flex:1;display:flex;gap:8px}
+.and{flex:1;background:var(--g50);border:2px dashed var(--g200);border-radius:9px;padding:10px;text-align:center;transition:all .2s;cursor:pointer}
+.and:hover{border-color:var(--p);background:var(--pl)}
+.ndi{font-size:20px;margin-bottom:3px}.ndn{font-size:12px;font-weight:700}.ndr{font-size:10px;color:var(--g500);margin-top:1px}
+.arw{text-align:center;color:var(--g300);font-size:16px;margin:3px 0;letter-spacing:6px}
+.cc{background:#fff;border-radius:var(--rl);box-shadow:var(--sm);overflow:hidden;display:flex;flex-direction:column;height:480px}
+.cms{flex:1;overflow-y:auto;padding:16px;background:var(--g50)}
+.mg{display:flex;gap:9px;margin-bottom:14px;animation:mgi .3s ease}@keyframes mgi{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+.mg.ur{flex-direction:row-reverse}
+.ma{width:32px;height:32px;border-radius:9px;display:flex;align-items:center;justify-content:center;font-size:14px;flex-shrink:0;color:#fff;font-weight:700}
+.mg.ai .ma{background:linear-gradient(135deg,var(--p),#ff6d00)}.mg.ur .ma{background:linear-gradient(135deg,var(--a),#1565c0)}
+.mb{max-width:70%;padding:10px 14px;border-radius:13px;font-size:13px;line-height:1.55}
+.mg.ai .mb{background:#fff;border:1px solid var(--g200);border-bottom-left-radius:4px}
+.mg.ur .mb{background:var(--a);color:#fff;border-bottom-right-radius:4px}
+.cia{padding:12px 16px;border-top:1px solid var(--g200);background:#fff;display:flex;gap:9px}
+.ci{flex:1;padding:9px 14px;border:1.5px solid var(--g200);border-radius:9px;font-size:13px;outline:none;transition:var(--t);font-family:inherit}
+.ci:focus{border-color:var(--p);box-shadow:0 0 0 3px var(--pg)}
+.seb{width:40px;height:40px;border-radius:9px;background:var(--p);color:#fff;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:16px}.seb:hover{background:var(--pd)}
+.bfm{max-width:640px;margin:0 auto}.fg{margin-bottom:16px}
+.fl{display:block;font-size:12.5px;font-weight:600;color:var(--g700);margin-bottom:6px}
+.fi,.ft{width:100%;padding:10px 13px;border:1.5px solid var(--g200);border-radius:9px;font-size:13.5px;transition:var(--t);background:#fff;color:var(--g800);font-family:inherit}
+.ft{resize:vertical;min-height:110px}
+.fi:focus,.ft:focus{outline:none;border-color:var(--p);box-shadow:0 0 0 3px var(--pg)}
+.ps{display:none}.ps.on{display:block;animation:fi .35s ease}@keyframes fi{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+.dt{width:100%;border-collapse:collapse}
+.dt th{text-align:left;padding:10px 13px;font-size:11px;font-weight:700;color:var(--g500);text-transform:uppercase;letter-spacing:.5px;border-bottom:2px solid var(--g100)}
+.dt td{padding:11px 13px;font-size:13px;border-bottom:1px solid var(--g100)}.dt tr:hover{background:var(--g50)}
+.alert{padding:11px 15px;border-radius:8px;font-size:12.5px;display:flex;align-items:flex-start;gap:8px;margin-bottom:12px}
+.ali{background:var(--pl);color:var(--pd)}.als{background:var(--sb);color:#166534}.alw{background:var(--wb);color:#936600}.ald{background:var(--db);color:#b91c1c}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:18px}.mt2{margin-top:16px}
+pre{white-space:pre-wrap;word-break:break-word}#clk{font-size:11.5px;color:var(--g400)}
+::-webkit-scrollbar{width:5px}::-webkit-scrollbar-thumb{background:var(--g300);border-radius:3px}
+</style>
+</head>
+<body>
+<div class="al">
+<aside class="sb">
+<div class="sbb"><h1><span class="bi">L</span> StarClaw 龙虾</h1><div class="bt">AI智能体自我进化控制台 v2.0</div></div>
+<nav class="ns" id="nav">
+<div class="nl">龙虾团队</div>
+<div class="ni on" data-p="dash"><span class="nic"><i class="fas fa-chart-line"></i></span> 团队驾驶舱<span class="nb">6</span></div>
+<div class="ni" data-p="arch"><span class="nic"><i class="fas fa-project-diagram"></i></span> 五层架构图</div>
+<div class="ni" data-p="agents"><span class="nic"><i class="fas fa-robot"></i></span> 智能体成员</div>
+<div class="ni" data-p="chat"><span class="nic"><i class="fas fa-comments"></i></span> GEO工作台</div>
+<div class="nl">系统功能</div>
+<div class="ni" data-p="build"><span class="nic"><i class="fas fa-cogs"></i></span> 创建新团队</div>
+<div class="ni" data-p="reg"><span class="nic"><i class="fas fa-list-alt"></i></span> 全部注册表</div>
+<div class="ni" data-p="orch"><span class="nic"><i class="fas fa-sync-alt"></i></span> 资源编排中心</div>
+<div class="nl">外部链接</div>
+<div class="ni" onclick="window.open('/voice-integrated.html','_blank')"><span class="nic"><i class="fas fa-home"></i></span> 小易伴侣主页</div>
+</nav>
+<div class="sbf"><div>StarClaw AI Agent System</div><div style="margin-top:3px">基于五层生存驱动架构</div></div>
+</aside>
+<main class="mc">
+<header class="tb">
+<div><div class="tbt" id="pt">GEO龙虾 - 团队驾驶舱</div><div class="tbs" id="pst">生成式引擎优化 | 7x24小时首席AI流量官</div></div>
+<div class="tba"><span id="clk"></span><button class="bn bnsm bo" onclick="location.reload()">刷新</button></div>
+</header>
+<div class="pb">
+<section class="ps on" id="p-dash">
+<div class="kg">
+<div class="kc"><div class="kh"><span class="kl">团队成员数</span><span class="ki kip"><i class="fas fa-users"></i></span></div><div class="kv">6</div><div class="kc2 up">+6 本月新增</div></div>
+<div class="kc"><div class="kh"><span class="kl">架构层级</span><span class="ki kia"><i class="fas fa-layer-group"></i></span></div><div class="kv">5</div><div class="kc2 nl2">感知/决策/执行/监控/进化</div></div>
+<div class="kc"><div class="kh"><span class="kl">技能总数</span><span class="ki kis"><i class="fas fa-rocket"></i></span></div><div class="kv">30+</div><div class="kc2 up">覆盖GEO全链路</div></div>
+<div class="kc"><div class="kh"><span class="kl">系统状态</span><span class="ki kiw"><i class="fas fa-star"></i></span></div><div class="kv" style="color:var(--s)">在线</div><div class="kc2 up">所有服务正常</div></div>
+</div>
+<div class="g2">
+<div class="cd"><div class="ch"><h3>GEO龙虾团队概览</h3><span class="bg bg1">geo_lobster</span></div><div class="cb">
+<p style="font-size:13.5px;color:var(--g600);line-height:1.7;margin-bottom:14px;"><strong>GEO龙虾</strong>是企业内生的、可7x24小时工作的<strong>"首席AI流量官"</strong>。基于SeaClaw出海龙虾的<strong>五层生存驱动架构</strong>设计。</p>
+<div style="display:flex;flex-wrap:wrap;gap:8px"><span class="bg bg5">GEO生成式引擎优化</span><span class="bg bg2">AI引用优化</span><span class="bg bg3">E-E-A-T框架</span><span class="bg bg1">多平台部署</span><span class="bg bg4">合规风控</span></div>
+</div></div>
+<div class="cd"><div class="ch"><h3>快速操作</h3></div><div class="cb" style="display:flex;flex-direction:column;gap:10px">
+<button class="bn bnlg bp" onclick="sp('chat')" style="justify-content:center"><i class="fas fa-comments"></i> 进入GEO工作台对话</button>
+<button class="bn ba" onclick="sp('agents')" style="justify-content:center"><i class="fas fa-robot"></i> 查看智能体成员</button>
+<button class="bn bo" onclick="sp('arch')" style="justify-content:center"><i class="fas fa-project-diagram"></i> 查看五层架构</button>
+<button class="bn bs" onclick="sp('build')" style="justify-content:center"><i class="fas fa-cogs"></i> 创建新团队</button>
+</div></div>
+</div>
+<div class="cd mt2"><div class="ch"><h3>团队成员预览</h3><button class="bn bnsm bo" onclick="sp('agents')">查看全部</button></div><div class="cb"><div class="ag" id="dag"></div></div></div>
+</section>
+
+<section class="ps" id="p-arch">
+<div class="alert ali"><i class="fas fa-info-circle"></i><div>基于 SeaClaw 出海龙虾的五层生存驱动架构适配 GEO 场景。数据流：感知采集 - 决策策略 - 执行部署 - 监控分析 - 风控审核 - 进化迭代</div></div>
+<div class="adm">
+<h3 style="font-size:15px;font-weight:700;margin-bottom:16px;">GEO龙虾 - 五层生存驱动架构</h3>
+<div class="alr"><div class="all lp">L1 感知<br>Perception</div><div class="anodes"><div class="and"><div class="ndi">&#x1F50D;</div><div class="ndn">龙探探</div><div class="ndr">GEO感知雷达</div></div></div></div>
+<div class="arw">&#x2B07;</div>
+<div class="alr"><div class="all ld">L2 决策<br>Cognition</div><div class="anodes"><div class="and"><div class="ndi">&#x1F9E0;</div><div class="ndn">龙策策</div><div class="ndr">策略架构师</div></div><div class="and"><div class="ndi">&#x270F;</div><div class="ndn">龙工工</div><div class="ndr">内容重构工程师</div></div></div></div>
+<div class="arw">&#x2B07;</div>
+<div class="alr"><div class="all le">L3 执行<br>Execution</div><div class="anodes"><div class="and"><div class="ndi">&#x1F4E6;</div><div class="ndn">龙部部</div><div class="ndr">信源部署专员</div></div></div></div>
+<div class="arw">&#x2B07;</div>
+<div class="alr"><div class="all lm">L4 监控<br>Monitoring</div><div class="anodes"><div class="and"><div class="ndi">&#x1F4CA;</div><div class="ndn">龙分分</div><div class="ndr">效果监测分析师</div></div></div></div>
+<div class="alr" style="margin-top:-14px"><div class="all lc">风控<br>Compliance</div><div class="anodes"><div class="and"><div class="ndi">&#x1F6E1;</div><div class="ndn">龙规规</div><div class="ndr">合规风控官</div></div></div></div>
+<div class="arw">&#x2B07;</div>
+<div class="alr"><div class="all lv">L5 进化<br>Evolution</div><div class="anodes"><div class="and"><div class="ndi">&#x2728;</div><div class="ndn">架构师</div><div class="ndr">元能力/自我进化</div></div></div></div>
+</div>
+<div class="cd mt2"><div class="ch"><h3>架构文档摘要</h3></div><div class="cb"><pre id="archText" style="background:var(--g50);padding:16px;border-radius:8px;font-size:12px;line-height:1.65;color:var(--g700)"></pre></div></div>
+</section>
+
+<section class="ps" id="p-agents">
+<div class="alert als"><i class="fas fa-check-circle"></i><div><strong>GEO龙虾团队</strong> 共 6 名核心成员。点击卡片查看详情，点击"召唤"激活该智能体。</div></div>
+<div class="ag" id="fag"></div>
+</section>
+
+<section class="ps" id="p-chat">
+<div class="g2">
+<div>
+<div class="cd mb2"><div class="ch"><h3>GEO工作台 - 对话面板</h3><span class="bg bg2">在线</span></div><div class="cb" style="padding:0"><div class="cc">
+<div class="cms" id="cms">
+<div class="mg ai"><div class="ma">G</div><div class="mb">你好！我是 <strong>GEO龙虾团队</strong>的工作台。<br><br>你可以：<br>1. 直接描述需求，我会调度合适的智能体处理<br>2. 使用 <code>[召唤:名字]</code> 召唤特定成员<br>3. 让我帮你创建全新的专业团队<br><br>请告诉我你需要什么帮助？</div></div>
+</div>
+<div class="cia"><input type="text" class="ci" id="ci" placeholder="输入消息... (试试召唤:龙探探 或 创建一个新团队)" onkeypress="if(event.key==='Enter')sc()"><button class="seb" onclick="sc()"><i class="fas fa-paper-plane"></i></button></div>
+</div></div></div>
+<div>
+<div class="cd mb2"><div class="ch"><h3>快捷指令</h3></div><div class="cb" style="display:flex;flex-direction:column;gap:8px">
+<button class="bn bnsm bo" onclick="qc('[召唤:龙探探] 扫描品牌在ChatGPT Search中的引用情况')"><i class="fas fa-radar"></i> 感知扫描</button>
+<button class="bn bnsm bo" onclick="qc('[召唤:龙策策] 制定本季度GEO关键词策略')"><i class="fas fa-chess"></i> 策略制定</button>
+<button class="bn bnsm bo" onclick="qc('[召唤:龙工工] 将内容重构为AI友好格式')"><i class="fas fa-edit"></i> 内容重构</button>
+<button class="bn bnsm bo" onclick="qc('[召唤:龙部部] 部署最新产品信息到所有信源渠道')"><i class="fas fa-upload"></i> 信源部署</button>
+<button class="bn bnsm bo" onclick="qc('[召唤:龙分分] 生成本周GEO效果报告')"><i class="fas fa-chart-bar"></i> 效果报告</button>
+<button class="bn bnsm bo" onclick="qc('[召唤:龙规规] 审核即将发布的内容包')"><i class="fas fa-shield-alt"></i> 合规审核</button>
+<hr style="border:none;border-top:1px solid var(--g200);margin:8px 0">
+<button class="bn bnsm bp" onclick="qc('[构建团队:请帮我创建一个新的专业龙虾团队]')"><i class="fas fa-plus"></i> + 创建新团队</button>
+</div></div>
+<div class="cd"><div class="ch"><h3>会话信息</h3></div><div class="cb" style="font-size:12.5px;color:var(--g600)">
+<div style="margin-bottom:8px"><b>当前团队：</b>GEO龙虾 (geo_lobster)</div>
+<div style="margin-bottom:8px"><b>可用智能体：</b>6 个</div>
+<div style="margin-bottom:8px"><b>API端点：</b>/api/chat</div>
+</div></div>
+</div>
+</div>
+</section>
+
+<section class="ps" id="p-build">
+<div class="cd"><div class="ch"><h3>创建新的龙虾团队</h3><span class="bg bg3">Beta</span></div><div class="cb">
+<div class="alert ali"><i class="fas fa-info-circle"></i><div>通过自然语言描述需求，<strong>StarClaw 架构师</strong>将自动分析并创建完整的专业团队（SOUL.md + SKILL.md + 注册信息）。</div></div>
+<div class="bfm">
+<div class="fg"><label class="fl">团队需求描述 *</label><textarea class="ft" id="brq" placeholder="例如：我需要一个专门做跨境电商选品的龙虾团队..."></textarea></div>
+<div class="fg"><label class="fl">团队名称（可选）</label><input type="text" class="fi" id="btn" placeholder="例如：电商龙虾、内容龙虾..."></div>
+<button class="bn bnlg bp" id="bb" onclick="bt()" style="width:100%;justify-content:center;margin-top:8px"><i class="fas fa-magic"></i> 开始构建团队</button>
+</div>
+<div id="bres" style="margin-top:18px;display:none"></div>
+</div></div>
+</section>
+
+<section class="ps" id="p-reg">
+<div class="cd"><div class="ch"><h3>全部智能体注册表</h3><button class="bn bnsm bo" onclick="loadReg()"><i class="fas fa-sync"></i> 刷新</button></div><div class="cb" style="overflow-x:auto"><table class="dt"><thead><tr><th>ID</th><th>名字</th><th>职位</th><th>团队</th><th>声音</th><th>技能数</th><th>状态</th></tr></thead><tbody id="rb"></tbody></table></div></div>
+<div class="cd mt2"><div class="ch"><h3>全部团队列表</h3></div><div class="cb" style="overflow-x:auto"><table class="dt"><thead><tr><th>团队ID</th><th>名称</th><th>描述</th><th>成员数</th></tr></thead><tbody id="tb"></tbody></table></div></div>
+</section>
+
+<section class="ps" id="p-orch">
+<div class="kg">
+<div class="kc"><div class="kh"><span class="kl">编排中心</span><span class="ki kip"><i class="fas fa-sync-alt"></i></span></div><div class="kv" id="os">检测中...</div><div class="kc2 nl2" id="osd"></div></div>
+<div class="kc"><div class="kh"><span class="kl">已注册资源</span><span class="ki kia"><i class="fas fa-database"></i></span></div><div class="kv" id="rc">-</div><div class="kc2 nl2">智能体+技能+工作流</div></div>
+</div>
+<div class="cd"><div class="ch"><h3>提交任务到资源编排中心</h3></div><div class="cb">
+<div class="fg"><label class="fl">任务描述</label><textarea class="ft" id="ot" placeholder="描述你想要完成的任务..." style="min-height:80px"></textarea></div>
+<button class="bn ba" onclick="sot()"><i class="fas fa-paper-plane"></i> 提交任务</button>
+<div id="ore" style="margin-top:14px;display:none"></div>
+</div></div>
+</section>
+
+</div></main></div>
+<script src="lobster-dashboard.js"></script>
+</body>
+</html>

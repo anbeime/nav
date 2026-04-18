@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>全球AI技能导航 | TOPGO发现导航 - 多地区本地化AI工具推荐</title>
+    <meta name="description" content="TOPGO发现导航全球版：按地区推荐最适合的AI工具。支持中国、北美、日本、欧洲、东南亚等主要市场。">
+    <link rel="alternate" hreflang="zh-CN" href="https://ai123.miyucaicai.cn/geo-region.html?region=cn">
+    <link rel="alternate" hreflang="en-US" href="https://ai123.miyucaicai.cn/geo-region.html?region=us">
+    <link rel="alternate" hreflang="ja-JP" href="https://ai123.miyucaicai.cn/geo-region.html?region=jp">
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC',sans-serif;background:#f8fafc;color:#1e293b;line-height:1.6}
+        .header{padding:16px 40px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #e2e8f0;background:#fff;position:sticky;top:0;z-index:100}
+        .logo{font-size:20px;font-weight:800;text-decoration:none;color:#1e293b}.logo span{color:#3b82f6}
+        .hero{background:linear-gradient(135deg,#1e293b,#334155,#475569);color:#fff;padding:60px 40px;text-align:center}
+        .hero h1{font-size:clamp(28px,4vw,40px);font-weight:800;margin-bottom:12px}
+        .region-bar{max-width:900px;margin:-30px auto 0;position:relative;z-index:10;display:flex;gap:12px;justify-content:center;flex-wrap:wrap;padding:0 20px}
+        .region-btn{padding:14px 28px;border-radius:14px;border:2px solid rgba(255,255,255,.15);background:rgba(255,255,255,.08);backdrop-filter:blur(10px);color:#fff;cursor:pointer;font-size:15px;font-weight:600;transition:all .3s;text-align:center;min-width:140px}
+        .region-btn:hover{transform:translateY(-2px);background:rgba(255,255,255,.15)}
+        .region-btn.active{background:#fff;color:#1e293b;border-color:#fff;transform:translateY(-4px);box-shadow:0 10px 30px rgba(0,0,0,.2)}
+        .region-flag{font-size:28px;display:block;margin-bottom:4px}
+        .content{max-width:1100px;margin:40px auto;padding:0 20px}
+        .tool-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px}
+        .tool-card{background:#fff;border-radius:14px;padding:22px;border:1px solid #e2e8f0;transition:all .25s}
+        .tool-card:hover{box-shadow:0 8px 30px rgba(0,0,0,.08);transform:translateY(-2px)}
+        .tool-header{display:flex;align-items:center;gap:12px;margin-bottom:10px}
+        .tool-icon{width:42px;height:42px;border-radius:10px;background:linear-gradient(135deg,#eff6ff,#dbeafe);display:flex;align-items:center;justify-content:center;font-size:20px}
+        .tool-info h3{font-size:16px;font-weight:700}
+        .tag{font-size:11px;padding:2px 8px;border-radius:6px;background:#eff6ff;color:#3b82f6;font-weight:500}
+        .tool-desc{font-size:13px;color:#64748b;line-height:1.5;margin-bottom:12px}
+        .tool-meta{display:flex;gap:12px;font-size:12px;color:#94a3b8}
+        .compliance-box{background:linear-gradient(135deg,#fef3c7,#fde68a);border-radius:14px;padding:24px;border-left:4px solid #f59e0b;margin-bottom:20px}
+        .compliance-box h3{font-size:18px;font-weight:700;color:#92400e;margin-bottom:8px}
+        .compliance-box p{font-size:14px;color:#78350f;line-height:1.6}
+        .footer{text-align:center;padding:30px;border-top:1px solid #e2e8f0;color:#94a3b8;font-size:13px}
+        .footer a{color:#3b82f6;text-decoration:none}
+        .hidden{display:none!important}
+        @media(max-width:768px){.header{padding:12px 20px}.hero{padding:40px 20px}.region-btn{min-width:110px;padding:10px 18px}.tool-grid{grid-template-columns:1fr}}
+    </style>
+</head>
+<body>
+<header class="header">
+    <a href="/" class="logo"><span>TOPGO</span> 发现导航</a>
+    <nav><a href="/scenario-hub.html" style="margin-left:24px;text-decoration:none;color:#64748b;font-size:14px">场景中心</a><a href="/" style="margin-left:24px;text-decoration:none;color:#64748b;font-size:14px">返回首页</a></nav>
+</header>
+
+<section class="hero">
+    <h1>全球 AI 技能导航</h1>
+    <p>选择你的所在地区，获取最匹配的 AI 工具推荐、本地化使用指南和合规建议。</p>
+</section>
+
+<div class="region-bar">
+    <button class="region-btn active" data-region="cn" onclick="selectRegion(this)"><span class="region-flag">CN</span><span class="region-name">中国</span><span style="font-size:11px;opacity:.7;display:block;margin-top:2px">默认 / 中文优先</span></button>
+    <button class="region-btn" data-region="us" onclick="selectRegion(this)"><span class="region-flag">US</span><span class="region-name">北美</span><span style="font-size:11px;opacity:.7;display:block;margin-top:2px">English / Global</span></button>
+    <button class="region-btn" data-region="jp" onclick="selectRegion(this)"><span class="region-flag">JP</span><span class="region-name">日本</span><span style="font-size:11px;opacity:.7;display:block;margin-top:2px">日本語 / 現地化</span></button>
+    <button class="region-btn" data-region="eu" onclick="selectRegion(this)"><span class="region-flag">EU</span><span class="region-name">欧洲</span><span style="font-size:11px;opacity:.7;display:block;margin-top:2px">GDPR / 多语言</span></button>
+    <button class="region-btn" data-region="sg" onclick="selectRegion(this)"><span class="region-flag">SG</span><span class="region-name">东南亚</span><span style="font-size:11px;opacity:.7;display:block;margin-top:2px">SEA / 跨境电商</span></button>
+</div>
+
+<main class="content">
+    <div id="region-cn" class="region-content">
+        <div class="compliance-box"><h3>中国区合规提示</h3><p>根据《生成式人工智能服务管理暂行办法》，以下工具均已通过或正在备案流程中：DeepSeek、Kimi（月之暗面）、通义千问（阿里）、智谱清言、Coze扣子等。</p></div>
+        <div class="tool-grid">
+            <div class="tool-card"><div class="tool-header"><div class="tool-icon">&#129302;</div><div class="tool-info"><h3>DeepSeek 深度求索</h3><span class="tag">国产大模型 TOP1</span></div></div><p class="tool-desc">国产开源大模型标杆，代码能力对标 GPT-4，完全免费使用。</p><div class="tool-meta"><span>已备案</span><span>免费</span><span>API可用</span></div></div>
+            <div class="tool-card"><div class="tool-header"><div class="tool-icon">&#128172;</div><div class="tool-info"><h3>Kimi 智能助手</h3><span class="tag">长文本处理</span></div></div><p class="tool-desc">支持200万字超长上下文，适合论文、财报、法律文档分析。</p><div class="tool-meta"><span>已备案</span><span>免费额度</span></div></div>
+            <div class="tool-card"><div class="tool-header"><div class="tool-icon">&#128640;</div><div class="tool-info"><h3>Coze 扣子</h3><span class="tag">智能体平台</span></div></div><p class="tool-desc">字节跳动AI Bot开发平台，零代码构建智能体，多渠道分发。</p><div class="tool-meta"><span>字节出品</span><span>免费</span></div></div>
+            <div class="tool-card"><div class="tool-header"><div class="tool-icon">&#127912;</div><div class="tool-info"><h3>可灵 AI (Kling)</h3><span class="tag">视频生成</span></div></div><p class="tool-desc">快手AI视频生成，文生图/图生视频效果媲美Sora，中文友好。</p><div class="tool-meta"><span>快手出品</span><span>部分免费</span></div></div>
+            <div class="tool-card"><div class="tool-header"><div class="tool-icon">&#128187;</div><div class="tool-info"><h3>Trae 字节豆包 IDE</h3><span class="tag">AI 编程</span></div></div><p class="tool-desc">字节AI原生IDE，基于VSCode内核，内置DeepSeek模型。</p><div class="tool-meta"><span>字节出品</span><span>免费</span></div></div>
+            <div class="tool-card"><div class="tool-header"><div class="tool-icon">&#128200;</div><div class="tool-info"><h3>JoinQuant 量化社区</h3><span class="tag">量化投研</span></div></div><p class="tool-desc">国内领先量化投资研究平台，A股数据回测+策略研究一站式。</p><div class="tool-meta"><span>A股数据</span><span>免费基础版</span></div></div>
+        </div>
+    </div>
+
+    <div id="region-us" class="region-content hidden">
+        <div class="tool-grid">
+            <div class="tool-card"><div class="tool-header"><div class="tool-icon">&#129302;</div><div class="tool-info"><h3>ChatGPT Plus</h3><span class="tag">Best Overall</span></div></div><p class="tool-desc">最广泛使用的AI助手。GPT-4o with vision, web browsing, GPT Store.</p><div class="tool-meta"><span>$20/mo</span><span>OpenAI</span></div></div>
+            <div class="tool-card"><div class="tool-header"><div class="tool-icon">&#128187;</div><div class="tool-info"><h3>Cursor IDE</h3><span class="tag">AI Coding Leader</span></div></div><p class="tool-desc">最佳AI-first代码编辑器。Claude/GPT-4集成，codebase-aware editing.</p><div class="tool-meta"><span>$20/mo</span><span>Claude + GPT</span></div></div>
+            <div class="tool-card"><div class="tool-header"><div class="tool-icon">&#128172;</div><div class="tool-info"><h3>Claude Pro</h3><span class="tag">Long Context</span></div></div><p class="tool-desc">Anthropic旗舰模型，200K上下文窗口，擅长写作和分析。</p><div class="tool-meta"><span>$20/mo</span><span>Anthropic</span></div></div>
+            <div class="tool-card"><div class="tool-header"><div class="tool-icon">&#127912;</div><div class="tool-info"><h3>Midjourney v6</h3><span class="tag">Image Gen</span></div></div><p class="tool-desc">行业领先AI图像生成，通过Discord使用，照片级真实感。</p><div class="tool-meta"><span>$10-60/mo</span><span>Top Quality</span></div></div>
+            <div class="tool-card"><div class="tool-header"><div class="tool-icon">&#9889;</div><div class="tool-info"><h3>Zapier AI</h3><span class="tag">Automation</span></div></div><p class="tool-desc">连接5000+应用的AI自动化平台，自然语言创建工作流。</p><div class="tool-meta"><span>$20/mo</span><span>No-code</span></div></div>
+            <div class="tool-card"><div class="tool-header"><div class="tool-icon">&#128722;</div><div class="tool-info"><h3>Shopify + AI Apps</h3><span class="tag">E-commerce</span></div></div><p class="tool-desc">Shopify生态AI工具集：商品描述、SEO优化、客服自动化。</p><div class="tool-meta"><span>Shopify</span><span>USD Payment</span></div></div>
+        </div>
+    </div>
+
+    <div id="region-jp" class="region-content hidden">
+        <div class="tool-grid">
+            <div class="tool-card"><div class="tool-header"><div class="tool-icon">&#129302;</div><div class="tool-info"><h3>Gemini (Google)</h3><span class="tag">日本語対応</span></div></div><p class="tool-desc">Google最新AI模型，日本語処理能力極高，検索連携とWorkspace統合。</p><div class="tool-meta"><span>無料あり</span><span>Google</span></div></div>
+            <div class="tool-card"><div class="tool-header"><div class="tool-icon">&#128187;</div><div class="tool-info"><h3>GitHub Copilot</h3><span class="tag">コーディング</span></div></div><p class="tool-desc">エンジニア必須のAIコーディングアシスタント，日本語コメント生成対応。</p><div class="tool-meta"><span>$10/mo</span><span>Microsoft</span></div></div>
+            <div class="tool-card"><div class="tool-header"><div class="tool-icon">&#127912;</div><div class="tool-info"><h3>Stable Diffusion JP</h3><span class="tag">画像生成</span></div></div><p class="tool-desc">日本語プロンプトで高品質画像生成，アニメ・イラストに特に強い。</p><div class="tool-meta"><span>無料</span><span>オープンソース</span></div></div>
+            <div class="tool-card"><div class="tool-header"><div class="tool-icon">&#128722;</div><div class="tool-info"><h3>Rakuten/Yahoo! EC</h3><span class="tag">EC運営</span></div></div><p class="tool-desc">楽天市場・Yahoo!ショッピング向けAI商品登録・レビュー分析ツール。</p><div class="tool-meta"><span>楽天連携</span><span>日本EC特化</span></div></div>
+            <div class="tool-card"><div class="tool-header"><div class="tool-icon">&#128172;</div><div class="tool-info"><h3>LINE AI Bot</h3><span class="tag">カスタマーサポート</span></div></div><p class="tool-desc">LINE公式アカウント連携AIチャットボット，日本のビジネス標準。</p><div class="tool-meta"><span>LINE API</span><span>24時間対応</span></div></div>
+        </div>
+    </div>
+
+    <div id="region-eu" class="region-content hidden">
+        <div class="compliance-box" style="background:linear-gradient(135deg,#dbeafe,#bfdbfe);border-left-color:#2563eb"><h3 style="color:#1e40af">EU AI Act & GDPR Compliance</h3><p style="color:#1e3a8a">Tools evaluated against EU AI Act risk categories and GDPR requirements. Data processing within EU borders prioritized.</p></div>
+        <div class="tool-grid">
+            <div class="tool-card"><div class="tool-header"><div class="tool-icon">&#129302;</div><div class="tool-info"><h3>Mistral AI</h3><span class="tag">EU-Based LLM</span></div></div><p class="tool-desc">法国领先AI公司，开源模型多语言能力强，GDPR原生架构。</p><div class="tool-meta"><span>France</span><span>Open Source</span><span>GDPR Ready</span></div></div>
+            <div class="tool-card"><div class="tool-header"><div class="tool-icon">&#128187;</div><div class="tool-info"><h3>Tabnine Enterprise</h3><span class="tag">Secure Coding</span></div></div><p class="tool-desc">本地运行AI代码补全，代码不离开基础设施，SOC2 & GDPR合规。</p><div class="tool-meta"><span>On-prem OK</span><span>SOC2</span><span>GDPR</span></div></div>
+            <div class="tool-card"><div class="tool-header"><div class="tool-icon">&#9889;</div><div class="tool-info"><h3>Make (Integromat)</h3><span class="tag">Automation EU</span></div></div><p class="tool-desc">欧盟自动化平台，数据服务器在欧盟境内，GDPR合规。</p><div class="tool-meta"><span>EU Servers</span><span>Visual Builder</span></div></div>
+        </div>
+    </div>
+
+    <div id="region-sg" class="region-content hidden">
+        <div class="tool-grid">
+            <div class="tool-card"><div class="tool-header"><div class="tool-icon">&#128722;</div><div class="tool-info"><h3>TikTok Shop AI Suite</h3><span class="tag">Cross-border EC</span></div></div><p class="tool-desc">TikTok Shop卖家AI工具箱：商品上架、广告文案、客服Bot、库存同步。</p><div class="tool-meta"><span>TikTok</span><span>SEA Focus</span></div></div>
+            <div class="tool-card"><div class="tool-header"><div class="tool-icon">&#129302;</div><div class="tool-info"><h3>Shopee AI Tools</h3><span class="tag">Shopey EC</span></div></div><p class="tool-desc">Shopee卖家AI工具：自动翻译列表到当地语言、价格优化、评论分析。</p><div class="tool-meta"><span>Shopee</span><span>SEA #1 Platform</span></div></div>
+            <div class="tool-card"><div class="tool-header"><div class="tool-icon">&#128172;</div><div class="tool-info"><h3>Multilingual Chatbot</h3><span class="tag">Customer Service</span></div></div><p class="tool-desc">支持泰语/越南语/印尼语/马来语/菲律宾语/中文的多语言AI客服。</p><div class="tool-meta"><span>10+ Languages</span><span>24/7 Support</span></div></div>
+            <div class="tool-card"><div class="tool-header"><div class="tool-icon">&#128200;</div><div class="tool-info"><h3>Lazada Seller Tools</h3><span class="tag">Alibaba EC</span></div></div><p class="tool-desc">Lazada（阿里巴巴SEA平台）卖家AI工具：Listing优化、竞品分析。</p><div class="tool-meta"><span>Alibaba</span><span>6 Countries</span></div></div>
+        </div>
+    </div>
+</main>
+
+<footer class="footer">
+    <p><a href="/">TOPGO发现导航</a> (ai123) - The AI Skills AppStore for Every Region</p>
+    <p>GitHub: <a href="https://github.com/anbeime/nav">anbeime/nav</a> | Powered by GEO Lobster Team | 2026-04-17</p>
+</footer>
+
+<script>
+function selectRegion(btn){document.querySelectorAll('.region-btn').forEach(b=>b.classList.remove('active'));btn.classList.add('active');const r=btn.dataset.region;document.querySelectorAll('.region-content').forEach(el=>el.classList.add('hidden'));const t=document.getElementById('region-'+r);if(t)t.classList.remove('hidden');history.replaceState(null,'','?region='+r)}
+const p=new URLSearchParams(window.location.search);const initR=p.get('region')||'cn';const initB=document.querySelector('[data-region="'+initR+'"]');if(initB)selectRegion(initB);
+</script>
+</body>
+</html>

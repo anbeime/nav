@@ -1,0 +1,87 @@
+{
+  "id": "trend-monitor",
+  "name": "AI引擎曝光优化师",
+  "description": "AI搜索/推荐引擎中的内容曝光优化战队，提升品牌和内容的可见度",
+  "version": "1.0.0",
+  "tier": "pro",
+  "category": "geo-trend-optimization",
+  "icon": "📈",
+  "price": 3999,
+  "agents": [
+    {
+      "id": "trend_scout",
+      "name": "趋势侦察兵",
+      "role": "scout",
+      "personality": "敏锐的趋势捕捉者，持续监控AI搜索引擎、推荐平台、社交热点的最新动态和变化。",
+      "skills": ["trend_detection", "keyword_tracking", "competitive_analysis"],
+      "tools": ["search_api", "social_analytics", "competitor_monitor"],
+      "instructions": "监控目标关键词在AI搜索平台的排名变化，跟踪竞品动态，识别新兴趋势和机会窗口。"
+    },
+    {
+      "id": "trend_optimizer",
+      "name": "曝光优化师",
+      "role": "optimizer",
+      "personality": "数据驱动的优化专家，通过分析AI引擎的排名规则和用户行为，持续优化内容曝光策略。",
+      "skills": [
+        "seo_optimization",
+        "content_enhancement",
+        "semantic_analysis"
+      ],
+      "tools": ["content_analyzer", "keyword_tool", "a_b_testing"],
+      "instructions": "基于侦察数据，分析排名因素，提供内容优化建议，包括关键词布局、结构优化、语义增强等。"
+    },
+    {
+      "id": "trend_reporter",
+      "name": "效果分析师",
+      "role": "reporter",
+      "personality": "精准的效果评估者，通过多维度数据展示优化效果，为后续决策提供数据支撑。",
+      "skills": [
+        "performance_analysis",
+        "roi_calculation",
+        "insight_generation"
+      ],
+      "tools": ["analytics_dashboard", "report_builder", "alert_system"],
+      "instructions": "汇总曝光数据、流量数据、转化数据，生成优化效果报告，展示ROI和增长趋势。"
+    }
+  ],
+  "workflow": {
+    "trigger": "scheduled",
+    "schedule": "0 */2 * * *",
+    "steps": [
+      { "agent": "trend_scout", "action": "track_trends", "timeout": 120 },
+      {
+        "agent": "trend_optimizer",
+        "action": "optimize_content",
+        "condition": "opportunity_found"
+      },
+      {
+        "agent": "trend_reporter",
+        "action": "analyze_performance",
+        "condition": "optimization_done"
+      }
+    ]
+  },
+  "dashboard": {
+    "metrics": [
+      "keyword_rankings",
+      "impressions",
+      "click_through_rate",
+      "organic_traffic",
+      "conversion_rate",
+      "competitor_gap"
+    ],
+    "reports": ["daily_rank", "weekly_performance", "monthly_strategy"],
+    "alerts": {
+      "ranking_drop": "immediate",
+      "competitor_movement": "within_4h",
+      "opportunity_detected": "within_1h"
+    }
+  },
+  "config": {
+    "targetKeywords": [],
+    "targetPlatforms": ["google", "bing", "chatgpt", "perplexity"],
+    "trackCompetitors": [],
+    "autoOptimize": false,
+    "alertChannels": ["email", "webhook"]
+  }
+}

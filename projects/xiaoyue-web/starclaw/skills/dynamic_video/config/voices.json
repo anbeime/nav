@@ -1,0 +1,175 @@
+{
+  "description": "StarClaw 动态视频语音配置",
+  "version": "1.0.0",
+  "provider": "Microsoft Edge-TTS",
+  "voices": {
+    "narrator_male": {
+      "name": "zh-CN-YunxiNeural",
+      "description": "男声旁白，沉稳大气",
+      "gender": "male",
+      "suitable": ["纪录片", "科普", "品牌宣传"]
+    },
+    "narrator_female": {
+      "name": "zh-CN-XiaoxiaoNeural",
+      "description": "女声旁白，清晰自然",
+      "gender": "female",
+      "suitable": ["教育课件", "教程", "解说"]
+    },
+    "teacher_male": {
+      "name": "zh-CN-YunyangNeural",
+      "description": "男声教师，专业权威",
+      "gender": "male",
+      "suitable": ["教育课件", "培训", "讲座"]
+    },
+    "teacher_female": {
+      "name": "zh-CN-XiaoyiNeural",
+      "description": "女声教师，亲切温暖",
+      "gender": "female",
+      "suitable": ["教育课件", "儿童内容", "故事讲解"]
+    },
+    "youth_male": {
+      "name": "zh-CN-YunjianNeural",
+      "description": "青年男声，活力阳光",
+      "gender": "male",
+      "suitable": ["短视频", "社交媒体", "青年内容"]
+    },
+    "youth_female": {
+      "name": "zh-CN-XiaochenNeural",
+      "description": "青年女声，活泼开朗",
+      "gender": "female",
+      "suitable": ["短视频", "社交媒体", "生活内容"]
+    },
+    "storyteller": {
+      "name": "zh-CN-XiaomoNeural",
+      "description": "说书人风格，富有感情",
+      "gender": "female",
+      "suitable": ["故事", "历史", "人文"]
+    },
+    "news_anchor": {
+      "name": "zh-CN-YunxiNeural",
+      "description": "新闻主播，专业正式",
+      "gender": "male",
+      "suitable": ["新闻", "公告", "正式场合"]
+    }
+  },
+  "prosody": {
+    "default": {
+      "speed": 0.95,
+      "pitch": "default",
+      "volume": 100
+    },
+    "slow": {
+      "speed": 0.85,
+      "pitch": "default",
+      "volume": 100
+    },
+    "fast": {
+      "speed": 1.1,
+      "pitch": "default",
+      "volume": 100
+    },
+    "educational": {
+      "speed": 0.9,
+      "pitch": "default",
+      "volume": 100
+    },
+    "dramatic": {
+      "speed": 0.85,
+      "pitch": "-10%",
+      "volume": 100
+    }
+  },
+  "breaks": {
+    "comma": {
+      "ms": 200,
+      "description": "逗号停顿"
+    },
+    "period": {
+      "ms": 500,
+      "description": "句号停顿"
+    },
+    "paragraph": {
+      "ms": 1000,
+      "description": "段落停顿"
+    },
+    "section": {
+      "ms": 2000,
+      "description": "章节停顿"
+    },
+    "emphasis": {
+      "ms": 300,
+      "description": "强调前停顿"
+    }
+  },
+  "ssml": {
+    "templates": {
+      "emphasis": "<emphasis level=\"{{level}}\">{{text}}</emphasis>",
+      "break": "<break time=\"{{ms}}ms\"/>",
+      "prosody": "<prosody rate=\"{{rate}}\" pitch=\"{{pitch}}\">{{text}}</prosody>",
+      "say_as": "<say-as interpret-as=\"{{interpret}}\">{{text}}</say-as>"
+    },
+    "examples": {
+      "number": {
+        "template": "say_as",
+        "interpret": "number",
+        "text": "123"
+      },
+      "date": {
+        "template": "say_as",
+        "interpret": "date",
+        "text": "2024-01-01"
+      },
+      "slow_speech": {
+        "template": "prosody",
+        "rate": "0.8",
+        "text": "这是慢速朗读"
+      },
+      "strong_emphasis": {
+        "template": "emphasis",
+        "level": "strong",
+        "text": "重点内容"
+      }
+    }
+  },
+  "scenePresets": {
+    "intro": {
+      "voice": "narrator_male",
+      "speed": 0.95,
+      "break_before": 500,
+      "break_after": 1000
+    },
+    "content": {
+      "voice": "teacher_female",
+      "speed": 0.9,
+      "break_before": 300,
+      "break_after": 500
+    },
+    "summary": {
+      "voice": "teacher_male",
+      "speed": 1.0,
+      "break_before": 1000,
+      "break_after": 500
+    },
+    "call_to_action": {
+      "voice": "youth_male",
+      "speed": 1.0,
+      "break_before": 300,
+      "break_after": 500
+    }
+  },
+  "multiVoice": {
+    "enabled": true,
+    "switchingRules": [
+      {
+        "condition": "dialogue",
+        "voices": ["youth_male", "youth_female"],
+        "alternating": true
+      },
+      {
+        "condition": "interview",
+        "voices": ["narrator_male", "narrator_female"],
+        "pattern": "Q&A"
+      }
+    ]
+  }
+}

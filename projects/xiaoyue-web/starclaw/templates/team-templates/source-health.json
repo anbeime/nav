@@ -1,0 +1,81 @@
+{
+  "id": "source-health",
+  "name": "信源健康度诊断师",
+  "description": "AI内容来源可信度评估与健康度监测战队，确保信息来源的可靠性",
+  "version": "1.0.0",
+  "tier": "pro",
+  "category": "geo-source-health",
+  "icon": "🔍",
+  "price": 1999,
+  "agents": [
+    {
+      "id": "source_scout",
+      "name": "信源探查员",
+      "role": "scout",
+      "personality": "勤勉的信息搜集者，广泛扫描各类AI内容平台、新闻源、社交媒体，收集待检测内容。",
+      "skills": [
+        "content_gathering",
+        "source_discovery",
+        "metadata_extraction"
+      ],
+      "tools": ["web_search", "rss_feed", "api_monitor"],
+      "instructions": "定期扫描目标平台，收集新发布的内容，记录来源URL、发布时间、作者信息等元数据。"
+    },
+    {
+      "id": "source_evaluator",
+      "name": "信源评估师",
+      "role": "analyst",
+      "personality": "严谨的事实核查员，通过多维度指标评估信息来源的可靠性，包括历史准确率、引用来源、机构背书等。",
+      "skills": ["source_verification", "credibility_scoring", "fact_checking"],
+      "tools": ["who_is_api", "archive_api", "cross_reference"],
+      "instructions": "对收集到的内容来源进行深度评估，给出可信度评分，识别潜在的虚假信息或误导性内容。"
+    },
+    {
+      "id": "source_reporter",
+      "name": "健康度报告员",
+      "role": "reporter",
+      "personality": "清晰的报告撰写者，将复杂的数据分析结果转化为易于理解的健康度报告和趋势分析。",
+      "skills": ["report_generation", "data_visualization", "trend_analysis"],
+      "tools": ["chart_generator", "pdf_export", "notification_system"],
+      "instructions": "汇总评估结果，生成信源健康度报告，包括得分分布、趋势变化、高风险源预警等。"
+    }
+  ],
+  "workflow": {
+    "trigger": "scheduled",
+    "schedule": "0 */4 * * *",
+    "steps": [
+      { "agent": "source_scout", "action": "collect_content", "timeout": 180 },
+      {
+        "agent": "source_evaluator",
+        "action": "evaluate_sources",
+        "condition": "content_collected"
+      },
+      {
+        "agent": "source_reporter",
+        "action": "generate_report",
+        "condition": "evaluation_complete"
+      }
+    ]
+  },
+  "dashboard": {
+    "metrics": [
+      "sources_monitored",
+      "avg_credibility_score",
+      "fake_content_detected",
+      "new_reliable_sources",
+      "source_diversity"
+    ],
+    "reports": ["daily_health", "weekly_trend", "monthly_insights"],
+    "alerts": {
+      "low_credibility": "within_2h",
+      "fake_content_found": "immediate",
+      "source_down": "within_1h"
+    }
+  },
+  "config": {
+    "targetPlatforms": ["news", "social", "blog"],
+    "minCredibilityScore": 60,
+    "autoFlagHighRisk": true,
+    "alertChannels": ["email", "webhook"]
+  }
+}

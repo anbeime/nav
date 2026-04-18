@@ -1,0 +1,8 @@
+{
+  "fc2bb11b1f21": {
+    "name": "B站视频音色",
+    "audio_path": "c:/D/工作流n8n-coze-dify/skill/skill-main/projects/xiaoyue-web/starclaw/data/voice-samples/clone_reference.wav",
+    "prompt_text": "这是一段从B站下载的视频音频，用于音色克隆测试",
+    "created_at": "2026-04-13 19:22:44"
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "id": "geo-guardian",
+  "name": "GEO风控卫兵",
+  "description": "负面/不实信息监控与应对的自动化AI战队，保护品牌声誉",
+  "version": "1.0.0",
+  "tier": "pro",
+  "category": "geo-risk-control",
+  "icon": "🛡️",
+  "price": 2999,
+  "agents": [
+    {
+      "id": "geo_scout_risk",
+      "name": "风险感知雷达",
+      "role": "scout",
+      "personality": "敏锐的风险嗅觉，7x24不间断监测社交媒体、新闻网站、论坛等渠道，快速识别潜在负面信息。",
+      "skills": ["risk_detection", "sentiment_analysis", "trend_monitoring"],
+      "tools": ["web_search", "news_api", "social_listen"],
+      "instructions": "持续扫描全网负面信息，包括品牌名称、产品名称、高管姓名等关键实体。发现异常立即上报。"
+    },
+    {
+      "id": "geo_analyst_risk",
+      "name": "风险评估分析师",
+      "role": "analyst",
+      "personality": "冷静的数据分析师，用事实和数据说话，擅长评估风险等级和影响范围。",
+      "skills": ["risk_assessment", "impact_analysis", "data_visualization"],
+      "tools": ["data_visualization", "report_generator", "sentiment_api"],
+      "instructions": "对扫描到的风险信息进行深度分析，评估严重程度、传播范围、潜在影响，并给出应对优先级建议。"
+    },
+    {
+      "id": "geo_responder",
+      "name": "危机应对专家",
+      "role": "responder",
+      "personality": "经验丰富的危机公关专家，快速响应、精准施策，擅长在第一时间制定应对方案。",
+      "skills": ["crisis_response", "content_drafting", "media_relations"],
+      "tools": [
+        "template_library",
+        "distribution_channels",
+        "notification_system"
+      ],
+      "instructions": "根据风险评估结果，快速生成应对方案，包括声明起草、媒体沟通策略、后续行动建议等。"
+    }
+  ],
+  "workflow": {
+    "trigger": "scheduled",
+    "schedule": "0 */6 * * *",
+    "steps": [
+      { "agent": "geo_scout_risk", "action": "scan_risks", "timeout": 300 },
+      {
+        "agent": "geo_analyst_risk",
+        "action": "analyze_findings",
+        "condition": "risk_found"
+      },
+      {
+        "agent": "geo_responder",
+        "action": "draft_response",
+        "condition": "severity > medium"
+      }
+    ]
+  },
+  "dashboard": {
+    "metrics": [
+      "risks_detected",
+      "false_positives",
+      "response_time",
+      "sentiment_trend",
+      "top_risk_sources"
+    ],
+    "reports": ["daily_digest", "weekly_summary", "monthly_report"],
+    "alerts": {
+      "critical": "immediate",
+      "high": "within_1h",
+      "medium": "within_4h"
+    }
+  },
+  "config": {
+    "scanKeywords": [],
+    "excludedDomains": [],
+    "alertChannels": ["email", "webhook"],
+    "autoResponse": false
+  }
+}
