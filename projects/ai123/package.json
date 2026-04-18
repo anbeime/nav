@@ -1,5 +1,12 @@
 {
+  "name": "ai123",
+  "version": "1.0.0",
+  "description": "AI工具导航站",
+  "scripts": {
+    "sync": "node scripts/sync-ai-tools-http.js"
+  },
   "dependencies": {
+    "axios": "^1.6.0",
     "lz-string": "^1.5.0"
   }
 }
