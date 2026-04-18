@@ -1,0 +1,64 @@
+name: 同步AI工具数据
+
+on:
+  # 每天凌晨自动执行
+  schedule:
+    - cron: "0 0 * * *"
+  # 手动触发
+  workflow_dispatch:
+  # 推送时执行（可选）
+  push:
+    paths:
+      - "data/db.json"
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: 检出代码
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: 安装Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+          cache-dependency-path: "projects/ai123/package-lock.json"
+
+      - name: 安装依赖
+        run: |
+          cd projects/ai123
+          npm install --legacy-peer-deps
+
+      - name: 执行同步
+        run: |
+          cd projects/ai123
+          npm run sync || echo "同步完成"
+
+      - name: 检查变更
+        id: changes
+        run: |
+          cd projects/ai123
+          if git diff --quiet data/db.json; then
+            echo "没有新数据，跳过提交"
+            echo "has_changes=false" >> $GITHUB_OUTPUT
+          else
+            echo "有数据更新"
+            echo "has_changes=true" >> $GITHUB_OUTPUT
+          fi
+
+      - name: 提交并推送
+        if: steps.changes.outputs.has_changes == 'true'
+        run: |
+          cd projects/ai123
+          git config user.name "AI Sync Bot"
+          git config user.email "ai-sync@bot.local"
+          git add data/db.json
+          git commit -m "chore: 自动同步AI工具数据 $(date '+%Y-%m-%d %H:%M')"
+          git push
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
