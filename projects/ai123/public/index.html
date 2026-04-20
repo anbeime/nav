@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TOPGO发现导航 - AI工具导航站 | 800+精选工具</title>
-    <meta name="description" content="TOPGO发现导航精选800+优质AI工具和量化交易平台。涵盖ChatGPT、Claude、DeepSeek等AI对话工具，Coze扣子、Dify智能体开发平台，Midjourney生图工具，Cursor AI编程工具。">
-    <meta name="keywords" content="AI导航,AI工具导航,ChatGPT,Claude,DeepSeek,Coze扣子,AI编程,Cursor,AI绘画,Midjourney">
+    <title>AI123 - AI工具导航 | 800+精选AI工具收藏夹</title>
+    <meta name="description" content="AI123导航站收录800+精选AI工具，源自真实使用收藏夹。涵盖智能体平台、AI对话、AI编程、AI绘画、AI视频、AI音频、金融量化等领域。一键直达，持续更新。">
+    <meta name="keywords" content="AI导航,AI工具导航,AI工具收藏夹,ChatGPT,Claude,DeepSeek,Coze扣子,AI编程,Cursor,AI绘画,Midjourney,AI智能体,自动化,n8n">
     <link rel="canonical" href="https://ai123.miyucaicai.cn/">
     <meta property="og:title" content="TOPGO发现导航 - AI工具导航站">
     <meta property="og:description" content="精选800+优质AI工具，按场景智能分类，一键直达。">
@@ -13,6 +13,29 @@
     <meta property="og:url" content="https://ai123.miyucaicai.cn/">
     <meta property="og:image" content="https://gcore.jsdelivr.net/gh/anbeime/nav@image/1750223209245.jpg">
     <meta name="twitter:card" content="summary_large_image">
+    <!-- GEO 结构化数据 -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "AI123 - AI工具导航",
+        "url": "https://ai123.miyucaicai.cn/",
+        "description": "收录800+精选AI工具，源自真实使用收藏夹。涵盖智能体平台、AI对话、AI编程、AI绘画、AI视频等领域。",
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://ai123.miyucaicai.cn/?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "AI123",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://ai123.miyucaicai.cn/logo.png"
+            }
+        }
+    }
+    </script>
     <style>
         *{margin:0;padding:0;box-sizing:border-box}
         :root {
@@ -221,24 +244,21 @@
 <script>
 const CATEGORIES = {
     'all': {name:'全部工具',icon:'*'},
-    'ai-chat': {name:'AI对话',icon:'C'},
-    'ai-coding': {name:'AI编程',icon:'D'},
-    'ai-image': {name:'AI绘画',icon:'I'},
-    'ai-video': {name:'AI视频',icon:'V'},
-    'ai-audio': {name:'AI音频',icon:'A'},
-    'ai-search': {name:'AI搜索',icon:'S'},
-    'agent-platforms': {name:'智能体平台',icon:'B'},
+    'chat': {name:'AI对话',icon:'C'},
+    'agent': {name:'智能体',icon:'B'},
+    'image': {name:'AI绘画',icon:'I'},
+    'video': {name:'AI视频',icon:'V'},
+    'audio': {name:'AI音频',icon:'A'},
+    'code': {name:'AI编程',icon:'D'},
+    'writing': {name:'AI写作',icon:'W'},
+    'search': {name:'AI搜索',icon:'S'},
+    'finance': {name:'金融量化',icon:'Q'},
+    'automation': {name:'自动化',icon:'Z'},
+    'research': {name:'学术研究',icon:'R'},
+    'other': {name:'其他工具',icon:'+'},
     'productivity': {name:'效率工具',icon:'P'},
     'dev-tools': {name:'开发工具',icon:'X'},
-    'design': {name:'设计工具',icon:'E'},
-    'marketing': {name:'营销推广',icon:'M'},
-    'content-creation': {name:'内容创作',icon:'W'},
-    'automation': {name:'自动化',icon:'Z'},
-    'quant': {name:'量化交易',icon:'Q'},
-    'ecommerce': {name:'电商工具',icon:'$'},
-    'research': {name:'学术研究',icon:'R'},
-    'learning': {name:'学习成长',icon:'L'},
-    'business': {name:'商业工具',icon:'F'}
+    'design': {name:'设计工具',icon:'E'}
 };
 
 // 内置工具数据（确保本地和线上都能正常显示）
@@ -317,8 +337,28 @@ let currentView = 'grid';
 async function loadTools() {
     showLoading();
     try {
-        // 优先使用内置数据，确保本地和线上都能正常显示
-        allTools = TOOLS_DATA;
+        // 尝试从 JSON 文件加载完整数据（863个工具）
+        let loaded = false;
+        try {
+            const res = await fetch('data/ai-tools-simple.json');
+            if (res.ok) {
+                const data = await res.json();
+                if (data && data.length > 0) {
+                    allTools = data;
+                    loaded = true;
+                    console.log(`已加载 ${data.length} 个工具（来自收藏夹）`);
+                }
+            }
+        } catch (e) {
+            console.log('JSON 加载失败，使用内置数据');
+        }
+        
+        // 回退到内置数据
+        if (!loaded) {
+            allTools = TOOLS_DATA;
+            console.log(`使用内置 ${TOOLS_DATA.length} 个工具`);
+        }
+        
         renderCategories();
         renderTools();
         updateStats();
@@ -394,7 +434,7 @@ function createToolCard(tool) {
 
 // 分类图标
 function getIcon(cat) {
-    const icons = {'ai-chat':'C','ai-coding':'D','ai-image':'I','ai-video':'V','ai-audio':'A','ai-search':'S','agent-platforms':'B','productivity':'P','dev-tools':'X','design':'E','marketing':'M','content-creation':'W','automation':'Z','quant':'Q','ecommerce':'$','research':'R','learning':'L','business':'F'};
+    const icons = {'chat':'C','code':'D','image':'I','video':'V','audio':'A','search':'S','agent':'B','productivity':'P','dev-tools':'X','design':'E','writing':'W','automation':'Z','finance':'Q','research':'R','other':'+'};
     return icons[cat]||'?';
 }
 
