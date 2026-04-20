@@ -249,7 +249,7 @@ let currentView = 'grid';
 async function loadTools() {
     showLoading();
     try {
-        const res = await fetch('data/db.json');
+        const res = await fetch('./data/db.json');
         allTools = await res.json();
         renderCategories();
         renderTools();
