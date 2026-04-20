@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TOPGO发现导航 - AI工具导航站 | 800+精选工具</title>
-    <meta name="description" content="TOPGO发现导航精选800+优质AI工具和量化交易平台。涵盖ChatGPT、Claude、DeepSeek等AI对话工具，Coze扣子、Dify智能体开发平台，Midjourney生图工具，Cursor AI编程工具。">
-    <meta name="keywords" content="AI导航,AI工具导航,ChatGPT,Claude,DeepSeek,Coze扣子,AI编程,Cursor,AI绘画,Midjourney">
+    <title>AI123 - AI工具导航 | 800+精选AI工具收藏夹</title>
+    <meta name="description" content="AI123导航站收录800+精选AI工具，源自真实使用收藏夹。涵盖智能体平台、AI对话、AI编程、AI绘画、AI视频、AI音频、金融量化等领域。一键直达，持续更新。">
+    <meta name="keywords" content="AI导航,AI工具导航,AI工具收藏夹,ChatGPT,Claude,DeepSeek,Coze扣子,AI编程,Cursor,AI绘画,Midjourney,AI智能体,自动化,n8n">
     <link rel="canonical" href="https://ai123.miyucaicai.cn/">
     <meta property="og:title" content="TOPGO发现导航 - AI工具导航站">
     <meta property="og:description" content="精选800+优质AI工具，按场景智能分类，一键直达。">
@@ -13,6 +13,29 @@
     <meta property="og:url" content="https://ai123.miyucaicai.cn/">
     <meta property="og:image" content="https://gcore.jsdelivr.net/gh/anbeime/nav@image/1750223209245.jpg">
     <meta name="twitter:card" content="summary_large_image">
+    <!-- GEO 结构化数据 -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "AI123 - AI工具导航",
+        "url": "https://ai123.miyucaicai.cn/",
+        "description": "收录800+精选AI工具，源自真实使用收藏夹。涵盖智能体平台、AI对话、AI编程、AI绘画、AI视频等领域。",
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://ai123.miyucaicai.cn/?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "AI123",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://ai123.miyucaicai.cn/logo.png"
+            }
+        }
+    }
+    </script>
     <style>
         *{margin:0;padding:0;box-sizing:border-box}
         :root {
@@ -218,28 +241,97 @@
     </div>
 </div>
 
+<!-- 嵌入式工具数据 -->
+<script src="data/tools_embedded.js"></script>
+
 <script>
 const CATEGORIES = {
     'all': {name:'全部工具',icon:'*'},
-    'ai-chat': {name:'AI对话',icon:'C'},
-    'ai-coding': {name:'AI编程',icon:'D'},
-    'ai-image': {name:'AI绘画',icon:'I'},
-    'ai-video': {name:'AI视频',icon:'V'},
-    'ai-audio': {name:'AI音频',icon:'A'},
-    'ai-search': {name:'AI搜索',icon:'S'},
-    'agent-platforms': {name:'智能体平台',icon:'B'},
-    'productivity': {name:'效率工具',icon:'P'},
-    'dev-tools': {name:'开发工具',icon:'X'},
-    'design': {name:'设计工具',icon:'E'},
+    'agent': {name:'智能体',icon:'B'},
+    'finance': {name:'金融量化',icon:'Q'},
     'marketing': {name:'营销推广',icon:'M'},
-    'content-creation': {name:'内容创作',icon:'W'},
+    'video': {name:'AI视频',icon:'V'},
+    'code': {name:'AI编程',icon:'D'},
+    'image': {name:'AI绘画',icon:'I'},
+    'chat': {name:'AI对话',icon:'C'},
+    'writing': {name:'AI写作',icon:'W'},
+    'audio': {name:'AI音频',icon:'A'},
+    'learning': {name:'学习教程',icon:'L'},
+    'data': {name:'数据分析',icon:'X'},
+    'productivity': {name:'效率工具',icon:'P'},
+    'search': {name:'AI搜索',icon:'S'},
     'automation': {name:'自动化',icon:'Z'},
-    'quant': {name:'量化交易',icon:'Q'},
-    'ecommerce': {name:'电商工具',icon:'$'},
     'research': {name:'学术研究',icon:'R'},
-    'learning': {name:'学习成长',icon:'L'},
-    'business': {name:'商业工具',icon:'F'}
+    'other': {name:'其他工具',icon:'+'}
 };
+
+// 内置工具数据（确保本地和线上都能正常显示）
+const TOOLS_DATA = [
+  {"id":"chatgpt","name":"ChatGPT","url":"https://chat.openai.com","desc":"OpenAI 推出的强大对话式 AI 助手，支持 GPT-4o，擅长写作、编程、分析、创意等全场景任务","tags":["AI对话","GPT-4","写作助手","代码生成"],"category":"ai-chat","rating":4.9,"isHot":true},
+  {"id":"claude","name":"Claude","url":"https://claude.ai","desc":"Anthropic 出品的 AI 助手，以超长上下文窗口著称，适合长文档分析、复杂推理和深度对话","tags":["AI对话","长文本","代码审查"],"category":"ai-chat","rating":4.8,"isHot":true},
+  {"id":"deepseek","name":"DeepSeek","url":"https://chat.deepseek.com","desc":"国产顶级大模型，DeepSeek-V3/R1 性能对标 GPT-4，数学推理和代码能力突出，完全免费","tags":["国产AI","免费","数学推理","代码"],"category":"ai-chat","rating":4.7,"isHot":true,"isNew":true},
+  {"id":"gemini","name":"Google Gemini","url":"https://gemini.google.com","desc":"Google 最新多模态 AI 模型，原生支持图文音视频理解，与 Google 生态深度集成","tags":["多模态","Google","免费"],"category":"ai-chat","rating":4.6,"isHot":true},
+  {"id":"kimi","name":"Kimi 智能助手","url":"https://kimi.moonshot.cn","desc":"月之暗面出品，支持 20 万字超长上下文，特别适合处理论文、报告、书籍等超长文档","tags":["长文档","国产AI","论文阅读","免费"],"category":"ai-chat","rating":4.6,"isHot":true},
+  {"id":"doubao","name":"豆包","url":"https://www.doubao.com","desc":"字节跳动出品的全能 AI 助手，基于云雀大模型，支持对话、写作、绘画、搜索等","tags":["字节跳动","国产AI","多模态","免费"],"category":"ai-chat","rating":4.5,"isHot":true},
+  {"id":"tongyi","name":"通义千问","url":"https://tongyi.aliyun.com","desc":"阿里云通义千问系列大模型，Qwen-Max 性能领先，支持文本理解、代码生成、数学推理","tags":["阿里云","国产AI","开源模型","免费"],"category":"ai-chat","rating":4.5,"isHot":true},
+  {"id":"zhipu","name":"智谱清言","url":"https://chatglm.cn","desc":"智谱 AI 出品，GLM-4 系列模型综合能力强，支持工具调用、代码解释器和多模态","tags":["清华系","国产AI","GLM-4","工具调用"],"category":"ai-chat","rating":4.5,"isHot":true},
+  {"id":"poe","name":"Poe","url":"https://poe.com","desc":"Quora 出品的 AI 聚合平台，一个界面访问 GPT-4、Claude、Gemini 等多个模型","tags":["AI聚合","多模型","GPT-4","Claude"],"category":"ai-chat","rating":4.6,"isHot":true},
+  {"id":"ollama","name":"Ollama","url":"https://ollama.com","desc":"简单易用的本地 LLM 运行工具，支持命令行和 API","tags":["本地LLM","命令行","API","开源"],"category":"ai-chat","rating":4.7,"isHot":true},
+  {"id":"coze","name":"Coze 扣子","url":"https://www.coze.cn","desc":"字节跳动推出的 AI Bot 开发平台，零代码构建智能体，支持插件、知识库、工作流","tags":["Bot平台","智能体开发","零代码","工作流","字节跳动"],"category":"agent-platforms","rating":4.8,"isHot":true},
+  {"id":"dify","name":"Dify","url":"https://dify.ai","desc":"开源 LLM 应用开发平台，可视化编排 RAG/Agent 工作流，支持自托管部署","tags":["开源","LLMOps","RAG","Agent","可视化编排"],"category":"agent-platforms","rating":4.7,"isHot":true},
+  {"id":"cursor","name":"Cursor","url":"https://cursor.sh","desc":"AI 原生代码编辑器，深度集成 GPT-4/Claude，支持智能补全、代码重构、Bug 修复","tags":["AI编程","代码编辑器","VSCode","GPT-4"],"category":"ai-coding","rating":4.9,"isHot":true},
+  {"id":"trae","name":"Trae","url":"https://trae.ai","desc":"字节跳动推出的 AI 原生 IDE，深度集成豆包大模型，中文编程体验优秀","tags":["AI编程","字节跳动","IDE","国产"],"category":"ai-coding","rating":4.6,"isNew":true,"isHot":true},
+  {"id":"github-copilot","name":"GitHub Copilot","url":"https://github.com/features/copilot","desc":"GitHub 出品的 AI 编程助手，支持代码补全、测试生成、文档编写","tags":["AI编程","代码补全","GitHub","VSCode"],"category":"ai-coding","rating":4.7,"isHot":true},
+  {"id":"v0-dev","name":"V0.dev","url":"https://v0.dev","desc":"Vercel 出品的 AI 生成 UI 组件工具，用自然语言描述即可生成 React/Tailwind 代码","tags":["AI生成UI","React","Tailwind","Vercel"],"category":"ai-coding","rating":4.6,"isHot":true},
+  {"id":"midjourney","name":"Midjourney","url":"https://www.midjourney.com","desc":"业界顶级的 AI 图像生成工具，以艺术风格多样、画质精美著称","tags":["AI绘画","图像生成","创意设计","艺术"],"category":"ai-image","rating":4.9,"isHot":true},
+  {"id":"stable-diffusion","name":"Stable Diffusion","url":"https://stability.ai","desc":"开源 AI 图像生成模型，支持本地部署和自定义训练","tags":["AI绘画","开源","本地部署","自定义模型"],"category":"ai-image","rating":4.7,"isHot":true},
+  {"id":"jimeng","name":"即梦 AI","url":"https://jimeng.jianying.com","desc":"字节跳动出品的 AI 图像生成工具，中文理解优秀","tags":["AI绘画","字节跳动","国产","文生图"],"category":"ai-image","rating":4.5,"isHot":true},
+  {"id":"liblib","name":"哩布哩布","url":"https://www.liblib.art","desc":"国内领先的 AI 绘画社区，提供海量 SD 模型和 LoRA 资源","tags":["AI绘画","模型社区","LoRA","Stable Diffusion"],"category":"ai-image","rating":4.5,"isHot":true},
+  {"id":"suno","name":"Suno AI","url":"https://suno.ai","desc":"AI 音乐生成神器，输入文字即可生成完整歌曲","tags":["AI音乐","歌曲生成","人声演唱","创意"],"category":"ai-audio","rating":4.8,"isHot":true},
+  {"id":"elevenlabs","name":"ElevenLabs","url":"https://elevenlabs.io","desc":"顶级 AI 语音合成平台，支持超逼真的多语言语音克隆","tags":["语音合成","语音克隆","TTS","多语言"],"category":"ai-audio","rating":4.7,"isHot":true},
+  {"id":"runway","name":"Runway","url":"https://runwayml.com","desc":"专业级 AI 视频生成工具，支持文生视频、图生视频","tags":["AI视频","视频生成","视频编辑","Gen-2"],"category":"ai-video","rating":4.8,"isHot":true},
+  {"id":"kling","name":"可灵 AI","url":"https://klingai.kuaishou.com","desc":"快手出品的 AI 视频生成工具，支持长视频生成","tags":["AI视频","快手","国产","长视频"],"category":"ai-video","rating":4.6,"isHot":true},
+  {"id":"heygen","name":"HeyGen","url":"https://www.heygen.com","desc":"AI 数字人视频生成平台，支持多语言口播视频","tags":["数字人","视频翻译","口播视频","AI主播"],"category":"ai-video","rating":4.7,"isHot":true},
+  {"id":"perplexity","name":"Perplexity AI","url":"https://www.perplexity.ai","desc":"AI 驱动的搜索引擎，实时联网检索并给出带引用来源的回答","tags":["AI搜索","学术研究","实时信息","引用溯源"],"category":"ai-search","rating":4.7,"isHot":true},
+  {"id":"notion","name":"Notion","url":"https://www.notion.so","desc":"一体化工作空间，支持笔记、知识库、项目管理和协作","tags":["笔记","知识管理","协作","数据库"],"category":"productivity","rating":4.8,"isHot":true},
+  {"id":"feishu","name":"飞书","url":"https://www.feishu.cn","desc":"字节跳动出品的协作办公平台，深度集成 AI 助手","tags":["协同办公","字节跳动","智能会议","文档协作"],"category":"productivity","rating":4.6,"isHot":true},
+  {"id":"gamma","name":"Gamma","url":"https://gamma.app","desc":"AI 驱动的演示文稿生成工具，输入主题即可生成精美 PPT","tags":["AI生成PPT","演示文稿","演示工具"],"category":"productivity","rating":4.7,"isHot":true},
+  {"id":"n8n","name":"n8n","url":"https://n8n.io","desc":"开源工作流自动化工具，可视化拖拽连接 400+ 应用","tags":["工作流自动化","开源","低代码","自托管"],"category":"automation","rating":4.7,"isHot":true},
+  {"id":"zapier","name":"Zapier","url":"https://zapier.com","desc":"无代码自动化平台，连接 6000+ 应用","tags":["自动化","无代码","应用集成","工作流"],"category":"automation","rating":4.6,"isHot":true},
+  {"id":"vnpy","name":"vn.py","url":"https://www.vnpy.com","desc":"Python 开源量化交易框架，支持 A 股、期货、数字货币","tags":["量化交易","Python","开源","A股","期货"],"category":"quant","rating":4.8,"isHot":true},
+  {"id":"shopify","name":"Shopify","url":"https://www.shopify.com","desc":"全球领先的跨境电商独立站平台","tags":["跨境电商","独立站","电商","建站"],"category":"ecommerce","rating":4.8,"isHot":true},
+  {"id":"tiktok-shop","name":"TikTok Shop","url":"https://www.tiktok.com/business/","desc":"TikTok 官方电商平台，支持短视频带货、直播带货","tags":["TikTok","跨境电商","直播带货","短视频电商"],"category":"ecommerce","rating":4.7,"isHot":true},
+  {"id":"github","name":"GitHub","url":"https://github.com","desc":"全球最大的代码托管平台","tags":["代码托管","开源","Git","协作开发"],"category":"dev-tools","rating":4.9,"isHot":true},
+  {"id":"vercel","name":"Vercel","url":"https://vercel.com","desc":"前端云部署平台，支持 Next.js、React 等框架一键部署","tags":["云部署","前端托管","Next.js","CI/CD"],"category":"dev-tools","rating":4.7,"isHot":true},
+  {"id":"huggingface","name":"Hugging Face","url":"https://huggingface.co","desc":"AI 模型社区和平台，提供海量预训练模型","tags":["AI模型","开源社区","Transformers","机器学习"],"category":"dev-tools","rating":4.8,"isHot":true},
+  {"id":"langchain","name":"LangChain","url":"https://www.langchain.com","desc":"构建 LLM 应用的开源框架，支持 RAG、Agent","tags":["LLM框架","开源","RAG","Agent"],"category":"dev-tools","rating":4.7,"isHot":true},
+  {"id":"obsidian","name":"Obsidian","url":"https://obsidian.md","desc":"知识管理工具，支持双向链接、图谱视图","tags":["笔记","知识管理","双向链接","插件"],"category":"productivity","rating":4.8,"isHot":true},
+  {"id":"figma","name":"Figma","url":"https://www.figma.com","desc":"专业级在线 UI/UX 设计工具","tags":["UI设计","协作","原型设计","设计系统"],"category":"design","rating":4.8,"isHot":true},
+  {"id":"canva","name":"Canva 可画","url":"https://www.canva.com","desc":"在线设计平台，提供海量模板","tags":["在线设计","海报设计","模板","协作"],"category":"design","rating":4.8,"isHot":true},
+  {"id":"ahrefs","name":"Ahrefs","url":"https://ahrefs.com","desc":"专业 SEO 工具套件","tags":["SEO","关键词研究","竞争对手分析","外链"],"category":"marketing","rating":4.8,"isHot":true},
+  {"id":"semrush","name":"Semrush","url":"https://www.semrush.com","desc":"数字营销全能工具","tags":["数字营销","SEO","竞品分析","广告研究"],"category":"marketing","rating":4.7,"isHot":true},
+  {"id":"jasper","name":"Jasper AI","url":"https://www.jasper.ai","desc":"AI 营销内容写作助手","tags":["AI写作","营销文案","内容创作","SEO"],"category":"content-creation","rating":4.5,"isHot":true},
+  {"id":"stripe","name":"Stripe","url":"https://stripe.com","desc":"互联网支付处理平台","tags":["支付","订阅","电商","API"],"category":"business","rating":4.8,"isHot":true},
+  {"id":"arxiv","name":"arXiv","url":"https://arxiv.org","desc":"开放获取的预印本论文库","tags":["预印本","开放获取","学术","论文"],"category":"research","rating":4.8,"isHot":true},
+  {"id":"paperswithcode","name":"Papers With Code","url":"https://paperswithcode.com","desc":"机器学习论文和代码链接平台","tags":["机器学习","论文","代码","复现"],"category":"research","rating":4.7,"isHot":true},
+  {"id":"zotero","name":"Zotero","url":"https://www.zotero.org","desc":"开源文献管理工具","tags":["文献管理","学术研究","开源","PDF管理"],"category":"research","rating":4.8,"isHot":true},
+  {"id":"kaggle","name":"Kaggle","url":"https://www.kaggle.com","desc":"数据科学竞赛平台和社区","tags":["数据科学","竞赛","数据集","机器学习"],"category":"dev-tools","rating":4.7,"isHot":true},
+  {"id":"anki","name":"Anki","url":"https://apps.ankiweb.net","desc":"开源间隔重复记忆软件","tags":["记忆","间隔重复","学习","开源"],"category":"learning","rating":4.7,"isHot":true},
+  {"id":"duolingo","name":"Duolingo 多邻国","url":"https://www.duolingo.com","desc":"游戏化语言学习平台","tags":["语言学习","游戏化","免费","多语言"],"category":"learning","rating":4.7,"isHot":true},
+  {"id":"deepl","name":"DeepL","url":"https://www.deepl.com","desc":"专业级 AI 翻译引擎","tags":["翻译","AI翻译","文档翻译","写作建议"],"category":"productivity","rating":4.8,"isHot":true},
+  {"id":"chatpdf","name":"ChatPDF","url":"https://www.chatpdf.com","desc":"与 PDF 文档对话的 AI 工具","tags":["PDF对话","AI","文档分析","摘要"],"category":"productivity","rating":4.5,"isHot":true},
+  {"id":"whisper","name":"Whisper","url":"https://github.com/openai/whisper","desc":"OpenAI 开源语音识别模型","tags":["语音识别","开源","多语言","OpenAI"],"category":"ai-audio","rating":4.7,"isHot":true},
+  {"id":"gpt-sovits","name":"GPT-SoVITS","url":"https://github.com/RVC-Boss/GPT-SoVITS","desc":"国产开源语音克隆项目","tags":["语音克隆","开源","国产","少量样本"],"category":"ai-audio","rating":4.6,"isHot":true},
+  {"id":"codeium","name":"Codeium","url":"https://codeium.com","desc":"免费 AI 代码补全工具","tags":["代码补全","免费","多语言","IDE插件"],"category":"ai-coding","rating":4.5,"isHot":true},
+  {"id":"supabase","name":"Supabase","url":"https://supabase.com","desc":"开源 Firebase 替代方案","tags":["BaaS","开源","数据库","认证"],"category":"dev-tools","rating":4.7,"isHot":true},
+  {"id":"postman","name":"Postman","url":"https://www.postman.com","desc":"API 开发和测试平台","tags":["API测试","接口开发","协作","文档"],"category":"dev-tools","rating":4.7,"isHot":true},
+  {"id":"ilovepdf","name":"iLovePDF","url":"https://www.ilovepdf.com","desc":"在线 PDF 工具套件","tags":["PDF工具","在线工具","免费","转换"],"category":"productivity","rating":4.6,"isHot":true},
+  {"id":"ticktick","name":"滴答清单","url":"https://www.dida365.com","desc":"国产任务管理工具","tags":["任务管理","国产","番茄钟","习惯打卡"],"category":"productivity","rating":4.6,"isHot":true},
+  {"id":"remove-bg","name":"remove.bg","url":"https://www.remove.bg","desc":"AI 自动抠图工具","tags":["抠图","背景移除","AI图像","批量处理"],"category":"design","rating":4.5,"isHot":true},
+  {"id":"comfyui","name":"ComfyUI","url":"https://github.com/comfyanonymous/ComfyUI","desc":"模块化 Stable Diffusion 图形界面","tags":["Stable Diffusion","工作流","节点编辑","开源"],"category":"ai-image","rating":4.7,"isHot":true},
+  {"id":"lmstudio","name":"LM Studio","url":"https://lmstudio.ai","desc":"本地运行 LLM 的桌面应用","tags":["本地LLM","桌面应用","开源模型","聊天"],"category":"ai-chat","rating":4.6,"isHot":true},
+  {"id":"monica","name":"Monica AI","url":"https://monica.im","desc":"全能 AI 助手浏览器插件","tags":["AI助手","浏览器插件","写作","翻译"],"category":"productivity","rating":4.5,"isHot":true}
+];
 
 let allTools = [];
 let currentCategory = 'all';
@@ -249,12 +341,21 @@ let currentView = 'grid';
 async function loadTools() {
     showLoading();
     try {
-        const res = await fetch('./data/db.json');
-        allTools = await res.json();
+        // 直接使用嵌入式数据（863个工具）
+        if (typeof BOOKMARK_TOOLS !== 'undefined' && BOOKMARK_TOOLS.length > 0) {
+            allTools = BOOKMARK_TOOLS;
+            console.log(`已加载 ${allTools.length} 个工具（收藏夹数据）`);
+        } else {
+            // 回退到内置数据
+            allTools = TOOLS_DATA;
+            console.log(`使用内置 ${TOOLS_DATA.length} 个工具`);
+        }
+        
         renderCategories();
         renderTools();
         updateStats();
     } catch (error) {
+        console.error('加载失败:', error);
         showErrorState();
     }
 }
@@ -326,7 +427,12 @@ function createToolCard(tool) {
 
 // 分类图标
 function getIcon(cat) {
-    const icons = {'ai-chat':'C','ai-coding':'D','ai-image':'I','ai-video':'V','ai-audio':'A','ai-search':'S','agent-platforms':'B','productivity':'P','dev-tools':'X','design':'E','marketing':'M','content-creation':'W','automation':'Z','quant':'Q','ecommerce':'$','research':'R','learning':'L','business':'F'};
+    const icons = {
+        'agent':'B','finance':'Q','marketing':'M','video':'V','code':'D',
+        'image':'I','chat':'C','writing':'W','audio':'A','learning':'L',
+        'data':'X','productivity':'P','search':'S','automation':'Z',
+        'research':'R','other':'+'
+    };
     return icons[cat]||'?';
 }
 

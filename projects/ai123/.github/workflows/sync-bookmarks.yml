@@ -1,0 +1,38 @@
+# GitHub Actions - 每日自动同步书签
+# 需要：
+# 1. 在 Settings > Secrets 中添加 BOOKMARKS_URL（书签文件的在线地址）
+# 2. 或者将书签文件放在仓库的 data/bookmarks.html
+
+name: Daily Sync Bookmarks
+
+on:
+  schedule:
+    # 每天 UTC 00:00 运行（北京时间 08:00）
+    - cron: '0 0 * * *'
+  workflow_dispatch:  # 手动触发
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Sync Bookmarks
+        run: |
+          python scripts/sync_and_push.py
+        env:
+          AI123_BOOKMARKS: ${{ secrets.BOOKMARKS_URL }}
+
+      - name: Commit & Push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add public/data/
+          git diff --quiet && git diff --staged --quiet || git commit -m "auto: 每日同步书签 $(date +'%Y-%m-%d')"
+          git push

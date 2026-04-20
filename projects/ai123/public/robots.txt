@@ -1,17 +1,4 @@
-# TOPGO发现导航 - Robots.txt for AI & Traditional Crawlers
 User-agent: *
 Allow: /
-Disallow: /system/
-Crawl-delay: 1
-User-agent: GPTBot
-Allow: /
-User-agent: CCBot
-Allow: /
-User-agent: anthropic-ai
-Allow: /
-User-agent: Google-Extended
-Allow: /
-User-agent: PerplexityBot
-Allow: /
-Sitemap: https://ai123.miyucaicai.cn/sitemap.xml
-Sitemap: https://ai123.miyucaicai.cn/sitemap-geo.xml
+
+Sitemap: https://ai123-nav.vercel.app/sitemap.xml
