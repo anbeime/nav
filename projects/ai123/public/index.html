@@ -1,2237 +1,448 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="zh-CN">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AI123 - AI工具导航站 | 发现800+精选AI工具</title>
-    <meta
-      name="description"
-      content="AI123 - 发现导航。按业务场景找AI工具，覆盖智能办公、量化投研、内容创作、电商运营等9大核心场景，800+精选工具一键直达。"
-    />
-    <meta
-      name="keywords"
-      content="AI工具导航,AI技能,业务场景导航,智能办公AI,量化投研工具,电商AI工具,AI编程助手,AI Agent"
-    />
-    <link rel="canonical" href="https://ai123.miyucaicai.cn/" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
-    />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TOPGO发现导航 - AI工具导航站 | 800+精选工具</title>
+    <meta name="description" content="TOPGO发现导航精选800+优质AI工具和量化交易平台。涵盖ChatGPT、Claude、DeepSeek等AI对话工具，Coze扣子、Dify智能体开发平台，Midjourney生图工具，Cursor AI编程工具。">
+    <meta name="keywords" content="AI导航,AI工具导航,ChatGPT,Claude,DeepSeek,Coze扣子,AI编程,Cursor,AI绘画,Midjourney">
+    <link rel="canonical" href="https://ai123.miyucaicai.cn/">
+    <meta property="og:title" content="TOPGO发现导航 - AI工具导航站">
+    <meta property="og:description" content="精选800+优质AI工具，按场景智能分类，一键直达。">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ai123.miyucaicai.cn/">
+    <meta property="og:image" content="https://gcore.jsdelivr.net/gh/anbeime/nav@image/1750223209245.jpg">
+    <meta name="twitter:card" content="summary_large_image">
     <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-
-      :root {
-        --primary: #6366f1;
-        --secondary: #8b5cf6;
-        --success: #10b981;
-        --warning: #f59e0b;
-        --danger: #ef4444;
-        --text-primary: #1f2937;
-        --text-secondary: #6b7280;
-        --bg-primary: #ffffff;
-        --bg-secondary: #f9fafb;
-        --border: #e5e7eb;
-      }
-
-      body {
-        font-family:
-          -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        min-height: 100vh;
-        padding: 20px;
-      }
-
-      .container {
-        max-width: 1400px;
-        margin: 0 auto;
-      }
-
-      /* Header */
-      .header {
-        text-align: center;
-        color: white;
-        margin-bottom: 30px;
-      }
-      .header h1 {
-        font-size: 2.5em;
-        font-weight: 700;
-        margin-bottom: 10px;
-      }
-      .header p {
-        opacity: 0.95;
-        font-size: 1.1em;
-        margin-bottom: 20px;
-      }
-      .header-stats {
-        display: flex;
-        justify-content: center;
-        gap: 40px;
-      }
-      .header-stat {
-        text-align: center;
-      }
-      .header-stat-value {
-        font-size: 2em;
-        font-weight: 700;
-      }
-      .header-stat-label {
-        opacity: 0.9;
-        font-size: 0.9em;
-      }
-
-      /* Main Layout */
-      .main-content {
-        display: grid;
-        grid-template-columns: 260px 1fr;
-        gap: 20px;
-      }
-
-      /* Sidebar */
-      .sidebar {
-        background: white;
-        border-radius: 16px;
-        padding: 20px;
-        height: fit-content;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        position: sticky;
-        top: 20px;
-      }
-      .sidebar-title {
-        font-size: 1.1em;
-        font-weight: 600;
-        margin-bottom: 15px;
-        color: var(--text-primary);
-      }
-
-      /* Quick Links */
-      .quick-links {
-        margin-bottom: 20px;
-        padding-bottom: 15px;
-        border-bottom: 1px solid var(--border);
-      }
-      .quick-link {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        padding: 10px;
-        border-radius: 10px;
-        color: var(--text-secondary);
-        text-decoration: none;
-        transition: all 0.2s;
-        margin-bottom: 8px;
-      }
-      .quick-link:hover {
-        background: var(--bg-secondary);
-        color: var(--primary);
-      }
-      .quick-link-icon {
-        width: 32px;
-        height: 32px;
-        border-radius: 8px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 1.2em;
-      }
-      .quick-link-starclaw {
-        background: linear-gradient(135deg, #f97316, #ea580c);
-        color: white;
-      }
-      .quick-link-geochain {
-        background: linear-gradient(135deg, #06b6d4, #0891b2);
-        color: white;
-      }
-      .quick-link-skillstore {
-        background: linear-gradient(135deg, #8b5cf6, #7c3aed);
-        color: white;
-      }
-
-      .region-selector {
-        display: flex;
-        gap: 8px;
-        margin-bottom: 15px;
-        flex-wrap: wrap;
-      }
-      .region-btn {
-        padding: 6px 12px;
-        border-radius: 20px;
-        font-size: 0.85em;
-        border: none;
-        cursor: pointer;
-        transition: all 0.2s;
-        background: var(--bg-secondary);
-        color: var(--text-secondary);
-      }
-      .region-btn.active {
-        background: var(--primary);
-        color: white;
-      }
-
-      /* Category List */
-      .category-list {
-        list-style: none;
-      }
-      .category-item {
-        padding: 12px 15px;
-        margin-bottom: 5px;
-        border-radius: 10px;
-        cursor: pointer;
-        transition: all 0.2s;
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        color: var(--text-secondary);
-      }
-      .category-item:hover {
-        background: var(--bg-secondary);
-        color: var(--text-primary);
-      }
-      .category-item.active {
-        background: linear-gradient(135deg, var(--primary), var(--secondary));
-        color: white;
-      }
-      .category-icon {
-        font-size: 1.2em;
-      }
-      .category-count {
-        margin-left: auto;
-        background: var(--bg-secondary);
-        padding: 2px 8px;
-        border-radius: 12px;
-        font-size: 0.85em;
-      }
-      .category-item.active .category-count {
-        background: rgba(255, 255, 255, 0.2);
-      }
-
-      /* Content Area */
-      .content-area {
-        background: white;
-        border-radius: 16px;
-        padding: 25px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      }
-
-      /* Search Bar */
-      .search-bar {
-        display: flex;
-        gap: 15px;
-        margin-bottom: 25px;
-      }
-      .search-input {
-        flex: 1;
-        position: relative;
-      }
-      .search-input input {
-        width: 100%;
-        padding: 14px 20px 14px 45px;
-        border: 2px solid var(--border);
-        border-radius: 12px;
-        font-size: 15px;
-        transition: all 0.3s;
-      }
-      .search-input input:focus {
-        outline: none;
-        border-color: var(--primary);
-        box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
-      }
-      .search-input::before {
-        content: "🔍";
-        position: absolute;
-        left: 15px;
-        top: 50%;
-        transform: translateY(-50%);
-        font-size: 1.2em;
-      }
-
-      /* Stats Bar */
-      .stats-bar {
-        display: flex;
-        gap: 30px;
-        margin-bottom: 20px;
-        padding: 15px;
-        background: var(--bg-secondary);
-        border-radius: 12px;
-      }
-      .stat-item {
-        text-align: center;
-      }
-      .stat-value {
-        font-size: 1.5em;
-        font-weight: 700;
-        color: var(--primary);
-      }
-      .stat-label {
-        font-size: 0.85em;
-        color: var(--text-secondary);
-      }
-
-      /* Scenario Cards Grid */
-      .tools-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-        gap: 16px;
-      }
-
-      .tool-card {
-        background: white;
-        border: 1px solid var(--border);
-        border-radius: 12px;
-        padding: 16px;
-        transition: all 0.3s;
-        cursor: pointer;
-      }
-      .tool-card:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
-        border-color: var(--primary);
-      }
-
-      .tool-header {
-        display: flex;
-        align-items: center;
-        gap: 12px;
-        margin-bottom: 12px;
-      }
-      .tool-icon {
-        width: 44px;
-        height: 44px;
-        border-radius: 10px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 1.5em;
-        background: linear-gradient(135deg, #f3f4f6, #e5e7eb);
-      }
-      .tool-name {
-        font-weight: 600;
-        color: var(--text-primary);
-        font-size: 1em;
-      }
-
-      .tool-desc {
-        color: var(--text-secondary);
-        font-size: 0.9em;
-        line-height: 1.5;
-        margin-bottom: 12px;
-        min-height: 40px;
-      }
-
-      .tool-tags {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 6px;
-        margin-bottom: 12px;
-      }
-      .tool-tag {
-        padding: 3px 8px;
-        background: var(--bg-secondary);
-        border-radius: 6px;
-        font-size: 0.75em;
-        color: var(--text-secondary);
-      }
-
-      .tool-footer {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding-top: 12px;
-        border-top: 1px solid var(--border);
-      }
-      .tool-region {
-        display: flex;
-        align-items: center;
-        gap: 5px;
-        font-size: 0.8em;
-        color: var(--text-secondary);
-      }
-      .tool-price {
-        font-weight: 600;
-        color: var(--success);
-        font-size: 0.9em;
-      }
-      .tool-price.paid {
-        color: var(--warning);
-      }
-
-      .tool-card .visit-btn {
-        padding: 6px 14px;
-        background: linear-gradient(135deg, var(--primary), var(--secondary));
-        color: white;
-        border: none;
-        border-radius: 6px;
-        font-size: 0.85em;
-        cursor: pointer;
-        transition: all 0.2s;
-      }
-      .tool-card .visit-btn:hover {
-        transform: scale(1.05);
-      }
-
-      /* Empty State */
-      .empty-state {
-        text-align: center;
-        padding: 60px 20px;
-        color: var(--text-secondary);
-      }
-      .empty-state-icon {
-        font-size: 3em;
-        margin-bottom: 15px;
-      }
-
-      /* Modal */
-      .modal {
-        display: none;
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: rgba(0, 0, 0, 0.6);
-        z-index: 1000;
-        align-items: center;
-        justify-content: center;
-        backdrop-filter: blur(4px);
-      }
-      .modal.active {
-        display: flex;
-      }
-      .modal-content {
-        background: white;
-        padding: 30px;
-        border-radius: 16px;
-        max-width: 600px;
-        width: 90%;
-        max-height: 80vh;
-        overflow-y: auto;
-      }
-      .modal-header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 20px;
-      }
-      .modal-close {
-        background: none;
-        border: none;
-        font-size: 24px;
-        cursor: pointer;
-        color: var(--text-secondary);
-      }
-
-      /* Toast */
-      .toast {
-        position: fixed;
-        top: 20px;
-        right: 20px;
-        padding: 15px 25px;
-        border-radius: 12px;
-        color: white;
-        font-weight: 500;
-        z-index: 2000;
-        animation: slideIn 0.3s ease;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-      }
-      .toast.success {
-        background: var(--success);
-      }
-      .toast.error {
-        background: var(--danger);
-      }
-
-      @keyframes slideIn {
-        from {
-          transform: translateX(100%);
-          opacity: 0;
+        *{margin:0;padding:0;box-sizing:border-box}
+        :root {
+            --primary:#6366f1;--primary-dark:#4f46e5;--secondary:#8b5cf6;
+            --success:#10b981;--warning:#f59e0b;--danger:#ef4444;
+            --text-primary:#1f2937;--text-secondary:#6b7280;
+            --bg-primary:#ffffff;--bg-secondary:#f9fafb;--border-color:#e5e7eb;
         }
-        to {
-          transform: translateX(0);
-          opacity: 1;
+        body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);min-height:100vh;padding:20px}
+        .container{max-width:1400px;margin:0 auto}
+        
+        /* Header */
+        .header{text-align:center;color:white;margin-bottom:24px}
+        .header h1{font-size:2.2em;margin-bottom:8px;font-weight:700;letter-spacing:-0.5px}
+        .header p{opacity:0.92;font-size:1.05em}
+        .header-stats{display:flex;justify-content:center;gap:32px;margin-top:16px;flex-wrap:wrap}
+        .header-stat{text-align:center}
+        .header-stat-value{font-size:1.8em;font-weight:700}
+        .header-stat-label{opacity:0.85;font-size:0.85em}
+        
+        /* Main Layout */
+        .main-content{display:grid;grid-template-columns:240px 1fr;gap:20px;align-items:start}
+        
+        /* Sidebar */
+        .sidebar{background:white;border-radius:14px;padding:18px;box-shadow:0 4px 12px rgba(0,0,0,0.08);position:sticky;top:20px}
+        .sidebar-title{font-size:1em;font-weight:600;margin-bottom:12px;color:var(--text-primary)}
+        .category-list{list-style:none}
+        .category-item{padding:9px 12px;margin-bottom:3px;border-radius:8px;cursor:pointer;transition:all 0.15s;display:flex;align-items:center;gap:8px;color:var(--text-secondary);font-size:0.9em}
+        .category-item:hover{background:var(--bg-secondary);color:var(--text-primary)}
+        .category-item.active{background:linear-gradient(135deg,#667eea,#764ba2);color:white}
+        .category-count{margin-left:auto;background:rgba(0,0,0,0.06);padding:1px 7px;border-radius:10px;font-size:0.82em}
+        .category-item.active .category-count{background:rgba(255,255,255,0.2)}
+        
+        /* Content */
+        .content-area{background:white;border-radius:14px;padding:22px;box-shadow:0 4px 12px rgba(0,0,0,0.08)}
+        
+        /* Search */
+        .search-bar{display:flex;gap:10px;margin-bottom:20px;flex-wrap:wrap}
+        .search-input{flex:1;min-width:200px;position:relative}
+        .search-input input{width:100%;padding:12px 16px 12px 42px;border:2px solid var(--border-color);border-radius:10px;font-size:14px;transition:all 0.2s;outline:none}
+        .search-input input:focus{border-color:var(--primary);box-shadow:0 0 0 3px rgba(99,102,241,0.1)}
+        .search-input::before{content:'';position:absolute;left:14px;top:50%;transform:translateY(-50%);width:18px;height:18px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%239ca3af' stroke-width='2'%3E%3Ccircle cx='11' cy='11' r='8'/%3E%3Cpath d='m21 21-4.35-4.35'/%3E%3C/svg%3E");background-repeat:no-repeat;background-size:contain}
+        .btn{padding:10px 18px;border:none;border-radius:8px;font-size:13px;cursor:pointer;transition:all 0.2s;font-weight:500;display:inline-flex;align-items:center;gap:6px}
+        .btn-primary{background:linear-gradient(135deg,#667eea,#764ba2);color:white}
+        .btn-primary:hover{transform:translateY(-1px);box-shadow:0 4px 12px rgba(99,102,241,0.3)}
+        .btn-secondary{background:var(--bg-secondary);color:var(--text-primary)}
+        .btn-secondary:hover{background:var(--border-color)}
+        .btn-sm{padding:6px 12px;font-size:12px}
+        
+        /* Toolbar */
+        .toolbar{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px;gap:12px;flex-wrap:wrap}
+        .view-toggle{display:flex;gap:3px;padding:3px;background:var(--bg-secondary);border-radius:8px}
+        .view-btn{padding:7px 12px;border:none;background:transparent;border-radius:6px;cursor:pointer;font-size:15px;transition:all 0.15s;color:var(--text-secondary)}
+        .view-btn.active{background:white;box-shadow:0 1px 3px rgba(0,0,0,0.1);color:var(--text-primary)}
+        .sort-select{padding:7px 12px;border:2px solid var(--border-color);border-radius:8px;font-size:13px;outline:none;cursor:pointer;background:white}
+        
+        /* Tools Grid */
+        .tools-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:16px}
+        .tools-list{display:flex;flex-direction:column;gap:10px}
+        
+        /* Tool Card */
+        .tool-card{border:2px solid var(--border-color);border-radius:14px;padding:18px;transition:all 0.25s;cursor:pointer;position:relative;overflow:hidden;background:white}
+        .tool-card:hover{border-color:var(--primary);box-shadow:0 8px 24px rgba(99,102,241,0.12);transform:translateY(-2px)}
+        .tool-badge{position:absolute;top:12px;right:12px;padding:3px 10px;border-radius:20px;font-size:0.75em;font-weight:600}
+        .badge-hot{background:#fef3c7;color:#92400e}
+        .badge-new{background:#dbeafe;color:#1e40af}
+        .badge-premium{background:#ede9fe;color:#5b21b6}
+        .tool-header{display:flex;align-items:center;gap:12px;margin-bottom:10px}
+        .tool-icon{width:44px;height:44px;border-radius:11px;display:flex;align-items:center;justify-content:center;font-size:1.3em;flex-shrink:0;background:linear-gradient(135deg,#667eea,#764ba2);color:white}
+        .tool-title{flex:1;min-width:0}
+        .tool-name{font-size:1.05em;font-weight:600;color:var(--text-primary);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+        .tool-rating{font-size:0.82em;color:var(--text-secondary);margin-top:2px;display:flex;align-items:center;gap:4px}
+        .tool-rating .stars{color:#f59e0b}
+        .tool-desc{color:var(--text-secondary);line-height:1.55;font-size:0.9em;margin-bottom:12px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+        .tool-tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px}
+        .tool-tag{padding:3px 9px;background:#f3f4f6;border-radius:6px;font-size:0.78em;color:var(--text-secondary)}
+        .tool-footer{display:flex;justify-content:space-between;align-items:center;padding-top:12px;border-top:1px solid var(--border-color)}
+        .tool-category{font-size:0.82em;color:var(--text-secondary)}
+        .tool-actions{display:flex;gap:8px}
+        
+        /* List View */
+        .list-card{display:flex;align-items:center;gap:16px;padding:14px 18px}
+        .list-card .tool-icon{width:38px;height:38px;font-size:1.1em;border-radius:9px}
+        .list-card .tool-info{flex:1}
+        .list-card .tool-name{font-size:1em}
+        .list-card .tool-desc{-webkit-line-clamp:1;margin-bottom:0}
+        .list-card .tool-tags{margin-bottom:0}
+        
+        /* Empty */
+        .empty-state{text-align:center;padding:60px 20px;color:var(--text-secondary)}
+        .empty-state h3{font-size:1.2em;color:var(--text-primary);margin-bottom:8px}
+        
+        /* Loading */
+        .loading{text-align:center;padding:50px;color:var(--text-secondary)}
+        .loading-spinner{font-size:2.5em;animation:spin 1s linear infinite;display:inline-block}
+        @keyframes spin{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
+        
+        /* Modal */
+        .modal{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.5);z-index:1000;align-items:center;justify-content:center;backdrop-filter:blur(4px)}
+        .modal.active{display:flex}
+        .modal-content{background:white;padding:28px;border-radius:16px;max-width:600px;width:92%;max-height:85vh;overflow-y:auto}
+        .modal-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px;padding-bottom:14px;border-bottom:1px solid var(--border-color)}
+        .modal-close{background:none;border:none;font-size:22px;cursor:pointer;color:var(--text-secondary);line-height:1;padding:4px}
+        .modal-close:hover{color:var(--text-primary)}
+        .detail-meta{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-bottom:18px}
+        .meta-item{padding:10px 14px;background:var(--bg-secondary);border-radius:8px}
+        .meta-label{font-size:0.78em;color:var(--text-secondary);margin-bottom:3px}
+        .meta-value{font-weight:600;color:var(--text-primary);font-size:0.95em}
+        .detail-actions{display:flex;gap:10px;margin-top:20px;flex-wrap:wrap}
+        .detail-actions .btn{flex:1;min-width:120px;justify-content:center}
+        
+        /* Toast */
+        .toast{position:fixed;top:20px;right:20px;padding:14px 22px;border-radius:10px;color:white;font-weight:500;z-index:2000;animation:slideIn 0.3s ease;box-shadow:0 4px 12px rgba(0,0,0,0.15)}
+        .toast.success{background:var(--success)}
+        .toast.error{background:var(--danger)}
+        .toast.info{background:var(--primary)}
+        @keyframes slideIn{from{transform:translateX(100%);opacity:0}to{transform:translateX(0);opacity:1}}
+        
+        /* Category colors */
+        .cat-ai-chat{background:linear-gradient(135deg,#ec4899,#f43f5e)}
+        .cat-ai-coding{background:linear-gradient(135deg,#3b82f6,#6366f1)}
+        .cat-ai-image{background:linear-gradient(135deg,#8b5cf6,#a855f7)}
+        .cat-ai-video{background:linear-gradient(135deg,#ef4444,#f97316)}
+        .cat-ai-audio{background:linear-gradient(135deg,#06b6d4,#0ea5e9)}
+        .cat-ai-search{background:linear-gradient(135deg,#10b981,#14b8a6)}
+        .cat-agent-platforms{background:linear-gradient(135deg,#f59e0b,#f97316)}
+        .cat-productivity{background:linear-gradient(135deg,#6366f1,#8b5cf6)}
+        .cat-dev-tools{background:linear-gradient(135deg,#64748b,#475569)}
+        .cat-design{background:linear-gradient(135deg,#ec4899,#d946ef)}
+        .cat-marketing{background:linear-gradient(135deg,#f43f5e,#ec4899)}
+        .cat-content-creation{background:linear-gradient(135deg,#84cc16,#22c55e)}
+        .cat-automation{background:linear-gradient(135deg,#0ea5e9,#06b6d4)}
+        .cat-quant{background:linear-gradient(135deg,#eab308,#f59e0b)}
+        .cat-ecommerce{background:linear-gradient(135deg,#f97316,#ea580c)}
+        .cat-research{background:linear-gradient(135deg,#6366f1,#a855f7)}
+        .cat-learning{background:linear-gradient(135deg,#22c55e,#10b981)}
+        .cat-business{background:linear-gradient(135deg,#0ea5e9,#0284c7)}
+        
+        /* Responsive */
+        @media(max-width:768px){
+            .main-content{grid-template-columns:1fr}
+            .sidebar{order:-1}
+            .category-list{display:flex;overflow-x:auto;gap:6px;padding-bottom:4px}
+            .category-item{white-space:nowrap}
+            .tools-grid{grid-template-columns:1fr}
+            .header-stats{gap:20px}
         }
-      }
-
-      /* Responsive */
-      @media (max-width: 900px) {
-        .main-content {
-          grid-template-columns: 1fr;
-        }
-        .sidebar {
-          position: static;
-        }
-        .category-list {
-          display: flex;
-          overflow-x: auto;
-          gap: 10px;
-          padding-bottom: 10px;
-        }
-        .category-item {
-          white-space: nowrap;
-        }
-        .tools-grid {
-          grid-template-columns: 1fr;
-        }
-      }
     </style>
-  </head>
-  <body>
-    <div class="container">
-      <div class="header">
-        <h1>🔗 AI123 发现导航</h1>
-        <p>按业务场景发现800+精选AI工具，一键直达全球优秀产品</p>
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <h1>TOPGO 发现导航</h1>
+        <p>精选 800+ AI工具，按场景智能分类，一键直达</p>
         <div class="header-stats">
-          <div class="header-stat">
-            <div class="header-stat-value" id="total-tools">843</div>
-            <div class="header-stat-label">AI工具</div>
-          </div>
-          <div class="header-stat">
-            <div class="header-stat-value" id="total-scenarios">9</div>
-            <div class="header-stat-label">场景分类</div>
-          </div>
-          <div class="header-stat">
-            <div class="header-stat-value">5</div>
-            <div class="header-stat-label">地区</div>
-          </div>
+            <div class="header-stat"><div class="header-stat-value" id="stat-total">0</div><div class="header-stat-label">总工具数</div></div>
+            <div class="header-stat"><div class="header-stat-value" id="stat-categories">18</div><div class="header-stat-label">分类</div></div>
+            <div class="header-stat"><div class="header-stat-value" id="stat-hot">0</div><div class="header-stat-label">热门推荐</div></div>
         </div>
-      </div>
-
-      <div class="main-content">
+    </div>
+    
+    <div class="main-content">
         <!-- Sidebar -->
         <div class="sidebar">
-          <h3 class="sidebar-title">🚀 快速入口</h3>
-          <div class="quick-links">
-            <a href="starclaw.html" class="quick-link" target="_blank">
-              <div class="quick-link-icon quick-link-starclaw">🦞</div>
-              <div>
-                <div style="font-weight: 600; font-size: 0.95em">
-                  StarClaw 控制台
-                </div>
-                <div style="font-size: 0.75em; color: var(--text-secondary)">
-                  智能体与战队
-                </div>
-              </div>
-            </a>
-            <a
-              href="geochain-dashboard.html"
-              class="quick-link"
-              target="_blank"
-            >
-              <div class="quick-link-icon quick-link-geochain">🔗</div>
-              <div>
-                <div style="font-weight: 600; font-size: 0.95em">
-                  GEO智链工作台
-                </div>
-                <div style="font-size: 0.75em; color: var(--text-secondary)">
-                  品牌保护方案
-                </div>
-              </div>
-            </a>
-            <a href="geo-solutions.html" class="quick-link" target="_blank">
-              <div class="quick-link-icon quick-link-skillstore">🛡️</div>
-              <div>
-                <div style="font-weight: 600; font-size: 0.95em">
-                  GEO解决方案
-                </div>
-                <div style="font-size: 0.75em; color: var(--text-secondary)">
-                  企业级AI方案
-                </div>
-              </div>
-            </a>
-          </div>
-
-          <h3 class="sidebar-title">🌍 地区筛选</h3>
-          <div class="region-selector">
-            <button class="region-btn active" data-region="all">全部</button>
-            <button class="region-btn" data-region="global">🌍 全球</button>
-            <button class="region-btn" data-region="cn">🇨🇳 中国</button>
-          </div>
-
-          <h3 class="sidebar-title">📂 场景分类</h3>
-          <ul class="category-list" id="category-list"></ul>
+            <h3 class="sidebar-title">工具分类</h3>
+            <ul class="category-list" id="category-list"></ul>
         </div>
-
-        <!-- Content Area -->
+        
+        <!-- Content -->
         <div class="content-area">
-          <div class="search-bar">
-            <div class="search-input">
-              <input
-                type="text"
-                id="search-input"
-                placeholder="搜索AI工具..."
-              />
-            </div>
-          </div>
-
-          <div class="stats-bar">
-            <div class="stat-item">
-              <div class="stat-value" id="display-count">843</div>
-              <div class="stat-label">个工具</div>
-            </div>
-            <div class="stat-item">
-              <div class="stat-value" id="free-count">0</div>
-              <div class="stat-label">免费</div>
-            </div>
-            <div class="stat-item">
-              <div class="stat-value" id="cn-count">0</div>
-              <div class="stat-label">国产</div>
-            </div>
-          </div>
-
-          <div class="tools-grid" id="tools-grid">
-            <div class="empty-state">
-              <div class="empty-state-icon">🔍</div>
-              <p>加载中...</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Tool Detail Modal -->
-    <div class="modal" id="tool-modal">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h2 id="modal-title" style="font-size: 1.3em; font-weight: 600"></h2>
-          <button class="modal-close" onclick="closeModal()">&times;</button>
-        </div>
-        <div id="modal-body"></div>
-      </div>
-    </div>
-
-    <script>
-      // Data loaded from db.json
-      let db = { scenarios: [], regions: [] };
-      let currentCategory = "all";
-      let currentRegion = "all";
-      let searchQuery = "";
-
-      // Load data
-      async function loadData() {
-        try {
-          const response = await fetch("./data/db.json");
-          db = await response.json();
-          renderCategories();
-          renderTools();
-          updateStats();
-        } catch (e) {
-          console.error("加载数据失败:", e);
-          document.getElementById("tools-grid").innerHTML =
-            '<div class="empty-state"><div class="empty-state-icon">❌</div><p>数据加载失败</p></div>';
-        }
-      }
-
-      // Render categories
-      function renderCategories() {
-        const list = document.getElementById("category-list");
-        let html = `<li class="category-item ${currentCategory === "all" ? "active" : ""}" data-category="all">
-                <span class="category-icon">📚</span>
-                <span>全部场景</span>
-                <span class="category-count">${db.scenarios.reduce((sum, s) => sum + s.tools.length, 0)}</span>
-            </li>`;
-
-        db.scenarios.forEach((s) => {
-          html += `<li class="category-item ${currentCategory === s.id ? "active" : ""}" data-category="${s.id}">
-                    <span class="category-icon">${s.icon}</span>
-                    <span>${s.name}</span>
-                    <span class="category-count">${s.tools.length}</span>
-                </li>`;
-        });
-
-        list.innerHTML = html;
-
-        // Click events
-        list.querySelectorAll(".category-item").forEach((item) => {
-          item.addEventListener("click", () => {
-            currentCategory = item.dataset.category;
-            renderCategories();
-            renderTools();
-          });
-        });
-      }
-
-      // Render tools
-      function renderTools() {
-        const grid = document.getElementById("tools-grid");
-        let tools = [];
-
-        // Filter by category
-        if (currentCategory === "all") {
-          db.scenarios.forEach((s) =>
-            tools.push(...s.tools.map((t) => ({ ...t, scenario: s.name }))),
-          );
-        } else {
-          const scenario = db.scenarios.find((s) => s.id === currentCategory);
-          if (scenario)
-            tools = scenario.tools.map((t) => ({
-              ...t,
-              scenario: scenario.name,
-            }));
-        }
-
-        // Filter by region
-        if (currentRegion !== "all") {
-          tools = tools.filter(
-            (t) =>
-              t.region.includes(currentRegion) || t.region.includes("global"),
-          );
-        }
-
-        // Filter by search
-        if (searchQuery) {
-          const q = searchQuery.toLowerCase();
-          tools = tools.filter(
-            (t) =>
-              t.name.toLowerCase().includes(q) ||
-              (t.tags && t.tags.some((tag) => tag.toLowerCase().includes(q))),
-          );
-        }
-
-        if (tools.length === 0) {
-          grid.innerHTML =
-            '<div class="empty-state"><div class="empty-state-icon">🔍</div><p>没有找到匹配的工具</p></div>';
-          return;
-        }
-
-        let html = "";
-        tools.forEach((t, i) => {
-          const icon = [
-            "🤖",
-            "💼",
-            "📊",
-            "✍️",
-            "🛒",
-            "💻",
-            "🎨",
-            "🎬",
-            "📈",
-            "📉",
-            "📚",
-          ][i % 11];
-          const isCN = t.region.includes("cn");
-
-          html += `<div class="tool-card" onclick="showToolDetail(${i})">
-                    <div class="tool-header">
-                        <div class="tool-icon">${icon}</div>
-                        <div class="tool-name">${t.name}</div>
-                    </div>
-                    <div class="tool-desc">${t.description || "暂无描述"}</div>
-                    <div class="tool-tags">
-                        ${(t.tags || [])
-                          .slice(0, 3)
-                          .map((tag) => `<span class="tool-tag">${tag}</span>`)
-                          .join("")}
-                    </div>
-                    <div class="tool-footer">
-                        <div class="tool-region">
-                            ${isCN ? "🇨🇳" : "🌍"} ${isCN ? "中国" : "全球"}
-                        </div>
-                        <button class="visit-btn" onclick="event.stopPropagation(); window.open('${t.url}', '_blank')">
-                            访问 →
-                        </button>
-                    </div>
-                </div>`;
-        });
-
-        grid.innerHTML = html;
-      }
-
-      // Show tool detail
-      function showToolDetail(index) {
-        let tools = [];
-        if (currentCategory === "all") {
-          db.scenarios.forEach((s) =>
-            tools.push(...s.tools.map((t) => ({ ...t, scenario: s.name }))),
-          );
-        } else {
-          const scenario = db.scenarios.find((s) => s.id === currentCategory);
-          if (scenario)
-            tools = scenario.tools.map((t) => ({
-              ...t,
-              scenario: scenario.name,
-            }));
-        }
-
-        if (currentRegion !== "all")
-          tools = tools.filter(
-            (t) =>
-              t.region.includes(currentRegion) || t.region.includes("global"),
-          );
-        if (searchQuery) {
-          const q = searchQuery.toLowerCase();
-          tools = tools.filter(
-            (t) =>
-              t.name.toLowerCase().includes(q) ||
-              (t.tags && t.tags.some((tag) => tag.toLowerCase().includes(q))),
-          );
-        }
-
-        const tool = tools[index];
-        if (!tool) return;
-
-        document.getElementById("modal-title").textContent = tool.name;
-
-        const isCN = tool.region.includes("cn");
-        document.getElementById("modal-body").innerHTML = `
-                <div style="margin-bottom: 20px;">
-                    <p style="color: var(--text-secondary); margin-bottom: 15px;">${tool.description || "暂无描述"}</p>
-                    <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px;">
-                        ${(tool.tags || []).map((tag) => `<span class="tool-tag" style="background: var(--primary); color: white;">${tag}</span>`).join("")}
-                    </div>
-                    <div style="display: flex; gap: 20px; padding: 15px; background: var(--bg-secondary); border-radius: 10px;">
-                        <div><strong>🌍 地区:</strong> ${isCN ? "中国" : "全球"}</div>
-                        <div><strong>📂 场景:</strong> ${tool.scenario}</div>
-                        <div><strong>💰 费用:</strong> ${tool.free ? "免费" : "付费"}</div>
-                    </div>
+            <!-- Search -->
+            <div class="search-bar">
+                <div class="search-input">
+                    <input type="text" id="search-input" placeholder="搜索工具名称、描述或标签..." onkeypress="if(event.key==='Enter')searchTools()">
                 </div>
-                <button onclick="window.open('${tool.url}', '_blank')" style="width: 100%; padding: 14px; background: linear-gradient(135deg, var(--primary), var(--secondary)); color: white; border: none; border-radius: 10px; font-size: 1em; cursor: pointer;">
-                    访问网站 →
-                </button>
-            `;
+                <select class="sort-select" id="sort-select" onchange="renderTools()">
+                    <option value="default">默认排序</option>
+                    <option value="rating">评分最高</option>
+                    <option value="name">名称 A-Z</option>
+                    <option value="hot">热门优先</option>
+                </select>
+                <div class="view-toggle">
+                    <button class="view-btn active" onclick="setView('grid')" title="网格视图">&#9783;</button>
+                    <button class="view-btn" onclick="setView('list')" title="列表视图">&#9776;</button>
+                </div>
+                <button class="btn btn-primary btn-sm" onclick="location.href='starclaw.html'">StarClaw</button>
+            </div>
+            
+            <!-- Tools Container -->
+            <div id="tools-container" class="tools-grid"></div>
+        </div>
+    </div>
+</div>
 
-        document.getElementById("tool-modal").classList.add("active");
-      }
+<!-- Detail Modal -->
+<div id="detail-modal" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h2 id="detail-title">工具详情</h2>
+            <button class="modal-close" onclick="closeDetailModal()">&times;</button>
+        </div>
+        <div id="detail-body"></div>
+    </div>
+</div>
 
-      function closeModal() {
-        document.getElementById("tool-modal").classList.remove("active");
-      }
+<script>
+const CATEGORIES = {
+    'all': {name:'全部工具',icon:'*'},
+    'ai-chat': {name:'AI对话',icon:'C'},
+    'ai-coding': {name:'AI编程',icon:'D'},
+    'ai-image': {name:'AI绘画',icon:'I'},
+    'ai-video': {name:'AI视频',icon:'V'},
+    'ai-audio': {name:'AI音频',icon:'A'},
+    'ai-search': {name:'AI搜索',icon:'S'},
+    'agent-platforms': {name:'智能体平台',icon:'B'},
+    'productivity': {name:'效率工具',icon:'P'},
+    'dev-tools': {name:'开发工具',icon:'X'},
+    'design': {name:'设计工具',icon:'E'},
+    'marketing': {name:'营销推广',icon:'M'},
+    'content-creation': {name:'内容创作',icon:'W'},
+    'automation': {name:'自动化',icon:'Z'},
+    'quant': {name:'量化交易',icon:'Q'},
+    'ecommerce': {name:'电商工具',icon:'$'},
+    'research': {name:'学术研究',icon:'R'},
+    'learning': {name:'学习成长',icon:'L'},
+    'business': {name:'商业工具',icon:'F'}
+};
 
-      // Update stats
-      function updateStats() {
-        let allTools = [];
-        db.scenarios.forEach((s) => allTools.push(...s.tools));
+let allTools = [];
+let currentCategory = 'all';
+let currentView = 'grid';
 
-        const total = allTools.length;
-        const free = allTools.filter((t) => t.free).length;
-        const cn = allTools.filter((t) => t.region.includes("cn")).length;
-
-        document.getElementById("display-count").textContent = total;
-        document.getElementById("free-count").textContent = free;
-        document.getElementById("cn-count").textContent = cn;
-      }
-
-      // Search
-      document.getElementById("search-input").addEventListener("input", (e) => {
-        searchQuery = e.target.value;
+// 加载工具数据
+async function loadTools() {
+    showLoading();
+    try {
+        const res = await fetch('data/db.json');
+        allTools = await res.json();
+        renderCategories();
         renderTools();
-      });
+        updateStats();
+    } catch (error) {
+        showErrorState();
+    }
+}
 
-      // Region filter
-      document.querySelectorAll(".region-btn").forEach((btn) => {
-        btn.addEventListener("click", () => {
-          document
-            .querySelectorAll(".region-btn")
-            .forEach((b) => b.classList.remove("active"));
-          btn.classList.add("active");
-          currentRegion = btn.dataset.region;
-          renderTools();
-        });
-      });
+// 渲染分类
+function renderCategories() {
+    const counts = {'all': allTools.length};
+    allTools.forEach(t => { counts[t.category] = (counts[t.category]||0)+1; });
+    
+    const container = document.getElementById('category-list');
+    container.innerHTML = Object.entries(CATEGORIES).map(([id,cat]) => `
+        <li class="category-item ${currentCategory===id?'active':''}" onclick="filterCategory('${id}')">
+            <span>${cat.icon}</span>
+            <span>${cat.name}</span>
+            <span class="category-count">${counts[id]||0}</span>
+        </li>
+    `).join('');
+}
 
-      // Close modal on outside click
-      document.getElementById("tool-modal").addEventListener("click", (e) => {
-        if (e.target.id === "tool-modal") closeModal();
-      });
+// 渲染工具
+function renderTools() {
+    const container = document.getElementById('tools-container');
+    let tools = currentCategory==='all' ? allTools : allTools.filter(t=>t.category===currentCategory);
+    
+    // 排序
+    const sort = document.getElementById('sort-select').value;
+    if (sort==='rating') tools.sort((a,b)=>(b.rating||0)-(a.rating||0));
+    else if (sort==='name') tools.sort((a,b)=>a.name.localeCompare(b.name));
+    else if (sort==='hot') tools.sort((a,b)=>(b.isHot?1:0)-(a.isHot?1:0));
+    
+    if (tools.length===0) {
+        container.innerHTML = `<div class="empty-state" style="grid-column:1/-1;"><h3>未找到相关工具</h3><p>试试切换分类或搜索关键词</p></div>`;
+        return;
+    }
+    
+    container.innerHTML = tools.map(t => createToolCard(t)).join('');
+    container.className = currentView==='list' ? 'tools-list' : 'tools-grid';
+}
 
-      // ESC close
-      document.addEventListener("keydown", (e) => {
-        if (e.key === "Escape") closeModal();
-      });
-
-      // Init
-      loadData();
-    </script>
-  </body>
-</html>
-
-    <!-- JSON-LD -->
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "WebSite",
-        "name": "TOPGO发现导航",
-        "alternateName": "ai123",
-        "url": "https://ai123.miyucaicai.cn/",
-        "description": "全球AI技能导航平台，按业务场景匹配AI工具，支持多地区本地化推荐",
-        "inLanguage": ["zh-CN", "en", "ja"],
-        "publisher": {
-          "@type": "Organization",
-          "name": "TOPGO发现导航",
-          "url": "https://ai123.miyucaicai.cn/"
-        },
-        "potentialAction": {
-          "@type": "SearchAction",
-          "target": "https://ai123.miyucaicai.cn/scenario-hub.html?q={search_term_string}",
-          "query-input": "required name=search_term_string"
-        },
-        "dateModified": "2026-04-18"
-      }
-    </script>
-
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-      body {
-        font-family:
-          -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
-          sans-serif;
-        background: linear-gradient(
-          135deg,
-          #0f0c29 0%,
-          #302b63 50%,
-          #24243e 100%
-        );
-        min-height: 100vh;
-        color: #fff;
-        line-height: 1.6;
-        overflow-x: hidden;
-      }
-
-      /* ===== Header ===== */
-      .header {
-        padding: 16px 40px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-        backdrop-filter: blur(20px);
-        position: sticky;
-        top: 0;
-        z-index: 100;
-        background: rgba(15, 12, 41, 0.85);
-      }
-      .logo-area {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-      }
-      .logo-icon {
-        width: 36px;
-        height: 36px;
-        border-radius: 10px;
-        background: linear-gradient(135deg, #4fc3f7, #7c4dff);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 18px;
-        font-weight: 900;
-        color: #fff;
-      }
-      .logo-text {
-        font-size: 20px;
-        font-weight: 800;
-        letter-spacing: -0.5px;
-      }
-      .logo-text span {
-        color: #4fc3f7;
-      }
-      .logo-badge {
-        font-size: 10px;
-        padding: 2px 8px;
-        border-radius: 10px;
-        background: rgba(79, 195, 247, 0.2);
-        color: #4fc3f7;
-        font-weight: 600;
-        margin-left: 6px;
-      }
-      .header-right {
-        display: flex;
-        align-items: center;
-        gap: 16px;
-      }
-      .geo-btn {
-        padding: 6px 14px;
-        border-radius: 20px;
-        border: 1px solid rgba(255, 255, 255, 0.2);
-        background: rgba(255, 255, 255, 0.06);
-        color: #bbb;
-        font-size: 12px;
-        cursor: pointer;
-        transition: all 0.25s;
-        text-decoration: none;
-        white-space: nowrap;
-      }
-      .geo-btn:hover {
-        background: rgba(79, 195, 247, 0.15);
-        border-color: #4fc3f7;
-        color: #4fc3f7;
-      }
-      .nav-link {
-        color: rgba(255, 255, 255, 0.6);
-        text-decoration: none;
-        font-size: 13px;
-        font-weight: 500;
-        transition: color 0.2s;
-      }
-      .nav-link:hover {
-        color: #fff;
-      }
-      .classic-link {
-        display: inline-flex;
-        align-items: center;
-        gap: 4px;
-        padding: 6px 14px;
-        border-radius: 20px;
-        border: 1px solid rgba(255, 255, 255, 0.15);
-        color: rgba(255, 255, 255, 0.6);
-        font-size: 12px;
-        text-decoration: none;
-        transition: all 0.2s;
-      }
-      .classic-link:hover {
-        border-color: rgba(255, 255, 255, 0.4);
-        color: #fff;
-      }
-
-      /* ===== Hero ===== */
-      .hero {
-        text-align: center;
-        padding: 56px 20px 44px;
-        max-width: 900px;
-        margin: 0 auto;
-        position: relative;
-      }
-      .hero::before {
-        content: "";
-        position: absolute;
-        top: -100px;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 600px;
-        height: 600px;
-        background: radial-gradient(
-          circle,
-          rgba(79, 195, 247, 0.15) 0%,
-          transparent 70%
-        );
-        pointer-events: none;
-      }
-      .hero-badge {
-        display: inline-flex;
-        align-items: center;
-        gap: 6px;
-        padding: 6px 16px;
-        border-radius: 20px;
-        background: rgba(124, 77, 255, 0.15);
-        border: 1px solid rgba(124, 77, 255, 0.3);
-        font-size: 12px;
-        font-weight: 600;
-        color: #d0bcff;
-        margin-bottom: 20px;
-      }
-      .hero h1 {
-        font-size: clamp(32px, 5vw, 48px);
-        font-weight: 800;
-        line-height: 1.2;
-        margin-bottom: 16px;
-        background: linear-gradient(
-          135deg,
-          #fff 0%,
-          #4fc3f7 50%,
-          #7c4dff 80%,
-          #f50057 100%
-        );
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-      }
-      .hero h1 .highlight {
-        background: linear-gradient(135deg, #4fc3f7, #7c4dff);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-      }
-      .hero p {
-        font-size: 17px;
-        opacity: 0.75;
-        max-width: 650px;
-        margin: 0 auto 28px;
-        line-height: 1.7;
-      }
-
-      /* ===== Search ===== */
-      .search-wrap {
-        max-width: 640px;
-        margin: 0 auto;
-        position: relative;
-      }
-      .search-input {
-        width: 100%;
-        padding: 18px 28px;
-        border-radius: 50px;
-        border: 2px solid rgba(255, 255, 255, 0.15);
-        background: rgba(255, 255, 255, 0.06);
-        color: #fff;
-        font-size: 16px;
-        outline: none;
-        transition: all 0.3s;
-        backdrop-filter: blur(10px);
-      }
-      .search-input:focus {
-        border-color: #4fc3f7;
-        background: rgba(255, 255, 255, 0.1);
-        box-shadow: 0 0 30px rgba(79, 195, 247, 0.15);
-      }
-      .search-input::placeholder {
-        color: rgba(255, 255, 255, 0.35);
-      }
-      .quick-tags {
-        display: flex;
-        gap: 8px;
-        justify-content: center;
-        flex-wrap: wrap;
-        margin-top: 16px;
-      }
-      .qt {
-        padding: 6px 16px;
-        border-radius: 16px;
-        background: rgba(255, 255, 255, 0.06);
-        font-size: 13px;
-        color: rgba(255, 255, 255, 0.7);
-        cursor: pointer;
-        transition: all 0.2s;
-        border: 1px solid transparent;
-      }
-      .qt:hover {
-        background: rgba(79, 195, 247, 0.12);
-        border-color: rgba(79, 195, 247, 0.3);
-        color: #4fc3f7;
-      }
-
-      /* ===== Role Filter ===== */
-      .role-bar {
-        max-width: 1100px;
-        margin: 0 auto;
-        padding: 0 20px;
-        display: flex;
-        gap: 8px;
-        justify-content: center;
-        flex-wrap: wrap;
-        align-items: center;
-      }
-      .role-label {
-        font-size: 13px;
-        color: rgba(255, 255, 255, 0.45);
-        margin-right: 4px;
-      }
-      .role-btn {
-        padding: 8px 20px;
-        border-radius: 22px;
-        border: 1px solid rgba(255, 255, 255, 0.12);
-        background: transparent;
-        color: rgba(255, 255, 255, 0.55);
-        font-size: 13px;
-        cursor: pointer;
-        transition: all 0.25s;
-        font-weight: 500;
-      }
-      .role-btn:hover {
-        background: rgba(124, 77, 255, 0.12);
-        border-color: rgba(124, 77, 255, 0.3);
-        color: #ddd;
-      }
-      .role-btn.active {
-        background: linear-gradient(
-          135deg,
-          rgba(79, 195, 247, 0.2),
-          rgba(124, 77, 255, 0.2)
-        );
-        border-color: rgba(124, 77, 255, 0.5);
-        color: #fff;
-      }
-
-      /* ===== Scenario Grid ===== */
-      .scenarios {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 32px 40px 60px;
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
-        gap: 20px;
-      }
-
-      .card {
-        background: rgba(255, 255, 255, 0.04);
-        border: 1px solid rgba(255, 255, 255, 0.08);
-        border-radius: 18px;
-        padding: 26px;
-        transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
-        cursor: pointer;
-        position: relative;
-        overflow: hidden;
-        text-decoration: none;
-        color: inherit;
-        display: block;
-      }
-      .card:hover {
-        transform: translateY(-6px);
-        background: rgba(255, 255, 255, 0.07);
-        border-color: var(--gc);
-        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
-      }
-      .card::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        height: 3px;
-        background: var(--gc);
-        opacity: 0.85;
-      }
-      .card-icon {
-        font-size: 34px;
-        margin-bottom: 14px;
-        display: block;
-      }
-      .card-title {
-        font-size: 19px;
-        font-weight: 700;
-        margin-bottom: 8px;
-      }
-      .card-desc {
-        font-size: 13.5px;
-        opacity: 0.65;
-        margin-bottom: 16px;
-        line-height: 1.6;
-      }
-      .card-stats {
-        display: flex;
-        gap: 14px;
-        margin-bottom: 14px;
-        flex-wrap: wrap;
-      }
-      .cs {
-        font-size: 12px;
-        opacity: 0.55;
-      }
-      .cs b {
-        color: #4fc3f7;
-        font-weight: 700;
-      }
-      .card-tags {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 5px;
-      }
-      .ct {
-        padding: 3px 9px;
-        border-radius: 10px;
-        font-size: 11px;
-        background: rgba(255, 255, 255, 0.06);
-        opacity: 0.8;
-      }
-      .card-arrow {
-        display: inline-flex;
-        align-items: center;
-        gap: 5px;
-        color: #4fc3f7;
-        font-size: 13px;
-        font-weight: 600;
-        margin-top: 14px;
-        transition: gap 0.2s;
-      }
-      .card:hover .card-arrow {
-        gap: 10px;
-      }
-
-      /* ===== Solution Packs ===== */
-      .section {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 0 40px 48px;
-      }
-      .sec-head {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        margin-bottom: 24px;
-      }
-      .sec-title {
-        font-size: 24px;
-        font-weight: 800;
-      }
-      .sec-more {
-        color: #4fc3f7;
-        font-size: 14px;
-        text-decoration: none;
-        font-weight: 500;
-      }
-      .sec-more:hover {
-        text-decoration: underline;
-      }
-      .pack-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-        gap: 16px;
-      }
-      .pack {
-        background: rgba(255, 255, 255, 0.03);
-        border: 1px solid rgba(255, 255, 255, 0.07);
-        border-radius: 14px;
-        padding: 20px;
-        transition: all 0.25s;
-      }
-      .pack:hover {
-        background: rgba(255, 255, 255, 0.06);
-        border-color: rgba(124, 77, 255, 0.2);
-      }
-      .pb {
-        display: inline-block;
-        padding: 3px 10px;
-        border-radius: 8px;
-        font-size: 11px;
-        font-weight: 600;
-        margin-bottom: 10px;
-      }
-      .pb-hot {
-        background: rgba(245, 0, 87, 0.18);
-        color: #f06292;
-      }
-      .pb-new {
-        background: rgba(76, 175, 80, 0.18);
-        color: #81c784;
-      }
-      .pb-pro {
-        background: rgba(255, 193, 7, 0.18);
-        color: #ffd54f;
-      }
-      .pt {
-        font-size: 15px;
-        font-weight: 700;
-        margin-bottom: 6px;
-      }
-      .pd {
-        font-size: 13px;
-        opacity: 0.55;
-        margin-bottom: 12px;
-        line-height: 1.5;
-      }
-      .ptools {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 5px;
-      }
-      .ptool {
-        padding: 2px 8px;
-        border-radius: 6px;
-        font-size: 11px;
-        background: rgba(79, 195, 247, 0.1);
-        color: #81d4fa;
-      }
-
-      /* ===== Banner / Original Links (保留原首页入口) ===== */
-      .banner-section {
-        max-width: 1100px;
-        margin: 36px auto 0;
-        padding: 0 20px;
-      }
-      .banner-title {
-        font-size: 15px;
-        font-weight: 700;
-        color: rgba(255, 255, 255, 0.7);
-        margin-bottom: 14px;
-        display: flex;
-        align-items: center;
-        gap: 8px;
-      }
-      .banner-title::before {
-        content: "";
-        display: inline-block;
-        width: 4px;
-        height: 16px;
-        background: linear-gradient(180deg, #4fc3f7, #7c4dff);
-        border-radius: 2px;
-      }
-      .banner-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-        gap: 12px;
-      }
-      .banner-item {
-        position: relative;
-        border-radius: 14px;
-        overflow: hidden;
-        transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
-        text-decoration: none;
-        display: block;
-        aspect-ratio: 2.4/1;
-      }
-      .banner-item:hover {
-        transform: translateY(-4px);
-        box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35);
-      }
-      .banner-item img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        transition: transform 0.5s;
-      }
-      .banner-item:hover img {
-        transform: scale(1.05);
-      }
-      .banner-item .banner-overlay {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        padding: 14px 16px;
-        background: linear-gradient(transparent, rgba(0, 0, 0, 0.75));
-        color: #fff;
-        font-size: 13px;
-        font-weight: 600;
-        opacity: 0;
-        transition: opacity 0.3s;
-      }
-      .banner-item:hover .banner-overlay {
-        opacity: 1;
-      }
-
-      /* ===== Stats Bar ===== */
-      .stats {
-        max-width: 1100px;
-        margin: 32px auto 0;
-        padding: 0 20px;
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-        gap: 14px;
-      }
-      .stat-box {
-        background: rgba(255, 255, 255, 0.03);
-        border: 1px solid rgba(255, 255, 255, 0.07);
-        border-radius: 14px;
-        padding: 20px;
-        text-align: center;
-      }
-      .stat-num {
-        font-size: 32px;
-        font-weight: 800;
-        color: #4fc3f7;
-      }
-      .stat-lbl {
-        font-size: 12px;
-        color: rgba(255, 255, 255, 0.45);
-        margin-top: 4px;
-      }
-
-      /* ===== CTA ===== */
-      .cta {
-        text-align: center;
-        padding: 48px 20px 64px;
-      }
-      .cta-box {
-        background: linear-gradient(
-          135deg,
-          #1a237a 0%,
-          #283593 50%,
-          #1a237a 100%
-        );
-        border-radius: 20px;
-        padding: 48px 36px;
-        max-width: 850px;
-        margin: 0 auto;
-        border: 1px solid rgba(79, 195, 247, 0.2);
-        position: relative;
-        overflow: hidden;
-      }
-      .cta-box::before {
-        content: "";
-        position: absolute;
-        top: -50%;
-        left: -50%;
-        width: 200%;
-        height: 200%;
-        background: radial-gradient(
-          circle at center,
-          rgba(79, 195, 247, 0.08) 0%,
-          transparent 60%
-        );
-        pointer-events: none;
-      }
-      .cta h2 {
-        font-size: 24px;
-        font-weight: 800;
-        margin-bottom: 10px;
-        position: relative;
-      }
-      .cta p {
-        opacity: 0.7;
-        margin-bottom: 24px;
-        font-size: 15px;
-        position: relative;
-      }
-      .cta-btns {
-        display: flex;
-        gap: 12px;
-        justify-content: center;
-        flex-wrap: wrap;
-        position: relative;
-      }
-      .btn-primary {
-        display: inline-block;
-        padding: 14px 32px;
-        background: linear-gradient(135deg, #4fc3f7, #7c4dff);
-        color: #fff;
-        border-radius: 30px;
-        text-decoration: none;
-        font-weight: 700;
-        font-size: 15px;
-        transition: all 0.25s;
-        box-shadow: 0 4px 20px rgba(79, 195, 247, 0.3);
-      }
-      .btn-primary:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 8px 30px rgba(79, 195, 247, 0.4);
-      }
-      .btn-outline {
-        display: inline-block;
-        padding: 14px 32px;
-        background: transparent;
-        color: #fff;
-        border: 1px solid rgba(255, 255, 255, 0.25);
-        border-radius: 30px;
-        text-decoration: none;
-        font-weight: 600;
-        font-size: 15px;
-        transition: all 0.25s;
-      }
-      .btn-outline:hover {
-        border-color: rgba(255, 255, 255, 0.5);
-        background: rgba(255, 255, 255, 0.08);
-      }
-
-      /* ===== Footer ===== */
-      .footer {
-        text-align: center;
-        padding: 32px 20px;
-        border-top: 1px solid rgba(255, 255, 255, 0.06);
-        opacity: 0.4;
-        font-size: 12px;
-      }
-      .footer a {
-        color: #4fc3f7;
-        text-decoration: none;
-      }
-      .footer-links {
-        display: flex;
-        gap: 20px;
-        justify-content: center;
-        margin-bottom: 10px;
-        flex-wrap: wrap;
-      }
-
-      @media (max-width: 768px) {
-        .header {
-          padding: 12px 16px;
-        }
-        .scenarios {
-          padding: 20px 16px 40px;
-          grid-template-columns: 1fr;
-        }
-        .section,
-        .stats,
-        .banner-section {
-          padding-left: 16px;
-          padding-right: 16px;
-        }
-        .hero {
-          padding: 40px 16px 32px;
-        }
-        .hero h1 {
-          font-size: 26px;
-        }
-        .role-bar {
-          padding: 0 16px;
-        }
-        .geo-btn {
-          display: none;
-        }
-        .banner-grid {
-          grid-template-columns: 1fr 1fr;
-          gap: 8px;
-        }
-      }
-      @keyframes fadeIn {
-        from {
-          opacity: 0;
-          transform: translateY(12px);
-        }
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <!-- ========== HEADER ========== -->
-    <header class="header">
-      <div class="logo-area">
-        <div class="logo-icon">T</div>
-        <div class="logo-text"><span>TOPGO</span> 发现导航</div>
-        <span class="logo-badge">v2.0</span>
-      </div>
-      <div class="header-right">
-        <nav style="display: flex; align-items: center; gap: 16px">
-          <a
-            href="starclaw.html"
-            class="geo-btn"
-            style="
-              background: rgba(230, 81, 0, 0.15);
-              border-color: rgba(230, 81, 0, 0.4);
-              color: #fb8c00;
-            "
-            >StarClaw</a
-          >
-          <a href="geo-region.html" class="geo-btn">GEO 地区</a>
-          <a href="#scenarios" class="nav-link">场景中心</a>
-          <a href="#solutions" class="nav-link">解决方案</a>
-          <a href="/#/" class="classic-link">经典模式</a>
-        </nav>
-      </div>
-    </header>
-
-    <!-- ========== HERO ========== -->
-    <section class="hero">
-      <div class="hero-badge">
-        &#127775; 已收录 <b>800+</b> 精选 AI 工具 | <b>5</b> 大地区本地化
-      </div>
-      <h1>
-        按业务场景找 AI 工具<br /><span class="highlight">不再为选型发愁</span>
-      </h1>
-      <p>
-        从"找技术"到"解决问题"。告诉我们要做什么，我们为你匹配最合适的 AI
-        工具组合。<br />覆盖智能办公、量化投研、内容创作、电商运营等 9
-        大核心业务场景。
-      </p>
-
-      <div class="search-wrap">
-        <input
-          type="text"
-          class="search-input"
-          placeholder="描述你的需求，如：帮我写周报 / 做数据分析 / 自动化客服 / 电商上货..."
-          id="gSearch"
-        />
-      </div>
-      <div class="quick-tags">
-        <span class="qt">写周报</span><span class="qt">做PPT</span
-        ><span class="qt">数据分析</span><span class="qt">客服自动化</span
-        ><span class="qt">电商上货</span><span class="qt">代码审查</span
-        ><span class="qt">生成文案</span><span class="qt">翻译文档</span
-        ><span class="qt">量化策略</span><span class="qt">小红书爆款</span>
-      </div>
-    </section>
-
-    <!-- ========== 原首页轮播图/链接入口（保留） ========== -->
-    <section class="banner-section" id="banners">
-      <div class="banner-title">精选资源入口</div>
-      <div class="banner-grid">
-        <!-- 1. TOPGO 主站 -->
-        <a
-          class="banner-item"
-          href="http://top.miyucaicai.cn"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img
-            src="https://gcore.jsdelivr.net/gh/anbeime/nav@image/1750204383207.png"
-            alt="TOPGO 主站"
-            loading="lazy"
-          />
-          <span class="banner-overlay">TOPGO 主站 &rarr;</span>
-        </a>
-        <!-- 2. 夸克网盘资源 1 -->
-        <a
-          class="banner-item"
-          href="https://pan.quark.cn/s/16c61b5d7960"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img
-            src="https://gcore.jsdelivr.net/gh/anbeime/nav@image/1748759394555.png"
-            alt="夸克网盘资源"
-            loading="lazy"
-          />
-          <span class="banner-overlay">夸克网盘资源 &rarr;</span>
-        </a>
-        <!-- 3. 夸克网盘资源 2 -->
-        <a
-          class="banner-item"
-          href="https://pan.quark.cn/s/406952352a2d"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img
-            src="https://gcore.jsdelivr.net/gh/anbeime/nav@image/1748759983012.png"
-            alt="夸克网盘资源"
-            loading="lazy"
-          />
-          <span class="banner-overlay">夸克网盘资源 &rarr;</span>
-        </a>
-        <!-- 4. 夸克网盘资源 3 -->
-        <a
-          class="banner-item"
-          href="https://pan.quark.cn/s/65fcc2747d7c"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img
-            src="https://gcore.jsdelivr.net/gh/anbeime/nav@image/1748760017002.png"
-            alt="夸克网盘资源"
-            loading="lazy"
-          />
-          <span class="banner-overlay">夸克网盘资源 &rarr;</span>
-        </a>
-        <!-- 5. 夸克网盘资源 4 -->
-        <a
-          class="banner-item"
-          href="https://pan.quark.cn/s/08f2614c718d"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img
-            src="https://gcore.jsdelivr.net/gh/anbeime/nav@image/1748760074612.png"
-            alt="夸克网盘资源"
-            loading="lazy"
-          />
-          <span class="banner-overlay">夸克网盘资源 &rarr;</span>
-        </a>
-        <!-- 6. 技能平台 -->
-        <a
-          class="banner-item"
-          href="https://skill.miyucaicai.cn/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img
-            src="https://gcore.jsdelivr.net/gh/anbeime/nav@image/1770295519542.png"
-            alt="技能平台"
-            loading="lazy"
-          />
-          <span class="banner-overlay">技能平台 &rarr;</span>
-        </a>
-        <!-- 7. StarClaw 龙虾控制台 (NEW) -->
-        <a class="banner-item" href="starclaw.html">
-          <div
-            style="
-              width: 100%;
-              height: 100%;
-              background: linear-gradient(
-                135deg,
-                #1a1a2e 0%,
-                #16213e 50%,
-                #0f3460 100%
-              );
-              display: flex;
-              flex-direction: column;
-              align-items: center;
-              justify-content: center;
-              padding: 20px;
-              text-align: center;
-            "
-          >
-            <div style="font-size: 36px; margin-bottom: 8px">&#x1F99E;</div>
-            <div style="font-size: 16px; font-weight: 700; color: #e65100">
-              StarClaw 龙虾团队
+// 创建工具卡片
+function createToolCard(tool) {
+    const badge = tool.isHot ? '<span class="tool-badge badge-hot">热门</span>' : (tool.isNew ? '<span class="tool-badge badge-new">新增</span>' : '');
+    const catClass = `cat-${tool.category||'productivity'}`;
+    const rating = tool.rating||4.0;
+    const stars = '★'.repeat(Math.floor(rating)) + (rating%1>=0.5?'½':'');
+    
+    const cardClass = currentView==='list' ? 'tool-card list-card' : 'tool-card';
+    
+    return `
+        <div class="${cardClass}" onclick="showDetail('${tool.id}')">
+            ${badge}
+            <div class="tool-header">
+                <div class="tool-icon ${catClass}">${getIcon(tool.category)}</div>
+                <div class="tool-title">
+                    <div class="tool-name">${escapeHtml(tool.name)}</div>
+                    <div class="tool-rating"><span class="stars">${stars}</span> ${rating.toFixed(1)}</div>
+                </div>
             </div>
-            <div style="font-size: 12px; color: #94a3b8; margin-top: 4px">
-              AI智能体自我进化控制台
+            <div class="tool-desc">${escapeHtml(tool.desc||'暂无描述')}</div>
+            <div class="tool-tags">${(tool.tags||[]).slice(0,4).map(tag=>`<span class="tool-tag">${escapeHtml(tag)}</span>`).join('')}</div>
+            <div class="tool-footer">
+                <div class="tool-category">${CATEGORIES[tool.category]?.name||'其他'}</div>
+                <div class="tool-actions">
+                    <button class="btn btn-primary btn-sm" onclick="event.stopPropagation();openUrl('${tool.url}')">访问</button>
+                </div>
             </div>
-            <div
-              style="
-                display: flex;
-                gap: 6px;
-                margin-top: 10px;
-                flex-wrap: wrap;
-                justify-content: center;
-              "
-            >
-              <span
-                style="
-                  padding: 2px 8px;
-                  border-radius: 10px;
-                  background: rgba(230, 81, 0, 0.15);
-                  color: #fb8c00;
-                  font-size: 10px;
-                "
-                >五层架构</span
-              >
-              <span
-                style="
-                  padding: 2px 8px;
-                  border-radius: 10px;
-                  background: rgba(52, 168, 83, 0.15);
-                  color: #81c784;
-                  font-size: 10px;
-                "
-                >自我进化</span
-              >
-              <span
-                style="
-                  padding: 2px 8px;
-                  border-radius: 10px;
-                  background: rgba(102, 126, 234, 0.15);
-                  color: #818cf8;
-                  font-size: 10px;
-                "
-                >6个智能体</span
-              >
-            </div>
-          </div>
-          <span class="banner-overlay">StarClaw 控制台 &rarr;</span>
-        </a>
-      </div>
-    </section>
+        </div>`;
+}
 
-    <!-- ========== STATS ========== -->
-    <div class="stats">
-      <div class="stat-box">
-        <div class="stat-num">800+</div>
-        <div class="stat-lbl">精选 AI 工具</div>
-      </div>
-      <div class="stat-box">
-        <div class="stat-num">9</div>
-        <div class="stat-lbl">业务场景分类</div>
-      </div>
-      <div class="stat-box">
-        <div class="stat-num">5</div>
-        <div class="stat-lbl">支持地区</div>
-      </div>
-      <div class="stat-box">
-        <div class="stat-num">35+</div>
-        <div class="stat-lbl">解决方案包</div>
-      </div>
-      <div class="stat-box">
-        <div class="stat-num">2149</div>
-        <div class="stat-lbl">历史收录总量</div>
-      </div>
-    </div>
+// 分类图标
+function getIcon(cat) {
+    const icons = {'ai-chat':'C','ai-coding':'D','ai-image':'I','ai-video':'V','ai-audio':'A','ai-search':'S','agent-platforms':'B','productivity':'P','dev-tools':'X','design':'E','marketing':'M','content-creation':'W','automation':'Z','quant':'Q','ecommerce':'$','research':'R','learning':'L','business':'F'};
+    return icons[cat]||'?';
+}
 
-    <!-- ========== ROLE FILTER ========== -->
-    <div class="role-bar" id="roleBar">
-      <span class="role-label">我是：</span>
-      <button class="role-btn active" onclick="filterRole(this,'')">
-        全部
-      </button>
-      <button class="role-btn" onclick="filterRole(this,'product')">
-        产品/运营
-      </button>
-      <button class="role-btn" onclick="filterRole(this,'developer')">
-        开发者
-      </button>
-      <button class="role-btn" onclick="filterRole(this,'ecommerce')">
-        电商卖家
-      </button>
-      <button class="role-btn" onclick="filterRole(this,'sales')">
-        销售/市场
-      </button>
-      <button class="role-btn" onclick="filterRole(this,'manager')">
-        管理者
-      </button>
-      <button class="role-btn" onclick="filterRole(this,'creator')">
-        创作者
-      </button>
-      <button class="role-btn" onclick="filterRole(this,'student')">
-        学生/研究者
-      </button>
-    </div>
+// 筛选分类
+function filterCategory(cat) {
+    currentCategory = cat;
+    renderCategories();
+    renderTools();
+}
 
-    <!-- ========== 9 BUSINESS SCENARIOS ========== -->
-    <main class="scenarios" id="scenarios">
-      <a
-        class="card"
-        style="--gc: linear-gradient(90deg, #4fc3f7, #7c4dff)"
-        data-role="developer,product,manager"
-        href="/#/agent-platforms"
-      >
-        <span class="card-icon">&#129302;</span>
-        <h3 class="card-title">AI 智能体应用中心</h3>
-        <p class="card-desc">
-          构建和部署 AI Agent（智能体），让 AI
-          自主完成复杂任务链。从对话机器人到全自动工作流，打造你的数字员工团队。
-        </p>
-        <div class="card-stats">
-          <span class="cs"><b>85+</b> 工具</span
-          ><span class="cs"><b>12</b> 方案包</span><span class="cs">热门</span>
-        </div>
-        <div class="card-tags">
-          <span class="ct">Coze扣子</span><span class="ct">Dify</span
-          ><span class="ct">FastHub</span><span class="ct">n8n</span
-          ><span class="ct">MCP服务</span>
-        </div>
-        <span class="card-arrow">进入场景 &rarr;</span>
-      </a>
+// 搜索
+function searchTools() {
+    const q = document.getElementById('search-input').value.trim().toLowerCase();
+    if (!q) { renderTools(); return; }
+    
+    const filtered = allTools.filter(t => 
+        t.name.toLowerCase().includes(q) || 
+        (t.desc||'').toLowerCase().includes(q) ||
+        (t.tags||[]).some(tag=>tag.toLowerCase().includes(q))
+    );
+    
+    const container = document.getElementById('tools-container');
+    if (filtered.length > 0) {
+        container.innerHTML = filtered.map(t => createToolCard(t)).join('');
+    } else {
+        container.innerHTML = `<div class="empty-state" style="grid-column:1/-1;"><h3>无搜索结果</h3><p>没有找到 "${q}" 相关的工具</p></div>`;
+    }
+}
 
-      <a
-        class="card"
-        style="--gc: linear-gradient(90deg, #66bb6a, #43a047)"
-        data-role="developer,product,manager,creator"
-        href="/#/ai-coding"
-      >
-        <span class="card-icon">&#128187;</span>
-        <h3 class="card-title">智能办公与代码助手</h3>
-        <p class="card-desc">
-          用 AI 提升工作效率 10x。写代码、写文档、做 PPT
-          到自动化日常办公流程，让 AI 成为你的超级助理。
-        </p>
-        <div class="card-stats">
-          <span class="cs"><b>120+</b> 工具</span
-          ><span class="cs"><b>18</b> 方案包</span
-          ><span class="cs">高频使用</span>
+// 显示详情
+function showDetail(id) {
+    const tool = allTools.find(t => t.id === id);
+    if (!tool) return;
+    
+    document.getElementById('detail-title').textContent = tool.name;
+    const rating = tool.rating||4.0;
+    
+    document.getElementById('detail-body').innerHTML = `
+        <div class="detail-meta">
+            <div class="meta-item"><div class="meta-label">分类</div><div class="meta-value">${CATEGORIES[tool.category]?.name||'其他'}</div></div>
+            <div class="meta-item"><div class="meta-label">评分</div><div class="meta-value">${rating.toFixed(1)} / 5.0</div></div>
+            <div class="meta-item"><div class="meta-label">标签</div><div class="meta-value">${(tool.tags||[]).join('、')||'暂无'}</div></div>
+            <div class="meta-item"><div class="meta-label">状态</div><div class="meta-value">${tool.isHot?'热门':(tool.isNew?'新增':'正常')}</div></div>
         </div>
-        <div class="card-tags">
-          <span class="ct">Cursor</span><span class="ct">ChatGPT</span
-          ><span class="ct">Claude</span><span class="ct">Trae</span
-          ><span class="ct">V0.dev</span>
+        <div style="margin-bottom:18px">
+            <h3 style="font-size:1em;font-weight:600;margin-bottom:8px">简介</h3>
+            <p style="color:var(--text-secondary);line-height:1.65">${escapeHtml(tool.desc||'暂无描述')}</p>
         </div>
-        <span class="card-arrow">进入场景 &rarr;</span>
-      </a>
+        <div class="detail-actions">
+            <button class="btn btn-primary" onclick="openUrl('${tool.url}')">访问官网</button>
+            <button class="btn btn-secondary" onclick="closeDetailModal()">关闭</button>
+        </div>
+    `;
+    
+    document.getElementById('detail-modal').classList.add('active');
+}
 
-      <a
-        class="card"
-        style="--gc: linear-gradient(90deg, #ffa726, #ef6c00)"
-        data-role="developer,student,researcher"
-        href="/#/quant-frameworks"
-      >
-        <span class="card-icon">&#128200;</span>
-        <h3 class="card-title">量化投研引擎</h3>
-        <p class="card-desc">
-          从策略回测到实盘交易的全栈量化工具。vn.py、Qlib、JoinQuant 等，覆盖 A
-          股、期货、数字货币全市场。
-        </p>
-        <div class="card-stats">
-          <span class="cs"><b>95+</b> 工具</span
-          ><span class="cs"><b>8</b> 方案包</span
-          ><span class="cs">专业领域</span>
-        </div>
-        <div class="card-tags">
-          <span class="ct">vn.py</span><span class="ct">StockSharp</span
-          ><span class="ct">JoinQuant</span><span class="ct">Qlib</span
-          ><span class="ct">FinGPT</span>
-        </div>
-        <span class="card-arrow">进入场景 &rarr;</span>
-      </a>
+function closeDetailModal() { document.getElementById('detail-modal').classList.remove('active'); }
 
-      <a
-        class="card"
-        style="--gc: linear-gradient(90deg, #ab47bc, #7b1fa2)"
-        data-role="creator,product,sales,ecommerce"
-        href="/#/self-media"
-      >
-        <span class="card-icon">&#127912;</span>
-        <h3 class="card-title">运营与增长引擎</h3>
-        <p class="card-desc">
-          AI 驱动的内容创作与社媒运营。批量生成爆款文案、小红书/抖音素材、SEO
-          优化文章，效率提升 100 倍。
-        </p>
-        <div class="card-stats">
-          <span class="cs"><b>110+</b> 工具</span
-          ><span class="cs"><b>15</b> 方案包</span
-          ><span class="cs">增长必备</span>
-        </div>
-        <div class="card-tags">
-          <span class="ct">Midjourney</span><span class="ct">可灵AI</span
-          ><span class="ct">即梦AI</span><span class="ct">Suno</span
-          ><span class="ct">SEO工具</span>
-        </div>
-        <span class="card-arrow">进入场景 &rarr;</span>
-      </a>
+// 视图切换
+function setView(view) {
+    currentView = view;
+    document.querySelectorAll('.view-btn').forEach(btn => btn.classList.remove('active'));
+    event.target.classList.add('active');
+    renderTools();
+}
 
-      <a
-        class="card"
-        style="--gc: linear-gradient(90deg, #ef5350, #c62828)"
-        data-role="ecommerce,sales,product"
-        href="/#/workflow-automation"
-      >
-        <span class="card-icon">&#128722;</span>
-        <h3 class="card-title">电商与跨境实战</h3>
-        <p class="card-desc">
-          跨境电商全链路 AI
-          工具箱。选品调研、多平台上架、跨境物流、独立站运营、客服自动化一站式方案。
-        </p>
-        <div class="card-stats">
-          <span class="cs"><b>70+</b> 工具</span
-          ><span class="cs"><b>10</b> 方案包</span
-          ><span class="cs">蓝海市场</span>
-        </div>
-        <div class="card-tags">
-          <span class="ct">Shopify</span><span class="ct">Amazon</span
-          ><span class="ct">TikTok Shop</span><span class="ct">ERP集成</span>
-        </div>
-        <span class="card-arrow">进入场景 &rarr;</span>
-      </a>
+// 更新统计
+function updateStats() {
+    document.getElementById('stat-total').textContent = allTools.length;
+    document.getElementById('stat-hot').textContent = allTools.filter(t=>t.isHot).length;
+}
 
-      <a
-        class="card"
-        style="--gc: linear-gradient(90deg, #26c6da, #00acc1)"
-        data-role="sales,manager,product"
-        href="/#/workflow-automation"
-      >
-        <span class="card-icon">&#128172;</span>
-        <h3 class="card-title">销售与客户成功</h3>
-        <p class="card-desc">
-          AI 赋能的销售全流程。线索挖掘、客户背调、私域运营、CRM
-          自动化、话术生成，让每个销售都有 AI 助理。
-        </p>
-        <div class="card-stats">
-          <span class="cs"><b>55+</b> 工具</span
-          ><span class="cs"><b>7</b> 方案包</span><span class="cs">高价值</span>
-        </div>
-        <div class="card-tags">
-          <span class="ct">CRM</span><span class="ct">线索挖掘</span
-          ><span class="ct">私域运营</span><span class="ct">邮件营销</span>
-        </div>
-        <span class="card-arrow">进入场景 &rarr;</span>
-      </a>
+// 显示加载
+function showLoading() {
+    document.getElementById('tools-container').innerHTML = `<div class="loading" style="grid-column:1/-1"><div class="loading-spinner">&#9696;</div><p style="margin-top:12px">正在加载工具列表...</p></div>`;
+}
 
-      <a
-        class="card"
-        style="--gc: linear-gradient(90deg, #ffd54f, #ff8f00)"
-        data-role="manager,product"
-        href="/#/productivity-tools"
-      >
-        <span class="card-icon">&#9881;</span>
-        <h3 class="card-title">行政与效率工具</h3>
-        <p class="card-desc">
-          办公自动化、文档处理、日程管理、团队协作、低代码开发——让繁琐的行政工作全部自动化。
-        </p>
-        <div class="card-stats">
-          <span class="cs"><b>80+</b> 工具</span
-          ><span class="cs"><b>9</b> 方案包</span
-          ><span class="cs">效率神器</span>
-        </div>
-        <div class="card-tags">
-          <span class="ct">Notion</span><span class="ct">飞书</span
-          ><span class="ct">Zapier</span><span class="ct">低代码</span>
-        </div>
-        <span class="card-arrow">进入场景 &rarr;</span>
-      </a>
+// 显示错误
+function showErrorState() {
+    document.getElementById('tools-container').innerHTML = `<div class="empty-state" style="grid-column:1/-1"><h3>加载失败</h3><p>请刷新页面重试</p><br><button class="btn btn-primary" onclick="loadTools()">重试</button></div>`;
+}
 
-      <a
-        class="card"
-        style="--gc: linear-gradient(90deg, #ce93d8, #ab47bc)"
-        data-role="student,creator,developer"
-        href="/#/learning-education"
-      >
-        <span class="card-icon">&#128218;</span>
-        <h3 class="card-title">个人发展与学习</h3>
-        <p class="card-desc">
-          AI
-          时代的学习加速器。在线课程、技能学习、求职面试准备、知识管理，持续成长的完整工具链。
-        </p>
-        <div class="card-stats">
-          <span class="cs"><b>90+</b> 工具</span
-          ><span class="cs"><b>11</b> 方案包</span
-          ><span class="cs">终身受益</span>
-        </div>
-        <div class="card-tags">
-          <span class="ct">在线课程</span><span class="ct">面试准备</span
-          ><span class="ct">知识管理</span><span class="ct">开源项目</span>
-        </div>
-        <span class="card-arrow">进入场景 &rarr;</span>
-      </a>
+// 辅助函数
+function escapeHtml(text) {
+    if (!text) return '';
+    const div = document.createElement('div');
+    div.textContent = text;
+    return div.innerHTML;
+}
 
-      <a
-        class="card"
-        style="--gc: linear-gradient(90deg, #90a4aa, #546e7a)"
-        data-role="developer"
-        href="/#/dev-resources"
-      >
-        <span class="card-icon">&#128187;</span>
-        <h3 class="card-title">开发者资源库</h3>
-        <p class="card-desc">
-          面向开发者的技术资源集合。前端/后端框架、DevOps 工具、数据库、API
-          接口、GitHub 开源项目一站式工具箱。
-        </p>
-        <div class="card-stats">
-          <span class="cs"><b>130+</b> 工具</span
-          ><span class="cs"><b>6</b> 方案包</span>
-        </div>
-        <div class="card-tags">
-          <span class="ct">前端框架</span><span class="ct">后端技术</span
-          ><span class="ct">DevOps</span><span class="ct">API接口</span>
-        </div>
-        <span class="card-arrow">进入场景 &rarr;</span>
-      </a>
-    </main>
+function openUrl(url) {
+    window.open(url, '_blank', 'noopener,noreferrer');
+}
 
-    <!-- ========== SOLUTION PACKS ========== -->
-    <section class="section" id="solutions">
-      <div class="sec-head">
-        <div>
-          <h2 class="sec-title">热门解决方案包</h2>
-          <p
-            style="
-              font-size: 13px;
-              color: rgba(255, 255, 255, 0.4);
-              margin-top: 4px;
-            "
-          >
-            经过验证的工具组合，开箱即用解决具体业务问题
-          </p>
-        </div>
-        <a href="scenario-hub.html" class="sec-more">查看全部 &rarr;</a>
-      </div>
-      <div class="pack-grid">
-        <div class="pack">
-          <span class="pb pb-hot">最热</span>
-          <h3 class="pt">小红书爆款内容生产线</h3>
-          <p class="pd">
-            从选题到发布全自动化：AI选题 + 文案生成 + 配图制作 + 一键多平台分发
-          </p>
-          <div class="ptools">
-            <span class="ptool">ChatGPT</span
-            ><span class="ptool">Midjourney</span
-            ><span class="ptool">可灵AI</span
-            ><span class="ptool">Coze Bot</span>
-          </div>
-        </div>
-        <div class="pack">
-          <span class="pb pb-new">新品</span>
-          <h3 class="pt">TikTok Shop 自动化上货套件</h3>
-          <p class="pd">
-            跨境电商卖家的效率神器：批量采集商品信息 + AI 翻译描述 + 自动上架 +
-            库存同步
-          </p>
-          <div class="ptools">
-            <span class="ptool">n8n</span><span class="ptool">DeepSeek</span
-            ><span class="ptool">Shopify API</span
-            ><span class="ptool">Dify</span>
-          </div>
-        </div>
-        <div class="pack">
-          <span class="pb pb-pro">专业版</span>
-          <h3 class="pt">量化策略从零到实盘</h3>
-          <p class="pd">
-            完整的量化交易学习路径：Python基础 + vn.py框架 + 策略回测 +
-            SimNow仿真 + 实盘对接
-          </p>
-          <div class="ptools">
-            <span class="ptool">vn.py</span><span class="ptool">JoinQuant</span
-            ><span class="ptool">Qlib</span><span class="ptool">SimNow</span>
-          </div>
-        </div>
-        <div class="pack">
-          <span class="pb pb-hot">最热</span>
-          <h3 class="pt">AI 编程助手全家桶</h3>
-          <p class="pd">
-            开发者效率革命：Cursor 写代码 + Claude Review + Copilot 补全 +
-            V0.dev 生成 UI
-          </p>
-          <div class="ptools">
-            <span class="ptool">Cursor</span><span class="ptool">Claude</span
-            ><span class="ptool">Copilot</span><span class="ptool">V0.dev</span>
-          </div>
-        </div>
-        <div class="pack">
-          <span class="pb pb-new">新品</span>
-          <h3 class="pt">智能客服全自动化</h3>
-          <p class="pd">
-            7x24 不间断的 AI 客服：知识库构建 + 多渠道接入 + 意图识别 + 自动工单
-            + 人工无缝切换
-          </p>
-          <div class="ptools">
-            <span class="ptool">Dify</span><span class="ptool">Coze</span
-            ><span class="ptool">FastHub</span><span class="ptool">n8n</span>
-          </div>
-        </div>
-        <div class="pack">
-          <span class="pb pb-pro">专业版</span>
-          <h3 class="pt">独立站 SEO + 引流工作流</h3>
-          <p class="pd">
-            从建站到获客的全链路：AI 生成 landing page + SEO 优化 + 社媒引流 +
-            邮件营销 + 数据分析
-          </p>
-          <div class="ptools">
-            <span class="ptool">V0.dev</span><span class="ptool">ChatGPT</span
-            ><span class="ptool">Ahrefs</span><span class="ptool">Make</span>
-          </div>
-        </div>
-      </div>
-    </section>
+// Toast
+function showToast(msg, type='info') {
+    const toast = document.createElement('div');
+    toast.className = `toast ${type}`;
+    toast.textContent = msg;
+    document.body.appendChild(toast);
+    setTimeout(() => toast.remove(), 3000);
+}
 
-    <!-- ========== CTA ========== -->
-    <section class="cta">
-      <div class="cta-box">
-        <h2>还没找到需要的工具？</h2>
-        <p>浏览完整工具目录，或查看针对你所在地区的本地化推荐</p>
-        <div class="cta-btns">
-          <a href="/#/" class="btn-primary">浏览全部 800+ 工具（经典模式）</a>
-          <a href="geo-region.html" class="btn-outline">按地区查找推荐工具</a>
-          <a href="ai-guide.html" class="btn-outline">查看 AI 选型指南</a>
-        </div>
-      </div>
-    </section>
+// 点击模态框外部关闭
+document.getElementById('detail-modal').addEventListener('click', e => {
+    if (e.target.id === 'detail-modal') closeDetailModal();
+});
 
-    <!-- ========== FOOTER ========== -->
-    <footer class="footer">
-      <div class="footer-links">
-        <a href="/">首页</a>
-        <a href="starclaw.html">StarClaw 控制台</a>
-        <a href="scenario-hub.html">场景中心</a>
-        <a href="geo-region.html">地区推荐</a>
-        <a href="ai-guide.html">AI选型指南</a>
-        <a href="https://github.com/anbeime/nav">GitHub</a>
-      </div>
-      <p>
-        TOPGO发现导航 (ai123) - AI时代的技能AppStore | Powered by GEO龙虾团队
-      </p>
-      <p style="margin-top: 6px">更新于 2026-04-18 | 部署于 Vercel</p>
-    </footer>
+// ESC 关闭
+document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') closeDetailModal();
+});
 
-    <script>
-      // Quick tag search
-      document.querySelectorAll(".qt").forEach((t) =>
-        t.addEventListener("click", () => {
-          document.getElementById("gSearch").value = t.textContent;
-          document.getElementById("gSearch").focus();
-        }),
-      );
-
-      // Role filter
-      function filterRole(btn, role) {
-        document
-          .querySelectorAll(".role-btn")
-          .forEach((b) => b.classList.remove("active"));
-        btn.classList.add("active");
-        document.querySelectorAll(".card").forEach((card) => {
-          const roles = (card.dataset.role || "").toLowerCase();
-          card.style.display =
-            !role || roles.includes("all") || roles.includes(role)
-              ? ""
-              : "none";
-          if (card.style.display !== "none")
-            card.style.animation = "fadeIn .35s ease";
-        });
-      }
-
-      // Search filter
-      document.getElementById("gSearch").addEventListener("input", (e) => {
-        const q = e.target.value.toLowerCase();
-        document
-          .querySelectorAll(".card")
-          .forEach(
-            (c) =>
-              (c.style.display = c.textContent.toLowerCase().includes(q)
-                ? ""
-                : "none"),
-          );
-      });
-
-      // Smooth scroll for anchor links
-      document.querySelectorAll('a[href^="#"]').forEach((a) =>
-        a.addEventListener("click", (e) => {
-          const t = document.querySelector(a.getAttribute("href"));
-          if (t) {
-            e.preventDefault();
-            t.scrollIntoView({ behavior: "smooth", block: "start" });
-          }
-        }),
-      );
-    </script>
-  </body>
+// 初始化
+document.addEventListener('DOMContentLoaded', loadTools);
+</script>
+</body>
 </html>
