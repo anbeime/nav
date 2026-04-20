@@ -9,7 +9,8 @@
       "AI智能体应用",
       "智谱"
     ],
-    "category": "chat"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "chat-with-z-ai---free-ai-for-presentatio",
@@ -21,7 +22,8 @@
       "AI智能体应用",
       "智谱"
     ],
-    "category": "chat"
+    "category": "chat",
+    "rating": 4.5
   },
   {
     "id": "讯飞星火大模型-ai大语言模型-星火大模型-科大讯飞",
@@ -33,7 +35,8 @@
       "AI智能体应用",
       "讯飞"
     ],
-    "category": "chat"
+    "category": "chat",
+    "rating": 4.5
   },
   {
     "id": "通义",
@@ -45,7 +48,8 @@
       "AI智能体应用",
       "阿里"
     ],
-    "category": "chat"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "阿里云百炼",
@@ -57,7 +61,8 @@
       "AI智能体应用",
       "阿里"
     ],
-    "category": "chat"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "qoder---the-agentic-coding-platform",
@@ -69,7 +74,8 @@
       "AI智能体应用",
       "阿里"
     ],
-    "category": "chat"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "qoder快速上手文档",
@@ -81,7 +87,8 @@
       "AI智能体应用",
       "阿里"
     ],
-    "category": "chat"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "通义万相---领先的ai视频与图像生成模型",
@@ -93,7 +100,8 @@
       "AI智能体应用",
       "阿里"
     ],
-    "category": "chat"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "灵光全模态ai助手",
@@ -105,7 +113,8 @@
       "AI智能体应用",
       "阿里"
     ],
-    "category": "chat"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "dify-ai---生成式-ai-应用创新引擎",
@@ -117,7 +126,8 @@
       "AI智能体应用",
       "dify"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "彻底告别限制-这个开源神器让你-无限-免费畅用-gemini-2-5-pro-模",
@@ -129,7 +139,8 @@
       "AI智能体应用",
       "google"
     ],
-    "category": "chat"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "api-库---api-和服务---google-cloud-console",
@@ -141,7 +152,8 @@
       "AI智能体应用",
       "google"
     ],
-    "category": "chat"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "解决方案---n8ngooglesheet---google-cloud-con",
@@ -153,7 +165,8 @@
       "AI智能体应用",
       "google"
     ],
-    "category": "chat"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "lovart---全球首个设计智能体",
@@ -165,7 +178,8 @@
       "AI智能体应用",
       "google"
     ],
-    "category": "chat"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "谷歌实验室lab",
@@ -177,7 +191,8 @@
       "AI智能体应用",
       "google"
     ],
-    "category": "chat"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "notebooklm",
@@ -189,7 +204,8 @@
       "AI智能体应用",
       "google"
     ],
-    "category": "chat"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "google-ai-studio",
@@ -201,7 +217,8 @@
       "AI智能体应用",
       "google"
     ],
-    "category": "chat"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "文心智能体平台agentbuilder---想象即现实",
@@ -213,7 +230,8 @@
       "百度智能云千帆",
       "文心"
     ],
-    "category": "chat"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "-百度搜索-文心智能体创新大赛-技术赛道-基于多工具调用的开放域问答智能体构建_",
@@ -225,7 +243,8 @@
       "百度智能云千帆",
       "飞浆"
     ],
-    "category": "chat"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "2024csig-飞桨-工银瑞信金融科技挑战赛初赛数据集_数据集-飞桨ai-st",
@@ -237,7 +256,8 @@
       "百度智能云千帆",
       "飞浆"
     ],
-    "category": "chat"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "飞桨ai-studio-人工智能学习实训社区",
@@ -249,7 +269,8 @@
       "百度智能云千帆",
       "飞浆"
     ],
-    "category": "chat"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "飞桨ai-studio星河社区-人工智能学习与实训社区",
@@ -261,7 +282,8 @@
       "百度智能云千帆",
       "飞浆"
     ],
-    "category": "chat"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "百度智能云控制台",
@@ -273,7 +295,8 @@
       "AI智能体应用",
       "百度智能云千帆"
     ],
-    "category": "chat"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "智能体调优---文心智能体平台文档中心",
@@ -285,7 +308,8 @@
       "AI智能体应用",
       "百度智能云千帆"
     ],
-    "category": "chat"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "绘想-ai视频创作平台",
@@ -297,7 +321,8 @@
       "AI智能体应用",
       "百度智能云千帆"
     ],
-    "category": "chat"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "bots---扣子",
@@ -309,7 +334,8 @@
       "AI智能体应用",
       "COZE智能体"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "飞书开放平台",
@@ -321,7 +347,8 @@
       "AI智能体应用",
       "COZE智能体"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "扣子---模板案例",
@@ -333,7 +360,8 @@
       "COZE智能体",
       "教程"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "案例分享-工作流",
@@ -345,7 +373,8 @@
       "COZE智能体",
       "教程"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "-教学向-我把coze比赛第一的bot拆了教大家",
@@ -357,7 +386,8 @@
       "COZE智能体",
       "教程"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "----------------------------------------",
@@ -369,7 +399,8 @@
       "COZE智能体",
       "教程"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "coze-飞书多维表格-打造-ai-稍后读智能体-解锁-10-倍知识管理效率--",
@@ -381,7 +412,8 @@
       "COZE智能体",
       "教程"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "100-官方提示词模版",
@@ -393,7 +425,8 @@
       "AI智能体应用",
       "COZE智能体"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "agentar平台赋能金融多领域---扣子空间",
@@ -405,7 +438,8 @@
       "COZE智能体",
       "扣子空间"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "拼图汇报图文小程序",
@@ -417,7 +451,8 @@
       "COZE智能体",
       "扣子空间"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "智能习题批改系统",
@@ -429,7 +464,8 @@
       "COZE智能体",
       "扣子空间"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "游戏盒嵌入小游戏",
@@ -441,7 +477,8 @@
       "COZE智能体",
       "扣子空间"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "制作网页端图片纵向合并工具---扣子空间",
@@ -453,7 +490,8 @@
       "COZE智能体",
       "扣子空间"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "一人公司数字员工前端设计---扣子空间",
@@ -465,7 +503,8 @@
       "COZE智能体",
       "扣子空间"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "创作皮克斯风睡眠有声绘本---扣子空间",
@@ -477,7 +516,8 @@
       "COZE智能体",
       "扣子空间"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "创作川味餐厅精致菜单---扣子空间",
@@ -489,7 +529,8 @@
       "COZE智能体",
       "扣子空间"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "招聘岗位信息爬取分析工具---扣子空间",
@@ -501,7 +542,8 @@
       "COZE智能体",
       "扣子空间"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "用mcp系统开发网页打砖块游戏---扣子空间",
@@ -513,7 +555,8 @@
       "COZE智能体",
       "扣子空间"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "模仿网页制作可玩mc游戏---扣子空间",
@@ -525,7 +568,8 @@
       "COZE智能体",
       "扣子空间"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "制作高考ai工具箱---扣子空间",
@@ -537,7 +581,8 @@
       "COZE智能体",
       "扣子空间"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "开发genai个人内容管理助手---扣子空间",
@@ -549,7 +594,8 @@
       "COZE智能体",
       "扣子空间"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "构建客户活动管理应用mvp---扣子空间",
@@ -561,7 +607,8 @@
       "COZE智能体",
       "扣子空间"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "开发aec行业ai市场情报系统---扣子空间",
@@ -573,7 +620,8 @@
       "COZE智能体",
       "扣子空间"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "银行邮件服务请求ai处理---扣子空间",
@@ -585,7 +633,8 @@
       "COZE智能体",
       "扣子空间"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "开发ai学生职业辅导系统---扣子空间",
@@ -597,7 +646,8 @@
       "COZE智能体",
       "扣子空间"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "打造智能语音金融应用---扣子空间",
@@ -609,7 +659,8 @@
       "COZE智能体",
       "扣子空间"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "ai广告设计自动优化---扣子空间",
@@ -621,7 +672,8 @@
       "COZE智能体",
       "扣子空间"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "解析maybe-finance并创作科普体验---扣子空间",
@@ -633,7 +685,8 @@
       "COZE智能体",
       "扣子空间"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "openbb平台科普文撰写与体验---扣子空间",
@@ -645,7 +698,8 @@
       "COZE智能体",
       "扣子空间"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "lightweight-charts全面解析---扣子空间",
@@ -657,7 +711,8 @@
       "COZE智能体",
       "扣子空间"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "制作smallshop-pro同款网站---扣子空间",
@@ -669,7 +724,8 @@
       "COZE智能体",
       "扣子空间"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "开发screenpick图文翻译功能---扣子空间",
@@ -681,7 +737,8 @@
       "COZE智能体",
       "扣子空间"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "用ai搜索海外网红并导出信息---扣子空间",
@@ -693,7 +750,8 @@
       "COZE智能体",
       "扣子空间"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "ai播报产品与虚拟旅游---扣子空间",
@@ -705,7 +763,8 @@
       "COZE智能体",
       "扣子空间"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "梦境社交产品功能打造---扣子空间",
@@ -717,7 +776,8 @@
       "COZE智能体",
       "扣子空间"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "peakwatch记录苹果表运动数据---扣子空间",
@@ -729,7 +789,8 @@
       "COZE智能体",
       "扣子空间"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "开发传达直面苦难的雨天游戏---扣子空间",
@@ -741,7 +802,8 @@
       "COZE智能体",
       "扣子空间"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "stocksharp交易平台架构解析---扣子空间",
@@ -753,7 +815,8 @@
       "COZE智能体",
       "扣子空间"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "stocksharp交易平台架构解析---扣子空间",
@@ -765,7 +828,8 @@
       "COZE智能体",
       "扣子空间"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "stocksharp交易平台架构解析---扣子空间",
@@ -777,7 +841,8 @@
       "COZE智能体",
       "扣子空间"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "stocksharp交易平台架构解析---扣子空间",
@@ -789,7 +854,8 @@
       "COZE智能体",
       "扣子空间"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "食智记应用功能与界面设计---扣子空间",
@@ -801,7 +867,8 @@
       "COZE智能体",
       "扣子空间"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "食智记应用功能与界面设计---扣子空间",
@@ -813,7 +880,8 @@
       "COZE智能体",
       "扣子空间"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "美妆数据洞察官",
@@ -825,7 +893,8 @@
       "COZE智能体",
       "扣子空间"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "screenpick翻译助手",
@@ -837,7 +906,8 @@
       "COZE智能体",
       "扣子空间"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "ai加密市场分析助手",
@@ -849,7 +919,8 @@
       "COZE智能体",
       "扣子空间"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "食智记应用功能与界面设计---扣子空间",
@@ -861,7 +932,8 @@
       "COZE智能体",
       "扣子空间"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "veighna量化交易框架",
@@ -873,7 +945,8 @@
       "COZE智能体",
       "扣子空间"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "fingpt",
@@ -885,7 +958,8 @@
       "COZE智能体",
       "扣子空间"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "微信文章分析",
@@ -897,7 +971,8 @@
       "COZE智能体",
       "扣子空间"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "食智记应用功能与界面设计---扣子空间",
@@ -909,7 +984,8 @@
       "COZE智能体",
       "扣子空间"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "食智记应用功能与界面设计---扣子空间",
@@ -921,7 +997,8 @@
       "COZE智能体",
       "扣子空间"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "openbb金融分析平台",
@@ -933,7 +1010,8 @@
       "COZE智能体",
       "扣子空间"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "stocksharp交易平台",
@@ -945,7 +1023,8 @@
       "COZE智能体",
       "扣子空间"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "星展银行客户活动管理平台",
@@ -957,7 +1036,8 @@
       "COZE智能体",
       "扣子空间"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "ai海外营销达人搜索",
@@ -969,7 +1049,8 @@
       "COZE智能体",
       "扣子空间"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "智能邮件服务代理",
@@ -981,7 +1062,8 @@
       "COZE智能体",
       "扣子空间"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "智能阅读导师",
@@ -993,7 +1075,8 @@
       "COZE智能体",
       "扣子空间"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "文章同步助手",
@@ -1005,7 +1088,8 @@
       "COZE智能体",
       "扣子空间"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "ai量化交易策略",
@@ -1017,7 +1101,8 @@
       "COZE智能体",
       "扣子空间"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "stocksharp交易平台",
@@ -1029,7 +1114,8 @@
       "COZE智能体",
       "扣子空间"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "ai金融大脑",
@@ -1041,7 +1127,8 @@
       "COZE智能体",
       "扣子空间"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "轻量级金融图表解析",
@@ -1053,7 +1140,8 @@
       "COZE智能体",
       "扣子空间"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "finqwen金融大模型",
@@ -1065,7 +1153,8 @@
       "COZE智能体",
       "扣子空间"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "qlib量化交易平台",
@@ -1077,7 +1166,8 @@
       "COZE智能体",
       "扣子空间"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "高盛量化金融库",
@@ -1089,7 +1179,8 @@
       "COZE智能体",
       "扣子空间"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "b站视频分析",
@@ -1101,7 +1192,8 @@
       "COZE智能体",
       "扣子空间"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "电商ai智能体系统",
@@ -1113,7 +1205,8 @@
       "COZE智能体",
       "扣子空间"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "ai实验助手",
@@ -1125,7 +1218,8 @@
       "COZE智能体",
       "扣子空间"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "灵犀智链",
@@ -1137,7 +1231,8 @@
       "COZE智能体",
       "扣子空间"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "ai产品创意研究助理",
@@ -1149,7 +1244,8 @@
       "COZE智能体",
       "扣子空间"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "家政预约上门服务",
@@ -1161,7 +1257,8 @@
       "COZE智能体",
       "扣子空间"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "生成科技热点微信公众号文章---扣子空间",
@@ -1173,7 +1270,8 @@
       "COZE智能体",
       "扣子空间"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "脑筋急转弯大师",
@@ -1185,7 +1283,8 @@
       "COZE智能体",
       "扣子空间"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "思考拍档",
@@ -1197,7 +1296,8 @@
       "COZE智能体",
       "扣子空间"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "企业图谱查询系统",
@@ -1209,7 +1309,8 @@
       "COZE智能体",
       "扣子空间"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "文字风格设计生成器",
@@ -1221,7 +1322,8 @@
       "COZE智能体",
       "扣子空间"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "小红书博主内容总结器",
@@ -1233,7 +1335,8 @@
       "COZE智能体",
       "扣子空间"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "智能体小程序管理系统",
@@ -1245,7 +1348,8 @@
       "COZE智能体",
       "扣子空间"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "菜单大师",
@@ -1257,7 +1361,8 @@
       "COZE智能体",
       "扣子空间"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "ai-pc-智能办公助手",
@@ -1269,7 +1374,8 @@
       "COZE智能体",
       "扣子空间"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "设计趋势智库",
@@ -1281,7 +1387,8 @@
       "COZE智能体",
       "扣子空间"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "rag技术平台",
@@ -1293,7 +1400,8 @@
       "COZE智能体",
       "扣子空间"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "简洁高效的媒体下载工具",
@@ -1305,7 +1413,8 @@
       "COZE智能体",
       "扣子空间"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "照片修复工具",
@@ -1317,7 +1426,8 @@
       "COZE智能体",
       "扣子空间"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "中文诗词数据库",
@@ -1329,7 +1439,8 @@
       "COZE智能体",
       "扣子空间"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "fiverr同款网站自由职业平台",
@@ -1341,7 +1452,8 @@
       "COZE智能体",
       "扣子空间"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "用gradio构建mcp服务器",
@@ -1353,7 +1465,8 @@
       "COZE智能体",
       "扣子空间"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "播客文章精选",
@@ -1365,7 +1478,8 @@
       "COZE智能体",
       "扣子空间"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "ai社区管家",
@@ -1377,7 +1491,8 @@
       "COZE智能体",
       "扣子空间"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "金融创新赋能平台",
@@ -1389,7 +1504,8 @@
       "COZE智能体",
       "扣子空间"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "蚂蚁财富基金申赎预测",
@@ -1401,7 +1517,8 @@
       "COZE智能体",
       "扣子空间"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "保险合规智能核验系统",
@@ -1413,7 +1530,8 @@
       "COZE智能体",
       "扣子空间"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "智能金融研报生成系统",
@@ -1425,7 +1543,8 @@
       "COZE智能体",
       "扣子空间"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "金融推理链压缩",
@@ -1437,7 +1556,8 @@
       "COZE智能体",
       "扣子空间"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "数字员工平台",
@@ -1449,7 +1569,8 @@
       "COZE智能体",
       "扣子空间"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "加密货币市场预测",
@@ -1461,7 +1582,8 @@
       "COZE智能体",
       "扣子空间"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "金融ai研究助手",
@@ -1473,7 +1595,8 @@
       "COZE智能体",
       "扣子空间"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "obsidian文本模板服务",
@@ -1485,7 +1608,8 @@
       "COZE智能体",
       "扣子空间"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "capwords拍照学词",
@@ -1497,7 +1621,8 @@
       "COZE智能体",
       "扣子空间"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "小丑牌策略",
@@ -1509,7 +1634,8 @@
       "COZE智能体",
       "扣子空间"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "art-of-fauna",
@@ -1521,7 +1647,8 @@
       "COZE智能体",
       "扣子空间"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "feather-3d绘图",
@@ -1533,7 +1660,8 @@
       "COZE智能体",
       "扣子空间"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "发票ocr识别",
@@ -1545,7 +1673,8 @@
       "COZE智能体",
       "扣子空间"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "高中化学ai刷题互动网页---扣子空间",
@@ -1557,7 +1686,8 @@
       "COZE智能体",
       "扣子空间"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "ai男装展示",
@@ -1569,7 +1699,8 @@
       "COZE智能体",
       "扣子空间"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "html在线预览器",
@@ -1581,7 +1712,8 @@
       "COZE智能体",
       "扣子空间"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "会议辅助系统流程搭建---扣子空间",
@@ -1593,7 +1725,8 @@
       "COZE智能体",
       "扣子空间"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "群聊式-ai--amp--智能调度系统",
@@ -1605,7 +1738,8 @@
       "COZE智能体",
       "扣子空间"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "---fishing-horror-adventure---z-ai-chat-",
@@ -1617,7 +1751,8 @@
       "COZE智能体",
       "扣子空间"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "个人-ip-故事创作系统---豆包",
@@ -1629,7 +1764,8 @@
       "COZE智能体",
       "扣子空间"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "---neva--39-s-journey---z-ai-chat---free",
@@ -1641,7 +1777,8 @@
       "COZE智能体",
       "扣子空间"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "--ai-travel-adventure---z-ai-chat---free",
@@ -1653,7 +1790,8 @@
       "COZE智能体",
       "扣子空间"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "红熊猫-ip-卡牌手办网站设计---豆包",
@@ -1665,7 +1803,8 @@
       "COZE智能体",
       "扣子空间"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "自媒体选题分析工具---豆包",
@@ -1677,7 +1816,8 @@
       "COZE智能体",
       "扣子空间"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "基于-n8n-的自动化平台设计---豆包",
@@ -1689,7 +1829,8 @@
       "COZE智能体",
       "扣子空间"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "umi-ocr-小程序设计---豆包",
@@ -1701,7 +1842,8 @@
       "COZE智能体",
       "扣子空间"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "创建射击网页游戏---豆包",
@@ -1713,7 +1855,8 @@
       "COZE智能体",
       "扣子空间"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "ai-自动记账-app-原型设计",
@@ -1725,7 +1868,8 @@
       "COZE智能体",
       "扣子空间"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "quantagent",
@@ -1737,7 +1881,8 @@
       "COZE智能体",
       "扣子空间"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "ai视频提示词生成器",
@@ -1749,7 +1894,8 @@
       "COZE智能体",
       "扣子空间"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "opencode配置助手",
@@ -1761,7 +1907,8 @@
       "COZE智能体",
       "扣子空间"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "modelslimmer-模型瘦身器",
@@ -1773,7 +1920,8 @@
       "COZE智能体",
       "扣子空间"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "chromedevtools-mcp---豆包",
@@ -1785,7 +1933,8 @@
       "COZE智能体",
       "扣子空间"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "pubscholar公益学术平台",
@@ -1797,7 +1946,8 @@
       "COZE智能体",
       "扣子空间"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "充电能量",
@@ -1809,7 +1959,8 @@
       "COZE智能体",
       "扣子空间"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "虚拟商品销售网站",
@@ -1821,7 +1972,8 @@
       "COZE智能体",
       "扣子空间"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "发型生成小程序",
@@ -1833,7 +1985,8 @@
       "COZE智能体",
       "扣子空间"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "银龄智伴",
@@ -1845,7 +1998,8 @@
       "COZE智能体",
       "扣子空间"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "光伏储能ai工单派发系统",
@@ -1857,7 +2011,8 @@
       "COZE智能体",
       "扣子空间"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "装修竣工图ai生成助理",
@@ -1869,7 +2024,8 @@
       "COZE智能体",
       "扣子空间"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "aipc端侧视频创作",
@@ -1881,7 +2037,8 @@
       "AI智能体应用",
       "COZE智能体"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "论文格式修改系统",
@@ -1893,7 +2050,8 @@
       "COZE智能体",
       "豆包应用"
     ],
-    "category": "chat"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "智能剧本创作与分镜规划平台",
@@ -1905,7 +2063,8 @@
       "COZE智能体",
       "豆包应用"
     ],
-    "category": "chat"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "视频处理工具集",
@@ -1917,7 +2076,8 @@
       "COZE智能体",
       "豆包应用"
     ],
-    "category": "chat"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "言形--语言风格转换工具",
@@ -1929,7 +2089,8 @@
       "COZE智能体",
       "豆包应用"
     ],
-    "category": "chat"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "智维脑测",
@@ -1941,7 +2102,8 @@
       "COZE智能体",
       "豆包应用"
     ],
-    "category": "chat"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "凡人修仙传",
@@ -1953,7 +2115,8 @@
       "COZE智能体",
       "豆包应用"
     ],
-    "category": "chat"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "智能ppt生成器",
@@ -1965,7 +2128,8 @@
       "COZE智能体",
       "豆包应用"
     ],
-    "category": "chat"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "文生视频提示词专业工具",
@@ -1977,7 +2141,8 @@
       "COZE智能体",
       "豆包应用"
     ],
-    "category": "chat"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "onecom一人公司",
@@ -1989,7 +2154,8 @@
       "COZE智能体",
       "技能商店"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "披萨店客服",
@@ -2001,7 +2167,8 @@
       "COZE智能体",
       "技能商店"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "reddit舆情分析技能",
@@ -2013,7 +2180,8 @@
       "COZE智能体",
       "技能商店"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "trae-agent",
@@ -2025,7 +2193,8 @@
       "COZE智能体",
       "技能商店"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "多平台媒体数据",
@@ -2037,7 +2206,8 @@
       "COZE智能体",
       "技能商店"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "语音文字互转",
@@ -2049,7 +2219,8 @@
       "COZE智能体",
       "技能商店"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "skills-商店",
@@ -2061,7 +2232,8 @@
       "COZE智能体",
       "技能商店"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "网页转桌面应用",
@@ -2073,7 +2245,8 @@
       "COZE智能体",
       "技能商店"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "skills-商店",
@@ -2085,7 +2258,8 @@
       "COZE智能体",
       "技能商店"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "智能语音合成",
@@ -2097,7 +2271,8 @@
       "COZE智能体",
       "技能商店"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "ai-coding挑战虚拟员工平台介绍---扣子",
@@ -2109,7 +2284,8 @@
       "COZE智能体",
       "技能商店"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "三体时序文明配音效音频制作---扣子",
@@ -2121,7 +2297,8 @@
       "COZE智能体",
       "技能商店"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "腾讯元器",
@@ -2133,7 +2310,8 @@
       "AI智能体应用",
       "腾讯元器"
     ],
-    "category": "chat"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "腾讯元宝---轻松工作-多点生活",
@@ -2145,7 +2323,8 @@
       "AI智能体应用",
       "腾讯元器"
     ],
-    "category": "chat"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "-闭眼入-免费gpu云电脑-云端算力t4显卡每月50000分钟免费时长-腾讯云免",
@@ -2157,7 +2336,8 @@
       "AI智能体应用",
       "腾讯元器"
     ],
-    "category": "chat"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "腾讯云-cloud-studio---云端开发-化繁为简",
@@ -2169,7 +2349,8 @@
       "AI智能体应用",
       "腾讯元器"
     ],
-    "category": "chat"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "腾讯云-agent-应用创新挑战赛作品提交",
@@ -2181,7 +2362,8 @@
       "AI智能体应用",
       "腾讯元器"
     ],
-    "category": "chat"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "腾讯元宝---轻松工作-多点生活",
@@ -2193,7 +2375,8 @@
       "AI智能体应用",
       "腾讯元器"
     ],
-    "category": "chat"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "腾讯混元3d",
@@ -2205,7 +2388,8 @@
       "AI智能体应用",
       "腾讯元器"
     ],
-    "category": "chat"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "腾讯混元游戏",
@@ -2217,7 +2401,8 @@
       "AI智能体应用",
       "腾讯元器"
     ],
-    "category": "chat"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "minimax-agent--minimize-effort--maximize",
@@ -2228,7 +2413,8 @@
       "书签栏",
       "AI智能体应用"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "welcome---xai",
@@ -2239,7 +2425,8 @@
       "书签栏",
       "AI智能体应用"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "ai-video-editor---create-viral-videos-wi",
@@ -2250,7 +2437,8 @@
       "书签栏",
       "AI智能体应用"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "自动生成n8n工作流-这个神级开源方案-绝了-",
@@ -2262,7 +2450,8 @@
       "AI智能体应用",
       "N8N"
     ],
-    "category": "automation"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "qwen",
@@ -2273,7 +2462,8 @@
       "书签栏",
       "AI智能体应用"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "grok-镜像",
@@ -2284,7 +2474,8 @@
       "书签栏",
       "AI智能体应用"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "google-ai-studio",
@@ -2295,7 +2486,8 @@
       "书签栏",
       "AI智能体应用"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "aipy-超级ai牛马智能体工厂-爱派aipy软件官网",
@@ -2306,7 +2498,8 @@
       "书签栏",
       "AI智能体应用"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "sam-3d",
@@ -2317,7 +2510,8 @@
       "书签栏",
       "AI智能体应用"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "zenmux类似openrute",
@@ -2328,7 +2522,8 @@
       "书签栏",
       "AI智能体应用"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "ai对话---aiplus",
@@ -2339,7 +2534,8 @@
       "书签栏",
       "AI智能体应用"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "千问",
@@ -2350,7 +2546,8 @@
       "书签栏",
       "AI智能体应用"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "home---anygen",
@@ -2361,7 +2558,8 @@
       "书签栏",
       "AI智能体应用"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "灵光全模态ai助手",
@@ -2372,7 +2570,8 @@
       "书签栏",
       "AI智能体应用"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "首页---inscode-快马",
@@ -2383,7 +2582,8 @@
       "书签栏",
       "AI智能体应用"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "项目中心---inscode-快马",
@@ -2395,7 +2595,8 @@
       "AI智能体应用",
       "csdn作品"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "运行项目---inscode-快马",
@@ -2407,7 +2608,8 @@
       "AI智能体应用",
       "csdn作品"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "运行项目---inscode-快马",
@@ -2419,7 +2621,8 @@
       "AI智能体应用",
       "csdn作品"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "运行项目---inscode-快马",
@@ -2431,7 +2634,8 @@
       "AI智能体应用",
       "csdn作品"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "运行项目---inscode-快马",
@@ -2443,7 +2647,8 @@
       "AI智能体应用",
       "csdn作品"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "运行项目---inscode-快马",
@@ -2455,7 +2660,8 @@
       "AI智能体应用",
       "csdn作品"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "运行项目---inscode-快马",
@@ -2467,7 +2673,8 @@
       "AI智能体应用",
       "csdn作品"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "运行项目---inscode-快马",
@@ -2479,7 +2686,8 @@
       "AI智能体应用",
       "csdn作品"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "运行项目---inscode-快马",
@@ -2491,7 +2699,8 @@
       "AI智能体应用",
       "csdn作品"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "运行项目---inscode-快马",
@@ -2503,7 +2712,8 @@
       "AI智能体应用",
       "csdn作品"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "运行项目---inscode-快马",
@@ -2515,7 +2725,8 @@
       "AI智能体应用",
       "csdn作品"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "运行项目---inscode-快马",
@@ -2527,7 +2738,8 @@
       "AI智能体应用",
       "csdn作品"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "运行项目---inscode-快马",
@@ -2539,7 +2751,8 @@
       "AI智能体应用",
       "csdn作品"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "运行项目---inscode-快马",
@@ -2551,7 +2764,8 @@
       "AI智能体应用",
       "csdn作品"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "运行项目---inscode-快马",
@@ -2563,7 +2777,8 @@
       "AI智能体应用",
       "csdn作品"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "运行项目---inscode-快马",
@@ -2575,7 +2790,8 @@
       "AI智能体应用",
       "csdn作品"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "运行项目---inscode-快马",
@@ -2587,7 +2803,8 @@
       "AI智能体应用",
       "csdn作品"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "运行项目---inscode-快马",
@@ -2599,7 +2816,8 @@
       "AI智能体应用",
       "csdn作品"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "运行项目---inscode-快马",
@@ -2611,7 +2829,8 @@
       "AI智能体应用",
       "csdn作品"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "运行项目---inscode-快马",
@@ -2623,7 +2842,8 @@
       "AI智能体应用",
       "csdn作品"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "运行项目---inscode-快马",
@@ -2635,7 +2855,8 @@
       "AI智能体应用",
       "csdn作品"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "运行项目---inscode-快马",
@@ -2647,7 +2868,8 @@
       "AI智能体应用",
       "csdn作品"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "运行项目---inscode-快马",
@@ -2659,7 +2881,8 @@
       "AI智能体应用",
       "csdn作品"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "运行项目---inscode-快马",
@@ -2671,7 +2894,8 @@
       "AI智能体应用",
       "csdn作品"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "运行项目---inscode-快马",
@@ -2683,7 +2907,8 @@
       "AI智能体应用",
       "csdn作品"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "运行项目---inscode-快马",
@@ -2695,7 +2920,8 @@
       "AI智能体应用",
       "csdn作品"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "运行项目---inscode-快马",
@@ -2707,7 +2933,8 @@
       "AI智能体应用",
       "csdn作品"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "运行项目---inscode-快马",
@@ -2719,7 +2946,8 @@
       "AI智能体应用",
       "csdn作品"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "运行项目---inscode-快马",
@@ -2731,7 +2959,8 @@
       "AI智能体应用",
       "csdn作品"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "运行项目---inscode-快马",
@@ -2743,7 +2972,8 @@
       "AI智能体应用",
       "csdn作品"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "运行项目---inscode-快马",
@@ -2755,7 +2985,8 @@
       "AI智能体应用",
       "csdn作品"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "金融mcp---mcp",
@@ -2767,7 +2998,8 @@
       "AI智能体应用",
       "csdn作品"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "word文档编辑mcp全面升级版-支持本地和web上传----mcp",
@@ -2779,7 +3011,8 @@
       "AI智能体应用",
       "csdn作品"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "北大法宝法律智能检索mcp服务---mcp",
@@ -2791,7 +3024,8 @@
       "AI智能体应用",
       "csdn作品"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "中医药科普短视频-mcp-amp-agent挑战赛---创空间",
@@ -2803,7 +3037,8 @@
       "AI智能体应用",
       "csdn作品"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "clawhub",
@@ -2814,7 +3049,8 @@
       "书签栏",
       "AI智能体应用"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "instreet---agent-社交网络",
@@ -2825,7 +3061,8 @@
       "书签栏",
       "AI智能体应用"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "jvs-claw",
@@ -2836,7 +3073,8 @@
       "书签栏",
       "AI智能体应用"
     ],
-    "category": "agent"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "财联社",
@@ -2846,7 +3084,8 @@
     "tags": [
       "书签栏"
     ],
-    "category": "other"
+    "category": "other",
+    "rating": 4.5
   },
   {
     "id": "qq邮箱",
@@ -2856,7 +3095,8 @@
     "tags": [
       "书签栏"
     ],
-    "category": "other"
+    "category": "other",
+    "rating": 4.5
   },
   {
     "id": "强势股回调买入法",
@@ -2867,7 +3107,8 @@
       "书签栏",
       "金融智能量化投研"
     ],
-    "category": "finance"
+    "category": "finance",
+    "rating": 4.5
   },
   {
     "id": "topgo主升浪神器",
@@ -2878,7 +3119,8 @@
       "书签栏",
       "金融智能量化投研"
     ],
-    "category": "finance"
+    "category": "finance",
+    "rating": 4.5
   },
   {
     "id": "狄耐克股票分析报告",
@@ -2890,7 +3132,8 @@
       "金融智能量化投研",
       "智能研报"
     ],
-    "category": "finance"
+    "category": "finance",
+    "rating": 4.5
   },
   {
     "id": "跨界智驾-通信老兵的车联网创业博弈",
@@ -2902,7 +3145,8 @@
       "金融智能量化投研",
       "智能研报"
     ],
-    "category": "finance"
+    "category": "finance",
+    "rating": 4.5
   },
   {
     "id": "狄耐克-300884-股票全面分析报告-ppt",
@@ -2914,7 +3158,8 @@
       "金融智能量化投研",
       "智能研报"
     ],
-    "category": "finance"
+    "category": "finance",
+    "rating": 4.5
   },
   {
     "id": "github量化交易神装详解---零基础搭建ai金融大脑",
@@ -2926,7 +3171,8 @@
       "金融智能量化投研",
       "教程实例源码"
     ],
-    "category": "finance"
+    "category": "finance",
+    "rating": 4.5
   },
   {
     "id": "一键选股神器-用python-ai打造智能股票分析系统",
@@ -2938,7 +3184,8 @@
       "金融智能量化投研",
       "教程实例源码"
     ],
-    "category": "finance"
+    "category": "finance",
+    "rating": 4.5
   },
   {
     "id": "金融舆情分析rag与时间序列预测融合-下一代量化分析的破局点",
@@ -2950,7 +3197,8 @@
       "金融智能量化投研",
       "教程实例源码"
     ],
-    "category": "finance"
+    "category": "finance",
+    "rating": 4.5
   },
   {
     "id": "investor-agent-智能投研mcp工具",
@@ -2962,7 +3210,8 @@
       "金融智能量化投研",
       "教程实例源码"
     ],
-    "category": "finance"
+    "category": "finance",
+    "rating": 4.5
   },
   {
     "id": "ai对冲基金多智能体系统",
@@ -2974,7 +3223,8 @@
       "金融智能量化投研",
       "教程实例源码"
     ],
-    "category": "finance"
+    "category": "finance",
+    "rating": 4.5
   },
   {
     "id": "一文读懂mcp协议与alpaca-mcp-跨市场交易终端实战指南",
@@ -2986,7 +3236,8 @@
       "金融智能量化投研",
       "教程实例源码"
     ],
-    "category": "finance"
+    "category": "finance",
+    "rating": 4.5
   },
   {
     "id": "easyquant-轻量级量化交易框架解析",
@@ -2998,7 +3249,8 @@
       "金融智能量化投研",
       "教程实例源码"
     ],
-    "category": "finance"
+    "category": "finance",
+    "rating": 4.5
   },
   {
     "id": "-开源神器-hummingbot-年交易额340亿美金的加密量化引擎怎么玩-",
@@ -3010,7 +3262,8 @@
       "金融智能量化投研",
       "教程实例源码"
     ],
-    "category": "finance"
+    "category": "finance",
+    "rating": 4.5
   },
   {
     "id": "基于python开发的自动化交易机器人-qbot-支持加密货币-股票市场",
@@ -3022,7 +3275,8 @@
       "金融智能量化投研",
       "教程实例源码"
     ],
-    "category": "finance"
+    "category": "finance",
+    "rating": 4.5
   },
   {
     "id": "qbot量化交易平台",
@@ -3034,7 +3288,8 @@
       "金融智能量化投研",
       "教程实例源码"
     ],
-    "category": "finance"
+    "category": "finance",
+    "rating": 4.5
   },
   {
     "id": "完整实例---迅投知识库",
@@ -3046,7 +3301,8 @@
       "金融智能量化投研",
       "教程实例源码"
     ],
-    "category": "finance"
+    "category": "finance",
+    "rating": 4.5
   },
   {
     "id": "agentar金融平台",
@@ -3058,7 +3314,8 @@
       "金融智能量化投研",
       "教程实例源码"
     ],
-    "category": "finance"
+    "category": "finance",
+    "rating": 4.5
   },
   {
     "id": "量化金融工作平台",
@@ -3070,7 +3327,8 @@
       "金融智能量化投研",
       "教程实例源码"
     ],
-    "category": "finance"
+    "category": "finance",
+    "rating": 4.5
   },
   {
     "id": "backtrader-交易系统",
@@ -3082,7 +3340,8 @@
       "金融智能量化投研",
       "教程实例源码"
     ],
-    "category": "finance"
+    "category": "finance",
+    "rating": 4.5
   },
   {
     "id": "ai量化交易系统",
@@ -3094,7 +3353,8 @@
       "金融智能量化投研",
       "教程实例源码"
     ],
-    "category": "finance"
+    "category": "finance",
+    "rating": 4.5
   },
   {
     "id": "银行客户活动管理mvp",
@@ -3106,7 +3366,8 @@
       "金融智能量化投研",
       "教程实例源码"
     ],
-    "category": "finance"
+    "category": "finance",
+    "rating": 4.5
   },
   {
     "id": "量化交易机器人",
@@ -3118,7 +3379,8 @@
       "金融智能量化投研",
       "教程实例源码"
     ],
-    "category": "finance"
+    "category": "finance",
+    "rating": 4.5
   },
   {
     "id": "可转债智能体系统",
@@ -3130,7 +3392,8 @@
       "金融智能量化投研",
       "教程实例源码"
     ],
-    "category": "finance"
+    "category": "finance",
+    "rating": 4.5
   },
   {
     "id": "保险代理销售系统",
@@ -3142,7 +3405,8 @@
       "金融智能量化投研",
       "教程实例源码"
     ],
-    "category": "finance"
+    "category": "finance",
+    "rating": 4.5
   },
   {
     "id": "stocks-insights-ai-agent",
@@ -3154,7 +3418,8 @@
       "金融智能量化投研",
       "教程实例源码"
     ],
-    "category": "finance"
+    "category": "finance",
+    "rating": 4.5
   },
   {
     "id": "mcp专家智能体指南",
@@ -3166,7 +3431,8 @@
       "金融智能量化投研",
       "教程实例源码"
     ],
-    "category": "finance"
+    "category": "finance",
+    "rating": 4.5
   },
   {
     "id": "midday财务管理系统",
@@ -3178,7 +3444,8 @@
       "金融智能量化投研",
       "教程实例源码"
     ],
-    "category": "finance"
+    "category": "finance",
+    "rating": 4.5
   },
   {
     "id": "vectorbt量化分析",
@@ -3190,7 +3457,8 @@
       "金融智能量化投研",
       "教程实例源码"
     ],
-    "category": "finance"
+    "category": "finance",
+    "rating": 4.5
   },
   {
     "id": "通达信金融终端在线说明书",
@@ -3202,7 +3470,8 @@
       "金融智能量化投研",
       "教程实例源码"
     ],
-    "category": "finance"
+    "category": "finance",
+    "rating": 4.5
   },
   {
     "id": "ima-copilot-通达信知识库",
@@ -3214,7 +3483,8 @@
       "金融智能量化投研",
       "教程实例源码"
     ],
-    "category": "finance"
+    "category": "finance",
+    "rating": 4.5
   },
   {
     "id": "nautilustrader结合ai大模型-如何开启量化投资新时代-",
@@ -3225,7 +3495,8 @@
       "书签栏",
       "金融智能量化投研"
     ],
-    "category": "finance"
+    "category": "finance",
+    "rating": 4.5
   },
   {
     "id": "股票龙虎榜top",
@@ -3236,7 +3507,8 @@
       "书签栏",
       "金融智能量化投研"
     ],
-    "category": "finance"
+    "category": "finance",
+    "rating": 4.5
   },
   {
     "id": "首页---迅投知识库",
@@ -3247,7 +3519,8 @@
       "书签栏",
       "金融智能量化投研"
     ],
-    "category": "finance"
+    "category": "finance",
+    "rating": 4.5
   },
   {
     "id": "qmt新人上手教程---迅投知识库",
@@ -3258,7 +3531,8 @@
       "书签栏",
       "金融智能量化投研"
     ],
-    "category": "finance"
+    "category": "finance",
+    "rating": 4.5
   },
   {
     "id": "magic-todo---goblintools",
@@ -3268,7 +3542,8 @@
     "tags": [
       "书签栏"
     ],
-    "category": "other"
+    "category": "other",
+    "rating": 4.5
   },
   {
     "id": "国家税务总局深圳市电子税务局",
@@ -3278,7 +3553,8 @@
     "tags": [
       "书签栏"
     ],
-    "category": "other"
+    "category": "other",
+    "rating": 4.5
   },
   {
     "id": "在线使用python-replit---build-software-faste",
@@ -3289,7 +3565,8 @@
       "书签栏",
       "python量化"
     ],
-    "category": "other"
+    "category": "code",
+    "rating": 4.5
   },
   {
     "id": "zion---个人中心",
@@ -3300,7 +3577,8 @@
       "书签栏",
       "python量化"
     ],
-    "category": "other"
+    "category": "finance",
+    "rating": 4.5
   },
   {
     "id": "用python写a股量化交易系统_哔哩哔哩_bilibili",
@@ -3311,7 +3589,8 @@
       "书签栏",
       "python量化"
     ],
-    "category": "other"
+    "category": "finance",
+    "rating": 4.5
   },
   {
     "id": "-麻省理工学院-中文字幕版-计算机科学和python编程基础79集完整课程-现分",
@@ -3322,7 +3601,8 @@
       "书签栏",
       "python量化"
     ],
-    "category": "other"
+    "category": "learning",
+    "rating": 4.5
   },
   {
     "id": "从零开始聊期权---掌握这些期权策略基础款才是赚钱第一步----知乎",
@@ -3333,7 +3613,8 @@
       "书签栏",
       "python量化"
     ],
-    "category": "other"
+    "category": "finance",
+    "rating": 4.5
   },
   {
     "id": "期权十八般武器之四种期权价差策略---知乎",
@@ -3344,7 +3625,8 @@
       "书签栏",
       "python量化"
     ],
-    "category": "other"
+    "category": "finance",
+    "rating": 4.5
   },
   {
     "id": "真格量化-打造您不知疲倦的-量化战斗天使----知乎",
@@ -3355,7 +3637,8 @@
       "书签栏",
       "python量化"
     ],
-    "category": "other"
+    "category": "finance",
+    "rating": 4.5
   },
   {
     "id": "单因子分析---joinquant",
@@ -3366,7 +3649,8 @@
       "书签栏",
       "python量化"
     ],
-    "category": "other"
+    "category": "finance",
+    "rating": 4.5
   },
   {
     "id": "首页---joinquant",
@@ -3377,7 +3661,8 @@
       "书签栏",
       "python量化"
     ],
-    "category": "other"
+    "category": "finance",
+    "rating": 4.5
   },
   {
     "id": "同花顺自动交易的相关微信公众号文章---搜狗微信搜索",
@@ -3388,7 +3673,8 @@
       "书签栏",
       "python量化"
     ],
-    "category": "other"
+    "category": "finance",
+    "rating": 4.5
   },
   {
     "id": "开源ctp-仿天勤框架_哔哩哔哩_bilibili",
@@ -3399,7 +3685,8 @@
       "书签栏",
       "python量化"
     ],
-    "category": "other"
+    "category": "finance",
+    "rating": 4.5
   },
   {
     "id": "安装vscode_启动数据库_行情服务器_交易服务器_查询k线_哔哩哔哩_bil",
@@ -3410,7 +3697,8 @@
       "书签栏",
       "python量化"
     ],
-    "category": "other"
+    "category": "data",
+    "rating": 4.5
   },
   {
     "id": "mytt--mytt将通达信-同花顺-文华麦语言等指标公式indicators-",
@@ -3421,7 +3709,8 @@
       "书签栏",
       "python量化"
     ],
-    "category": "other"
+    "category": "finance",
+    "rating": 4.5
   },
   {
     "id": "开发策略---pythongo-文档",
@@ -3432,7 +3721,8 @@
       "书签栏",
       "python量化"
     ],
-    "category": "other"
+    "category": "code",
+    "rating": 4.5
   },
   {
     "id": "指标转换---pythongo-文档",
@@ -3443,7 +3733,8 @@
       "书签栏",
       "python量化"
     ],
-    "category": "other"
+    "category": "writing",
+    "rating": 4.5
   },
   {
     "id": "无限易infinitrader的个人空间_哔哩哔哩_bilibili",
@@ -3454,7 +3745,8 @@
       "书签栏",
       "python量化"
     ],
-    "category": "other"
+    "category": "finance",
+    "rating": 4.5
   },
   {
     "id": "-put-call-parity三条腿的无风险套利-新一代期货期权交易终端_哔哩",
@@ -3465,7 +3757,8 @@
       "书签栏",
       "python量化"
     ],
-    "category": "other"
+    "category": "finance",
+    "rating": 4.5
   },
   {
     "id": "简介---无限易操作手册",
@@ -3476,7 +3769,8 @@
       "书签栏",
       "python量化"
     ],
-    "category": "other"
+    "category": "finance",
+    "rating": 4.5
   },
   {
     "id": "archived--python-extension-packages-for-",
@@ -3487,7 +3781,8 @@
       "书签栏",
       "python量化"
     ],
-    "category": "other"
+    "category": "finance",
+    "rating": 4.5
   },
   {
     "id": "-无限易网格策略-高抛低吸自动交易--新一代期货期权交易终端_哔哩哔哩_bili",
@@ -3498,7 +3793,8 @@
       "书签栏",
       "python量化"
     ],
-    "category": "other"
+    "category": "finance",
+    "rating": 4.5
   },
   {
     "id": "-put-call-parity三条腿的无风险套利-新一代期货期权交易终端_哔哩",
@@ -3509,7 +3805,8 @@
       "书签栏",
       "python量化"
     ],
-    "category": "other"
+    "category": "finance",
+    "rating": 4.5
   },
   {
     "id": "无限易期权可视化操作-行情精准把握-持仓高效管理_哔哩哔哩_bilibili",
@@ -3520,7 +3817,8 @@
       "书签栏",
       "python量化"
     ],
-    "category": "other"
+    "category": "data",
+    "rating": 4.5
   },
   {
     "id": "套利猎人---无限易操作手册",
@@ -3531,7 +3829,8 @@
       "书签栏",
       "python量化"
     ],
-    "category": "other"
+    "category": "finance",
+    "rating": 4.5
   },
   {
     "id": "天勤量化策略库-r-breaker策略-难度-初级----知乎",
@@ -3542,7 +3841,8 @@
       "书签栏",
       "python量化"
     ],
-    "category": "other"
+    "category": "finance",
+    "rating": 4.5
   },
   {
     "id": "交易策略的多实例运行---tianqin-python-sdk-3-4-0-文档",
@@ -3553,7 +3853,8 @@
       "书签栏",
       "python量化"
     ],
-    "category": "other"
+    "category": "finance",
+    "rating": 4.5
   },
   {
     "id": "-期货ea-r-breaker策略原理分析---知乎",
@@ -3564,7 +3865,8 @@
       "书签栏",
       "python量化"
     ],
-    "category": "other"
+    "category": "finance",
+    "rating": 4.5
   },
   {
     "id": "python-量化交易教程--python-量化交易教程",
@@ -3575,7 +3877,8 @@
       "书签栏",
       "python量化"
     ],
-    "category": "other"
+    "category": "finance",
+    "rating": 4.5
   },
   {
     "id": "pystrategy-ctatemplate---pythonlab-1-文档",
@@ -3586,7 +3889,8 @@
       "书签栏",
       "python量化"
     ],
-    "category": "other"
+    "category": "writing",
+    "rating": 4.5
   },
   {
     "id": "期货交易基础知识测试",
@@ -3597,7 +3901,8 @@
       "书签栏",
       "python量化"
     ],
-    "category": "other"
+    "category": "finance",
+    "rating": 4.5
   },
   {
     "id": "真格量化---期货期权实盘量化平台",
@@ -3608,7 +3913,8 @@
       "书签栏",
       "python量化"
     ],
-    "category": "other"
+    "category": "finance",
+    "rating": 4.5
   },
   {
     "id": "网格策略---无限易操作手册",
@@ -3619,7 +3925,8 @@
       "书签栏",
       "python量化"
     ],
-    "category": "other"
+    "category": "finance",
+    "rating": 4.5
   },
   {
     "id": "注册---quantfair",
@@ -3630,7 +3937,8 @@
       "书签栏",
       "python量化"
     ],
-    "category": "other"
+    "category": "finance",
+    "rating": 4.5
   },
   {
     "id": "天勤量化-tqsdk-策略库---知乎",
@@ -3641,7 +3949,8 @@
       "书签栏",
       "python量化"
     ],
-    "category": "other"
+    "category": "finance",
+    "rating": 4.5
   },
   {
     "id": "simnow仿真交易-官方网站-",
@@ -3652,7 +3961,8 @@
       "书签栏",
       "python量化"
     ],
-    "category": "other"
+    "category": "finance",
+    "rating": 4.5
   },
   {
     "id": "牛市最赚钱的交易策略----卖出认沽期权---知乎",
@@ -3663,7 +3973,8 @@
       "书签栏",
       "python量化"
     ],
-    "category": "other"
+    "category": "finance",
+    "rating": 4.5
   },
   {
     "id": "python展示一行代码就可爬取b站以及各大网址视频-想想就刺激的不行----知",
@@ -3674,7 +3985,8 @@
       "书签栏",
       "python量化"
     ],
-    "category": "other"
+    "category": "code",
+    "rating": 4.5
   },
   {
     "id": "基于python实现全自动下载抖音视频---经验笔记",
@@ -3685,7 +3997,8 @@
       "书签栏",
       "python量化"
     ],
-    "category": "other"
+    "category": "video",
+    "rating": 4.5
   },
   {
     "id": "python实现ai换脸---灰信网-软件开发博客聚合-",
@@ -3696,7 +4009,8 @@
       "书签栏",
       "python量化"
     ],
-    "category": "other"
+    "category": "code",
+    "rating": 4.5
   },
   {
     "id": "飞瓜数据---抖音快手_电商与直播大数据分析平台-feigua-cn",
@@ -3707,7 +4021,8 @@
       "书签栏",
       "python量化"
     ],
-    "category": "other"
+    "category": "data",
+    "rating": 4.5
   },
   {
     "id": "期货程序化-金叉-k线-布林_网易订阅",
@@ -3718,7 +4033,8 @@
       "书签栏",
       "python量化"
     ],
-    "category": "other"
+    "category": "finance",
+    "rating": 4.5
   },
   {
     "id": "https---pul-tdx-com-cn-site-app-gzhbd-td",
@@ -3729,7 +4045,8 @@
       "书签栏",
       "python量化"
     ],
-    "category": "other"
+    "category": "search",
+    "rating": 4.5
   },
   {
     "id": "-图片-我用3天时间搭建自主量化交易-程序化交易-平台_量化交易吧_百度贴吧",
@@ -3740,7 +4057,8 @@
       "书签栏",
       "python量化"
     ],
-    "category": "other"
+    "category": "finance",
+    "rating": 4.5
   },
   {
     "id": "backtrader中国ctp期货实盘交易生产级接口成功了----知乎",
@@ -3751,7 +4069,8 @@
       "书签栏",
       "python量化"
     ],
-    "category": "other"
+    "category": "finance",
+    "rating": 4.5
   },
   {
     "id": "扫地僧开源量化框架学习官网",
@@ -3762,7 +4081,8 @@
       "书签栏",
       "python量化"
     ],
-    "category": "other"
+    "category": "finance",
+    "rating": 4.5
   },
   {
     "id": "美股期权-最强期权交易策略-上涨赚钱-下跌还能赚-对角价差组合---知乎",
@@ -3773,7 +4093,8 @@
       "书签栏",
       "python量化"
     ],
-    "category": "other"
+    "category": "finance",
+    "rating": 4.5
   },
   {
     "id": "大-郑商所卖权保证金计算公式",
@@ -3784,7 +4105,8 @@
       "书签栏",
       "python量化"
     ],
-    "category": "other"
+    "category": "finance",
+    "rating": 4.5
   },
   {
     "id": "金字塔决策交易系统---专业的程序化交易软件提供商",
@@ -3795,7 +4117,8 @@
       "书签栏",
       "python量化"
     ],
-    "category": "other"
+    "category": "finance",
+    "rating": 4.5
   },
   {
     "id": "十分钟快速入门---tianqin-python-sdk-3-3-0-文档",
@@ -3806,7 +4129,8 @@
       "书签栏",
       "python量化"
     ],
-    "category": "other"
+    "category": "learning",
+    "rating": 4.5
   },
   {
     "id": "期权工具",
@@ -3817,7 +4141,8 @@
       "书签栏",
       "python量化"
     ],
-    "category": "other"
+    "category": "finance",
+    "rating": 4.5
   },
   {
     "id": "安装-pythongo-运行环境---pythongo-文档",
@@ -3828,7 +4153,8 @@
       "书签栏",
       "python量化"
     ],
-    "category": "other"
+    "category": "writing",
+    "rating": 4.5
   },
   {
     "id": "online-audio-converter---сonvert-audio-f",
@@ -3839,7 +4165,8 @@
       "书签栏",
       "python量化"
     ],
-    "category": "other"
+    "category": "audio",
+    "rating": 4.5
   },
   {
     "id": "python-实现-ai-换脸---邯城往事",
@@ -3850,7 +4177,8 @@
       "书签栏",
       "python量化"
     ],
-    "category": "other"
+    "category": "finance",
+    "rating": 4.5
   },
   {
     "id": "python-实现-ai-换脸---码农教程",
@@ -3861,7 +4189,8 @@
       "书签栏",
       "python量化"
     ],
-    "category": "other"
+    "category": "finance",
+    "rating": 4.5
   },
   {
     "id": "如何使用python通过爬虫抓取的文章一键生成短视频----知乎",
@@ -3872,7 +4201,8 @@
       "书签栏",
       "python量化"
     ],
-    "category": "other"
+    "category": "video",
+    "rating": 4.5
   },
   {
     "id": "python-selenium实现短视频自动上传与发布-同时支持抖音-快手-b站",
@@ -3883,7 +4213,8 @@
       "书签栏",
       "python量化"
     ],
-    "category": "other"
+    "category": "video",
+    "rating": 4.5
   },
   {
     "id": "流程图---mermaid-chart",
@@ -3894,7 +4225,8 @@
       "书签栏",
       "python量化"
     ],
-    "category": "other"
+    "category": "finance",
+    "rating": 4.5
   },
   {
     "id": "将小爱音箱接入chatgpt和豆包-变身真正的ai音箱",
@@ -3905,7 +4237,8 @@
       "书签栏",
       "python量化"
     ],
-    "category": "other"
+    "category": "chat",
+    "rating": 4.5
   },
   {
     "id": "首页-影刀帮助中心",
@@ -3916,7 +4249,8 @@
       "书签栏",
       "python量化"
     ],
-    "category": "other"
+    "category": "finance",
+    "rating": 4.5
   },
   {
     "id": "-影刀-coze-小红书治愈系图文全自动化创造-一键发布秘籍-打造爆款内容",
@@ -3927,7 +4261,8 @@
       "书签栏",
       "python量化"
     ],
-    "category": "other"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "python自动化办公社区的个人空间-python自动化办公社区个人主页-哔哩哔",
@@ -3938,7 +4273,8 @@
       "书签栏",
       "python量化"
     ],
-    "category": "other"
+    "category": "video",
+    "rating": 4.5
   },
   {
     "id": "html-css-js-在线工具---菜鸟工具",
@@ -3949,7 +4285,8 @@
       "书签栏",
       "python量化"
     ],
-    "category": "other"
+    "category": "finance",
+    "rating": 4.5
   },
   {
     "id": "esheep-内测中----一站式的aigc社区",
@@ -3960,7 +4297,8 @@
       "书签栏",
       "python量化"
     ],
-    "category": "other"
+    "category": "finance",
+    "rating": 4.5
   },
   {
     "id": "玩转-ai-绘图-基于函数计算部署-stable-diffusion可自定义模型",
@@ -3971,7 +4309,8 @@
       "书签栏",
       "python量化"
     ],
-    "category": "other"
+    "category": "image",
+    "rating": 4.5
   },
   {
     "id": "stable-diffusion",
@@ -3982,7 +4321,8 @@
       "书签栏",
       "python量化"
     ],
-    "category": "other"
+    "category": "image",
+    "rating": 4.5
   },
   {
     "id": "sd",
@@ -3993,7 +4333,8 @@
       "书签栏",
       "python量化"
     ],
-    "category": "other"
+    "category": "finance",
+    "rating": 4.5
   },
   {
     "id": "laf",
@@ -4004,7 +4345,8 @@
       "书签栏",
       "python量化"
     ],
-    "category": "other"
+    "category": "finance",
+    "rating": 4.5
   },
   {
     "id": "网站集成---linkai---一站式ai智能体平台---极简未来",
@@ -4015,7 +4357,8 @@
       "书签栏",
       "python量化"
     ],
-    "category": "other"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "具身智能-人形机器人-开源路线---魔搭社区",
@@ -4026,7 +4369,8 @@
       "书签栏",
       "python量化"
     ],
-    "category": "other"
+    "category": "finance",
+    "rating": 4.5
   },
   {
     "id": "首页---魔搭社区",
@@ -4037,7 +4381,8 @@
       "书签栏",
       "python量化"
     ],
-    "category": "other"
+    "category": "finance",
+    "rating": 4.5
   },
   {
     "id": "天聚数行tianapi---应用开发者api数据调用平台",
@@ -4048,7 +4393,8 @@
       "书签栏",
       "python量化"
     ],
-    "category": "other"
+    "category": "data",
+    "rating": 4.5
   },
   {
     "id": "用户登录---天聚数行tianapi",
@@ -4059,7 +4405,8 @@
       "书签栏",
       "python量化"
     ],
-    "category": "other"
+    "category": "finance",
+    "rating": 4.5
   },
   {
     "id": "outseta---all-in-one-membership-software",
@@ -4070,7 +4417,8 @@
       "书签栏",
       "python量化"
     ],
-    "category": "other"
+    "category": "finance",
+    "rating": 4.5
   },
   {
     "id": "free-carousel-maker--amp--generator---ai",
@@ -4081,7 +4429,8 @@
       "书签栏",
       "python量化"
     ],
-    "category": "other"
+    "category": "finance",
+    "rating": 4.5
   },
   {
     "id": "sitegpt---make-ai-your-expert-customer-s",
@@ -4092,7 +4441,8 @@
       "书签栏",
       "python量化"
     ],
-    "category": "other"
+    "category": "chat",
+    "rating": 4.5
   },
   {
     "id": "flowise---low-code-llm-apps-builder",
@@ -4103,7 +4453,8 @@
       "书签栏",
       "python量化"
     ],
-    "category": "other"
+    "category": "chat",
+    "rating": 4.5
   },
   {
     "id": "-文心智能体-00后疯感工牌生成器-低代码的简单应用以及图片快速响应解决方案-干",
@@ -4114,7 +4465,8 @@
       "书签栏",
       "python量化"
     ],
-    "category": "other"
+    "category": "chat",
+    "rating": 4.5
   },
   {
     "id": "小程序",
@@ -4125,7 +4477,8 @@
       "书签栏",
       "python量化"
     ],
-    "category": "other"
+    "category": "finance",
+    "rating": 4.5
   },
   {
     "id": "微信开放平台",
@@ -4136,7 +4489,8 @@
       "书签栏",
       "python量化"
     ],
-    "category": "other"
+    "category": "finance",
+    "rating": 4.5
   },
   {
     "id": "小程序多端框架概述",
@@ -4147,7 +4501,8 @@
       "书签栏",
       "python量化"
     ],
-    "category": "other"
+    "category": "finance",
+    "rating": 4.5
   },
   {
     "id": "智谱清言",
@@ -4158,7 +4513,8 @@
       "书签栏",
       "python量化"
     ],
-    "category": "other"
+    "category": "chat",
+    "rating": 4.5
   },
   {
     "id": "微信云托管",
@@ -4169,7 +4525,8 @@
       "书签栏",
       "python量化"
     ],
-    "category": "other"
+    "category": "finance",
+    "rating": 4.5
   },
   {
     "id": "----------------------------------------",
@@ -4180,7 +4537,8 @@
       "书签栏",
       "python量化"
     ],
-    "category": "other"
+    "category": "writing",
+    "rating": 4.5
   },
   {
     "id": "资源-课程和培训---google-for-developers",
@@ -4191,7 +4549,8 @@
       "书签栏",
       "python量化"
     ],
-    "category": "other"
+    "category": "learning",
+    "rating": 4.5
   },
   {
     "id": "使用-flutter-构建应用-----google-for-developer",
@@ -4202,7 +4561,8 @@
       "书签栏",
       "python量化"
     ],
-    "category": "other"
+    "category": "code",
+    "rating": 4.5
   },
   {
     "id": "udacity",
@@ -4213,7 +4573,8 @@
       "书签栏",
       "python量化"
     ],
-    "category": "other"
+    "category": "finance",
+    "rating": 4.5
   },
   {
     "id": "实用教程---flutter-中文文档---flutter-中文开发者网站---",
@@ -4224,7 +4585,8 @@
       "书签栏",
       "python量化"
     ],
-    "category": "other"
+    "category": "learning",
+    "rating": 4.5
   },
   {
     "id": "微信云托管",
@@ -4235,7 +4597,8 @@
       "书签栏",
       "python量化"
     ],
-    "category": "other"
+    "category": "finance",
+    "rating": 4.5
   },
   {
     "id": "docs",
@@ -4246,7 +4609,8 @@
       "书签栏",
       "python量化"
     ],
-    "category": "other"
+    "category": "finance",
+    "rating": 4.5
   },
   {
     "id": "futurepedia---find-the-best-ai-tools--am",
@@ -4257,7 +4621,8 @@
       "书签栏",
       "python量化"
     ],
-    "category": "other"
+    "category": "finance",
+    "rating": 4.5
   },
   {
     "id": "dart--the-dart-command-line-tool---dart",
@@ -4268,7 +4633,8 @@
       "书签栏",
       "python量化"
     ],
-    "category": "other"
+    "category": "finance",
+    "rating": 4.5
   },
   {
     "id": "dart-compile---dart",
@@ -4279,7 +4645,8 @@
       "书签栏",
       "python量化"
     ],
-    "category": "other"
+    "category": "finance",
+    "rating": 4.5
   },
   {
     "id": "flutter-和-dart-的优秀插件包榜单",
@@ -4290,7 +4657,8 @@
       "书签栏",
       "python量化"
     ],
-    "category": "other"
+    "category": "finance",
+    "rating": 4.5
   },
   {
     "id": "printify是什么-shopify卖家怎么使用printify----知乎",
@@ -4301,7 +4669,8 @@
       "书签栏",
       "python量化"
     ],
-    "category": "other"
+    "category": "video",
+    "rating": 4.5
   },
   {
     "id": "在线免费pdf转换器_pdf转换word转ppt_pdf转换excel转jpg-",
@@ -4312,7 +4681,8 @@
       "书签栏",
       "python量化"
     ],
-    "category": "other"
+    "category": "productivity",
+    "rating": 4.5
   },
   {
     "id": "python代码编程助手",
@@ -4323,7 +4693,8 @@
       "书签栏",
       "python量化"
     ],
-    "category": "other"
+    "category": "code",
+    "rating": 4.5
   },
   {
     "id": "百度ppde计划开放申请啦-",
@@ -4334,7 +4705,8 @@
       "书签栏",
       "python量化"
     ],
-    "category": "other"
+    "category": "finance",
+    "rating": 4.5
   },
   {
     "id": "examples---apache-echarts",
@@ -4345,7 +4717,8 @@
       "书签栏",
       "python量化"
     ],
-    "category": "other"
+    "category": "finance",
+    "rating": 4.5
   },
   {
     "id": "free-charting-library-by-tradingview",
@@ -4356,7 +4729,8 @@
       "书签栏",
       "python量化"
     ],
-    "category": "other"
+    "category": "finance",
+    "rating": 4.5
   },
   {
     "id": "html-在线运行---锤子在线工具",
@@ -4367,7 +4741,8 @@
       "书签栏",
       "python量化"
     ],
-    "category": "other"
+    "category": "finance",
+    "rating": 4.5
   },
   {
     "id": "figma--the-collaborative-interface-desig",
@@ -4378,7 +4753,8 @@
       "书签栏",
       "python量化"
     ],
-    "category": "other"
+    "category": "image",
+    "rating": 4.5
   },
   {
     "id": "开发者空间-华为云",
@@ -4389,7 +4765,8 @@
       "书签栏",
       "python量化"
     ],
-    "category": "other"
+    "category": "code",
+    "rating": 4.5
   },
   {
     "id": "资讯----花易宝--让鲜花不只绽放在手中-harmonyos助力花农直连市场-",
@@ -4400,7 +4777,8 @@
       "书签栏",
       "python量化"
     ],
-    "category": "other"
+    "category": "code",
+    "rating": 4.5
   },
   {
     "id": "欢迎使用-colaboratory---colab",
@@ -4411,7 +4789,8 @@
       "书签栏",
       "python量化"
     ],
-    "category": "other"
+    "category": "finance",
+    "rating": 4.5
   },
   {
     "id": "google-oauth2-generic---n8n-docs",
@@ -4422,7 +4801,8 @@
       "书签栏",
       "python量化"
     ],
-    "category": "other"
+    "category": "finance",
+    "rating": 4.5
   },
   {
     "id": "小智-ai-聊天机器人",
@@ -4433,7 +4813,8 @@
       "书签栏",
       "python量化"
     ],
-    "category": "other"
+    "category": "chat",
+    "rating": 4.5
   },
   {
     "id": "有趣的开源社区---hellogithub",
@@ -4444,7 +4825,8 @@
       "书签栏",
       "python量化"
     ],
-    "category": "other"
+    "category": "code",
+    "rating": 4.5
   },
   {
     "id": "--智能数据集---datafountain",
@@ -4455,7 +4837,8 @@
       "书签栏",
       "python量化"
     ],
-    "category": "other"
+    "category": "finance",
+    "rating": 4.5
   },
   {
     "id": "云解析-dns",
@@ -4466,7 +4849,8 @@
       "书签栏",
       "python量化"
     ],
-    "category": "other"
+    "category": "finance",
+    "rating": 4.5
   },
   {
     "id": "pubscholar公益学术平台",
@@ -4477,7 +4861,8 @@
       "书签栏",
       "python量化"
     ],
-    "category": "other"
+    "category": "finance",
+    "rating": 4.5
   },
   {
     "id": "云开发编程助手",
@@ -4488,7 +4873,8 @@
       "书签栏",
       "python量化"
     ],
-    "category": "other"
+    "category": "code",
+    "rating": 4.5
   },
   {
     "id": "技术线图---无限易操作手册",
@@ -4499,7 +4885,8 @@
       "书签栏",
       "python量化"
     ],
-    "category": "other"
+    "category": "finance",
+    "rating": 4.5
   },
   {
     "id": "软件下载---国泰海通证券官方网站",
@@ -4510,7 +4897,8 @@
       "书签栏",
       "python量化"
     ],
-    "category": "other"
+    "category": "finance",
+    "rating": 4.5
   },
   {
     "id": "strapi---open-source-node-js-headless-cm",
@@ -4522,7 +4910,8 @@
       "github",
       "开源可部署高星"
     ],
-    "category": "other"
+    "category": "code",
+    "rating": 4.5
   },
   {
     "id": "home---immich",
@@ -4534,7 +4923,8 @@
       "github",
       "开源可部署高星"
     ],
-    "category": "other"
+    "category": "code",
+    "rating": 4.5
   },
   {
     "id": "github-actions",
@@ -4546,7 +4936,8 @@
       "github",
       "开源可部署高星"
     ],
-    "category": "other"
+    "category": "code",
+    "rating": 4.5
   },
   {
     "id": "awesome-quant",
@@ -4558,7 +4949,8 @@
       "github",
       "开源可部署高星"
     ],
-    "category": "other"
+    "category": "code",
+    "rating": 4.5
   },
   {
     "id": "code-your-way-to-a-life-changing-career-",
@@ -4570,7 +4962,8 @@
       "github",
       "开源可部署高星"
     ],
-    "category": "other"
+    "category": "code",
+    "rating": 4.5
   },
   {
     "id": "open-saas",
@@ -4582,7 +4975,8 @@
       "github",
       "开源可部署高星"
     ],
-    "category": "other"
+    "category": "code",
+    "rating": 4.5
   },
   {
     "id": "microsoft-generative-ai-for-beginners--2",
@@ -4594,7 +4988,8 @@
       "github",
       "开源可部署高星"
     ],
-    "category": "other"
+    "category": "code",
+    "rating": 4.5
   },
   {
     "id": "colossal-ai",
@@ -4606,7 +5001,8 @@
       "github",
       "开源可部署高星"
     ],
-    "category": "other"
+    "category": "code",
+    "rating": 4.5
   },
   {
     "id": "excalidraw---hand-drawn-look--amp--feel-",
@@ -4618,7 +5014,8 @@
       "github",
       "开源可部署高星"
     ],
-    "category": "other"
+    "category": "code",
+    "rating": 4.5
   },
   {
     "id": "免费的渐变背景css3样式---oulu-me",
@@ -4630,7 +5027,8 @@
       "github",
       "开源可部署高星"
     ],
-    "category": "other"
+    "category": "code",
+    "rating": 4.5
   },
   {
     "id": "sunbooshi-note-to-mp",
@@ -4642,7 +5040,8 @@
       "github",
       "开源可部署高星"
     ],
-    "category": "other"
+    "category": "code",
+    "rating": 4.5
   },
   {
     "id": "styled-jsx---npm",
@@ -4654,7 +5053,8 @@
       "github",
       "开源可部署高星"
     ],
-    "category": "other"
+    "category": "code",
+    "rating": 4.5
   },
   {
     "id": "github---idootop-mi-gpt----将小爱音箱接入-chatg",
@@ -4666,7 +5066,8 @@
       "python量化",
       "github"
     ],
-    "category": "other"
+    "category": "chat",
+    "rating": 4.5
   },
   {
     "id": "github---yihong0618-xiaogpt--play-chatgp",
@@ -4678,7 +5079,8 @@
       "python量化",
       "github"
     ],
-    "category": "other"
+    "category": "chat",
+    "rating": 4.5
   },
   {
     "id": "repository-search-results",
@@ -4690,7 +5092,8 @@
       "python量化",
       "github"
     ],
-    "category": "other"
+    "category": "code",
+    "rating": 4.5
   },
   {
     "id": "marketplace",
@@ -4702,7 +5105,8 @@
       "python量化",
       "github"
     ],
-    "category": "other"
+    "category": "code",
+    "rating": 4.5
   },
   {
     "id": "command-line-arguments-and-settings---au",
@@ -4714,7 +5118,8 @@
       "python量化",
       "github"
     ],
-    "category": "other"
+    "category": "code",
+    "rating": 4.5
   },
   {
     "id": "laf-docs-zh-quick-start-todo-md-at-main-",
@@ -4726,7 +5131,8 @@
       "python量化",
       "github"
     ],
-    "category": "other"
+    "category": "code",
+    "rating": 4.5
   },
   {
     "id": "flagopen-awesome-industry-dataset--旨在收集各",
@@ -4738,7 +5144,8 @@
       "python量化",
       "github"
     ],
-    "category": "other"
+    "category": "code",
+    "rating": 4.5
   },
   {
     "id": "daniulive-smarterstreaming--业内为数不多致力于极致体",
@@ -4750,7 +5157,8 @@
       "python量化",
       "github"
     ],
-    "category": "other"
+    "category": "code",
+    "rating": 4.5
   },
   {
     "id": "vn-py---基于python的开源交易平台开发框架---vn-py",
@@ -4762,7 +5170,8 @@
       "python量化",
       "github"
     ],
-    "category": "other"
+    "category": "code",
+    "rating": 4.5
   },
   {
     "id": "trending-developers-on-github-this-month",
@@ -4774,7 +5183,8 @@
       "python量化",
       "github"
     ],
-    "category": "other"
+    "category": "code",
+    "rating": 4.5
   },
   {
     "id": "tap4-ai-tools-directory---discover-the-b",
@@ -4786,7 +5196,8 @@
       "python量化",
       "github"
     ],
-    "category": "other"
+    "category": "code",
+    "rating": 4.5
   },
   {
     "id": "thudm-cogvideo--text-and-image-to-video-",
@@ -4798,7 +5209,8 @@
       "python量化",
       "github"
     ],
-    "category": "other"
+    "category": "code",
+    "rating": 4.5
   },
   {
     "id": "文心一格---ai艺术和创意辅助平台",
@@ -4810,7 +5222,8 @@
       "python量化",
       "github"
     ],
-    "category": "other"
+    "category": "code",
+    "rating": 4.5
   },
   {
     "id": "tencent-hunyuanvideo--hunyuanvideo--a-sy",
@@ -4822,7 +5235,8 @@
       "python量化",
       "github"
     ],
-    "category": "other"
+    "category": "code",
+    "rating": 4.5
   },
   {
     "id": "小程序",
@@ -4834,7 +5248,8 @@
       "github",
       "小程序"
     ],
-    "category": "other"
+    "category": "code",
+    "rating": 4.5
   },
   {
     "id": "https---developers-weixin-qq-com-minipro",
@@ -4846,7 +5261,8 @@
       "github",
       "小程序"
     ],
-    "category": "other"
+    "category": "code",
+    "rating": 4.5
   },
   {
     "id": "小程序认证",
@@ -4858,7 +5274,8 @@
       "github",
       "小程序"
     ],
-    "category": "other"
+    "category": "code",
+    "rating": 4.5
   },
   {
     "id": "anbeime-awesome-mcp-servers--a-collectio",
@@ -4870,7 +5287,8 @@
       "python量化",
       "github"
     ],
-    "category": "other"
+    "category": "code",
+    "rating": 4.5
   },
   {
     "id": "useful-n8n-node",
@@ -4882,7 +5300,8 @@
       "python量化",
       "github"
     ],
-    "category": "other"
+    "category": "code",
+    "rating": 4.5
   },
   {
     "id": "拆解-github-trending上爆火项目",
@@ -4894,7 +5313,8 @@
       "python量化",
       "github"
     ],
-    "category": "other"
+    "category": "code",
+    "rating": 4.5
   },
   {
     "id": "量化交易分析工具",
@@ -4905,7 +5325,8 @@
       "书签栏",
       "python量化"
     ],
-    "category": "other"
+    "category": "finance",
+    "rating": 4.5
   },
   {
     "id": "热搜词",
@@ -4917,7 +5338,8 @@
       "自媒体运营",
       "爆款素材"
     ],
-    "category": "other"
+    "category": "marketing",
+    "rating": 4.5
   },
   {
     "id": "晋江文学城-管理文章-",
@@ -4929,7 +5351,8 @@
       "自媒体运营",
       "爆款素材"
     ],
-    "category": "other"
+    "category": "writing",
+    "rating": 4.5
   },
   {
     "id": "-宿命之环-小说在线阅读-起点中文网",
@@ -4941,7 +5364,8 @@
       "自媒体运营",
       "爆款素材"
     ],
-    "category": "other"
+    "category": "writing",
+    "rating": 4.5
   },
   {
     "id": "3d溜溜网-3d66-com----全网设计素材首选平台",
@@ -4953,7 +5377,8 @@
       "自媒体运营",
       "爆款素材"
     ],
-    "category": "other"
+    "category": "image",
+    "rating": 4.5
   },
   {
     "id": "全球畸变-开局活吞黑曼巴蛇_第1章-重回畸变之前-活吞黑曼巴毒蛇在线阅读-qq阅",
@@ -4965,7 +5390,8 @@
       "自媒体运营",
       "爆款素材"
     ],
-    "category": "other"
+    "category": "marketing",
+    "rating": 4.5
   },
   {
     "id": "you下载",
@@ -4977,7 +5403,8 @@
       "自媒体运营",
       "爆款素材"
     ],
-    "category": "other"
+    "category": "marketing",
+    "rating": 4.5
   },
   {
     "id": "twitter-video-downloader-online-hd---twi",
@@ -4989,7 +5416,8 @@
       "自媒体运营",
       "爆款素材"
     ],
-    "category": "other"
+    "category": "code",
+    "rating": 4.5
   },
   {
     "id": "youtube-summary-with-chatgpt--amp--claud",
@@ -5001,7 +5429,8 @@
       "自媒体运营",
       "爆款素材"
     ],
-    "category": "other"
+    "category": "chat",
+    "rating": 4.5
   },
   {
     "id": "设计文件-pixso",
@@ -5013,7 +5442,8 @@
       "自媒体运营",
       "爆款素材"
     ],
-    "category": "other"
+    "category": "image",
+    "rating": 4.5
   },
   {
     "id": "躺着就能涨粉-python自动化短视频搬运-六--自动发布---知乎",
@@ -5025,7 +5455,8 @@
       "自媒体运营",
       "爆款素材"
     ],
-    "category": "other"
+    "category": "video",
+    "rating": 4.5
   },
   {
     "id": "135编辑器官网-微信排版编辑器-微信公众号图文排版工具-好用素材多",
@@ -5037,7 +5468,8 @@
       "自媒体运营",
       "爆款素材"
     ],
-    "category": "other"
+    "category": "writing",
+    "rating": 4.5
   },
   {
     "id": "灰豚数据",
@@ -5049,7 +5481,8 @@
       "自媒体运营",
       "爆款素材"
     ],
-    "category": "other"
+    "category": "marketing",
+    "rating": 4.5
   },
   {
     "id": "兴趣电商数据专家-考古加数据",
@@ -5061,7 +5494,8 @@
       "自媒体运营",
       "爆款素材"
     ],
-    "category": "other"
+    "category": "marketing",
+    "rating": 4.5
   },
   {
     "id": "万能视频图片解析下载---snapany",
@@ -5073,7 +5507,8 @@
       "自媒体运营",
       "爆款素材"
     ],
-    "category": "other"
+    "category": "image",
+    "rating": 4.5
   },
   {
     "id": "与梦想同行-许戈辉的搜索结果_百度图片搜索",
@@ -5085,7 +5520,8 @@
       "自媒体运营",
       "爆款素材"
     ],
-    "category": "other"
+    "category": "image",
+    "rating": 4.5
   },
   {
     "id": "效率集-主页-导航-聚合搜索",
@@ -5097,7 +5533,8 @@
       "自媒体运营",
       "爆款素材"
     ],
-    "category": "other"
+    "category": "search",
+    "rating": 4.5
   },
   {
     "id": "搜狗搜索引擎---上网从搜狗开始",
@@ -5109,7 +5546,8 @@
       "自媒体运营",
       "爆款素材"
     ],
-    "category": "other"
+    "category": "search",
+    "rating": 4.5
   },
   {
     "id": "橙篇ai---用橙篇-就成了",
@@ -5121,7 +5559,8 @@
       "自媒体运营",
       "爆款素材"
     ],
-    "category": "other"
+    "category": "marketing",
+    "rating": 4.5
   },
   {
     "id": "豆包---抖音旗下-ai-智能助手",
@@ -5133,7 +5572,8 @@
       "自媒体运营",
       "爆款素材"
     ],
-    "category": "other"
+    "category": "chat",
+    "rating": 4.5
   },
   {
     "id": "素材酷平台",
@@ -5145,7 +5585,8 @@
       "自媒体运营",
       "爆款素材"
     ],
-    "category": "other"
+    "category": "marketing",
+    "rating": 4.5
   },
   {
     "id": "pixso新手指南-pixso",
@@ -5157,7 +5598,8 @@
       "自媒体运营",
       "爆款素材"
     ],
-    "category": "other"
+    "category": "learning",
+    "rating": 4.5
   },
   {
     "id": "pixso官网---新一代ui设计工具-替代sketch-figma-支持在线实",
@@ -5169,7 +5611,8 @@
       "自媒体运营",
       "爆款素材"
     ],
-    "category": "other"
+    "category": "image",
+    "rating": 4.5
   },
   {
     "id": "有声小说-有声读物-电台广播在线听书-蜻蜓fm",
@@ -5181,7 +5624,8 @@
       "自媒体运营",
       "爆款素材"
     ],
-    "category": "other"
+    "category": "writing",
+    "rating": 4.5
   },
   {
     "id": "搜狗微信搜索_订阅号及文章内容独家收录-一搜即达",
@@ -5193,7 +5637,8 @@
       "自媒体运营",
       "爆款素材"
     ],
-    "category": "other"
+    "category": "writing",
+    "rating": 4.5
   },
   {
     "id": "yt5s---免费的youtube视频下载器--无广告-",
@@ -5205,7 +5650,8 @@
       "自媒体运营",
       "爆款素材"
     ],
-    "category": "other"
+    "category": "marketing",
+    "rating": 4.5
   },
   {
     "id": "viewstats--create-video-ideas--titles--a",
@@ -5217,7 +5663,8 @@
       "自媒体运营",
       "爆款素材"
     ],
-    "category": "other"
+    "category": "code",
+    "rating": 4.5
   },
   {
     "id": "youtube-shorts-download-in-hd---shorts-d",
@@ -5229,7 +5676,8 @@
       "自媒体运营",
       "爆款素材"
     ],
-    "category": "other"
+    "category": "marketing",
+    "rating": 4.5
   },
   {
     "id": "youtube-mp3-playlist-downloader-online--",
@@ -5241,7 +5689,8 @@
       "自媒体运营",
       "爆款素材"
     ],
-    "category": "other"
+    "category": "marketing",
+    "rating": 4.5
   },
   {
     "id": "cobalt",
@@ -5253,7 +5702,8 @@
       "自媒体运营",
       "爆款素材"
     ],
-    "category": "other"
+    "category": "marketing",
+    "rating": 4.5
   },
   {
     "id": "在线-youtube-视频下载器",
@@ -5265,7 +5715,8 @@
       "自媒体运营",
       "爆款素材"
     ],
-    "category": "other"
+    "category": "video",
+    "rating": 4.5
   },
   {
     "id": "newsnow---最热",
@@ -5277,7 +5728,8 @@
       "自媒体运营",
       "爆款素材"
     ],
-    "category": "other"
+    "category": "marketing",
+    "rating": 4.5
   },
   {
     "id": "通义千问",
@@ -5289,7 +5741,8 @@
       "自媒体运营",
       "爆款文案"
     ],
-    "category": "other"
+    "category": "chat",
+    "rating": 4.5
   },
   {
     "id": "chatgpt",
@@ -5301,7 +5754,8 @@
       "自媒体运营",
       "爆款文案"
     ],
-    "category": "other"
+    "category": "chat",
+    "rating": 4.5
   },
   {
     "id": "文心一言",
@@ -5313,7 +5767,8 @@
       "自媒体运营",
       "爆款文案"
     ],
-    "category": "other"
+    "category": "chat",
+    "rating": 4.5
   },
   {
     "id": "天工超能ai",
@@ -5325,7 +5780,8 @@
       "自媒体运营",
       "爆款文案"
     ],
-    "category": "other"
+    "category": "writing",
+    "rating": 4.5
   },
   {
     "id": "爆款文案",
@@ -5337,7 +5793,8 @@
       "自媒体运营",
       "爆款文案"
     ],
-    "category": "other"
+    "category": "writing",
+    "rating": 4.5
   },
   {
     "id": "openai-platform",
@@ -5349,7 +5806,8 @@
       "自媒体运营",
       "爆款文案"
     ],
-    "category": "other"
+    "category": "writing",
+    "rating": 4.5
   },
   {
     "id": "youcom",
@@ -5361,7 +5819,8 @@
       "自媒体运营",
       "爆款文案"
     ],
-    "category": "other"
+    "category": "writing",
+    "rating": 4.5
   },
   {
     "id": "bard",
@@ -5373,7 +5832,8 @@
       "自媒体运营",
       "爆款文案"
     ],
-    "category": "other"
+    "category": "writing",
+    "rating": 4.5
   },
   {
     "id": "起点达人中心",
@@ -5385,7 +5845,8 @@
       "自媒体运营",
       "爆款文案"
     ],
-    "category": "other"
+    "category": "writing",
+    "rating": 4.5
   },
   {
     "id": "番茄达人中心",
@@ -5397,7 +5858,8 @@
       "自媒体运营",
       "爆款文案"
     ],
-    "category": "other"
+    "category": "writing",
+    "rating": 4.5
   },
   {
     "id": "qq阅读小说-网文推荐-推广代理接单-赚钱-达人推书-阅文合作--qq阅读达人推",
@@ -5409,7 +5871,8 @@
       "自媒体运营",
       "爆款文案"
     ],
-    "category": "other"
+    "category": "writing",
+    "rating": 4.5
   },
   {
     "id": "七猫达人",
@@ -5421,7 +5884,8 @@
       "自媒体运营",
       "爆款文案"
     ],
-    "category": "other"
+    "category": "writing",
+    "rating": 4.5
   },
   {
     "id": "qq阅读小说-网文推荐-推广代理接单-赚钱-达人推书-阅文合作--qq阅读达人推",
@@ -5433,7 +5897,8 @@
       "自媒体运营",
       "爆款文案"
     ],
-    "category": "other"
+    "category": "writing",
+    "rating": 4.5
   },
   {
     "id": "腾讯元宝---轻松工作-多点生活",
@@ -5445,7 +5910,8 @@
       "自媒体运营",
       "爆款文案"
     ],
-    "category": "other"
+    "category": "writing",
+    "rating": 4.5
   },
   {
     "id": "可画",
@@ -5457,7 +5923,8 @@
       "自媒体运营",
       "剪辑排版"
     ],
-    "category": "other"
+    "category": "video",
+    "rating": 4.5
   },
   {
     "id": "强到离谱的dora-ai-一句话就能生成整个网站---ai万花筒--连接ai新世",
@@ -5469,7 +5936,8 @@
       "自媒体运营",
       "剪辑排版"
     ],
-    "category": "other"
+    "category": "video",
+    "rating": 4.5
   },
   {
     "id": "万彩ai---ai智能写作生成神器-照片数字人制作-ai短视频制作",
@@ -5481,7 +5949,8 @@
       "自媒体运营",
       "剪辑排版"
     ],
-    "category": "other"
+    "category": "video",
+    "rating": 4.5
   },
   {
     "id": "文章转视频-ai智能一键文字生成视频-图文转视频-腾讯智影",
@@ -5493,7 +5962,8 @@
       "自媒体运营",
       "剪辑排版"
     ],
-    "category": "other"
+    "category": "video",
+    "rating": 4.5
   },
   {
     "id": "西瓜云剪",
@@ -5505,7 +5975,8 @@
       "自媒体运营",
       "剪辑排版"
     ],
-    "category": "other"
+    "category": "video",
+    "rating": 4.5
   },
   {
     "id": "星海智创",
@@ -5517,7 +5988,8 @@
       "自媒体运营",
       "剪辑排版"
     ],
-    "category": "other"
+    "category": "video",
+    "rating": 4.5
   },
   {
     "id": "capcut",
@@ -5529,7 +6001,8 @@
       "自媒体运营",
       "剪辑排版"
     ],
-    "category": "other"
+    "category": "video",
+    "rating": 4.5
   },
   {
     "id": "gmail",
@@ -5541,7 +6014,8 @@
       "自媒体运营",
       "剪辑排版"
     ],
-    "category": "other"
+    "category": "video",
+    "rating": 4.5
   },
   {
     "id": "magicedit--high-fidelity-temporally-cohe",
@@ -5553,7 +6027,8 @@
       "自媒体运营",
       "剪辑排版"
     ],
-    "category": "other"
+    "category": "video",
+    "rating": 4.5
   },
   {
     "id": "photopea---online-photo-editor",
@@ -5565,7 +6040,8 @@
       "自媒体运营",
       "剪辑排版"
     ],
-    "category": "other"
+    "category": "video",
+    "rating": 4.5
   },
   {
     "id": "一键生成网站",
@@ -5577,7 +6053,8 @@
       "自媒体运营",
       "剪辑排版"
     ],
-    "category": "other"
+    "category": "video",
+    "rating": 4.5
   },
   {
     "id": "whee---高品质的ai素材生成器",
@@ -5589,7 +6066,8 @@
       "自媒体运营",
       "剪辑排版"
     ],
-    "category": "other"
+    "category": "video",
+    "rating": 4.5
   },
   {
     "id": "星火绘镜",
@@ -5601,7 +6079,8 @@
       "自媒体运营",
       "剪辑排版"
     ],
-    "category": "other"
+    "category": "chat",
+    "rating": 4.5
   },
   {
     "id": "影刀rpa---影刀官网",
@@ -5613,7 +6092,8 @@
       "自媒体运营",
       "剪辑排版"
     ],
-    "category": "other"
+    "category": "video",
+    "rating": 4.5
   },
   {
     "id": "微信-markdown-编辑器---doocs-开源社区",
@@ -5625,7 +6105,8 @@
       "自媒体运营",
       "剪辑排版"
     ],
-    "category": "other"
+    "category": "writing",
+    "rating": 4.5
   },
   {
     "id": "文章编辑器掘金",
@@ -5637,7 +6118,8 @@
       "自媒体运营",
       "剪辑排版"
     ],
-    "category": "other"
+    "category": "writing",
+    "rating": 4.5
   },
   {
     "id": "markdown编辑器---微信公众号排版工具---在线内容创作平台",
@@ -5649,7 +6131,8 @@
       "自媒体运营",
       "剪辑排版"
     ],
-    "category": "other"
+    "category": "writing",
+    "rating": 4.5
   },
   {
     "id": "内容生产与管理一站式服务平台---内容驱动增长",
@@ -5661,7 +6144,8 @@
       "自媒体运营",
       "剪辑排版"
     ],
-    "category": "other"
+    "category": "marketing",
+    "rating": 4.5
   },
   {
     "id": "mermaid---diagramming-and-charting-tool",
@@ -5673,7 +6157,8 @@
       "自媒体运营",
       "剪辑排版"
     ],
-    "category": "other"
+    "category": "video",
+    "rating": 4.5
   },
   {
     "id": "arya---在线-markdown-编辑器",
@@ -5685,7 +6170,8 @@
       "自媒体运营",
       "剪辑排版"
     ],
-    "category": "other"
+    "category": "writing",
+    "rating": 4.5
   },
   {
     "id": "微信-markdown-编辑器---doocs-开源社区",
@@ -5697,7 +6183,8 @@
       "自媒体运营",
       "剪辑排版"
     ],
-    "category": "other"
+    "category": "writing",
+    "rating": 4.5
   },
   {
     "id": "md2card---markdown-转知识卡片工具",
@@ -5709,7 +6196,8 @@
       "自媒体运营",
       "剪辑排版"
     ],
-    "category": "other"
+    "category": "writing",
+    "rating": 4.5
   },
   {
     "id": "mdx-editor---一个微信排版编辑器-使用-mdx-来排版",
@@ -5721,7 +6209,8 @@
       "自媒体运营",
       "剪辑排版"
     ],
-    "category": "other"
+    "category": "writing",
+    "rating": 4.5
   },
   {
     "id": "文兔兔",
@@ -5733,7 +6222,8 @@
       "自媒体运营",
       "剪辑排版"
     ],
-    "category": "other"
+    "category": "video",
+    "rating": 4.5
   },
   {
     "id": "淘宝联盟",
@@ -5745,7 +6235,8 @@
       "自媒体运营",
       "引流推广"
     ],
-    "category": "other"
+    "category": "marketing",
+    "rating": 4.5
   },
   {
     "id": "开拍---用ai制作口播视频",
@@ -5757,7 +6248,8 @@
       "自媒体运营",
       "引流推广"
     ],
-    "category": "other"
+    "category": "video",
+    "rating": 4.5
   },
   {
     "id": "爆款-如何利用知乎引上万流量-我是这样做的--实战_痴海的博客-csdn博客",
@@ -5769,7 +6261,8 @@
       "自媒体运营",
       "引流推广"
     ],
-    "category": "other"
+    "category": "marketing",
+    "rating": 4.5
   },
   {
     "id": "-5--discord----invideo",
@@ -5781,7 +6274,8 @@
       "自媒体运营",
       "引流推广"
     ],
-    "category": "other"
+    "category": "marketing",
+    "rating": 4.5
   },
   {
     "id": "discord",
@@ -5793,7 +6287,8 @@
       "自媒体运营",
       "引流推广"
     ],
-    "category": "other"
+    "category": "marketing",
+    "rating": 4.5
   },
   {
     "id": "小红书商品编辑",
@@ -5805,7 +6300,8 @@
       "自媒体运营",
       "引流推广"
     ],
-    "category": "other"
+    "category": "marketing",
+    "rating": 4.5
   },
   {
     "id": "阿里妈妈-创意中心---首页",
@@ -5817,7 +6313,8 @@
       "自媒体运营",
       "引流推广"
     ],
-    "category": "other"
+    "category": "marketing",
+    "rating": 4.5
   },
   {
     "id": "合辑----父与子--英文版-1-100集",
@@ -5829,7 +6326,8 @@
       "自媒体运营",
       "引流推广"
     ],
-    "category": "other"
+    "category": "marketing",
+    "rating": 4.5
   },
   {
     "id": "aippt---全智能-ai-一键生成-ppt",
@@ -5841,7 +6339,8 @@
       "自媒体运营",
       "引流推广"
     ],
-    "category": "other"
+    "category": "marketing",
+    "rating": 4.5
   },
   {
     "id": "网站---google-adsense",
@@ -5853,7 +6352,8 @@
       "自媒体运营",
       "引流推广"
     ],
-    "category": "other"
+    "category": "marketing",
+    "rating": 4.5
   },
   {
     "id": "-电商ai工具一期-ai引领电商新风潮-20款ai电子商务工具盘点-让你实现财富",
@@ -5865,7 +6365,8 @@
       "自媒体运营",
       "变现"
     ],
-    "category": "other"
+    "category": "marketing",
+    "rating": 4.5
   },
   {
     "id": "1688-买家工作台",
@@ -5877,7 +6378,8 @@
       "自媒体运营",
       "变现"
     ],
-    "category": "other"
+    "category": "marketing",
+    "rating": 4.5
   },
   {
     "id": "表情包---即时设计",
@@ -5889,7 +6391,8 @@
       "自媒体运营",
       "变现"
     ],
-    "category": "other"
+    "category": "image",
+    "rating": 4.5
   },
   {
     "id": "产品纯自用-我在用ai低成本批量赚老外美金-专访团长联盟董振国",
@@ -5901,7 +6404,8 @@
       "自媒体运营",
       "变现"
     ],
-    "category": "other"
+    "category": "marketing",
+    "rating": 4.5
   },
   {
     "id": "红书上货",
@@ -5913,7 +6417,8 @@
       "自媒体运营",
       "变现"
     ],
-    "category": "other"
+    "category": "marketing",
+    "rating": 4.5
   },
   {
     "id": "即创",
@@ -5925,7 +6430,8 @@
       "自媒体运营",
       "变现"
     ],
-    "category": "other"
+    "category": "marketing",
+    "rating": 4.5
   },
   {
     "id": "巨量百应buyin",
@@ -5937,7 +6443,8 @@
       "自媒体运营",
       "变现"
     ],
-    "category": "other"
+    "category": "marketing",
+    "rating": 4.5
   },
   {
     "id": "千牛商家工作台",
@@ -5949,7 +6456,8 @@
       "自媒体运营",
       "变现"
     ],
-    "category": "other"
+    "category": "marketing",
+    "rating": 4.5
   },
   {
     "id": "商品视频",
@@ -5961,7 +6469,8 @@
       "自媒体运营",
       "变现"
     ],
-    "category": "other"
+    "category": "video",
+    "rating": 4.5
   },
   {
     "id": "淘宝",
@@ -5973,7 +6482,8 @@
       "自媒体运营",
       "变现"
     ],
-    "category": "other"
+    "category": "marketing",
+    "rating": 4.5
   },
   {
     "id": "微信表情",
@@ -5985,7 +6495,8 @@
       "自媒体运营",
       "变现"
     ],
-    "category": "other"
+    "category": "marketing",
+    "rating": 4.5
   },
   {
     "id": "小红书千帆pc端",
@@ -5997,7 +6508,8 @@
       "自媒体运营",
       "变现"
     ],
-    "category": "other"
+    "category": "marketing",
+    "rating": 4.5
   },
   {
     "id": "小红书一键",
@@ -6009,7 +6521,8 @@
       "自媒体运营",
       "变现"
     ],
-    "category": "other"
+    "category": "marketing",
+    "rating": 4.5
   },
   {
     "id": "做表情包也能赚钱-我用ai自制表情包并成功上架微信平台了--ai_网易订阅",
@@ -6021,7 +6534,8 @@
       "自媒体运营",
       "变现"
     ],
-    "category": "other"
+    "category": "marketing",
+    "rating": 4.5
   },
   {
     "id": "animate-anyone---阿里开源的图像到视频角色动画合成的框架---a",
@@ -6033,7 +6547,8 @@
       "自媒体运营",
       "变现"
     ],
-    "category": "other"
+    "category": "image",
+    "rating": 4.5
   },
   {
     "id": "outfitanyone---a-hugging-face-space-by-h",
@@ -6045,7 +6560,8 @@
       "自媒体运营",
       "变现"
     ],
-    "category": "other"
+    "category": "marketing",
+    "rating": 4.5
   },
   {
     "id": "pic-copilot电商",
@@ -6057,7 +6573,8 @@
       "自媒体运营",
       "变现"
     ],
-    "category": "other"
+    "category": "marketing",
+    "rating": 4.5
   },
   {
     "id": "temu历史榜单数据---免费temu卖家工具",
@@ -6069,7 +6586,8 @@
       "自媒体运营",
       "变现"
     ],
-    "category": "other"
+    "category": "marketing",
+    "rating": 4.5
   },
   {
     "id": "微信表情开放平台",
@@ -6081,7 +6599,8 @@
       "自媒体运营",
       "变现"
     ],
-    "category": "other"
+    "category": "marketing",
+    "rating": 4.5
   },
   {
     "id": "表情包vector-icons-and-stickers---png--svg-",
@@ -6093,7 +6612,8 @@
       "自媒体运营",
       "变现"
     ],
-    "category": "other"
+    "category": "marketing",
+    "rating": 4.5
   },
   {
     "id": "luma-dream-machine",
@@ -6105,7 +6625,8 @@
       "自媒体运营",
       "变现"
     ],
-    "category": "other"
+    "category": "marketing",
+    "rating": 4.5
   },
   {
     "id": "--抖音百科创作者招募-抖音百科",
@@ -6117,7 +6638,8 @@
       "自媒体运营",
       "变现"
     ],
-    "category": "other"
+    "category": "marketing",
+    "rating": 4.5
   },
   {
     "id": "入驻开发者平台_开发者平台_抖音开放平台",
@@ -6129,7 +6651,8 @@
       "自媒体运营",
       "变现"
     ],
-    "category": "other"
+    "category": "code",
+    "rating": 4.5
   },
   {
     "id": "素材酷平台",
@@ -6141,7 +6664,8 @@
       "自媒体运营",
       "变现"
     ],
-    "category": "other"
+    "category": "marketing",
+    "rating": 4.5
   },
   {
     "id": "10228--paywall-examples--designs--amp--u",
@@ -6153,7 +6677,8 @@
       "自媒体运营",
       "变现"
     ],
-    "category": "other"
+    "category": "marketing",
+    "rating": 4.5
   },
   {
     "id": "数字情报和应用数据分析---sensor-tower",
@@ -6165,7 +6690,8 @@
       "自媒体运营",
       "变现"
     ],
-    "category": "other"
+    "category": "data",
+    "rating": 4.5
   },
   {
     "id": "七麦数据--专业移动产品商业分析平台-关键词优化-asa优化-七麦科技",
@@ -6177,7 +6703,8 @@
       "自媒体运营",
       "变现"
     ],
-    "category": "other"
+    "category": "data",
+    "rating": 4.5
   },
   {
     "id": "ai赚钱新思路-利用rpa-kimi实现小红书全自动制作发布-详细攻略--今日头",
@@ -6189,7 +6716,8 @@
       "自媒体运营",
       "变现"
     ],
-    "category": "other"
+    "category": "chat",
+    "rating": 4.5
   },
   {
     "id": "ai赚钱的六个境界-从入门到暴富",
@@ -6201,7 +6729,8 @@
       "自媒体运营",
       "变现"
     ],
-    "category": "other"
+    "category": "learning",
+    "rating": 4.5
   },
   {
     "id": "一人公司",
@@ -6213,7 +6742,8 @@
       "自媒体运营",
       "变现"
     ],
-    "category": "other"
+    "category": "marketing",
+    "rating": 4.5
   },
   {
     "id": "----------------------------------------",
@@ -6225,7 +6755,8 @@
       "自媒体运营",
       "变现"
     ],
-    "category": "other"
+    "category": "productivity",
+    "rating": 4.5
   },
   {
     "id": "product-hunt---the-best-new-products-in-",
@@ -6237,7 +6768,8 @@
       "自媒体运营",
       "变现"
     ],
-    "category": "other"
+    "category": "video",
+    "rating": 4.5
   },
   {
     "id": "微信小店",
@@ -6249,7 +6781,8 @@
       "自媒体运营",
       "变现"
     ],
-    "category": "other"
+    "category": "marketing",
+    "rating": 4.5
   },
   {
     "id": "返利文案模板---旺财狗",
@@ -6261,7 +6794,8 @@
       "自媒体运营",
       "变现"
     ],
-    "category": "other"
+    "category": "writing",
+    "rating": 4.5
   },
   {
     "id": "跃问",
@@ -6272,7 +6806,8 @@
       "书签栏",
       "自媒体运营"
     ],
-    "category": "other"
+    "category": "marketing",
+    "rating": 4.5
   },
   {
     "id": "写文章---知乎",
@@ -6284,7 +6819,8 @@
       "自媒体运营",
       "发布媒体"
     ],
-    "category": "other"
+    "category": "writing",
+    "rating": 4.5
   },
   {
     "id": "头条号",
@@ -6296,7 +6832,8 @@
       "自媒体运营",
       "发布媒体"
     ],
-    "category": "other"
+    "category": "marketing",
+    "rating": 4.5
   },
   {
     "id": "social-auto-upload---social-auto-upload",
@@ -6308,7 +6845,8 @@
       "自媒体运营",
       "发布媒体"
     ],
-    "category": "other"
+    "category": "marketing",
+    "rating": 4.5
   },
   {
     "id": "打卡激励-csdn创作中心",
@@ -6320,7 +6858,8 @@
       "自媒体运营",
       "发布媒体"
     ],
-    "category": "other"
+    "category": "marketing",
+    "rating": 4.5
   },
   {
     "id": "西瓜创作平台",
@@ -6332,7 +6871,8 @@
       "自媒体运营",
       "发布媒体"
     ],
-    "category": "other"
+    "category": "marketing",
+    "rating": 4.5
   },
   {
     "id": "小红书创作服务平台",
@@ -6344,7 +6884,8 @@
       "自媒体运营",
       "发布媒体"
     ],
-    "category": "other"
+    "category": "marketing",
+    "rating": 4.5
   },
   {
     "id": "微信公众号",
@@ -6356,7 +6897,8 @@
       "自媒体运营",
       "发布媒体"
     ],
-    "category": "other"
+    "category": "marketing",
+    "rating": 4.5
   },
   {
     "id": "公众号视频",
@@ -6368,7 +6910,8 @@
       "自媒体运营",
       "发布媒体"
     ],
-    "category": "other"
+    "category": "video",
+    "rating": 4.5
   },
   {
     "id": "b站打卡",
@@ -6380,7 +6923,8 @@
       "自媒体运营",
       "发布媒体"
     ],
-    "category": "other"
+    "category": "marketing",
+    "rating": 4.5
   },
   {
     "id": "雪球发布长文",
@@ -6392,7 +6936,8 @@
       "自媒体运营",
       "发布媒体"
     ],
-    "category": "other"
+    "category": "marketing",
+    "rating": 4.5
   },
   {
     "id": "东方财富创作平台",
@@ -6404,7 +6949,8 @@
       "自媒体运营",
       "发布媒体"
     ],
-    "category": "other"
+    "category": "marketing",
+    "rating": 4.5
   },
   {
     "id": "博士猫-快手",
@@ -6416,7 +6962,8 @@
       "自媒体运营",
       "发布媒体"
     ],
-    "category": "other"
+    "category": "marketing",
+    "rating": 4.5
   },
   {
     "id": "wordpress",
@@ -6428,7 +6975,8 @@
       "自媒体运营",
       "发布媒体"
     ],
-    "category": "other"
+    "category": "video",
+    "rating": 4.5
   },
   {
     "id": "易媒助手官网---短视频一键分发同布-自媒体多账号管理",
@@ -6440,7 +6988,8 @@
       "自媒体运营",
       "发布媒体"
     ],
-    "category": "other"
+    "category": "video",
+    "rating": 4.5
   },
   {
     "id": "tiktok",
@@ -6452,7 +7001,8 @@
       "自媒体运营",
       "发布媒体"
     ],
-    "category": "other"
+    "category": "marketing",
+    "rating": 4.5
   },
   {
     "id": "消息---微博",
@@ -6464,7 +7014,8 @@
       "自媒体运营",
       "发布媒体"
     ],
-    "category": "other"
+    "category": "marketing",
+    "rating": 4.5
   },
   {
     "id": "flow",
@@ -6476,7 +7027,8 @@
       "自媒体运营",
       "发布媒体"
     ],
-    "category": "other"
+    "category": "marketing",
+    "rating": 4.5
   },
   {
     "id": "home---x",
@@ -6488,7 +7040,8 @@
       "自媒体运营",
       "发布媒体"
     ],
-    "category": "other"
+    "category": "marketing",
+    "rating": 4.5
   },
   {
     "id": "最热新闻榜",
@@ -6499,7 +7052,8 @@
       "书签栏",
       "自媒体运营"
     ],
-    "category": "other"
+    "category": "marketing",
+    "rating": 4.5
   },
   {
     "id": "公众号对标改写",
@@ -6511,7 +7065,8 @@
       "自媒体运营",
       "对标分析"
     ],
-    "category": "other"
+    "category": "marketing",
+    "rating": 4.5
   },
   {
     "id": "抖音",
@@ -6523,7 +7078,8 @@
       "自媒体运营",
       "对标分析"
     ],
-    "category": "other"
+    "category": "marketing",
+    "rating": 4.5
   },
   {
     "id": "小红书",
@@ -6535,7 +7091,8 @@
       "自媒体运营",
       "对标分析"
     ],
-    "category": "other"
+    "category": "marketing",
+    "rating": 4.5
   },
   {
     "id": "ai全能写作助手",
@@ -6547,7 +7104,8 @@
       "自媒体运营",
       "文案二创"
     ],
-    "category": "other"
+    "category": "writing",
+    "rating": 4.5
   },
   {
     "id": "wps-ai",
@@ -6559,7 +7117,8 @@
       "自媒体运营",
       "文案二创"
     ],
-    "category": "other"
+    "category": "writing",
+    "rating": 4.5
   },
   {
     "id": "视频去水印",
@@ -6571,7 +7130,8 @@
       "自媒体运营",
       "视频去水印"
     ],
-    "category": "other"
+    "category": "video",
+    "rating": 4.5
   },
   {
     "id": "----------------------------------------",
@@ -6583,7 +7143,8 @@
       "自媒体运营",
       "视频去水印"
     ],
-    "category": "other"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "----------------------------------------",
@@ -6595,7 +7156,8 @@
       "自媒体运营",
       "视频去水印"
     ],
-    "category": "other"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "free-sora-watermark-remover---remove-wat",
@@ -6607,7 +7169,8 @@
       "自媒体运营",
       "视频去水印"
     ],
-    "category": "other"
+    "category": "video",
+    "rating": 4.5
   },
   {
     "id": "vidu-ai---全球领先的ai内容生产平台",
@@ -6619,7 +7182,8 @@
       "自媒体运营",
       "视频去水印"
     ],
-    "category": "other"
+    "category": "video",
+    "rating": 4.5
   },
   {
     "id": "ai文案成片",
@@ -6631,7 +7195,8 @@
       "自媒体运营",
       "视频去水印"
     ],
-    "category": "other"
+    "category": "video",
+    "rating": 4.5
   },
   {
     "id": "runninghub-高可用性云端comfyui-在线创作ai应用",
@@ -6643,7 +7208,8 @@
       "自媒体运营",
       "视频去水印"
     ],
-    "category": "other"
+    "category": "video",
+    "rating": 4.5
   },
   {
     "id": "free-sora-watermark-remover---download-s",
@@ -6655,7 +7221,8 @@
       "自媒体运营",
       "视频去水印"
     ],
-    "category": "other"
+    "category": "video",
+    "rating": 4.5
   },
   {
     "id": "sora2watermarkremover---remove-sora2-wat",
@@ -6667,7 +7234,8 @@
       "自媒体运营",
       "视频去水印"
     ],
-    "category": "other"
+    "category": "video",
+    "rating": 4.5
   },
   {
     "id": "anytocopy---免费在线视频文案提取-一键抖音文案提取-支持50-平台文",
@@ -6679,7 +7247,8 @@
       "自媒体运营",
       "视频去水印"
     ],
-    "category": "other"
+    "category": "video",
+    "rating": 4.5
   },
   {
     "id": "免费ai视频水印去除工具-无损去除视频水印-无需登录-在线处理-",
@@ -6691,7 +7260,8 @@
       "自媒体运营",
       "视频去水印"
     ],
-    "category": "other"
+    "category": "video",
+    "rating": 4.5
   },
   {
     "id": "清影提示词-图生视频专用----智谱清言智能体",
@@ -6703,7 +7273,8 @@
       "自媒体运营",
       "视频去水印"
     ],
-    "category": "other"
+    "category": "chat",
+    "rating": 4.5
   },
   {
     "id": "oiioii-ai---ai-animation-agent-team-for-",
@@ -6715,7 +7286,8 @@
       "自媒体运营",
       "视频去水印"
     ],
-    "category": "other"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "inpaint-web",
@@ -6727,7 +7299,8 @@
       "自媒体运营",
       "视频去水印"
     ],
-    "category": "other"
+    "category": "video",
+    "rating": 4.5
   },
   {
     "id": "sora2-imagine---ai-生成器",
@@ -6739,7 +7312,8 @@
       "自媒体运营",
       "视频去水印"
     ],
-    "category": "other"
+    "category": "video",
+    "rating": 4.5
   },
   {
     "id": "贞贞的ai工坊",
@@ -6751,7 +7325,8 @@
       "自媒体运营",
       "视频去水印"
     ],
-    "category": "other"
+    "category": "video",
+    "rating": 4.5
   },
   {
     "id": "geminigen-ai---ai-video-generator---crea",
@@ -6763,7 +7338,8 @@
       "自媒体运营",
       "视频去水印"
     ],
-    "category": "other"
+    "category": "video",
+    "rating": 4.5
   },
   {
     "id": "chat-to-create-viral-ai-videos--shorts--",
@@ -6775,7 +7351,8 @@
       "自媒体运营",
       "视频去水印"
     ],
-    "category": "other"
+    "category": "video",
+    "rating": 4.5
   },
   {
     "id": "tomoviee-ai-studio---create-videos--imag",
@@ -6787,7 +7364,8 @@
       "自媒体运营",
       "视频去水印"
     ],
-    "category": "other"
+    "category": "video",
+    "rating": 4.5
   },
   {
     "id": "ai-视频摘要及文案---飞书云文档",
@@ -6799,7 +7377,8 @@
       "自媒体运营",
       "视频去水印"
     ],
-    "category": "other"
+    "category": "writing",
+    "rating": 4.5
   },
   {
     "id": "flow",
@@ -6811,7 +7390,8 @@
       "自媒体运营",
       "视频去水印"
     ],
-    "category": "other"
+    "category": "video",
+    "rating": 4.5
   },
   {
     "id": "flow",
@@ -6823,7 +7403,8 @@
       "自媒体运营",
       "视频去水印"
     ],
-    "category": "other"
+    "category": "video",
+    "rating": 4.5
   },
   {
     "id": "ai文案成片",
@@ -6835,7 +7416,8 @@
       "自媒体运营",
       "视频去水印"
     ],
-    "category": "other"
+    "category": "video",
+    "rating": 4.5
   },
   {
     "id": "ai-image-animator---turn-photos-into-vid",
@@ -6847,7 +7429,8 @@
       "自媒体运营",
       "视频去水印"
     ],
-    "category": "other"
+    "category": "video",
+    "rating": 4.5
   },
   {
     "id": "dreamina--create-realistic-talking-avata",
@@ -6859,7 +7442,8 @@
       "自媒体运营",
       "视频去水印"
     ],
-    "category": "other"
+    "category": "video",
+    "rating": 4.5
   },
   {
     "id": "喜韵音坊",
@@ -6871,7 +7455,8 @@
       "自媒体运营",
       "智能配音"
     ],
-    "category": "other"
+    "category": "audio",
+    "rating": 4.5
   },
   {
     "id": "音剪ai",
@@ -6883,7 +7468,8 @@
       "自媒体运营",
       "智能配音"
     ],
-    "category": "other"
+    "category": "audio",
+    "rating": 4.5
   },
   {
     "id": "免费音频生产",
@@ -6895,7 +7481,8 @@
       "自媒体运营",
       "智能配音"
     ],
-    "category": "other"
+    "category": "audio",
+    "rating": 4.5
   },
   {
     "id": "音乐生成suno",
@@ -6907,7 +7494,8 @@
       "自媒体运营",
       "智能配音"
     ],
-    "category": "other"
+    "category": "audio",
+    "rating": 4.5
   },
   {
     "id": "fish-audio--audio-generation-for-all",
@@ -6919,7 +7507,8 @@
       "自媒体运营",
       "智能配音"
     ],
-    "category": "other"
+    "category": "audio",
+    "rating": 4.5
   },
   {
     "id": "音刻---精准音频转录与可搜索笔记",
@@ -6931,7 +7520,8 @@
       "自媒体运营",
       "智能配音"
     ],
-    "category": "other"
+    "category": "audio",
+    "rating": 4.5
   },
   {
     "id": "text-to-speech---在线文本转语音",
@@ -6943,7 +7533,8 @@
       "自媒体运营",
       "智能配音"
     ],
-    "category": "other"
+    "category": "audio",
+    "rating": 4.5
   },
   {
     "id": "chattts--text-to-speech-for-chat",
@@ -6955,7 +7546,8 @@
       "自媒体运营",
       "智能配音"
     ],
-    "category": "other"
+    "category": "audio",
+    "rating": 4.5
   },
   {
     "id": "musicfy-ai---ai-voice-song-generator",
@@ -6967,7 +7559,8 @@
       "自媒体运营",
       "智能配音"
     ],
-    "category": "other"
+    "category": "audio",
+    "rating": 4.5
   },
   {
     "id": "cosyvoice-300m---创空间",
@@ -6979,7 +7572,8 @@
       "自媒体运营",
       "智能配音"
     ],
-    "category": "other"
+    "category": "audio",
+    "rating": 4.5
   },
   {
     "id": "cosyvoice2-0-5b---创空间",
@@ -6991,7 +7585,8 @@
       "自媒体运营",
       "智能配音"
     ],
-    "category": "other"
+    "category": "audio",
+    "rating": 4.5
   },
   {
     "id": "chattts-稳定音色-区分男女---创空间",
@@ -7003,7 +7598,8 @@
       "自媒体运营",
       "智能配音"
     ],
-    "category": "other"
+    "category": "audio",
+    "rating": 4.5
   },
   {
     "id": "sensevoice---创空间",
@@ -7015,7 +7611,8 @@
       "自媒体运营",
       "智能配音"
     ],
-    "category": "other"
+    "category": "audio",
+    "rating": 4.5
   },
   {
     "id": "ai对话播客-输入网页或pdf即可生成一档对话播客节目----创空间",
@@ -7027,7 +7624,8 @@
       "自媒体运营",
       "智能配音"
     ],
-    "category": "other"
+    "category": "audio",
+    "rating": 4.5
   },
   {
     "id": "funsound-在线字幕合成---创空间",
@@ -7039,7 +7637,8 @@
       "自媒体运营",
       "智能配音"
     ],
-    "category": "other"
+    "category": "audio",
+    "rating": 4.5
   },
   {
     "id": "maskgct语音克隆---创空间",
@@ -7051,7 +7650,8 @@
       "自媒体运营",
       "智能配音"
     ],
-    "category": "other"
+    "category": "audio",
+    "rating": 4.5
   },
   {
     "id": "各大音乐平台音频解析工具---创空间",
@@ -7063,7 +7663,8 @@
       "自媒体运营",
       "智能配音"
     ],
-    "category": "other"
+    "category": "audio",
+    "rating": 4.5
   },
   {
     "id": "musicgen--让ai作曲触手可及---创空间",
@@ -7075,7 +7676,8 @@
       "自媒体运营",
       "智能配音"
     ],
-    "category": "other"
+    "category": "audio",
+    "rating": 4.5
   },
   {
     "id": "webassembly实时中英粤语识别-新一代kaldi-paraformer-",
@@ -7087,7 +7689,8 @@
       "自媒体运营",
       "智能配音"
     ],
-    "category": "other"
+    "category": "audio",
+    "rating": 4.5
   },
   {
     "id": "minimax",
@@ -7099,7 +7702,8 @@
       "自媒体运营",
       "智能配音"
     ],
-    "category": "other"
+    "category": "audio",
+    "rating": 4.5
   },
   {
     "id": "free-ai-voice-generator--amp--voice-agen",
@@ -7111,7 +7715,8 @@
       "自媒体运营",
       "智能配音"
     ],
-    "category": "other"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "ai-video-generator--amp--image-generator",
@@ -7123,7 +7728,8 @@
       "自媒体运营",
       "智能配音"
     ],
-    "category": "other"
+    "category": "code",
+    "rating": 4.5
   },
   {
     "id": "suno---ai-music",
@@ -7135,7 +7741,8 @@
       "自媒体运营",
       "智能配音"
     ],
-    "category": "other"
+    "category": "audio",
+    "rating": 4.5
   },
   {
     "id": "发现声音---声音搜索---淘声网---免费音效素材资源-视频游戏配乐下载",
@@ -7147,7 +7754,8 @@
       "自媒体运营",
       "智能配音"
     ],
-    "category": "other"
+    "category": "audio",
+    "rating": 4.5
   },
   {
     "id": "爱给网_音效配乐_3d模型_视频素材_免费下载",
@@ -7159,7 +7767,8 @@
       "自媒体运营",
       "智能配音"
     ],
-    "category": "other"
+    "category": "video",
+    "rating": 4.5
   },
   {
     "id": "有道音视频翻译",
@@ -7171,7 +7780,8 @@
       "自媒体运营",
       "智能配音"
     ],
-    "category": "other"
+    "category": "video",
+    "rating": 4.5
   },
   {
     "id": "imageai---您的免费-ai-图像生成工具",
@@ -7183,7 +7793,8 @@
       "自媒体运营",
       "智能配音"
     ],
-    "category": "other"
+    "category": "image",
+    "rating": 4.5
   },
   {
     "id": "heygen---ai-spokesperson-video-creator",
@@ -7195,7 +7806,8 @@
       "自媒体运营",
       "数字人"
     ],
-    "category": "other"
+    "category": "video",
+    "rating": 4.5
   },
   {
     "id": "开放数字人对话",
@@ -7207,7 +7819,8 @@
       "自媒体运营",
       "数字人"
     ],
-    "category": "other"
+    "category": "video",
+    "rating": 4.5
   },
   {
     "id": "必剪数字人",
@@ -7219,7 +7832,8 @@
       "自媒体运营",
       "数字人"
     ],
-    "category": "other"
+    "category": "video",
+    "rating": 4.5
   },
   {
     "id": "free-ai-video-generator--create-stunning",
@@ -7231,7 +7845,8 @@
       "自媒体运营",
       "数字人"
     ],
-    "category": "other"
+    "category": "video",
+    "rating": 4.5
   },
   {
     "id": "图像生成---豆包",
@@ -7243,7 +7858,8 @@
       "自媒体运营",
       "图文海报"
     ],
-    "category": "other"
+    "category": "image",
+    "rating": 4.5
   },
   {
     "id": "python-ai-绘画---菜鸟教程",
@@ -7255,7 +7871,8 @@
       "自媒体运营",
       "图文海报"
     ],
-    "category": "other"
+    "category": "image",
+    "rating": 4.5
   },
   {
     "id": "云界ai官网---一看就会的免费ai作图工具",
@@ -7267,7 +7884,8 @@
       "自媒体运营",
       "图文海报"
     ],
-    "category": "other"
+    "category": "image",
+    "rating": 4.5
   },
   {
     "id": "奇域-新中式文生图",
@@ -7279,7 +7897,8 @@
       "自媒体运营",
       "图文海报"
     ],
-    "category": "other"
+    "category": "image",
+    "rating": 4.5
   },
   {
     "id": "奇域---社区",
@@ -7291,7 +7910,8 @@
       "自媒体运营",
       "图文海报"
     ],
-    "category": "other"
+    "category": "image",
+    "rating": 4.5
   },
   {
     "id": "创意海报生成---创空间",
@@ -7303,7 +7923,8 @@
       "自媒体运营",
       "图文海报"
     ],
-    "category": "other"
+    "category": "image",
+    "rating": 4.5
   },
   {
     "id": "未道帮ai抠图---在线抠图_ai抠图_图片抠图_智能抠图_免费抠图_智能换背景",
@@ -7315,7 +7936,8 @@
       "自媒体运营",
       "智能图像"
     ],
-    "category": "other"
+    "category": "image",
+    "rating": 4.5
   },
   {
     "id": "抠抠图-抠图软件永久免费在线智能抠图",
@@ -7327,7 +7949,8 @@
       "自媒体运营",
       "智能图像"
     ],
-    "category": "other"
+    "category": "image",
+    "rating": 4.5
   },
   {
     "id": "顽兔抠图",
@@ -7339,7 +7962,8 @@
       "自媒体运营",
       "智能图像"
     ],
-    "category": "other"
+    "category": "image",
+    "rating": 4.5
   },
   {
     "id": "stable-diffusion",
@@ -7351,7 +7975,8 @@
       "自媒体运营",
       "智能图像"
     ],
-    "category": "other"
+    "category": "image",
+    "rating": 4.5
   },
   {
     "id": "kolors-virtual-try-on---a-hugging-face-s",
@@ -7363,7 +7988,8 @@
       "自媒体运营",
       "智能图像"
     ],
-    "category": "other"
+    "category": "image",
+    "rating": 4.5
   },
   {
     "id": "ai老照片修复---创空间",
@@ -7375,7 +8001,8 @@
       "自媒体运营",
       "智能图像"
     ],
-    "category": "other"
+    "category": "image",
+    "rating": 4.5
   },
   {
     "id": "可图ai试衣---创空间",
@@ -7387,7 +8014,8 @@
       "自媒体运营",
       "智能图像"
     ],
-    "category": "other"
+    "category": "image",
+    "rating": 4.5
   },
   {
     "id": "sd3-5-turbo快速生图---创空间",
@@ -7399,7 +8027,8 @@
       "自媒体运营",
       "智能图像"
     ],
-    "category": "other"
+    "category": "image",
+    "rating": 4.5
   },
   {
     "id": "万能抠图-背景消除术---创空间",
@@ -7411,7 +8040,8 @@
       "自媒体运营",
       "智能图像"
     ],
-    "category": "other"
+    "category": "image",
+    "rating": 4.5
   },
   {
     "id": "丹青-千变万换---创空间",
@@ -7423,7 +8053,8 @@
       "自媒体运营",
       "智能图像"
     ],
-    "category": "other"
+    "category": "image",
+    "rating": 4.5
   },
   {
     "id": "一键生成高清证件照---创空间",
@@ -7435,7 +8066,8 @@
       "自媒体运营",
       "智能图像"
     ],
-    "category": "other"
+    "category": "image",
+    "rating": 4.5
   },
   {
     "id": "motionshop2来啦-单张照片替换视频人物---创空间",
@@ -7447,7 +8079,8 @@
       "自媒体运营",
       "智能图像"
     ],
-    "category": "other"
+    "category": "image",
+    "rating": 4.5
   },
   {
     "id": "instantmesh-10秒完成图生3d的强力杀器---创空间",
@@ -7459,7 +8092,8 @@
       "自媒体运营",
       "智能图像"
     ],
-    "category": "other"
+    "category": "image",
+    "rating": 4.5
   },
   {
     "id": "en3d-通用3d人物生成---创空间",
@@ -7471,7 +8105,8 @@
       "自媒体运营",
       "智能图像"
     ],
-    "category": "other"
+    "category": "image",
+    "rating": 4.5
   },
   {
     "id": "美图秀秀-免费在线p图抠图拼图_证件照制作",
@@ -7483,7 +8118,8 @@
       "自媒体运营",
       "智能图像"
     ],
-    "category": "other"
+    "category": "image",
+    "rating": 4.5
   },
   {
     "id": "在线抠图软件_图片去除背景---remove-bg---remove-bg",
@@ -7495,7 +8131,8 @@
       "自媒体运营",
       "智能图像"
     ],
-    "category": "other"
+    "category": "image",
+    "rating": 4.5
   },
   {
     "id": "超能画布首页",
@@ -7507,7 +8144,8 @@
       "自媒体运营",
       "智能图像"
     ],
-    "category": "other"
+    "category": "image",
+    "rating": 4.5
   },
   {
     "id": "tripo-ai---create-your-first-3d-model-wi",
@@ -7519,7 +8157,8 @@
       "自媒体运营",
       "智能图像"
     ],
-    "category": "other"
+    "category": "image",
+    "rating": 4.5
   },
   {
     "id": "ai故事随心绘-anystory---创空间",
@@ -7531,7 +8170,8 @@
       "自媒体运营",
       "智能图像"
     ],
-    "category": "other"
+    "category": "image",
+    "rating": 4.5
   },
   {
     "id": "图片变清晰upscayl---ai-image-upscaler",
@@ -7543,7 +8183,8 @@
       "自媒体运营",
       "智能图像"
     ],
-    "category": "other"
+    "category": "image",
+    "rating": 4.5
   },
   {
     "id": "freepik---多合一ai創意套件",
@@ -7555,7 +8196,8 @@
       "自媒体运营",
       "智能图像"
     ],
-    "category": "other"
+    "category": "image",
+    "rating": 4.5
   },
   {
     "id": "free-ai-image-generator-for-ai-art-creat",
@@ -7567,7 +8209,8 @@
       "自媒体运营",
       "智能图像"
     ],
-    "category": "other"
+    "category": "image",
+    "rating": 4.5
   },
   {
     "id": "flux-playground---black-forest-labs",
@@ -7579,7 +8222,8 @@
       "自媒体运营",
       "智能图像"
     ],
-    "category": "other"
+    "category": "image",
+    "rating": 4.5
   },
   {
     "id": "nano-banana-pro-提示词宝库---高质量-ai-绘画提示词",
@@ -7591,7 +8235,8 @@
       "自媒体运营",
       "智能图像"
     ],
-    "category": "other"
+    "category": "image",
+    "rating": 4.5
   },
   {
     "id": "ai对话---aiplus",
@@ -7603,7 +8248,8 @@
       "自媒体运营",
       "智能图像"
     ],
-    "category": "other"
+    "category": "chat",
+    "rating": 4.5
   },
   {
     "id": "最佳-ai-hentai-生成器-火辣-ai-角色與場景創作工具",
@@ -7615,7 +8261,8 @@
       "自媒体运营",
       "智能图像"
     ],
-    "category": "other"
+    "category": "image",
+    "rating": 4.5
   },
   {
     "id": "bottomdrawerslidecase--本示例介绍了利用list实现底部抽",
@@ -7627,7 +8274,8 @@
       "自媒体运营",
       "智能图像"
     ],
-    "category": "other"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "nano-banana-pro-画图神器-免费用-",
@@ -7639,7 +8287,8 @@
       "自媒体运营",
       "智能图像"
     ],
-    "category": "other"
+    "category": "image",
+    "rating": 4.5
   },
   {
     "id": "meta-ai-demos",
@@ -7651,7 +8300,8 @@
       "自媒体运营",
       "智能图像"
     ],
-    "category": "other"
+    "category": "image",
+    "rating": 4.5
   },
   {
     "id": "39z5vr3n7n-coze-site",
@@ -7663,7 +8313,8 @@
       "自媒体运营",
       "智能图像"
     ],
-    "category": "other"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "无需公网ip-用国际域名一键访问本地博客-不加端口号-不做内网穿透-不开端口映射",
@@ -7674,7 +8325,8 @@
       "书签栏",
       "教程"
     ],
-    "category": "other"
+    "category": "learning",
+    "rating": 4.5
   },
   {
     "id": "figma全指南-看这一篇就够了---知乎",
@@ -7685,7 +8337,8 @@
       "书签栏",
       "教程"
     ],
-    "category": "other"
+    "category": "learning",
+    "rating": 4.5
   },
   {
     "id": "画小二aigc开源文档---飞书云文档",
@@ -7696,7 +8349,8 @@
       "书签栏",
       "教程"
     ],
-    "category": "other"
+    "category": "productivity",
+    "rating": 4.5
   },
   {
     "id": "waytoagi-通往agi之路-最好的-ai-知识库和工具站",
@@ -7707,7 +8361,8 @@
       "书签栏",
       "教程"
     ],
-    "category": "other"
+    "category": "learning",
+    "rating": 4.5
   },
   {
     "id": "知乎8天5级-涨的也太快了-文末附rpa源码-",
@@ -7718,7 +8373,8 @@
       "书签栏",
       "教程"
     ],
-    "category": "other"
+    "category": "automation",
+    "rating": 4.5
   },
   {
     "id": "网易云课堂---ai公开课",
@@ -7729,7 +8385,8 @@
       "书签栏",
       "教程"
     ],
-    "category": "other"
+    "category": "learning",
+    "rating": 4.5
   },
   {
     "id": "豆包文档docs",
@@ -7740,7 +8397,8 @@
       "书签栏",
       "教程"
     ],
-    "category": "other"
+    "category": "learning",
+    "rating": 4.5
   },
   {
     "id": "30案例打造flowith保姆级教程",
@@ -7751,7 +8409,8 @@
       "书签栏",
       "教程"
     ],
-    "category": "other"
+    "category": "learning",
+    "rating": 4.5
   },
   {
     "id": "只需1-分钟-用coze搭建一个500万项目的策划团队-效率提升10倍-给你省掉",
@@ -7762,7 +8421,8 @@
       "书签栏",
       "教程"
     ],
-    "category": "other"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "一款全能会议助手",
@@ -7773,7 +8433,8 @@
       "书签栏",
       "教程"
     ],
-    "category": "other"
+    "category": "chat",
+    "rating": 4.5
   },
   {
     "id": "----------------------------------------",
@@ -7784,7 +8445,8 @@
       "书签栏",
       "教程"
     ],
-    "category": "other"
+    "category": "chat",
+    "rating": 4.5
   },
   {
     "id": "飞书多维表格---即梦-4-0-打造你的-ai-生图游乐场-",
@@ -7795,7 +8457,8 @@
       "书签栏",
       "教程"
     ],
-    "category": "other"
+    "category": "image",
+    "rating": 4.5
   },
   {
     "id": "vidu-提示词指南",
@@ -7806,7 +8469,8 @@
       "书签栏",
       "教程"
     ],
-    "category": "other"
+    "category": "learning",
+    "rating": 4.5
   },
   {
     "id": "人生管理系统---飞书云文档",
@@ -7816,7 +8480,8 @@
     "tags": [
       "书签栏"
     ],
-    "category": "other"
+    "category": "productivity",
+    "rating": 4.5
   },
   {
     "id": "基于-扣子平台-和-英特尔ai-pc工具箱-端插件开发端云协同智能体-csdn直",
@@ -7828,7 +8493,8 @@
       "比赛",
       "coze+英特尔AI PC"
     ],
-    "category": "other"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "英特尔人工智能创新应用大赛-半决赛方案一提交",
@@ -7840,7 +8506,8 @@
       "比赛",
       "coze+英特尔AI PC"
     ],
-    "category": "other"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "----------------------------------------",
@@ -7852,7 +8519,8 @@
       "比赛",
       "coze+英特尔AI PC"
     ],
-    "category": "other"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "扣子空间",
@@ -7864,7 +8532,8 @@
       "比赛",
       "coze+英特尔AI PC"
     ],
-    "category": "other"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "prompt-generator---扣子-ai-智能体",
@@ -7876,7 +8545,8 @@
       "比赛",
       "coze+英特尔AI PC"
     ],
-    "category": "other"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "----------------------------------------",
@@ -7888,7 +8558,8 @@
       "比赛",
       "coze+英特尔AI PC"
     ],
-    "category": "other"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "csdn提交赛题",
@@ -7900,7 +8571,8 @@
       "比赛",
       "coze+英特尔AI PC"
     ],
-    "category": "other"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "支持流式-api-和说话人识别",
@@ -7912,7 +8584,8 @@
       "比赛",
       "coze+英特尔AI PC"
     ],
-    "category": "other"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "路演材料收集-2025英特尔人工智能创新应用大赛",
@@ -7924,7 +8597,8 @@
       "比赛",
       "coze+英特尔AI PC"
     ],
-    "category": "other"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "2025腾讯广告算法大赛200w",
@@ -7936,7 +8610,8 @@
       "比赛",
       "腾讯云"
     ],
-    "category": "other"
+    "category": "marketing",
+    "rating": 4.5
   },
   {
     "id": "腾讯云黑客松小程序-web一人公司",
@@ -7948,7 +8623,8 @@
       "比赛",
       "腾讯云"
     ],
-    "category": "other"
+    "category": "other",
+    "rating": 4.5
   },
   {
     "id": "cloudbase-ai-toolkit---codebuddy---腾讯云开发",
@@ -7960,7 +8636,8 @@
       "比赛",
       "腾讯云"
     ],
-    "category": "other"
+    "category": "code",
+    "rating": 4.5
   },
   {
     "id": "小程序接入云开发-ai-能力指引---腾讯云开发-cloudbase---一站式",
@@ -7972,7 +8649,8 @@
       "比赛",
       "腾讯云"
     ],
-    "category": "other"
+    "category": "code",
+    "rating": 4.5
   },
   {
     "id": "30天狂飙500万营收-1美元ai广告-正在卷爆整个营销业---今日头条",
@@ -7984,7 +8662,8 @@
       "比赛",
       "腾讯云"
     ],
-    "category": "other"
+    "category": "marketing",
+    "rating": 4.5
   },
   {
     "id": "一人最高赚1个亿-人均创收166万-这33家ai公司-正在创造商业-神话-",
@@ -7996,7 +8675,8 @@
       "比赛",
       "腾讯云"
     ],
-    "category": "other"
+    "category": "other",
+    "rating": 4.5
   },
   {
     "id": "cloudbase-ai-toolkit-概述---腾讯云开发-cloudbas",
@@ -8008,7 +8688,8 @@
       "比赛",
       "腾讯云"
     ],
-    "category": "other"
+    "category": "code",
+    "rating": 4.5
   },
   {
     "id": "腾讯云开发-cloudbase---一站式后端云服务",
@@ -8020,7 +8701,8 @@
       "比赛",
       "腾讯云"
     ],
-    "category": "other"
+    "category": "code",
+    "rating": 4.5
   },
   {
     "id": "腾讯云-agent-应用创新挑战赛",
@@ -8032,7 +8714,8 @@
       "比赛",
       "腾讯云"
     ],
-    "category": "other"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "腾讯云黑客松agent应用创新挑战赛",
@@ -8044,7 +8727,8 @@
       "比赛",
       "腾讯云"
     ],
-    "category": "other"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "腾讯云-agent-应用创新挑战赛报名",
@@ -8056,7 +8740,8 @@
       "比赛",
       "腾讯云"
     ],
-    "category": "other"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "腾讯云黑客松agent应用创新挑战赛faq",
@@ -8068,7 +8753,8 @@
       "比赛",
       "腾讯云"
     ],
-    "category": "other"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "腾讯云智能体开发平台-快速入门-文档中心-腾讯云",
@@ -8080,7 +8766,8 @@
       "比赛",
       "腾讯云"
     ],
-    "category": "other"
+    "category": "learning",
+    "rating": 4.5
   },
   {
     "id": "腾讯元器官方帮助文档-新-",
@@ -8092,7 +8779,8 @@
       "比赛",
       "腾讯云"
     ],
-    "category": "other"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "智能体大赛-企业微信智能体接入指南",
@@ -8104,7 +8792,8 @@
       "比赛",
       "腾讯云"
     ],
-    "category": "other"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "腾讯云智能体平台补给包申请",
@@ -8116,7 +8805,8 @@
       "比赛",
       "腾讯云"
     ],
-    "category": "other"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "英特尔人工智能创新应用大赛开发者技术与服务推荐专区",
@@ -8128,7 +8818,8 @@
       "比赛",
       "英特尔openvino应用"
     ],
-    "category": "other"
+    "category": "code",
+    "rating": 4.5
   },
   {
     "id": "2025英特尔人工智能创新应用大赛---英特尔大湾区科技创新中心",
@@ -8140,7 +8831,8 @@
       "比赛",
       "英特尔openvino应用"
     ],
-    "category": "other"
+    "category": "other",
+    "rating": 4.5
   },
   {
     "id": "openvino---魔搭社区",
@@ -8152,7 +8844,8 @@
       "比赛",
       "英特尔openvino应用"
     ],
-    "category": "other"
+    "category": "other",
+    "rating": 4.5
   },
   {
     "id": "英特尔aipc智会pro",
@@ -8164,7 +8857,8 @@
       "比赛",
       "英特尔openvino应用"
     ],
-    "category": "other"
+    "category": "video",
+    "rating": 4.5
   },
   {
     "id": "how-to-use-torch-compile-on-windows-cpu-",
@@ -8176,7 +8870,8 @@
       "比赛",
       "英特尔openvino应用"
     ],
-    "category": "other"
+    "category": "other",
+    "rating": 4.5
   },
   {
     "id": "ipex-llm-python-llm-example-gpu-pytorch-",
@@ -8188,7 +8883,8 @@
       "比赛",
       "英特尔openvino应用"
     ],
-    "category": "other"
+    "category": "chat",
+    "rating": 4.5
   },
   {
     "id": "glm-4-1v合集详情-来自zhipuai---魔搭社区",
@@ -8200,7 +8896,8 @@
       "比赛",
       "英特尔openvino应用"
     ],
-    "category": "other"
+    "category": "chat",
+    "rating": 4.5
   },
   {
     "id": "build-ai-apps-with-ai-reference-kits-fro",
@@ -8212,7 +8909,8 @@
       "比赛",
       "英特尔openvino应用"
     ],
-    "category": "other"
+    "category": "other",
+    "rating": 4.5
   },
   {
     "id": "openvinotoolkit-openvino_notebooks----ju",
@@ -8224,7 +8922,8 @@
       "比赛",
       "英特尔openvino应用"
     ],
-    "category": "other"
+    "category": "other",
+    "rating": 4.5
   },
   {
     "id": "intel-ai-pc-samples",
@@ -8236,7 +8935,8 @@
       "比赛",
       "英特尔openvino应用"
     ],
-    "category": "other"
+    "category": "other",
+    "rating": 4.5
   },
   {
     "id": "开始使用-openvino--工具套件",
@@ -8248,7 +8948,8 @@
       "比赛",
       "英特尔openvino应用"
     ],
-    "category": "other"
+    "category": "other",
+    "rating": 4.5
   },
   {
     "id": "模型下载",
@@ -8260,7 +8961,8 @@
       "比赛",
       "英特尔openvino应用"
     ],
-    "category": "other"
+    "category": "other",
+    "rating": 4.5
   },
   {
     "id": "openvino_notebooks-notebooks-qwen2-5-vl-",
@@ -8272,7 +8974,8 @@
       "比赛",
       "英特尔openvino应用"
     ],
-    "category": "other"
+    "category": "chat",
+    "rating": 4.5
   },
   {
     "id": "notion和chatgpt都在模仿它-融资4300万美刀-月留存70--这款a",
@@ -8284,7 +8987,8 @@
       "比赛",
       "英特尔openvino应用"
     ],
-    "category": "other"
+    "category": "chat",
+    "rating": 4.5
   },
   {
     "id": "opendatalab-mineru--a-high-quality-tool-",
@@ -8296,7 +9000,8 @@
       "比赛",
       "英特尔openvino应用"
     ],
-    "category": "other"
+    "category": "writing",
+    "rating": 4.5
   },
   {
     "id": "promptpilot",
@@ -8308,7 +9013,8 @@
       "比赛",
       " 提示词"
     ],
-    "category": "other"
+    "category": "video",
+    "rating": 4.5
   },
   {
     "id": "精选提示词",
@@ -8320,7 +9026,8 @@
       "比赛",
       " 提示词"
     ],
-    "category": "other"
+    "category": "other",
+    "rating": 4.5
   },
   {
     "id": "cursor系统提示词",
@@ -8332,7 +9039,8 @@
       "比赛",
       " 提示词"
     ],
-    "category": "other"
+    "category": "code",
+    "rating": 4.5
   },
   {
     "id": "----------------------------------------",
@@ -8344,7 +9052,8 @@
       "比赛",
       " 提示词"
     ],
-    "category": "other"
+    "category": "search",
+    "rating": 4.5
   },
   {
     "id": "免费api",
@@ -8355,7 +9064,8 @@
       "书签栏",
       "比赛"
     ],
-    "category": "other"
+    "category": "data",
+    "rating": 4.5
   },
   {
     "id": "嘉立创",
@@ -8367,7 +9077,8 @@
       "比赛",
       "COZE智能硬件"
     ],
-    "category": "other"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "带着ai去造物-扣子首届智能硬件大赛---文档---扣子",
@@ -8379,7 +9090,8 @@
       "比赛",
       "COZE智能硬件"
     ],
-    "category": "other"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "作品提交---带着ai去造物-扣子首届智能硬件大赛",
@@ -8391,7 +9103,8 @@
       "比赛",
       "COZE智能硬件"
     ],
-    "category": "other"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "硬件设备基于-websocket-实现语音交互---文档---扣子",
@@ -8403,7 +9116,8 @@
       "比赛",
       "COZE智能硬件"
     ],
-    "category": "other"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "atoms3r-m12-火山引擎语音助手",
@@ -8415,7 +9129,8 @@
       "比赛",
       "COZE智能硬件"
     ],
-    "category": "other"
+    "category": "chat",
+    "rating": 4.5
   },
   {
     "id": "esp-adf--esp-adf-是由乐鑫官方推出的针对-esp32-和-esp",
@@ -8427,7 +9142,8 @@
       "比赛",
       "COZE智能硬件"
     ],
-    "category": "other"
+    "category": "code",
+    "rating": 4.5
   },
   {
     "id": "喵伴对话智能体--智能体---扣子",
@@ -8439,7 +9155,8 @@
       "比赛",
       "COZE智能硬件"
     ],
-    "category": "other"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "echoear--喵伴-用户指南",
@@ -8451,7 +9168,8 @@
       "比赛",
       "COZE智能硬件"
     ],
-    "category": "other"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "esp-idf-编程指南---esp32-----esp-idf-编程指南-la",
@@ -8463,7 +9181,8 @@
       "比赛",
       "COZE智能硬件"
     ],
-    "category": "other"
+    "category": "learning",
+    "rating": 4.5
   },
   {
     "id": "----------------------------------------",
@@ -8475,7 +9194,8 @@
       "比赛",
       "COZE智能硬件"
     ],
-    "category": "other"
+    "category": "productivity",
+    "rating": 4.5
   },
   {
     "id": "esp32-ai-box1---正点原子资料下载中心-1-0-0-文档",
@@ -8487,7 +9207,8 @@
       "比赛",
       "COZE智能硬件"
     ],
-    "category": "other"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "rtc-aigc-embedded-demo-readme-md-at-mast",
@@ -8499,7 +9220,8 @@
       "比赛",
       "COZE智能硬件"
     ],
-    "category": "other"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "rtc-aigc-embedded-demo-docs-quick_start_",
@@ -8511,7 +9233,8 @@
       "比赛",
       "COZE智能硬件"
     ],
-    "category": "other"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "esp-adf-examples-ai_agent-coze_ws_app-at",
@@ -8523,7 +9246,8 @@
       "比赛",
       "COZE智能硬件"
     ],
-    "category": "other"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "playground---扣子",
@@ -8535,7 +9259,8 @@
       "比赛",
       "COZE智能硬件"
     ],
-    "category": "other"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "esp-idf-examples-peripherals-timer_group",
@@ -8547,7 +9272,8 @@
       "比赛",
       "COZE智能硬件"
     ],
-    "category": "other"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "esp-brookesia-products-speaker-common_co",
@@ -8559,7 +9285,8 @@
       "比赛",
       "COZE智能硬件"
     ],
-    "category": "other"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "触摸唤醒",
@@ -8571,7 +9298,8 @@
       "比赛",
       "COZE智能硬件"
     ],
-    "category": "other"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "memos",
@@ -8583,7 +9311,8 @@
       "比赛",
       "应用部署"
     ],
-    "category": "other"
+    "category": "other",
+    "rating": 4.5
   },
   {
     "id": "--open-webui",
@@ -8595,7 +9324,8 @@
       "比赛",
       "应用部署"
     ],
-    "category": "other"
+    "category": "other",
+    "rating": 4.5
   },
   {
     "id": "管理员面板---open-webui",
@@ -8607,7 +9337,8 @@
       "比赛",
       "应用部署"
     ],
-    "category": "other"
+    "category": "other",
+    "rating": 4.5
   },
   {
     "id": "bolt-new",
@@ -8619,7 +9350,8 @@
       "比赛",
       "应用部署"
     ],
-    "category": "other"
+    "category": "other",
+    "rating": 4.5
   },
   {
     "id": "siliconflow--支持-flux-绘图----dify",
@@ -8631,7 +9363,8 @@
       "比赛",
       "应用部署"
     ],
-    "category": "other"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "在-dify-中使用---siliconflow",
@@ -8643,7 +9376,8 @@
       "比赛",
       "应用部署"
     ],
-    "category": "other"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "moneyprinterturbo",
@@ -8655,7 +9389,8 @@
       "比赛",
       "应用部署"
     ],
-    "category": "other"
+    "category": "video",
+    "rating": 4.5
   },
   {
     "id": "comfyui",
@@ -8667,7 +9402,8 @@
       "比赛",
       "应用部署"
     ],
-    "category": "other"
+    "category": "other",
+    "rating": 4.5
   },
   {
     "id": "声音克隆gpt-sovits-webui",
@@ -8679,7 +9415,8 @@
       "比赛",
       "应用部署"
     ],
-    "category": "other"
+    "category": "audio",
+    "rating": 4.5
   },
   {
     "id": "工作室---dify",
@@ -8691,7 +9428,8 @@
       "比赛",
       "应用部署"
     ],
-    "category": "other"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "n8n-io---workflow-automation",
@@ -8703,7 +9441,8 @@
       "比赛",
       "应用部署"
     ],
-    "category": "other"
+    "category": "automation",
+    "rating": 4.5
   },
   {
     "id": "discover-800--automation-workflows-from-",
@@ -8715,7 +9454,8 @@
       "比赛",
       "应用部署"
     ],
-    "category": "other"
+    "category": "automation",
+    "rating": 4.5
   },
   {
     "id": "实时渲染工具",
@@ -8727,7 +9467,8 @@
       "比赛",
       "应用部署"
     ],
-    "category": "other"
+    "category": "other",
+    "rating": 4.5
   },
   {
     "id": "nextchat",
@@ -8739,7 +9480,8 @@
       "比赛",
       "应用部署"
     ],
-    "category": "other"
+    "category": "chat",
+    "rating": 4.5
   },
   {
     "id": "stockbot-powered-by-groq---stockbot-powe",
@@ -8751,7 +9493,8 @@
       "比赛",
       "应用部署"
     ],
-    "category": "other"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "股票辅助决策",
@@ -8763,7 +9506,8 @@
       "比赛",
       "应用部署"
     ],
-    "category": "other"
+    "category": "finance",
+    "rating": 4.5
   },
   {
     "id": "excalidraw",
@@ -8775,7 +9519,8 @@
       "比赛",
       "应用部署"
     ],
-    "category": "other"
+    "category": "other",
+    "rating": 4.5
   },
   {
     "id": "excalidraw-miyucaicai-cn",
@@ -8787,7 +9532,8 @@
       "比赛",
       "应用部署"
     ],
-    "category": "other"
+    "category": "other",
+    "rating": 4.5
   },
   {
     "id": "mini-dashboard---meilisearch",
@@ -8799,7 +9545,8 @@
       "比赛",
       "应用部署"
     ],
-    "category": "other"
+    "category": "search",
+    "rating": 4.5
   },
   {
     "id": "sun-panel",
@@ -8811,7 +9558,8 @@
       "比赛",
       "应用部署"
     ],
-    "category": "other"
+    "category": "other",
+    "rating": 4.5
   },
   {
     "id": "最好用的ai---最好用的办公效率ai工具",
@@ -8823,7 +9571,8 @@
       "比赛",
       "应用部署"
     ],
-    "category": "other"
+    "category": "productivity",
+    "rating": 4.5
   },
   {
     "id": "ollama",
@@ -8835,7 +9584,8 @@
       "比赛",
       "应用部署"
     ],
-    "category": "other"
+    "category": "chat",
+    "rating": 4.5
   },
   {
     "id": "https---ai-miyucaicai-cn-index-html",
@@ -8847,7 +9597,8 @@
       "比赛",
       "应用部署"
     ],
-    "category": "other"
+    "category": "other",
+    "rating": 4.5
   },
   {
     "id": "open-webui",
@@ -8859,7 +9610,8 @@
       "比赛",
       "应用部署"
     ],
-    "category": "other"
+    "category": "other",
+    "rating": 4.5
   },
   {
     "id": "pdfmathtranslate体验空间---创空间",
@@ -8871,7 +9623,8 @@
       "比赛",
       "应用部署"
     ],
-    "category": "other"
+    "category": "other",
+    "rating": 4.5
   },
   {
     "id": "读光ocr-多场景文字识别---创空间",
@@ -8883,7 +9636,8 @@
       "比赛",
       "应用部署"
     ],
-    "category": "other"
+    "category": "other",
+    "rating": 4.5
   },
   {
     "id": "llama-board-大型语言模型一键微调平台---创空间",
@@ -8895,7 +9649,8 @@
       "比赛",
       "应用部署"
     ],
-    "category": "other"
+    "category": "other",
+    "rating": 4.5
   },
   {
     "id": "minimind---创空间",
@@ -8907,7 +9662,8 @@
       "比赛",
       "应用部署"
     ],
-    "category": "other"
+    "category": "other",
+    "rating": 4.5
   },
   {
     "id": "让提示词自我进化---创空间",
@@ -8919,7 +9675,8 @@
       "比赛",
       "应用部署"
     ],
-    "category": "other"
+    "category": "other",
+    "rating": 4.5
   },
   {
     "id": "部署-gpu---仙宫云-xiangongyun-com",
@@ -8931,7 +9688,8 @@
       "比赛",
       "应用部署"
     ],
-    "category": "other"
+    "category": "other",
+    "rating": 4.5
   },
   {
     "id": "实时渲染工具",
@@ -8943,7 +9701,8 @@
       "比赛",
       "应用部署"
     ],
-    "category": "other"
+    "category": "other",
+    "rating": 4.5
   },
   {
     "id": "生成的论文",
@@ -8955,7 +9714,8 @@
       "比赛",
       "应用部署"
     ],
-    "category": "other"
+    "category": "research",
+    "rating": 4.5
   },
   {
     "id": "agent-zero",
@@ -8967,7 +9727,8 @@
       "比赛",
       "应用部署"
     ],
-    "category": "other"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "best_ai--最好用的ai排行榜-自主发布智能体成为小程序-提供生成海报-复",
@@ -8979,7 +9740,8 @@
       "比赛",
       "应用部署"
     ],
-    "category": "other"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "1-比-1复刻应用",
@@ -8991,7 +9753,8 @@
       "比赛",
       "应用部署"
     ],
-    "category": "other"
+    "category": "other",
+    "rating": 4.5
   },
   {
     "id": "qwenlm-qwen-code--qwen-code-is-a-coding-",
@@ -9003,7 +9766,8 @@
       "比赛",
       "应用部署"
     ],
-    "category": "other"
+    "category": "code",
+    "rating": 4.5
   },
   {
     "id": "codebuddy-ide",
@@ -9015,7 +9779,8 @@
       "比赛",
       "应用部署"
     ],
-    "category": "other"
+    "category": "code",
+    "rating": 4.5
   },
   {
     "id": "moonshotai-kimi-k2--kimi-k2-is-the-large",
@@ -9027,7 +9792,8 @@
       "比赛",
       "应用部署"
     ],
-    "category": "other"
+    "category": "chat",
+    "rating": 4.5
   },
   {
     "id": "workflows---n8n",
@@ -9039,7 +9805,8 @@
       "比赛",
       "应用部署"
     ],
-    "category": "other"
+    "category": "automation",
+    "rating": 4.5
   },
   {
     "id": "vercel",
@@ -9051,7 +9818,8 @@
       "比赛",
       "应用部署"
     ],
-    "category": "other"
+    "category": "other",
+    "rating": 4.5
   },
   {
     "id": "cloudflare-dashboard---manage-your-accou",
@@ -9063,7 +9831,8 @@
       "比赛",
       "应用部署"
     ],
-    "category": "other"
+    "category": "other",
+    "rating": 4.5
   },
   {
     "id": "neon-gemini-runner",
@@ -9075,7 +9844,8 @@
       "比赛",
       "应用部署"
     ],
-    "category": "other"
+    "category": "chat",
+    "rating": 4.5
   },
   {
     "id": "alphaqubit--quantum-error-decoding",
@@ -9087,7 +9857,8 @@
       "比赛",
       "应用部署"
     ],
-    "category": "other"
+    "category": "finance",
+    "rating": 4.5
   },
   {
     "id": "cursorweb2api---cloudstudio",
@@ -9099,7 +9870,8 @@
       "比赛",
       "应用部署"
     ],
-    "category": "other"
+    "category": "code",
+    "rating": 4.5
   },
   {
     "id": "cloud-studio---新一代ai应用学习社区",
@@ -9110,7 +9882,8 @@
       "书签栏",
       "比赛"
     ],
-    "category": "other"
+    "category": "learning",
+    "rating": 4.5
   },
   {
     "id": "nano-banana-hackathon---kaggle",
@@ -9121,7 +9894,8 @@
       "书签栏",
       "比赛"
     ],
-    "category": "other"
+    "category": "other",
+    "rating": 4.5
   },
   {
     "id": "hull-tactical---market-prediction---kagg",
@@ -9132,7 +9906,8 @@
       "书签栏",
       "比赛"
     ],
-    "category": "other"
+    "category": "video",
+    "rating": 4.5
   },
   {
     "id": "高德空间智能开发者大赛",
@@ -9143,7 +9918,8 @@
       "书签栏",
       "比赛"
     ],
-    "category": "other"
+    "category": "code",
+    "rating": 4.5
   },
   {
     "id": "骁龙大赛复赛提交入口",
@@ -9154,7 +9930,8 @@
       "书签栏",
       "比赛"
     ],
-    "category": "other"
+    "category": "other",
+    "rating": 4.5
   },
   {
     "id": "aipc-端侧视频助手方案补充---豆包",
@@ -9165,7 +9942,8 @@
       "书签栏",
       "比赛"
     ],
-    "category": "other"
+    "category": "chat",
+    "rating": 4.5
   },
   {
     "id": "nutriguardian---kaggle",
@@ -9176,7 +9954,8 @@
       "书签栏",
       "比赛"
     ],
-    "category": "other"
+    "category": "other",
+    "rating": 4.5
   },
   {
     "id": "predicting-heart-disease---kaggle",
@@ -9187,7 +9966,8 @@
       "书签栏",
       "比赛"
     ],
-    "category": "other"
+    "category": "video",
+    "rating": 4.5
   },
   {
     "id": "recod-ai-luc---scientific-image-forgery-",
@@ -9198,7 +9978,8 @@
       "书签栏",
       "比赛"
     ],
-    "category": "other"
+    "category": "research",
+    "rating": 4.5
   },
   {
     "id": "cvpr-2026-ntire-第三届真实场景图像复原-raim-挑战赛震撼启动",
@@ -9209,7 +9990,8 @@
       "书签栏",
       "比赛"
     ],
-    "category": "other"
+    "category": "image",
+    "rating": 4.5
   },
   {
     "id": "数字中国创新大赛",
@@ -9220,7 +10002,8 @@
       "书签栏",
       "比赛"
     ],
-    "category": "other"
+    "category": "video",
+    "rating": 4.5
   },
   {
     "id": "基于多模态大模型的场景文本图像伪造分析-赛道详情---数字中国",
@@ -9231,7 +10014,8 @@
       "书签栏",
       "比赛"
     ],
-    "category": "other"
+    "category": "chat",
+    "rating": 4.5
   },
   {
     "id": "ai赋能数据全链路应用与实践-赛道详情---数字中国",
@@ -9242,7 +10026,8 @@
       "书签栏",
       "比赛"
     ],
-    "category": "other"
+    "category": "video",
+    "rating": 4.5
   },
   {
     "id": "跨境数据合规流通与智能应用创新-赛道详情---数字中国",
@@ -9253,7 +10038,8 @@
       "书签栏",
       "比赛"
     ],
-    "category": "other"
+    "category": "video",
+    "rating": 4.5
   },
   {
     "id": "flagos开放计算全球挑战赛",
@@ -9264,7 +10050,8 @@
       "书签栏",
       "比赛"
     ],
-    "category": "other"
+    "category": "other",
+    "rating": 4.5
   },
   {
     "id": "数智化产业互联网平台创新与应用-赛道详情---数字中国",
@@ -9275,7 +10062,8 @@
       "书签栏",
       "比赛"
     ],
-    "category": "other"
+    "category": "video",
+    "rating": 4.5
   },
   {
     "id": "数字文旅赛道-赛道详情---数字中国",
@@ -9286,7 +10074,8 @@
       "书签栏",
       "比赛"
     ],
-    "category": "other"
+    "category": "video",
+    "rating": 4.5
   },
   {
     "id": "2026数字中国创新大赛-智能科技赛道-赛道详情---数字中国",
@@ -9297,7 +10086,8 @@
       "书签栏",
       "比赛"
     ],
-    "category": "other"
+    "category": "video",
+    "rating": 4.5
   },
   {
     "id": "轻型新能源厢式货车的车险经营困境",
@@ -9308,7 +10098,8 @@
       "书签栏",
       "比赛"
     ],
-    "category": "other"
+    "category": "other",
+    "rating": 4.5
   },
   {
     "id": "多模态医学数据治理赋能生物医学创新",
@@ -9319,7 +10110,8 @@
       "书签栏",
       "比赛"
     ],
-    "category": "other"
+    "category": "data",
+    "rating": 4.5
   },
   {
     "id": "基于真实世界临床对话数据的深度治理与价值挖掘",
@@ -9330,7 +10122,8 @@
       "书签栏",
       "比赛"
     ],
-    "category": "other"
+    "category": "chat",
+    "rating": 4.5
   },
   {
     "id": "输电线路巡检缺陷数据集构建",
@@ -9341,7 +10134,8 @@
       "书签栏",
       "比赛"
     ],
-    "category": "other"
+    "category": "data",
+    "rating": 4.5
   },
   {
     "id": "淋巴造血系统肿瘤micm医学高质量数据集构建",
@@ -9352,7 +10146,8 @@
       "书签栏",
       "比赛"
     ],
-    "category": "other"
+    "category": "data",
+    "rating": 4.5
   },
   {
     "id": "基于aigc背景下的广东重点产业人才供需适配应用研究赛题",
@@ -9363,7 +10158,8 @@
       "书签栏",
       "比赛"
     ],
-    "category": "other"
+    "category": "research",
+    "rating": 4.5
   },
   {
     "id": "ai赋能智能终端pcb高效设计创新实践",
@@ -9374,7 +10170,8 @@
       "书签栏",
       "比赛"
     ],
-    "category": "other"
+    "category": "image",
+    "rating": 4.5
   },
   {
     "id": "phet-免费的在线物理-化学-生物-地理及数学仿真程序",
@@ -9385,7 +10182,8 @@
       "书签栏",
       "互动教材"
     ],
-    "category": "other"
+    "category": "other",
+    "rating": 4.5
   },
   {
     "id": "国家中小学智慧教育平台",
@@ -9396,7 +10194,8 @@
       "书签栏",
       "互动教材"
     ],
-    "category": "other"
+    "category": "learning",
+    "rating": 4.5
   },
   {
     "id": "provider-平台",
@@ -9406,7 +10205,8 @@
     "tags": [
       "书签栏"
     ],
-    "category": "other"
+    "category": "code",
+    "rating": 4.5
   },
   {
     "id": "证券创新挑战赛",
@@ -9416,7 +10216,8 @@
     "tags": [
       "书签栏"
     ],
-    "category": "other"
+    "category": "finance",
+    "rating": 4.5
   },
   {
     "id": "火山openclaw",
@@ -9426,7 +10227,8 @@
     "tags": [
       "书签栏"
     ],
-    "category": "other"
+    "category": "other",
+    "rating": 4.5
   },
   {
     "id": "中国版权登记业务平台",
@@ -9436,7 +10238,8 @@
     "tags": [
       "书签栏"
     ],
-    "category": "other"
+    "category": "other",
+    "rating": 4.5
   },
   {
     "id": "osome-hassle-free-incorporation-and-acco",
@@ -9447,7 +10250,8 @@
       "书签栏",
       "海外赚钱"
     ],
-    "category": "other"
+    "category": "other",
+    "rating": 4.5
   },
   {
     "id": "概览---jumpserver-开源堡垒机",
@@ -9457,7 +10261,8 @@
     "tags": [
       "书签栏"
     ],
-    "category": "other"
+    "category": "other",
+    "rating": 4.5
   },
   {
     "id": "百度热搜",
@@ -9465,7 +10270,8 @@
     "url": "https://top.baidu.com/board?tab=homepage",
     "desc": "百度热搜",
     "tags": [],
-    "category": "other"
+    "category": "other",
+    "rating": 4.5
   },
   {
     "id": "初中综合素质",
@@ -9473,7 +10279,8 @@
     "url": "https://gl.gdedu.gov.cn/ac/",
     "desc": "初中综合素质",
     "tags": [],
-    "category": "other"
+    "category": "other",
+    "rating": 4.5
   },
   {
     "id": "公共住房保障",
@@ -9481,7 +10288,8 @@
     "url": "https://zjj.sz.gov.cn/zfxx/ggfw/index.html#/dist/new/confirmRent",
     "desc": "公共住房保障",
     "tags": [],
-    "category": "other"
+    "category": "other",
+    "rating": 4.5
   },
   {
     "id": "欢迎使用综合素质评价系统",
@@ -9489,7 +10297,8 @@
     "url": "https://czzp.gdedu.gov.cn/czzhszpj/web/csbg/xsCsbgMenu.htm",
     "desc": "欢迎使用综合素质评价系统",
     "tags": [],
-    "category": "other"
+    "category": "other",
+    "rating": 4.5
   },
   {
     "id": "京东读书",
@@ -9497,7 +10306,8 @@
     "url": "https://e-m.jd.com/bookshelf",
     "desc": "京东读书",
     "tags": [],
-    "category": "other"
+    "category": "other",
+    "rating": 4.5
   },
   {
     "id": "精选特惠购买",
@@ -9505,7 +10315,8 @@
     "url": "https://wuying.aliyun.com/HDXEngine.html?launchid=1674961811031#type=message&engineType=HTML5Engine",
     "desc": "精选特惠购买",
     "tags": [],
-    "category": "other"
+    "category": "other",
+    "rating": 4.5
   },
   {
     "id": "深圳公积金业务在线办理系统",
@@ -9513,7 +10324,8 @@
     "url": "https://gjj-zxbl.zjj.sz.gov.cn/ish#/",
     "desc": "深圳公积金业务在线办理系统",
     "tags": [],
-    "category": "other"
+    "category": "other",
+    "rating": 4.5
   },
   {
     "id": "深圳市市场监督管理局商事主体恢复记载于商事登记簿-移出经营异常名录-申请",
@@ -9521,7 +10333,8 @@
     "url": "https://amr.sz.gov.cn/ycmlmis.webui/YCMLYCSQ.aspx",
     "desc": "深圳市市场监督管理局商事主体恢复记载于商事登记簿（移出经营异常名录）申请",
     "tags": [],
-    "category": "other"
+    "category": "other",
+    "rating": 4.5
   },
   {
     "id": "深圳市统一电子印章管理系统",
@@ -9529,7 +10342,8 @@
     "url": "https://amr.sz.gov.cn/elecseal/seal-web/web/#/home",
     "desc": "深圳市统一电子印章管理系统",
     "tags": [],
-    "category": "other"
+    "category": "other",
+    "rating": 4.5
   },
   {
     "id": "深圳税务",
@@ -9537,7 +10351,8 @@
     "url": "https://etax.shenzhen.chinatax.gov.cn/bszm-web/apps/views/beforeLogin/indexBefore/pageIndex.html#/",
     "desc": "深圳税务",
     "tags": [],
-    "category": "other"
+    "category": "other",
+    "rating": 4.5
   },
   {
     "id": "深i企",
@@ -9545,7 +10360,8 @@
     "url": "https://www.szsiq.com/#/",
     "desc": "深i企",
     "tags": [],
-    "category": "other"
+    "category": "other",
+    "rating": 4.5
   },
   {
     "id": "市场监督",
@@ -9553,7 +10369,8 @@
     "url": "http://amr.sz.gov.cn/",
     "desc": "市场监督",
     "tags": [],
-    "category": "other"
+    "category": "other",
+    "rating": 4.5
   },
   {
     "id": "首页---中国进出口商品交易会-广交会官方网站-",
@@ -9561,7 +10378,8 @@
     "url": "https://www.cantonfair.org.cn/",
     "desc": "首页 - 中国进出口商品交易会（广交会官方网站）",
     "tags": [],
-    "category": "other"
+    "category": "finance",
+    "rating": 4.5
   },
   {
     "id": "微信读书",
@@ -9569,7 +10387,8 @@
     "url": "https://weread.qq.com/web/shelf",
     "desc": "微信读书",
     "tags": [],
-    "category": "other"
+    "category": "other",
+    "rating": 4.5
   },
   {
     "id": "下载中心---通达信软件---深圳市财富趋势科技股份有限公司",
@@ -9577,7 +10396,8 @@
     "url": "https://www.tdx.com.cn/soft.html",
     "desc": "下载中心 - 通达信软件 - 深圳市财富趋势科技股份有限公司",
     "tags": [],
-    "category": "other"
+    "category": "other",
+    "rating": 4.5
   },
   {
     "id": "云电脑免费体验_云桌面_安全办公_pc租赁-阿里云",
@@ -9585,7 +10405,8 @@
     "url": "https://www.aliyun.com/activity/creativity/wuying",
     "desc": "云电脑免费体验_云桌面_安全办公_PC租赁-阿里云",
     "tags": [],
-    "category": "other"
+    "category": "productivity",
+    "rating": 4.5
   },
   {
     "id": "在线签章",
@@ -9593,7 +10414,8 @@
     "url": "https://amr.sz.gov.cn/elecseal/seal-web//web/#/sealPdf/",
     "desc": "在线签章",
     "tags": [],
-    "category": "other"
+    "category": "other",
+    "rating": 4.5
   },
   {
     "id": "珠海市教育局网站",
@@ -9601,7 +10423,8 @@
     "url": "http://zhjy.zhuhai.gov.cn/",
     "desc": "珠海市教育局网站",
     "tags": [],
-    "category": "other"
+    "category": "learning",
+    "rating": 4.5
   },
   {
     "id": "珠海市中考管理系统",
@@ -9609,7 +10432,8 @@
     "url": "http://59.38.32.157:8280/zh2024/",
     "desc": "珠海市中考管理系统",
     "tags": [],
-    "category": "other"
+    "category": "other",
+    "rating": 4.5
   },
   {
     "id": "qq邮箱---写信",
@@ -9617,7 +10441,8 @@
     "url": "https://mail.qq.com/cgi-bin/frame_html?sid=KMKmSsGnw3TCdSZF&r=d5aa14b30a27009c649476085ccff2e8&lang=zh",
     "desc": "QQ邮箱 - 写信",
     "tags": [],
-    "category": "other"
+    "category": "other",
+    "rating": 4.5
   },
   {
     "id": "zecde80lf9l4hndoyo1zkz",
@@ -9625,7 +10450,8 @@
     "url": "https://wuying.aliyun.com/HDXEngine.html?launchid=1650894221924#type=message&engineType=HTML5Engine",
     "desc": "Zecde80lf9l4hndoyo1zkZ",
     "tags": [],
-    "category": "other"
+    "category": "other",
+    "rating": 4.5
   },
   {
     "id": "星火网校-中小学在线辅导品牌",
@@ -9633,7 +10459,8 @@
     "url": "https://www.xhwx100.com/",
     "desc": "星火网校-中小学在线辅导品牌",
     "tags": [],
-    "category": "other"
+    "category": "chat",
+    "rating": 4.5
   },
   {
     "id": "to-do",
@@ -9641,7 +10468,8 @@
     "url": "https://to-do.live.com/tasks/",
     "desc": "To Do",
     "tags": [],
-    "category": "other"
+    "category": "other",
+    "rating": 4.5
   },
   {
     "id": "jpg转pdf_在线免费图片转换成pdf_图片转换成pdf格式在线转换器",
@@ -9649,7 +10477,8 @@
     "url": "https://www.camscanner.com/pictopdf",
     "desc": "JPG转PDF_在线免费图片转换成pdf_图片转换成pdf格式在线转换器",
     "tags": [],
-    "category": "other"
+    "category": "image",
+    "rating": 4.5
   },
   {
     "id": "全国在线律师免费咨询-律师24小时在线解答-律总管",
@@ -9657,7 +10486,8 @@
     "url": "https://www.dalvlaw.com/question/add/",
     "desc": "全国在线律师免费咨询，律师24小时在线解答-律总管",
     "tags": [],
-    "category": "other"
+    "category": "other",
+    "rating": 4.5
   },
   {
     "id": "扣子--付费模板",
@@ -9665,7 +10495,8 @@
     "url": "https://www.coze.cn/docs/guides/template_challenge?utm_source=1024",
     "desc": "扣子 -付费模板",
     "tags": [],
-    "category": "other"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "会员数据服务",
@@ -9673,7 +10504,8 @@
     "url": "https://mip.sseinfo.com/sc/login?redirect=%2Findex",
     "desc": "会员数据服务",
     "tags": [],
-    "category": "other"
+    "category": "data",
+    "rating": 4.5
   },
   {
     "id": "上海证券交易所投资者认证及分级测试系统",
@@ -9681,7 +10513,8 @@
     "url": "http://edu.sse.com.cn/optioncourses/",
     "desc": "上海证券交易所投资者认证及分级测试系统",
     "tags": [],
-    "category": "other"
+    "category": "finance",
+    "rating": 4.5
   },
   {
     "id": "国家知识产权局商标局-中国商标网",
@@ -9689,7 +10522,8 @@
     "url": "https://sbj.cnipa.gov.cn/sbj/index.html",
     "desc": "国家知识产权局商标局 中国商标网",
     "tags": [],
-    "category": "other"
+    "category": "learning",
+    "rating": 4.5
   },
   {
     "id": "光伏产业链企业谱图-来源-能源电力说-光伏产业链全景图-光伏产业以硅为主线-上中",
@@ -9699,7 +10533,8 @@
     "tags": [
       "光伏"
     ],
-    "category": "other"
+    "category": "other",
+    "rating": 4.5
   },
   {
     "id": "储能集成面临的三大难题与破局--近年来-随着光伏-风力发电等-新能源-项目的快速",
@@ -9709,7 +10544,8 @@
     "tags": [
       "光伏"
     ],
-    "category": "other"
+    "category": "automation",
+    "rating": 4.5
   },
   {
     "id": "亚马逊欧洲电商市场热销新趋势-太阳能产品搜索量暴增1123--",
@@ -9719,7 +10555,8 @@
     "tags": [
       "光伏"
     ],
-    "category": "other"
+    "category": "search",
+    "rating": 4.5
   },
   {
     "id": "太阳能",
@@ -9729,7 +10566,8 @@
     "tags": [
       "光伏"
     ],
-    "category": "other"
+    "category": "other",
+    "rating": 4.5
   },
   {
     "id": "分布式光伏-中标-招标采购导航网-招标采购行业指定平台",
@@ -9739,7 +10577,8 @@
     "tags": [
       "光伏"
     ],
-    "category": "other"
+    "category": "other",
+    "rating": 4.5
   },
   {
     "id": "-光伏发电加盟费-光伏发电加盟费是多少钱-总投资21-89万元----加盟费查询",
@@ -9749,7 +10588,8 @@
     "tags": [
       "光伏"
     ],
-    "category": "other"
+    "category": "finance",
+    "rating": 4.5
   },
   {
     "id": "太阳能光伏发电",
@@ -9759,7 +10599,8 @@
     "tags": [
       "光伏"
     ],
-    "category": "other"
+    "category": "other",
+    "rating": 4.5
   },
   {
     "id": "隆基光伏板招商加盟-加盟费用-代理条件-电话-51加盟网",
@@ -9769,7 +10610,8 @@
     "tags": [
       "光伏"
     ],
-    "category": "other"
+    "category": "other",
+    "rating": 4.5
   },
   {
     "id": "加盟星平台_一站式招商加盟服务平台_直达全网优质加盟创业项目",
@@ -9779,7 +10621,8 @@
     "tags": [
       "光伏"
     ],
-    "category": "other"
+    "category": "other",
+    "rating": 4.5
   },
   {
     "id": "solar-panels---tesla",
@@ -9789,7 +10632,8 @@
     "tags": [
       "光伏"
     ],
-    "category": "other"
+    "category": "other",
+    "rating": 4.5
   },
   {
     "id": "红书文案图文大师---扣子-ai-bot",
@@ -9797,7 +10641,8 @@
     "url": "https://www.coze.cn/store/bot/7395108203241177142?bid=6d86vv5kg2009&panel=1",
     "desc": "红书文案图文大师 - 扣子 AI Bot",
     "tags": [],
-    "category": "other"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "扣子",
@@ -9805,7 +10650,8 @@
     "url": "https://www.coze.cn/store/bot/7384660213225422898?bid=6d8i746ig201k&panel=1",
     "desc": "扣子",
     "tags": [],
-    "category": "other"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "红书微信一键发---扣子-ai-bot",
@@ -9813,7 +10659,8 @@
     "url": "https://www.coze.cn/store/bot/7392862053352013862?panel=1",
     "desc": "红书微信一键发 - 扣子 AI Bot",
     "tags": [],
-    "category": "other"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "读书变强---扣子-ai-bot",
@@ -9821,7 +10668,8 @@
     "url": "https://www.coze.cn/store/bot/7396649399365140530?panel=1",
     "desc": "读书变强 - 扣子 AI Bot",
     "tags": [],
-    "category": "other"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "文心智能体平台agentbuilder---想象即现实",
@@ -9829,7 +10677,8 @@
     "url": "https://agents.baidu.com/center",
     "desc": "文心智能体平台AgentBuilder | 想象即现实",
     "tags": [],
-    "category": "other"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "coze-智能体专家---扣子-ai-bot",
@@ -9837,7 +10686,8 @@
     "url": "https://www.coze.cn/store/bot/7399602556843933748?panel=1",
     "desc": "COZE 智能体专家 - 扣子 AI Bot",
     "tags": [],
-    "category": "other"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "logomaster---扣子-ai-bot",
@@ -9845,7 +10695,8 @@
     "url": "https://www.coze.cn/store/bot/7400995524549230646?panel=1",
     "desc": "LogoMaster - 扣子 AI Bot",
     "tags": [],
-    "category": "other"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "毒舌罗伯特---扣子-ai-bot",
@@ -9853,7 +10704,8 @@
     "url": "https://www.coze.cn/store/bot/7402460336659464211?panel=1",
     "desc": "毒舌罗伯特 - 扣子 AI Bot",
     "tags": [],
-    "category": "other"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "bots---扣子",
@@ -9861,7 +10713,8 @@
     "url": "https://www.coze.cn/space/7384658849845968948/bot",
     "desc": "Bots - 扣子",
     "tags": [],
-    "category": "other"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "游小助---扣子-ai-bot",
@@ -9869,7 +10722,8 @@
     "url": "https://www.coze.cn/store/bot/7403356430759395391?panel=1",
     "desc": "游小助 - 扣子 AI Bot",
     "tags": [],
-    "category": "other"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "慧眼金句-思维导图---扣子-ai-bot",
@@ -9877,7 +10731,8 @@
     "url": "https://www.coze.cn/store/bot/7403301993374122023?panel=1",
     "desc": "慧眼金句·思维导图 - 扣子 AI Bot",
     "tags": [],
-    "category": "other"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "ai教练---扣子-ai-bot",
@@ -9885,7 +10740,8 @@
     "url": "https://www.coze.cn/store/bot/7404346762414145574?panel=1",
     "desc": "AI教练 - 扣子 AI Bot",
     "tags": [],
-    "category": "other"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "收藏夹---扣子-ai-智能体",
@@ -9893,7 +10749,8 @@
     "url": "https://www.coze.cn/store/agent/7432510717527982114?bot_id=true",
     "desc": "收藏夹 - 扣子 AI 智能体",
     "tags": [],
-    "category": "other"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "扣子",
@@ -9901,7 +10758,8 @@
     "url": "https://www.coze.cn/store/project/7447996250823278601?bid=6eoab0aao701m&entity_id=1",
     "desc": "扣子",
     "tags": [],
-    "category": "other"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "https---www-coze-cn-store-agent-74541271",
@@ -9909,7 +10767,8 @@
     "url": "https://www.coze.cn/store/agent/7454127157313732660?bot_id=true",
     "desc": "https://www.coze.cn/store/agent/7454127157313732660?bot_id=true",
     "tags": [],
-    "category": "other"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "智能体调优---文心智能体平台文档中心",
@@ -9917,7 +10776,8 @@
     "url": "https://agents.baidu.com/docs/intelligent-agent/tuning/",
     "desc": "智能体调优 - 文心智能体平台文档中心",
     "tags": [],
-    "category": "other"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "账号登录-火山引擎",
@@ -9925,7 +10785,8 @@
     "url": "https://console.volcengine.com/auth/login/?coze_env=release&new_entry=1&redirectURI=https%3A%2F%2Fsignin.volcengine.com%2Fapi%2Fpassport%2Fsso%2FOIDCAuth%3Fclient_id%3D490362313be302cd4bf07a084b99dbdf%26response_type%3Dcode%26redirect_uri%3Dhttps%253A%252F%252Fsignin.volcengine.com%252Fapi%252Fpassport%252FcloudIdentity%252Fpassport%252Fcallback%26state%3D%25257B%252522platform%252522%25253A%252522eps_cloud_identity%252522%25252C%252522navigatePath%252522%25253A%252522%25252Fspace-preview%25253Flogin_from%253Dspace_landing%2526open%253D1%252522%25252C%252522type%252522%25253A%252522login%252522%25257D%2526redirect_uri%253Dhttps%25253A%25252F%25252Fsignin-saas.volccloudidentity.com%25252Fapi%25252Fcloudidentity%25252Fauthorize%25252FfederateOAuth%25253Fclient_id%25253D9836804098%252526coze_env%25253Drelease%252526new_entry%25253D1%252526redirect_uri%25253Dhttps%2525253A%2525252F%2525252Fwww.coze.cn%2525252Fauth%2525252Fcallback%252526response_type%25253Dcode%252526scenario%25253Dcoze%252526state%25253D%2525257B%25252522platform%25252522%2525253A%25252522eps_cloud_identity%25252522%2525252C%25252522navigatePath%25252522%2525253A%25252522%2525252Fspace-preview%2525253Flogin_from%2525253Dspace_landing%25252526open%2525253D1%25252522%2525252C%25252522type%25252522%2525253A%25252522login%25252522%2525257D%2526client_id%253D9836804098%2526scenario%253Dcoze%26scenario%3Dcoze%26utm_source%3Dcoze%26utm_medium%3Dcoze_fusion%26utm_term%3Dcoze_signin%26utm_campaign%3Dfrom_coze%26utm_content%3Dcoze_signin%26new_entry%3D1%26c",
     "desc": "账号登录-火山引擎",
     "tags": [],
-    "category": "other"
+    "category": "other",
+    "rating": 4.5
   },
   {
     "id": "--clawbot",
@@ -9933,7 +10794,8 @@
     "url": "http://localhost:8891/",
     "desc": "🤖 ClawBot",
     "tags": [],
-    "category": "other"
+    "category": "agent",
+    "rating": 4.5
   },
   {
     "id": "topgo全能专家---扣子-ai-bot",
@@ -9941,6 +10803,7 @@
     "url": "https://www.coze.cn/store/bot/7384660213225422898?panel=1&bid=6d9j9dbs4000c",
     "desc": "TOPGO全能专家 - 扣子 AI Bot",
     "tags": [],
-    "category": "other"
+    "category": "agent",
+    "rating": 4.5
   }
 ]

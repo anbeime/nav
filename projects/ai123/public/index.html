@@ -244,21 +244,22 @@
 <script>
 const CATEGORIES = {
     'all': {name:'全部工具',icon:'*'},
-    'chat': {name:'AI对话',icon:'C'},
     'agent': {name:'智能体',icon:'B'},
-    'image': {name:'AI绘画',icon:'I'},
-    'video': {name:'AI视频',icon:'V'},
-    'audio': {name:'AI音频',icon:'A'},
-    'code': {name:'AI编程',icon:'D'},
-    'writing': {name:'AI写作',icon:'W'},
-    'search': {name:'AI搜索',icon:'S'},
     'finance': {name:'金融量化',icon:'Q'},
+    'marketing': {name:'营销推广',icon:'M'},
+    'video': {name:'AI视频',icon:'V'},
+    'code': {name:'AI编程',icon:'D'},
+    'image': {name:'AI绘画',icon:'I'},
+    'chat': {name:'AI对话',icon:'C'},
+    'writing': {name:'AI写作',icon:'W'},
+    'audio': {name:'AI音频',icon:'A'},
+    'learning': {name:'学习教程',icon:'L'},
+    'data': {name:'数据分析',icon:'X'},
+    'productivity': {name:'效率工具',icon:'P'},
+    'search': {name:'AI搜索',icon:'S'},
     'automation': {name:'自动化',icon:'Z'},
     'research': {name:'学术研究',icon:'R'},
-    'other': {name:'其他工具',icon:'+'},
-    'productivity': {name:'效率工具',icon:'P'},
-    'dev-tools': {name:'开发工具',icon:'X'},
-    'design': {name:'设计工具',icon:'E'}
+    'other': {name:'其他工具',icon:'+'}
 };
 
 // 内置工具数据（确保本地和线上都能正常显示）
@@ -434,7 +435,12 @@ function createToolCard(tool) {
 
 // 分类图标
 function getIcon(cat) {
-    const icons = {'chat':'C','code':'D','image':'I','video':'V','audio':'A','search':'S','agent':'B','productivity':'P','dev-tools':'X','design':'E','writing':'W','automation':'Z','finance':'Q','research':'R','other':'+'};
+    const icons = {
+        'agent':'B','finance':'Q','marketing':'M','video':'V','code':'D',
+        'image':'I','chat':'C','writing':'W','audio':'A','learning':'L',
+        'data':'X','productivity':'P','search':'S','automation':'Z',
+        'research':'R','other':'+'
+    };
     return icons[cat]||'?';
 }
 
