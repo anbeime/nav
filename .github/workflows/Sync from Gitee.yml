@@ -1,4 +1,4 @@
-name: Sync from GitCode
+name: Sync from Gitee (aitools)
 
 on:
   schedule:
@@ -16,8 +16,8 @@ permissions:
   contents: write
 
 env:
-  # 源仓库地址 (GitCode)
-  SOURCE_REPO: https://gitcode.com/sscc001/ai123.git
+  # 源仓库地址 (Gitee)
+  SOURCE_REPO: https://gitee.com/anbeime/aitools.git
   # 目标仓库的默认分支
   TARGET_BRANCH: main
   # 动态获取输入的分支，如果没有则使用默认值
@@ -41,7 +41,7 @@ jobs:
 
       - name: 🔗 Add Source Remote and Fetch
         run: |
-          # 添加 GitCode 源仓库
+          # 添加 Gitee 源仓库
           git remote add source ${{ env.SOURCE_REPO }}
           # 获取源仓库和目标仓库的指定分支
           git fetch source ${{ env.SOURCE_BRANCH }}
@@ -54,7 +54,7 @@ jobs:
           SOURCE_COMMIT=$(git rev-parse source/${{ env.SOURCE_BRANCH }})
           TARGET_COMMIT=$(git rev-parse origin/${{ env.TARGET_BRANCH }})
           
-          echo "Source (GitCode) commit: $SOURCE_COMMIT"
+          echo "Source (Gitee) commit: $SOURCE_COMMIT"
           echo "Target (GitHub) commit: $TARGET_COMMIT"
           
           # 比较 Commit Hash 判断是否有更新
@@ -74,7 +74,7 @@ jobs:
           git config pull.rebase false
           
           # 将源仓库的更改合并到当前分支
-          git merge source/${{ env.SOURCE_BRANCH }} -m "sync: merge updates from GitCode
+          git merge source/${{ env.SOURCE_BRANCH }} -m "sync: merge updates from Gitee
           
           Source: ${{ env.SOURCE_REPO }}
           Commit: ${{ steps.check_updates.outputs.source_commit }}"
@@ -88,19 +88,19 @@ jobs:
             git pull origin ${{ env.TARGET_BRANCH }} --no-rebase || git pull origin ${{ env.TARGET_BRANCH }} --rebase
             git push origin ${{ env.TARGET_BRANCH }}
           fi
-          echo " Successfully synced from GitCode to GitHub!"
+          echo " Successfully synced from Gitee to GitHub!"
 
       - name: 📊 Create Sync Summary (Updated)
         if: steps.check_updates.outputs.has_updates == 'true'
         run: |
           echo "## 🔄 Sync Summary" >> "$GITHUB_STEP_SUMMARY"
           echo "" >> "$GITHUB_STEP_SUMMARY"
-          echo "✅ **Status:** Successfully synced from GitCode to GitHub" >> "$GITHUB_STEP_SUMMARY"
+          echo "✅ **Status:** Successfully synced from Gitee to GitHub" >> "$GITHUB_STEP_SUMMARY"
           echo "" >> "$GITHUB_STEP_SUMMARY"
           echo "| Repository | Info |" >> "$GITHUB_STEP_SUMMARY"
           echo "| :--- | :--- |" >> "$GITHUB_STEP_SUMMARY"
-          echo "| **Source:** | [sscc001/ai123](https://gitcode.com/sscc001/ai123) |" >> "$GITHUB_STEP_SUMMARY"
-          echo "| **Target:** | [anbeime/nav](https://github.com/anbeime/nav) |" >> "$GITHUB_STEP_SUMMARY"
+          echo "| **Source:** | <anbeime/aitools> |" >> "$GITHUB_STEP_SUMMARY"
+          echo "| **Target:** | <anbeime/nav> |" >> "$GITHUB_STEP_SUMMARY"
           echo "| **Branch:** | ${{ env.SOURCE_BRANCH }} → ${{ env.TARGET_BRANCH }} |" >> "$GITHUB_STEP_SUMMARY"
           echo "| **Commit:** | \`${{ steps.check_updates.outputs.source_commit }}\` |" >> "$GITHUB_STEP_SUMMARY"
           echo "| **Time:** | $(date -u '+%Y-%m-%d %H:%M:%S UTC') |" >> "$GITHUB_STEP_SUMMARY"
@@ -112,6 +112,6 @@ jobs:
           echo "" >> "$GITHUB_STEP_SUMMARY"
           echo "ℹ️ **Status:** No updates found. Repositories are already in sync." >> "$GITHUB_STEP_SUMMARY"
           echo "" >> "$GITHUB_STEP_SUMMARY"
-          echo "- **Source:** [sscc001/ai123](https://gitcode.com/sscc001/ai123)" >> "$GITHUB_STEP_SUMMARY"
-          echo "- **Target:** [anbeime/nav](https://github.com/anbeime/nav)" >> "$GITHUB_STEP_SUMMARY"
+          echo "- **Source:** <anbeime/aitools>" >> "$GITHUB_STEP_SUMMARY"
+          echo "- **Target:** <anbeime/nav>" >> "$GITHUB_STEP_SUMMARY"
           echo "- **Last Checked:** $(date -u '+%Y-%m-%d %H:%M:%S UTC')" >> "$GITHUB_STEP_SUMMARY"
