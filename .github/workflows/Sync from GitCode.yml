@@ -1,0 +1,117 @@
+name: Sync from GitCode
+
+on:
+  schedule:
+    # 每天凌晨 2 点触发 (UTC 时间)
+    - cron: '0 2 * * *'
+  workflow_dispatch:
+    inputs:
+      sync_branch:
+        description: '要同步的分支名称 (默认: main)'
+        required: false
+        default: 'main'
+        type: string
+
+permissions:
+  contents: write
+
+env:
+  # 源仓库地址 (GitCode)
+  SOURCE_REPO: https://gitcode.com/sscc001/ai123.git
+  # 目标仓库的默认分支
+  TARGET_BRANCH: main
+  # 动态获取输入的分支，如果没有则使用默认值
+  SOURCE_BRANCH: ${{ github.event.inputs.sync_branch || 'main' }}
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: 🛎️ Checkout GitHub Repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: ⚙️ Configure Git Identity
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: 🔗 Add Source Remote and Fetch
+        run: |
+          # 添加 GitCode 源仓库
+          git remote add source ${{ env.SOURCE_REPO }}
+          # 获取源仓库和目标仓库的指定分支
+          git fetch source ${{ env.SOURCE_BRANCH }}
+          git fetch origin ${{ env.TARGET_BRANCH }}
+
+      - name: 🔍 Check for Updates
+        id: check_updates
+        run: |
+          # 获取两个仓库的最新 Commit Hash
+          SOURCE_COMMIT=$(git rev-parse source/${{ env.SOURCE_BRANCH }})
+          TARGET_COMMIT=$(git rev-parse origin/${{ env.TARGET_BRANCH }})
+          
+          echo "Source (GitCode) commit: $SOURCE_COMMIT"
+          echo "Target (GitHub) commit: $TARGET_COMMIT"
+          
+          # 比较 Commit Hash 判断是否有更新
+          if [ "$SOURCE_COMMIT" = "$TARGET_COMMIT" ]; then
+            echo "No updates found. The repositories are already in sync."
+            echo "has_updates=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "Updates found! Merging changes..."
+            echo "has_updates=true" >> "$GITHUB_OUTPUT"
+            echo "source_commit=$SOURCE_COMMIT" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: 🔄 Merge Source Changes
+        if: steps.check_updates.outputs.has_updates == 'true'
+        run: |
+          # 设置合并策略（禁用 rebase，使用 merge）
+          git config pull.rebase false
+          
+          # 将源仓库的更改合并到当前分支
+          git merge source/${{ env.SOURCE_BRANCH }} -m "sync: merge updates from GitCode
+          
+          Source: ${{ env.SOURCE_REPO }}
+          Commit: ${{ steps.check_updates.outputs.source_commit }}"
+
+      - name: 📤 Push to GitHub
+        if: steps.check_updates.outputs.has_updates == 'true'
+        run: |
+          # 尝试推送，如果失败则拉取最新更改并重试
+          if ! git push origin ${{ env.TARGET_BRANCH }}; then
+            echo "Push failed, attempting to pull and re-merge..."
+            git pull origin ${{ env.TARGET_BRANCH }} --no-rebase || git pull origin ${{ env.TARGET_BRANCH }} --rebase
+            git push origin ${{ env.TARGET_BRANCH }}
+          fi
+          echo " Successfully synced from GitCode to GitHub!"
+
+      - name: 📊 Create Sync Summary (Updated)
+        if: steps.check_updates.outputs.has_updates == 'true'
+        run: |
+          echo "## 🔄 Sync Summary" >> "$GITHUB_STEP_SUMMARY"
+          echo "" >> "$GITHUB_STEP_SUMMARY"
+          echo "✅ **Status:** Successfully synced from GitCode to GitHub" >> "$GITHUB_STEP_SUMMARY"
+          echo "" >> "$GITHUB_STEP_SUMMARY"
+          echo "| Repository | Info |" >> "$GITHUB_STEP_SUMMARY"
+          echo "| :--- | :--- |" >> "$GITHUB_STEP_SUMMARY"
+          echo "| **Source:** | [sscc001/ai123](https://gitcode.com/sscc001/ai123) |" >> "$GITHUB_STEP_SUMMARY"
+          echo "| **Target:** | [anbeime/nav](https://github.com/anbeime/nav) |" >> "$GITHUB_STEP_SUMMARY"
+          echo "| **Branch:** | ${{ env.SOURCE_BRANCH }} → ${{ env.TARGET_BRANCH }} |" >> "$GITHUB_STEP_SUMMARY"
+          echo "| **Commit:** | \`${{ steps.check_updates.outputs.source_commit }}\` |" >> "$GITHUB_STEP_SUMMARY"
+          echo "| **Time:** | $(date -u '+%Y-%m-%d %H:%M:%S UTC') |" >> "$GITHUB_STEP_SUMMARY"
+
+      - name: ℹ️ No Updates Summary
+        if: steps.check_updates.outputs.has_updates == 'false'
+        run: |
+          echo "## 📊 Sync Summary" >> "$GITHUB_STEP_SUMMARY"
+          echo "" >> "$GITHUB_STEP_SUMMARY"
+          echo "ℹ️ **Status:** No updates found. Repositories are already in sync." >> "$GITHUB_STEP_SUMMARY"
+          echo "" >> "$GITHUB_STEP_SUMMARY"
+          echo "- **Source:** [sscc001/ai123](https://gitcode.com/sscc001/ai123)" >> "$GITHUB_STEP_SUMMARY"
+          echo "- **Target:** [anbeime/nav](https://github.com/anbeime/nav)" >> "$GITHUB_STEP_SUMMARY"
+          echo "- **Last Checked:** $(date -u '+%Y-%m-%d %H:%M:%S UTC')" >> "$GITHUB_STEP_SUMMARY"
