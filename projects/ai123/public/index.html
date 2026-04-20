@@ -241,6 +241,9 @@
     </div>
 </div>
 
+<!-- 嵌入式工具数据 -->
+<script src="data/tools_embedded.js"></script>
+
 <script>
 const CATEGORIES = {
     'all': {name:'全部工具',icon:'*'},
@@ -338,24 +341,12 @@ let currentView = 'grid';
 async function loadTools() {
     showLoading();
     try {
-        // 尝试从 JSON 文件加载完整数据（863个工具）
-        let loaded = false;
-        try {
-            const res = await fetch('data/ai-tools-simple.json');
-            if (res.ok) {
-                const data = await res.json();
-                if (data && data.length > 0) {
-                    allTools = data;
-                    loaded = true;
-                    console.log(`已加载 ${data.length} 个工具（来自收藏夹）`);
-                }
-            }
-        } catch (e) {
-            console.log('JSON 加载失败，使用内置数据');
-        }
-        
-        // 回退到内置数据
-        if (!loaded) {
+        // 直接使用嵌入式数据（863个工具）
+        if (typeof BOOKMARK_TOOLS !== 'undefined' && BOOKMARK_TOOLS.length > 0) {
+            allTools = BOOKMARK_TOOLS;
+            console.log(`已加载 ${allTools.length} 个工具（收藏夹数据）`);
+        } else {
+            // 回退到内置数据
             allTools = TOOLS_DATA;
             console.log(`使用内置 ${TOOLS_DATA.length} 个工具`);
         }
@@ -364,6 +355,7 @@ async function loadTools() {
         renderTools();
         updateStats();
     } catch (error) {
+        console.error('加载失败:', error);
         showErrorState();
     }
 }
