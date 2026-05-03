@@ -104,7 +104,7 @@ pre{white-space:pre-wrap;word-break:break-word}#clk{font-size:11.5px;color:var(-
 <div class="ni" data-p="reg"><span class="nic"><i class="fas fa-list-alt"></i></span> 全部注册表</div>
 <div class="ni" data-p="orch"><span class="nic"><i class="fas fa-sync-alt"></i></span> 资源编排中心</div>
 <div class="nl">外部链接</div>
-<div class="ni" onclick="window.open('/voice-integrated.html','_blank')"><span class="nic"><i class="fas fa-home"></i></span> 小易伴侣主页</div>
+<div class="ni" onclick="window.open('/voice.html','_blank')"><span class="nic"><i class="fas fa-home"></i></span> 小易伴侣主页</div>
 </nav>
 <div class="sbf"><div>StarClaw AI Agent System</div><div style="margin-top:3px">基于五层生存驱动架构</div></div>
 </aside>
