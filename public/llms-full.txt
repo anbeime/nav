@@ -1,0 +1,1465 @@
+# llms-full.txt - AI123 AI工具导航 全量精简版
+
+> 全量 863 个 AI 工具，按分类聚合输出
+> 主页: https://ai123.miyucaicai.cn
+> 数据更新: 持续维护
+
+## 分类总览
+
+- 智能体平台 (agent): 300 个
+- AI 金融 (finance): 112 个
+- 其他 (other): 74 个
+- AI 营销 (marketing): 66 个
+- AI 视频 (video): 65 个
+- AI 编程 (code): 56 个
+- AI 绘画 (image): 48 个
+- AI 对话 (chat): 34 个
+- AI 写作 (writing): 33 个
+- AI 语音 (audio): 24 个
+- learning (learning): 19 个
+- data (data): 11 个
+- productivity (productivity): 7 个
+- search (search): 6 个
+- automation (automation): 5 个
+- research (research): 3 个
+
+---
+
+## 智能体平台 (agent)
+
+- **GLM-PC** — https://cogagent.aminer.cn/home
+  GLM-PC
+  tags: 书签栏,AI智能体应用,智谱
+
+- **通义** — https://tongyi.aliyun.com/qianwen/agent/home
+  通义
+  tags: 书签栏,AI智能体应用,阿里
+
+- **阿里云百炼** — https://bailian.console.aliyun.com/#/app-center
+  阿里云百炼
+  tags: 书签栏,AI智能体应用,阿里
+
+- **Qoder - The Agentic Coding Platform** — https://qoder.com/
+  Qoder - The Agentic Coding Platform
+  tags: 书签栏,AI智能体应用,阿里
+
+- **Qoder快速上手文档** — https://docs.qoder.com/
+  Qoder快速上手文档
+  tags: 书签栏,AI智能体应用,阿里
+
+- **通义万相 | 领先的AI视频与图像生成模型** — https://tongyi.aliyun.com/wan/
+  通义万相 | 领先的AI视频与图像生成模型
+  tags: 书签栏,AI智能体应用,阿里
+
+- **灵光全模态AI助手** — https://www.lingguang.com/chat?id=0597d8bf-b614-4e6d-8ed8-153bb827274f
+  灵光全模态AI助手
+  tags: 书签栏,AI智能体应用,阿里
+
+- **Dify.AI · 生成式 AI 应用创新引擎** — https://dify.ai/zh
+  Dify.AI · 生成式 AI 应用创新引擎
+  tags: 书签栏,AI智能体应用,dify
+
+- **彻底告别限制！这个开源神器让你『无限』免费畅用 Gemini 2.5 Pro 模型！** — https://mp.weixin.qq.com/s?__biz=MjM5NDcxNTY5Ng==&mid=2247484174&idx=1&sn=a6e600437b7bf79f1d94f2a22f7c7cc2&chksm=a7d5b18fdfee48d4d9792d5aaff6687ee8bc1616766933b44aee483e9d1b75fa4733838bb324#rd
+  彻底告别限制！这个开源神器让你『无限』免费畅用 Gemini 2.5 Pro 模型！
+  tags: 书签栏,AI智能体应用,google
+
+- **API 库 – API 和服务 – Google Cloud Console** — https://console.cloud.google.com/apis/library?pli=1&inv=1&invt=Ab0r8g
+  API 库 – API 和服务 – Google Cloud Console
+  tags: 书签栏,AI智能体应用,google
+
+- **解决方案 – n8ngooglesheet – Google Cloud Console** — https://console.cloud.google.com/products?inv=1&invt=Ab0r8g&project=animated-tracer-459816-d6
+  解决方案 – n8ngooglesheet – Google Cloud Console
+  tags: 书签栏,AI智能体应用,google
+
+- **Lovart | 全球首个设计智能体** — https://www.lovart.ai/zh
+  Lovart | 全球首个设计智能体
+  tags: 书签栏,AI智能体应用,google
+
+- **谷歌实验室lab** — https://labs.google/experiments
+  谷歌实验室lab
+  tags: 书签栏,AI智能体应用,google
+
+- **NotebookLM** — https://notebooklm.google.com/?icid=home_maincta&_gl=1*1nohmmv*_ga*NjE2NDU3MzY0LjE3NjI1MTM1MTE.*_ga_W0LDH41ZCB*czE3NjI1MTM1MTEkbzEkZzEkdDE3NjI1MTM1MjAkajUxJGwwJGgw&original_referer=https:%2F%2Fnotebooklm.google%23&pli=1
+  NotebookLM
+  tags: 书签栏,AI智能体应用,google
+
+- **Google AI Studio** — https://aistudio.google.com/prompts/new_chat?model=gemini-2.5-pro
+  Google AI Studio
+  tags: 书签栏,AI智能体应用,google
+
+- **文心智能体平台AgentBuilder | 想象即现实** — https://agents.baidu.com/
+  文心智能体平台AgentBuilder | 想象即现实
+  tags: AI智能体应用,百度智能云千帆,文心
+
+- **“百度搜索·文心智能体创新大赛”技术赛道：基于多工具调用的开放域问答智能体构建_飞桨大赛-飞桨AI Studio星河社区** — https://aistudio.baidu.com/competition/detail/1235/0/introduction
+  “百度搜索·文心智能体创新大赛”技术赛道：基于多工具调用的开放域问答智能体构建_飞桨大赛-飞桨AI Studio星河社区
+  tags: AI智能体应用,百度智能云千帆,飞浆
+
+- **2024CSIG-飞桨、工银瑞信金融科技挑战赛初赛数据集_数据集-飞桨AI Studio星河社区** — https://aistudio.baidu.com/datasetdetail/285396
+  2024CSIG-飞桨、工银瑞信金融科技挑战赛初赛数据集_数据集-飞桨AI Studio星河社区
+  tags: AI智能体应用,百度智能云千帆,飞浆
+
+- **飞桨AI Studio-人工智能学习实训社区** — https://aistudio.baidu.com/paddle/forum/
+  飞桨AI Studio-人工智能学习实训社区
+  tags: AI智能体应用,百度智能云千帆,飞浆
+
+- **飞桨AI Studio星河社区-人工智能学习与实训社区** — https://aistudio.baidu.com/community/app/106043/selectedCourses
+  飞桨AI Studio星河社区-人工智能学习与实训社区
+  tags: AI智能体应用,百度智能云千帆,飞浆
+
+- **百度智能云控制台** — https://console.bce.baidu.com/ai_apaas/personalSpace/app
+  百度智能云控制台
+  tags: 书签栏,AI智能体应用,百度智能云千帆
+
+- **智能体调优 - 文心智能体平台文档中心** — https://agents.baidu.com/docs/intelligent-agent/tuning/
+  智能体调优 - 文心智能体平台文档中心
+  tags: 书签栏,AI智能体应用,百度智能云千帆
+
+- **绘想-AI视频创作平台** — https://huixiang.baidu.com/
+  绘想-AI视频创作平台
+  tags: 书签栏,AI智能体应用,百度智能云千帆
+
+- **Bots - 扣子** — https://www.coze.cn/space/7384658849845968948/bot
+  Bots - 扣子
+  tags: 书签栏,AI智能体应用,COZE智能体
+
+- **飞书开放平台** — https://open.feishu.cn/
+  飞书开放平台
+  tags: 书签栏,AI智能体应用,COZE智能体
+
+- **扣子 - 模板案例** — https://www.coze.cn/docs/guides/template_ai_companion
+  扣子 - 模板案例
+  tags: AI智能体应用,COZE智能体,教程
+
+- **案例分享｜工作流** — https://docs.qq.com/doc/DTnRZVEFzWVhaa1lY
+  案例分享｜工作流
+  tags: AI智能体应用,COZE智能体,教程
+
+- **[教学向]我把Coze比赛第一的bot拆了教大家** — https://mp.weixin.qq.com/s?__biz=MzI2Mzg2NzQzNg==&mid=2247484120&idx=1&sn=170363d9da861d0ccfca9bdaba46e1a9&chksm=eab41f9bddc3968d9391bbca4a9552989fb92bd167c91f4242b6cb08ae8c611b283f37927579&cur_album_id=3457801254309543945&scene=189#wechat_redirect
+  [教学向]我把Coze比赛第一的bot拆了教大家
+  tags: AI智能体应用,COZE智能体,教程
+
+- **‍‍⁤⁤﻿‍​﻿‍‍​​﻿‍​​⁤​‍⁢⁢​​​‍‍⁢﻿​‌​‌⁡⁡⁡‬​‍‍‬‍⁣‍​﻿‬⁣​​﻿《舆情管理大师》 工作流思路 - 飞书云文档** — https://waytoagi.feishu.cn/wiki/Rwd7wYcouijdPdkF2Ayc9RlAntg
+  ‍‍⁤⁤﻿‍​﻿‍‍​​﻿‍​​⁤​‍⁢⁢​​​‍‍⁢﻿​‌​‌⁡⁡⁡‬​‍‍‬‍⁣‍​﻿‬⁣​​﻿《舆情管理大师》 工作流思路 - 飞书云文档
+  tags: AI智能体应用,COZE智能体,教程
+
+- **Coze+飞书多维表格，打造 AI 稍后读智能体，解锁 10 倍知识管理效率 - 大模型知识库|大模型训练|开箱即用的企业大模型应用平台|智能体开发|53AI** — https://53ai.com/news/coze/2024081896712.html
+  Coze+飞书多维表格，打造 AI 稍后读智能体，解锁 10 倍知识管理效率 - 大模型知识库|大模型训练|开箱即用的企业大模型应用平台|智能体开发|53AI
+  tags: AI智能体应用,COZE智能体,教程
+
+  *... 此分类还有 270 个工具，详见 https://ai123.miyucaicai.cn/data/tools_embedded.js*
+
+## AI 金融 (finance)
+
+- **强势股回调买入法** — https://mp.weixin.qq.com/s/hcUQRBoM2mDdK-EPxha5ng
+  强势股回调买入法
+  tags: 书签栏,金融智能量化投研
+
+- **TOPGO主升浪神器** — https://mp.weixin.qq.com/s/UDI0SVmEMqoDJAnRKmFdzw
+  TOPGO主升浪神器
+  tags: 书签栏,金融智能量化投研
+
+- **狄耐克股票分析报告** — https://space.coze.cn/web?uri=7516784050246893583%2F%E7%8B%84%E8%80%90%E5%85%8B%E8%82%A1%E7%A5%A8%E5%88%86%E6%9E%90%E6%8A%A5%E5%91%8A-696ccbd740.jsx
+  狄耐克股票分析报告
+  tags: 书签栏,金融智能量化投研,智能研报
+
+- **跨界智驾：通信老兵的车联网创业博弈** — https://space.coze.cn/web?uri=7514947529910861864%2F%E8%B7%A8%E7%95%8C%E6%99%BA%E9%A9%BE%EF%BC%9A%E9%80%9A%E4%BF%A1%E8%80%81%E5%85%B5%E7%9A%84%E8%BD%A6%E8%81%94%E7%BD%91%E5%88%9B%E4%B8%9A%E5%8D%9A%E5%BC%88-6351374963.html
+  跨界智驾：通信老兵的车联网创业博弈
+  tags: 书签栏,金融智能量化投研,智能研报
+
+- **狄耐克（300884）股票全面分析报告.ppt** — https://space.coze.cn/task/7516784050246893583
+  狄耐克（300884）股票全面分析报告.ppt
+  tags: 书签栏,金融智能量化投研,智能研报
+
+- **GitHub量化交易神装详解 | 零基础搭建AI金融大脑** — https://mp.weixin.qq.com/s/pncz7Aux87waEWJ_McrweQ
+  GitHub量化交易神装详解 | 零基础搭建AI金融大脑
+  tags: 书签栏,金融智能量化投研,教程实例源码
+
+- **一键选股神器：用Python+AI打造智能股票分析系统** — https://mp.weixin.qq.com/s/HMDU2pbB1zSRzbGWFdywNQ
+  一键选股神器：用Python+AI打造智能股票分析系统
+  tags: 书签栏,金融智能量化投研,教程实例源码
+
+- **金融舆情分析RAG与时间序列预测融合：下一代量化分析的破局点** — https://mp.weixin.qq.com/s?__biz=MjM5OTA3ODcyMw==&mid=2650330248&idx=1&sn=8577438bdf796cb9d501f731b78dbafb&chksm=becc8aa489bb03b2d0427cfb1aa207ff0f13b681fd74cade181f9a38a0efe46b3cfe01699f9a&scene=178&cur_album_id=3906533360771858442&search_click_id=#rd
+  金融舆情分析RAG与时间序列预测融合：下一代量化分析的破局点
+  tags: 书签栏,金融智能量化投研,教程实例源码
+
+- **Investor-Agent 智能投研MCP工具** — https://mp.weixin.qq.com/s?__biz=MjM5OTA3ODcyMw==&mid=2650330212&idx=1&sn=198067eb9717a662116e0cfedb61869d&chksm=becc8a4889bb035e767c1089fd936f2bea850e549d7ff846c299a90809cf48be6b0e622bbedc&scene=178&cur_album_id=3906533360771858442&search_click_id=#rd
+  Investor-Agent 智能投研MCP工具
+  tags: 书签栏,金融智能量化投研,教程实例源码
+
+- **AI对冲基金多智能体系统** — https://space.coze.cn/task/7505780134880919590
+  AI对冲基金多智能体系统
+  tags: 书签栏,金融智能量化投研,教程实例源码
+
+- **一文读懂MCP协议与Alpaca-MCP 跨市场交易终端实战指南** — https://mp.weixin.qq.com/s?__biz=MjM5OTA3ODcyMw==&mid=2650330205&idx=1&sn=6d09e1cf41d01cb6121caa685793c542&chksm=becc8a7189bb0367fcf00f0557c78be20571fd8bef7b8d2810e64f0acab32a21fa8e718248da&scene=178&cur_album_id=3906533360771858442&search_click_id=#rd
+  一文读懂MCP协议与Alpaca-MCP 跨市场交易终端实战指南
+  tags: 书签栏,金融智能量化投研,教程实例源码
+
+- **EasyQuant：轻量级量化交易框架解析** — https://mp.weixin.qq.com/s?__biz=MjM5OTA3ODcyMw==&mid=2650330092&idx=1&sn=01fc9f3f280b502f4f21e752d076714a&chksm=becc8dc089bb04d61e00e8dfe91fba895710cff88d2046f088d92b2073a8b5ed54d9d9672fff&scene=178&cur_album_id=3906533360771858442&search_click_id=#rd
+  EasyQuant：轻量级量化交易框架解析
+  tags: 书签栏,金融智能量化投研,教程实例源码
+
+- **【开源神器】Hummingbot：年交易额340亿美金的加密量化引擎怎么玩？** — https://mp.weixin.qq.com/s?__biz=MjM5OTA3ODcyMw==&mid=2650329829&idx=1&sn=a99f021c97bb1e991478b2b9b4957468&scene=21#wechat_redirect
+  【开源神器】Hummingbot：年交易额340亿美金的加密量化引擎怎么玩？
+  tags: 书签栏,金融智能量化投研,教程实例源码
+
+- **基于Python开发的自动化交易机器人​Qbot，支持加密货币/股票市场** — https://mp.weixin.qq.com/s?__biz=MjM5OTA3ODcyMw==&mid=2650330289&idx=1&sn=e257b9363b432ca87ebe5b5b7093ca15&chksm=becc8a9d89bb038b3e01d914ff960379d49975cfe26372b15a1cfa713a47b2c4ea5d266374ad&scene=178&cur_album_id=3906533360771858442&search_click_id=#rd
+  基于Python开发的自动化交易机器人​Qbot，支持加密货币/股票市场
+  tags: 书签栏,金融智能量化投研,教程实例源码
+
+- **Qbot量化交易平台** — https://space.coze.cn/task/7506582874817462281
+  Qbot量化交易平台
+  tags: 书签栏,金融智能量化投研,教程实例源码
+
+- **完整实例 | 迅投知识库** — https://dict.thinktrader.net/nativeApi/code_examples.html#%E8%8E%B7%E5%8F%96%E8%A1%8C%E6%83%85%E7%A4%BA%E4%BE%8B
+  完整实例 | 迅投知识库
+  tags: 书签栏,金融智能量化投研,教程实例源码
+
+- **Agentar金融平台** — https://space.coze.cn/coding-expert-runtime/23410867458
+  Agentar金融平台
+  tags: 书签栏,金融智能量化投研,教程实例源码
+
+- **量化金融工作平台** — https://space.coze.cn/task/7508574626564112423
+  量化金融工作平台
+  tags: 书签栏,金融智能量化投研,教程实例源码
+
+- **Backtrader 交易系统** — https://space.coze.cn/task/7508574122025795622
+  Backtrader 交易系统
+  tags: 书签栏,金融智能量化投研,教程实例源码
+
+- **AI量化交易系统** — https://space.coze.cn/task/7508574213788549156
+  AI量化交易系统
+  tags: 书签栏,金融智能量化投研,教程实例源码
+
+- **银行客户活动管理MVP** — https://space.coze.cn/task/7507660473488736310
+  银行客户活动管理MVP
+  tags: 书签栏,金融智能量化投研,教程实例源码
+
+- **量化交易机器人** — https://space.coze.cn/task/7506393389697810466
+  量化交易机器人
+  tags: 书签栏,金融智能量化投研,教程实例源码
+
+- **可转债智能体系统** — https://space.coze.cn/task/7506148308856193087
+  可转债智能体系统
+  tags: 书签栏,金融智能量化投研,教程实例源码
+
+- **保险代理销售系统** — https://space.coze.cn/task/7505985790624350246
+  保险代理销售系统
+  tags: 书签栏,金融智能量化投研,教程实例源码
+
+- **Stocks Insights AI Agent** — https://space.coze.cn/task/7506032874811244596
+  Stocks Insights AI Agent
+  tags: 书签栏,金融智能量化投研,教程实例源码
+
+- **MCP专家智能体指南** — https://space.coze.cn/task/7505797775926607891
+  MCP专家智能体指南
+  tags: 书签栏,金融智能量化投研,教程实例源码
+
+- **Midday财务管理系统** — https://space.coze.cn/task/7505778699048976425
+  Midday财务管理系统
+  tags: 书签栏,金融智能量化投研,教程实例源码
+
+- **VectorBT量化分析** — https://space.coze.cn/task/7505794731763613750
+  VectorBT量化分析
+  tags: 书签栏,金融智能量化投研,教程实例源码
+
+- **通达信金融终端在线说明书** — https://www.tdx.com.cn/products/helpfile/tdxw/
+  通达信金融终端在线说明书
+  tags: 书签栏,金融智能量化投研,教程实例源码
+
+- **ima.copilot-通达信知识库** — https://ima.qq.com/wiki/?shareId=9a2ca03bef60cd8e3ddcc36a4f1fa034b5a80df7255902f1d9c12b5fae945fef
+  ima.copilot-通达信知识库
+  tags: 书签栏,金融智能量化投研,教程实例源码
+
+  *... 此分类还有 82 个工具，详见 https://ai123.miyucaicai.cn/data/tools_embedded.js*
+
+## 其他 (other)
+
+- **财联社** — https://www.cls.cn/telegraph
+  财联社
+  tags: 书签栏
+
+- **QQ邮箱** — https://mail.qq.com/cgi-bin/frame_html?sid=3zWvCYKr1mHzeyhN&r=73431792e75c9b27f4e6e9f6d065666e&lang=zh
+  QQ邮箱
+  tags: 书签栏
+
+- **Magic ToDo - GoblinTools** — https://goblin.tools/
+  Magic ToDo - GoblinTools
+  tags: 书签栏
+
+- **国家税务总局深圳市电子税务局** — https://tpass.shenzhen.chinatax.gov.cn:8443//#/identitySwitch/enterprisePerson
+  国家税务总局深圳市电子税务局
+  tags: 书签栏
+
+- **腾讯云黑客松小程序/web一人公司** — https://marketing.csdn.net/p/6c228e821a73bb9d3b8a75acf4999ff0?pId=3020
+  腾讯云黑客松小程序/web一人公司
+  tags: 书签栏,比赛,腾讯云
+
+- **一人最高赚1个亿，人均创收166万！这33家AI公司，正在创造商业“神话”** — https://mp.weixin.qq.com/s?__biz=MzkyNTY1MjE2OA==&mid=2247489830&idx=1&sn=1414a4eb69c84a2171c28761c8a11a9e&chksm=c0755325a98de349ac9066791aa3d09ccc42e12bc505845ea37fc4eac863a7772c924b02adb1#rd
+  一人最高赚1个亿，人均创收166万！这33家AI公司，正在创造商业“神话”
+  tags: 书签栏,比赛,腾讯云
+
+- **2025英特尔人工智能创新应用大赛 - 英特尔大湾区科技创新中心** — https://www.igbacenter.com/special/ai2025/
+  2025英特尔人工智能创新应用大赛 - 英特尔大湾区科技创新中心
+  tags: 书签栏,比赛,英特尔openvino应用
+
+- **OpenVINO · 魔搭社区** — https://www.modelscope.cn/organization/OpenVINO
+  OpenVINO · 魔搭社区
+  tags: 书签栏,比赛,英特尔openvino应用
+
+- **How to use torch.compile on Windows CPU/XPU — PyTorch Tutorials 2.7.0+cu126 docu** — https://docs.pytorch.org/tutorials/prototype/inductor_windows.html
+  How to use torch.compile on Windows CPU/XPU — PyTorch Tutorials 2.7.0+cu126 docu
+  tags: 书签栏,比赛,英特尔openvino应用
+
+- **Build AI Apps with AI Reference Kits from Intel** — https://www.intel.com/content/www/us/en/developer/topic-technology/edge-5g/open-potential.html
+  Build AI Apps with AI Reference Kits from Intel
+  tags: 书签栏,比赛,英特尔openvino应用
+
+- **openvinotoolkit/openvino_notebooks: 📚 Jupyter notebook tutorials for OpenVINO™** — https://github.com/openvinotoolkit/openvino_notebooks
+  openvinotoolkit/openvino_notebooks: 📚 Jupyter notebook tutorials for OpenVINO™
+  tags: 书签栏,比赛,英特尔openvino应用
+
+- **intel/AI-PC-Samples** — https://github.com/intel/AI-PC-Samples
+  intel/AI-PC-Samples
+  tags: 书签栏,比赛,英特尔openvino应用
+
+- **开始使用 OpenVINO™ 工具套件** — https://www.intel.cn/content/www/cn/zh/developer/tools/openvino-toolkit/get-started.html
+  开始使用 OpenVINO™ 工具套件
+  tags: 书签栏,比赛,英特尔openvino应用
+
+- **模型下载** — https://storage.openvinotoolkit.org/repositories/open_model_zoo/
+  模型下载
+  tags: 书签栏,比赛,英特尔openvino应用
+
+- **精选提示词** — https://www.feishu.cn/community/prompts
+  精选提示词
+  tags: 书签栏,比赛, 提示词
+
+- **Memos** — http://localhost:5230/
+  Memos
+  tags: 书签栏,比赛,应用部署
+
+- **💻 Open WebUI** — http://localhost:3000/c/0e205bca-061f-41f2-8c29-0aec810764e9
+  💻 Open WebUI
+  tags: 书签栏,比赛,应用部署
+
+- **管理员面板 | Open WebUI** — http://localhost:3000/admin/settings
+  管理员面板 | Open WebUI
+  tags: 书签栏,比赛,应用部署
+
+- **Bolt.new** — http://localhost:5173/
+  Bolt.new
+  tags: 书签栏,比赛,应用部署
+
+- **ComfyUI** — http://127.0.0.1:8188/
+  ComfyUI
+  tags: 书签栏,比赛,应用部署
+
+- **实时渲染工具** — http://localhost:8000/
+  实时渲染工具
+  tags: 书签栏,比赛,应用部署
+
+- **Excalidraw** — https://excalidraw-uwbvcorq.us-east-1.clawcloudrun.com/
+  Excalidraw
+  tags: 书签栏,比赛,应用部署
+
+- **excalidraw.miyucaicai.cn** — https://excalidraw.miyucaicai.cn/
+  excalidraw.miyucaicai.cn
+  tags: 书签栏,比赛,应用部署
+
+- **Sun-Panel** — https://qszuummr.us-east-1.clawcloudrun.com/login
+  Sun-Panel
+  tags: 书签栏,比赛,应用部署
+
+- **https://ai.miyucaicai.cn/index.html** — https://ai.miyucaicai.cn/index.html
+  https://ai.miyucaicai.cn/index.html
+  tags: 书签栏,比赛,应用部署
+
+- **Open WebUI** — http://localhost:3000/
+  Open WebUI
+  tags: 书签栏,比赛,应用部署
+
+- **PDFMathTranslate体验空间 · 创空间** — https://modelscope.cn/studios/AI-ModelScope/PDFMathTranslate
+  PDFMathTranslate体验空间 · 创空间
+  tags: 书签栏,比赛,应用部署
+
+- **读光OCR-多场景文字识别 · 创空间** — https://modelscope.cn/studios/iic/cv_ocr-text-spotting
+  读光OCR-多场景文字识别 · 创空间
+  tags: 书签栏,比赛,应用部署
+
+- **LLaMA Board：大型语言模型一键微调平台 · 创空间** — https://modelscope.cn/studios/hiyouga/LLaMA-Board
+  LLaMA Board：大型语言模型一键微调平台 · 创空间
+  tags: 书签栏,比赛,应用部署
+
+- **MiniMind · 创空间** — https://modelscope.cn/studios/gongjy/MiniMind
+  MiniMind · 创空间
+  tags: 书签栏,比赛,应用部署
+
+  *... 此分类还有 44 个工具，详见 https://ai123.miyucaicai.cn/data/tools_embedded.js*
+
+## AI 营销 (marketing)
+
+- **热搜词** — https://ark.xiaohongshu.com/app-note/hot-word
+  热搜词
+  tags: 书签栏,自媒体运营,爆款素材
+
+- **全球畸变：开局活吞黑曼巴蛇_第1章 重回畸变之前，活吞黑曼巴毒蛇在线阅读-QQ阅读** — https://book.qq.com/book-read/48529366/1
+  全球畸变：开局活吞黑曼巴蛇_第1章 重回畸变之前，活吞黑曼巴毒蛇在线阅读-QQ阅读
+  tags: 书签栏,自媒体运营,爆款素材
+
+- **You下载** — https://www.y2mate.com/youtube/2vzwtqhhjv8
+  You下载
+  tags: 书签栏,自媒体运营,爆款素材
+
+- **灰豚数据** — https://dy.huitun.com/app/#/dashboard
+  灰豚数据
+  tags: 书签栏,自媒体运营,爆款素材
+
+- **兴趣电商数据专家-考古加数据** — https://www.kaogujia.com/homeOverview
+  兴趣电商数据专家-考古加数据
+  tags: 书签栏,自媒体运营,爆款素材
+
+- **橙篇AI - 用橙篇，就成了** — https://cp.baidu.com/?sa=bdindex
+  橙篇AI - 用橙篇，就成了
+  tags: 书签栏,自媒体运营,爆款素材
+
+- **素材酷平台** — https://cool.bilibili.com/creator-square/sticker
+  素材酷平台
+  tags: 书签栏,自媒体运营,爆款素材
+
+- **Yt5s - 免费的Youtube视频下载器 [无广告]** — https://yt5s.biz/zh-cnwr200/
+  Yt5s - 免费的Youtube视频下载器 [无广告]
+  tags: 书签栏,自媒体运营,爆款素材
+
+- **YouTube Shorts Download in HD - Shorts Downloader by ShortsNoob** — https://shortsnoob.com/en220oY
+  YouTube Shorts Download in HD - Shorts Downloader by ShortsNoob
+  tags: 书签栏,自媒体运营,爆款素材
+
+- **YouTube MP3 Playlist Downloader Online - Loader.to** — https://en.loader.to/4/
+  YouTube MP3 Playlist Downloader Online - Loader.to
+  tags: 书签栏,自媒体运营,爆款素材
+
+- **cobalt** — https://cobalt.tools/
+  cobalt
+  tags: 书签栏,自媒体运营,爆款素材
+
+- **NewsNow | 最热** — https://newsnow.busiyi.world/
+  NewsNow | 最热
+  tags: 书签栏,自媒体运营,爆款素材
+
+- **内容生产与管理一站式服务平台 - 内容驱动增长** — https://ling.jd.com/?autologin=0
+  内容生产与管理一站式服务平台 - 内容驱动增长
+  tags: 书签栏,自媒体运营,剪辑排版
+
+- **淘宝联盟** — https://pub.alimama.com/portal/v2/home/plus/index.htm
+  淘宝联盟
+  tags: 书签栏,自媒体运营,引流推广
+
+- **爆款！如何利用知乎引上万流量，我是这样做的！｜实战_痴海的博客-CSDN博客** — https://blog.csdn.net/qq_33570092/article/details/123391200?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522165173486016782184639897%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fall.%2522%257D&request_id=165173486016782184639897&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_ecpm_v1~rank_v31_ecpm-17-123391200.142^v9^control,157^v4^control&utm_term=%E9%AB%98%E8%B5%9E+%E7%88%AC%E8%99%AB+%E6%8A%96%E9%9F%B3&spm=1018.2226.3001.4187
+  爆款！如何利用知乎引上万流量，我是这样做的！｜实战_痴海的博客-CSDN博客
+  tags: 书签栏,自媒体运营,引流推广
+
+- **(5) Discord | @InVideo** — https://discord.com/channels/@me/1197727172283080904
+  (5) Discord | @InVideo
+  tags: 书签栏,自媒体运营,引流推广
+
+- **Discord** — https://discord.com/channels/1197715713117401108/1197715713708793878
+  Discord
+  tags: 书签栏,自媒体运营,引流推广
+
+- **小红书商品编辑** — https://ark.xiaohongshu.com/app-item/good/success
+  小红书商品编辑
+  tags: 书签栏,自媒体运营,引流推广
+
+- **阿里妈妈 创意中心 - 首页** — https://chuangyi.taobao.com/
+  阿里妈妈 创意中心 - 首页
+  tags: 书签栏,自媒体运营,引流推广
+
+- **合辑 | 《父与子》•英文版：1-100集** — https://mp.weixin.qq.com/s?__biz=MzUyNTQ1NjgyNw==&mid=2247598279&idx=4&sn=54ddb4a6da3a68f61724b2694bb698d6&chksm=fa1ec413cd694d0558c1c15bb1877b0deda3a76131023cef319e4be127430a2a0693fcfc7778&scene=27&poc_token=HP3mpWWjWKQHFkcbydfSUWdQPIIgs2qGeICJiTVT
+  合辑 | 《父与子》•英文版：1-100集
+  tags: 书签栏,自媒体运营,引流推广
+
+- **AiPPT - 全智能 AI 一键生成 PPT** — https://www.aippt.cn/
+  AiPPT - 全智能 AI 一键生成 PPT
+  tags: 书签栏,自媒体运营,引流推广
+
+- **网站 – Google AdSense** — https://adsense.google.com/adsense/u/0/pub-1294046928890978/sites/detail/url=miyucaicai.cn
+  网站 – Google AdSense
+  tags: 书签栏,自媒体运营,引流推广
+
+- **【电商AI工具一期】AI引领电商新风潮：20款AI电子商务工具盘点，让你实现财富增长！ - 知乎** — https://zhuanlan.zhihu.com/p/637816361
+  【电商AI工具一期】AI引领电商新风潮：20款AI电子商务工具盘点，让你实现财富增长！ - 知乎
+  tags: 书签栏,自媒体运营,变现
+
+- **1688-买家工作台** — https://systemjs.1688.com/krump/schema/2152.html
+  1688-买家工作台
+  tags: 书签栏,自媒体运营,变现
+
+- **产品纯自用，我在用AI低成本批量赚老外美金｜专访团长联盟董振国** — https://mbd.baidu.com/newspage/data/landingsuper?context=%7B%22nid%22%3A%22news_9543474738271328014%22%7D&n_type=1&p_from=4
+  产品纯自用，我在用AI低成本批量赚老外美金｜专访团长联盟董振国
+  tags: 书签栏,自媒体运营,变现
+
+- **红书上货** — https://ark.xiaohongshu.com/ark/home
+  红书上货
+  tags: 书签栏,自媒体运营,变现
+
+- **即创** — https://aic.oceanengine.com/inspiration/v2?bpId=1790572803006473
+  即创
+  tags: 书签栏,自媒体运营,变现
+
+- **巨量百应Buyin** — https://buyin.jinritemai.com/dashboard/shopwindow/goods-list
+  巨量百应Buyin
+  tags: 书签栏,自媒体运营,变现
+
+- **千牛商家工作台** — https://myseller.taobao.com/home.htm/QnworkbenchHome/
+  千牛商家工作台
+  tags: 书签栏,自媒体运营,变现
+
+- **淘宝** — https://www.taobao.com/?spm=pc_detail.27183998/evo365560b447257.202201.1.24d07dd6H9j8IU
+  淘宝
+  tags: 书签栏,自媒体运营,变现
+
+  *... 此分类还有 36 个工具，详见 https://ai123.miyucaicai.cn/data/tools_embedded.js*
+
+## AI 视频 (video)
+
+- **基于Python实现全自动下载抖音视频 - 经验笔记** — https://www.nhooo.com/note/qa396m.html
+  基于Python实现全自动下载抖音视频 - 经验笔记
+  tags: 书签栏,python量化
+
+- **如何使用Python通过爬虫抓取的文章一键生成短视频？ - 知乎** — https://www.zhihu.com/question/573372994/answer/2809413417?utm_id=0
+  如何使用Python通过爬虫抓取的文章一键生成短视频？ - 知乎
+  tags: 书签栏,python量化
+
+- **Python+selenium实现短视频自动上传与发布，同时支持抖音、快手、b站、小红书等平台的视频自动化同步发布-腾讯云开发者社区-腾讯云** — https://cloud.tencent.com/developer/article/1939987
+  Python+selenium实现短视频自动上传与发布，同时支持抖音、快手、b站、小红书等平台的视频自动化同步发布-腾讯云开发者社区-腾讯云
+  tags: 书签栏,python量化
+
+- **Python自动化办公社区的个人空间-Python自动化办公社区个人主页-哔哩哔哩视频** — https://space.bilibili.com/259649365
+  Python自动化办公社区的个人空间-Python自动化办公社区个人主页-哔哩哔哩视频
+  tags: 书签栏,python量化
+
+- **Printify是什么?Shopify卖家怎么使用Printify? - 知乎** — https://zhuanlan.zhihu.com/p/615500148
+  Printify是什么?Shopify卖家怎么使用Printify? - 知乎
+  tags: 书签栏,python量化
+
+- **躺着就能涨粉？Python自动化短视频搬运（六）｜自动发布 - 知乎** — https://zhuanlan.zhihu.com/p/596386619
+  躺着就能涨粉？Python自动化短视频搬运（六）｜自动发布 - 知乎
+  tags: 书签栏,自媒体运营,爆款素材
+
+- **在线 YouTube 视频下载器** — https://ytube.savetube.me/zh/29-youtube-video-downloader-5djdh6
+  在线 YouTube 视频下载器
+  tags: 书签栏,自媒体运营,爆款素材
+
+- **可画** — https://www.canva.com/design/DAGHuJcCzN0/bS35yDZh9bknPrnJr2-SRA/edit
+  可画
+  tags: 书签栏,自媒体运营,剪辑排版
+
+- **强到离谱的Dora AI，一句话就能生成整个网站 | AI万花筒| 连接AI新世界** — https://www.aiwht.com/5974.html
+  强到离谱的Dora AI，一句话就能生成整个网站 | AI万花筒| 连接AI新世界
+  tags: 书签栏,自媒体运营,剪辑排版
+
+- **万彩AI - AI智能写作生成神器,照片数字人制作,AI短视频制作** — https://ai.kezhan365.com/history/text/?scene=&kw=
+  万彩AI - AI智能写作生成神器,照片数字人制作,AI短视频制作
+  tags: 书签栏,自媒体运营,剪辑排版
+
+- **文章转视频-AI智能一键文字生成视频-图文转视频-腾讯智影** — https://zenvideo.qq.com/smart/ttv
+  文章转视频-AI智能一键文字生成视频-图文转视频-腾讯智影
+  tags: 书签栏,自媒体运营,剪辑排版
+
+- **西瓜云剪** — https://mp.toutiao.com/xigua-editor/editor/7281266830772018216?action=initWHRatio&%20%20%20%20%20%20%20%20%20%20value=1.778&ratio=16:9&from=web_click_add
+  西瓜云剪
+  tags: 书签栏,自媒体运营,剪辑排版
+
+- **星海智创** — https://studio.ainovel.info/video/production?id=1760182911407149056
+  星海智创
+  tags: 书签栏,自媒体运营,剪辑排版
+
+- **CapCut** — https://www.capcut.com/zh-tw/signup
+  CapCut
+  tags: 书签栏,自媒体运营,剪辑排版
+
+- **Gmail** — https://mail.google.com/mail/u/0/#inbox
+  Gmail
+  tags: 书签栏,自媒体运营,剪辑排版
+
+- **MagicEdit: High-Fidelity Temporally Coherent Video Editing** — https://magic-edit.github.io/
+  MagicEdit: High-Fidelity Temporally Coherent Video Editing
+  tags: 书签栏,自媒体运营,剪辑排版
+
+- **Photopea | Online Photo Editor** — https://www.photopea.com/
+  Photopea | Online Photo Editor
+  tags: 书签栏,自媒体运营,剪辑排版
+
+- **一键生成网站** — https://www.perplexity.ai/search?q=pending&newFrontendContextUUID=d00e1f34-203a-4d72-b0b9-306bcc076941
+  一键生成网站
+  tags: 书签栏,自媒体运营,剪辑排版
+
+- **WHEE - 高品质的AI素材生成器** — https://www.whee.com/
+  WHEE - 高品质的AI素材生成器
+  tags: 书签栏,自媒体运营,剪辑排版
+
+- **影刀RPA - 影刀官网** — https://www.yingdao.com/
+  影刀RPA - 影刀官网
+  tags: 书签栏,自媒体运营,剪辑排版
+
+- **Mermaid | Diagramming and charting tool** — https://mermaid.js.org/
+  Mermaid | Diagramming and charting tool
+  tags: 书签栏,自媒体运营,剪辑排版
+
+- **文兔兔** — https://wentutu.sunboshi.tech/
+  文兔兔
+  tags: 书签栏,自媒体运营,剪辑排版
+
+- **开拍 - 用AI制作口播视频** — https://kaipai.meitu.com/ai-script/theme
+  开拍 - 用AI制作口播视频
+  tags: 书签栏,自媒体运营,引流推广
+
+- **商品视频** — https://chuangyi.taobao.com/external/meditorLite?itemId=767491174953
+  商品视频
+  tags: 书签栏,自媒体运营,变现
+
+- **Product Hunt – The best new products in tech.** — https://www.producthunt.com/
+  Product Hunt – The best new products in tech.
+  tags: 书签栏,自媒体运营,变现
+
+- **公众号视频** — https://mp.weixin.qq.com/cgi-bin/appmsg?t=media/videomsg_edit&action=video_edit&type=15&token=1169982532&lang=zh_CN
+  公众号视频
+  tags: 书签栏,自媒体运营,发布媒体
+
+- **wordpress** — https://cn.wordpress.org/plugins/?plugin_business_model=community
+  wordpress
+  tags: 书签栏,自媒体运营,发布媒体
+
+- **易媒助手官网 | 短视频一键分发同布 自媒体多账号管理** — https://yimeizhushou.com/
+  易媒助手官网 | 短视频一键分发同布 自媒体多账号管理
+  tags: 书签栏,自媒体运营,发布媒体
+
+- **视频去水印** — https://www.coze.cn/store/project/7483182254099562506?from=project_card&bid=6gf09ge749g14
+  视频去水印
+  tags: 书签栏,自媒体运营,视频去水印
+
+- **Free Sora Watermark Remover - Remove Watermarks from Sora AI Videos Online** — https://reel.money/tools/remove-sora-watermark
+  Free Sora Watermark Remover - Remove Watermarks from Sora AI Videos Online
+  tags: 书签栏,自媒体运营,视频去水印
+
+  *... 此分类还有 35 个工具，详见 https://ai123.miyucaicai.cn/data/tools_embedded.js*
+
+## AI 编程 (code)
+
+- **在线使用PYTHON Replit – Build software faster** — https://replit.com/?spm=5176.29317386.0.0.54d83da28vyRnk
+  在线使用PYTHON Replit – Build software faster
+  tags: 书签栏,python量化
+
+- **开发策略 - PythonGo 文档** — https://infinitrader.quantdo.com.cn/pythongo/develop_strategy/#_4
+  开发策略 - PythonGo 文档
+  tags: 书签栏,python量化
+
+- **Python展示一行代码就可爬取b站以及各大网址视频（想想就刺激的不行） - 知乎** — https://zhuanlan.zhihu.com/p/139995313
+  Python展示一行代码就可爬取b站以及各大网址视频（想想就刺激的不行） - 知乎
+  tags: 书签栏,python量化
+
+- **python实现AI换脸 - 灰信网（软件开发博客聚合）** — https://www.freesion.com/article/3163795464/
+  python实现AI换脸 - 灰信网（软件开发博客聚合）
+  tags: 书签栏,python量化
+
+- **使用 Flutter 构建应用  |  Google for Developers** — https://developers.google.cn/learn/pathways/intro-to-flutter?hl=zh_cn
+  使用 Flutter 构建应用  |  Google for Developers
+  tags: 书签栏,python量化
+
+- **python代码编程助手** — https://agents.baidu.com/center/agent/preview/YnuGeBY2yUBzLYMMOHtaKmqbMtFb0OXn
+  python代码编程助手
+  tags: 书签栏,python量化
+
+- **开发者空间-华为云** — https://developer.huaweicloud.com/space/devportal/desktop
+  开发者空间-华为云
+  tags: 书签栏,python量化
+
+- **资讯 - 《花易宝》：让鲜花不只绽放在手中，HarmonyOS助力花农直连市场 - 华为开发者联盟** — https://developer.huawei.com/consumer/cn/information/stories/944b4069772947bf8884aec1f9ed66b2?ha_source=202501yk&ha_sourceId=89000503
+  资讯 - 《花易宝》：让鲜花不只绽放在手中，HarmonyOS助力花农直连市场 - 华为开发者联盟
+  tags: 书签栏,python量化
+
+- **有趣的开源社区 - HelloGitHub** — https://hellogithub.com/
+  有趣的开源社区 - HelloGitHub
+  tags: 书签栏,python量化
+
+- **云开发编程助手** — http://ask.cloudbase.net/
+  云开发编程助手
+  tags: 书签栏,python量化
+
+- **Strapi - Open source Node.js Headless CMS 🚀** — https://strapi.io/
+  Strapi - Open source Node.js Headless CMS 🚀
+  tags: python量化,github,开源可部署高星
+
+- **Home | Immich** — https://immich.app/
+  Home | Immich
+  tags: python量化,github,开源可部署高星
+
+- **GitHub Actions** — https://github.com/features/actions
+  GitHub Actions
+  tags: python量化,github,开源可部署高星
+
+- **Awesome Quant** — https://wilsonfreitas.github.io/awesome-quant/
+  Awesome Quant
+  tags: python量化,github,开源可部署高星
+
+- **Code Your Way to a Life-Changing Career | JS Mastery Pro** — https://jsmastery.pro/
+  Code Your Way to a Life-Changing Career | JS Mastery Pro
+  tags: python量化,github,开源可部署高星
+
+- **Open SaaS** — https://opensaas.sh/
+  Open SaaS
+  tags: python量化,github,开源可部署高星
+
+- **microsoft/generative-ai-for-beginners: 21 Lessons, Get Started Building with Gen** — https://github.com/microsoft/generative-ai-for-beginners
+  microsoft/generative-ai-for-beginners: 21 Lessons, Get Started Building with Gen
+  tags: python量化,github,开源可部署高星
+
+- **Colossal-AI** — https://colossalai.org/
+  Colossal-AI
+  tags: python量化,github,开源可部署高星
+
+- **Excalidraw | Hand-drawn look &amp; feel • Collaborative • Secure** — https://excalidraw-15dy7s1fe-excalidraw.vercel.app/
+  Excalidraw | Hand-drawn look &amp; feel • Collaborative • Secure
+  tags: python量化,github,开源可部署高星
+
+- **免费的渐变背景CSS3样式 | oulu.me** — https://color.oulu.me/index.html
+  免费的渐变背景CSS3样式 | oulu.me
+  tags: python量化,github,开源可部署高星
+
+- **sunbooshi/note-to-mp** — https://github.com/sunbooshi/note-to-mp
+  sunbooshi/note-to-mp
+  tags: python量化,github,开源可部署高星
+
+- **styled-jsx - npm** — https://www.npmjs.com/package/styled-jsx
+  styled-jsx - npm
+  tags: python量化,github,开源可部署高星
+
+- **Repository search results** — https://github.com/search?q=YOUTUBE&type=repositories&p=3
+  Repository search results
+  tags: 书签栏,python量化,github
+
+- **Marketplace** — https://github.com/marketplace?type=apps&category=ides
+  Marketplace
+  tags: 书签栏,python量化,github
+
+- **Command Line Arguments and Settings · AUTOMATIC1111/stable-diffusion-webui Wiki** — https://github.com/AUTOMATIC1111/stable-diffusion-webui/wiki/Command-Line-Arguments-and-Settings?spm=5176.fcnext.0.0.7c7578c8KA6HbS
+  Command Line Arguments and Settings · AUTOMATIC1111/stable-diffusion-webui Wiki
+  tags: 书签栏,python量化,github
+
+- **laf/docs/zh/quick-start/Todo.md at main · anbeime/laf** — https://github.com/anbeime/laf/blob/main/docs/zh/quick-start/Todo.md
+  laf/docs/zh/quick-start/Todo.md at main · anbeime/laf
+  tags: 书签栏,python量化,github
+
+- **FlagOpen/Awesome-Industry-Dataset: 旨在收集各行业的开源数据，引导和推动行业大模型的发展** — https://github.com/FlagOpen/Awesome-Industry-Dataset
+  FlagOpen/Awesome-Industry-Dataset: 旨在收集各行业的开源数据，引导和推动行业大模型的发展
+  tags: 书签栏,python量化,github
+
+- **daniulive/SmarterStreaming: 业内为数不多致力于极致体验的超强全自研跨平台(windows/linux/android/iOS)流媒体** — https://github.com/daniulive/SmarterStreaming
+  daniulive/SmarterStreaming: 业内为数不多致力于极致体验的超强全自研跨平台(windows/linux/android/iOS)流媒体
+  tags: 书签栏,python量化,github
+
+- **vn.py - 基于python的开源交易平台开发框架 - vn.py** — http://www.vnpy.org/
+  vn.py - 基于python的开源交易平台开发框架 - vn.py
+  tags: 书签栏,python量化,github
+
+- **Trending developers on GitHub this month** — https://github.com/trending/developers?since=monthly
+  Trending developers on GitHub this month
+  tags: 书签栏,python量化,github
+
+  *... 此分类还有 26 个工具，详见 https://ai123.miyucaicai.cn/data/tools_embedded.js*
+
+## AI 绘画 (image)
+
+- **玩转 AI 绘图，基于函数计算部署 Stable Diffusion可自定义模型-阿里云开发者社区** — https://developer.aliyun.com/article/1444860?spm=a2c6h.14164896.0.0.13a447c5wJXBho&scm=20140722.S_community@@%E6%96%87%E7%AB%A0@@1444860._.ID_1444860-RL_%E9%83%A8%E7%BD%B2StableDiffusion-LOC_search~UND~community~UND~item-OR_ser-V_3-P0_14
+  玩转 AI 绘图，基于函数计算部署 Stable Diffusion可自定义模型-阿里云开发者社区
+  tags: 书签栏,python量化
+
+- **Stable Diffusion** — http://sd-669665--sd.fcv3.1595409364908227.cn-hangzhou.fc.devsapp.net/?spm=5176.fcnext.0.0.7c7578c8KA6HbS
+  Stable Diffusion
+  tags: 书签栏,python量化
+
+- **Figma: The Collaborative Interface Design Tool** — https://www.figma.com/
+  Figma: The Collaborative Interface Design Tool
+  tags: 书签栏,python量化
+
+- **3D溜溜网(3d66.com) - 全网设计素材首选平台** — https://www.3d66.com/
+  3D溜溜网(3d66.com) - 全网设计素材首选平台
+  tags: 书签栏,自媒体运营,爆款素材
+
+- **设计文件-Pixso** — https://pixso.cn/app/editor/LiTAPxW76A4qM2GEb9_DvQ?showQuickFrame=true&page-id=0%3A1
+  设计文件-Pixso
+  tags: 书签栏,自媒体运营,爆款素材
+
+- **万能视频图片解析下载 - SnapAny** — https://snapany.com/zh
+  万能视频图片解析下载 - SnapAny
+  tags: 书签栏,自媒体运营,爆款素材
+
+- **与梦想同行 许戈辉的搜索结果_百度图片搜索** — https://image.baidu.com/search/detail?ct=503316480&z=0&ipn=d&word=%E4%B8%8E%E6%A2%A6%E6%83%B3%E5%90%8C%E8%A1%8C%20%E8%AE%B8%E6%88%88%E8%BE%89&step_word=&hs=0&pn=2&spn=0&di=7375936315981824001&pi=0&rn=1&tn=baiduimagedetail&is=0%2C0&istype=2&ie=utf-8&oe=utf-8&in=&cl=2&lm=-1&st=-1&cs=3919233721%2C3242548033&os=3761488343%2C2368473526&simid=3919233721%2C3242548033&adpicid=0&lpn=0&ln=276&fr=&fmq=1721024481800_R&fm=result&ic=&s=undefined&hd=&latest=&copyright=&se=&sme=&tab=0&width=&height=&face=undefined&ist=&jit=&cg=&bdtype=0&oriquery=&objurl=https%3A%2F%2Fi1.sinaimg.cn%2Fent%2Fv%2Fm%2F2011-03-21%2FU5913P28T3D3259134F326DT20110321121433.bmp&fromurl=ippr_z2C%24qAzdH3FAzdH3Fjgp_z%26e3Bftgw_z%26e3Bv54_z%26e3BvgAzdH3FeAzdH3F4AzdH3Fda88-an-d8AzdH3F8d89ndcl8n9_z%26e3Bfip4s&gsm=1e&rpstart=0&rpnum=0&islist=&querylist=&nojc=undefined&lid=6114740957175114160
+  与梦想同行 许戈辉的搜索结果_百度图片搜索
+  tags: 书签栏,自媒体运营,爆款素材
+
+- **Pixso官网 - 新一代UI设计工具，替代Sketch，Figma，支持在线实时协作** — https://pixso.cn/
+  Pixso官网 - 新一代UI设计工具，替代Sketch，Figma，支持在线实时协作
+  tags: 书签栏,自媒体运营,爆款素材
+
+- **表情包 - 即时设计** — https://js.design/f/QlFW1F?mode=design&p=1qa8Sa7Rwu
+  表情包 - 即时设计
+  tags: 书签栏,自媒体运营,变现
+
+- **Animate Anyone - 阿里开源的图像到视频角色动画合成的框架 | AI工具集** — https://ai-bot.cn/animate-anyone/
+  Animate Anyone - 阿里开源的图像到视频角色动画合成的框架 | AI工具集
+  tags: 书签栏,自媒体运营,变现
+
+- **ImageAI - 您的免费 AI 图像生成工具** — https://imageai.123everything.com/zh/InfiniteTalkI2V?utm_source=xgy&utm_campaign=infiniteimage
+  ImageAI - 您的免费 AI 图像生成工具
+  tags: 书签栏,自媒体运营,智能配音
+
+- **图像生成 - 豆包** — https://www.doubao.com/chat/create-image
+  图像生成 - 豆包
+  tags: 书签栏,自媒体运营,图文海报
+
+- **Python AI 绘画 | 菜鸟教程** — https://www.runoob.com/python3/python-ai-draw.html
+  Python AI 绘画 | 菜鸟教程
+  tags: 书签栏,自媒体运营,图文海报
+
+- **云界AI官网 - 一看就会的免费AI作图工具** — https://www.yunjie.art/
+  云界AI官网 - 一看就会的免费AI作图工具
+  tags: 书签栏,自媒体运营,图文海报
+
+- **奇域-新中式文生图** — https://www.qiyuai.net/apps/met/login
+  奇域-新中式文生图
+  tags: 书签栏,自媒体运营,图文海报
+
+- **奇域 - 社区** — https://www.qiyuai.net/apps/met/community/activity/7382494194177455239
+  奇域 - 社区
+  tags: 书签栏,自媒体运营,图文海报
+
+- **创意海报生成 · 创空间** — https://modelscope.cn/studios/iic/PosterGenius
+  创意海报生成 · 创空间
+  tags: 书签栏,自媒体运营,图文海报
+
+- **未道帮AI抠图 | 在线抠图_AI抠图_图片抠图_智能抠图_免费抠图_智能换背景** — https://cutout.aiwave.cc/?ref=top.aibase.com
+  未道帮AI抠图 | 在线抠图_AI抠图_图片抠图_智能抠图_免费抠图_智能换背景
+  tags: 书签栏,自媒体运营,智能图像
+
+- **抠抠图-抠图软件永久免费在线智能抠图** — https://www.koukoutu.com/
+  抠抠图-抠图软件永久免费在线智能抠图
+  tags: 书签栏,自媒体运营,智能图像
+
+- **顽兔抠图** — https://alidesign.taobao.com/work.htm?ref#/?_k=a1l8mm
+  顽兔抠图
+  tags: 书签栏,自媒体运营,智能图像
+
+- **Stable Diffusion** — https://sd.study.163.com/paintingStudioFree/?__theme=dark
+  Stable Diffusion
+  tags: 书签栏,自媒体运营,智能图像
+
+- **Kolors Virtual Try-On - a Hugging Face Space by Kwai-Kolors** — https://huggingface.co/spaces/Kwai-Kolors/Kolors-Virtual-Try-On
+  Kolors Virtual Try-On - a Hugging Face Space by Kwai-Kolors
+  tags: 书签栏,自媒体运营,智能图像
+
+- **AI老照片修复 · 创空间** — https://modelscope.cn/studios/iic/old_photo_restoration
+  AI老照片修复 · 创空间
+  tags: 书签栏,自媒体运营,智能图像
+
+- **可图AI试衣 · 创空间** — https://modelscope.cn/studios/Kwai-Kolors/Kolors-Virtual-Try-On
+  可图AI试衣 · 创空间
+  tags: 书签栏,自媒体运营,智能图像
+
+- **SD3.5-turbo快速生图 · 创空间** — https://modelscope.cn/studios/AI-ModelScope/stable-diffusion-3.5-large-turbo
+  SD3.5-turbo快速生图 · 创空间
+  tags: 书签栏,自媒体运营,智能图像
+
+- **万能抠图-背景消除术 · 创空间** — https://modelscope.cn/studios/AI-ModelScope/background-removal
+  万能抠图-背景消除术 · 创空间
+  tags: 书签栏,自媒体运营,智能图像
+
+- **丹青-千变万换 · 创空间** — https://modelscope.cn/studios/iic/ReplaceAnything
+  丹青-千变万换 · 创空间
+  tags: 书签栏,自媒体运营,智能图像
+
+- **一键生成高清证件照 · 创空间** — https://modelscope.cn/studios/SwanLab/HivisionIDPhotos
+  一键生成高清证件照 · 创空间
+  tags: 书签栏,自媒体运营,智能图像
+
+- **Motionshop2来啦！单张照片替换视频人物 · 创空间** — https://modelscope.cn/studios/Damo_XR_Lab/Motionshop2
+  Motionshop2来啦！单张照片替换视频人物 · 创空间
+  tags: 书签栏,自媒体运营,智能图像
+
+- **InstantMesh:10秒完成图生3D的强力杀器 · 创空间** — https://modelscope.cn/studios/AI-ModelScope/InstantMesh
+  InstantMesh:10秒完成图生3D的强力杀器 · 创空间
+  tags: 书签栏,自媒体运营,智能图像
+
+  *... 此分类还有 18 个工具，详见 https://ai123.miyucaicai.cn/data/tools_embedded.js*
+
+## AI 对话 (chat)
+
+- **Chat with Z.ai - Free AI for Presentations, Writing &amp; Coding** — https://chat.z.ai/
+  Chat with Z.ai - Free AI for Presentations, Writing &amp; Coding
+  tags: 书签栏,AI智能体应用,智谱
+
+- **讯飞星火大模型-AI大语言模型-星火大模型-科大讯飞** — https://xinghuo.xfyun.cn/botcenter/createbot
+  讯飞星火大模型-AI大语言模型-星火大模型-科大讯飞
+  tags: 书签栏,AI智能体应用,讯飞
+
+- **将小爱音箱接入ChatGPT和豆包，变身真正的AI音箱** — https://mp.weixin.qq.com/s?src=11&timestamp=1721124419&ver=5386&signature=zZKsR2PZpFxmZyOMT0ru0H3HY8P5YsPfAcdKUXisu5UKlwOLW--PVdoVm4WtQPIXCPdwYFmtnRvUSyurBEN1roYIMYM*g08lAha6xydbUVymJ8qc7gC3PsJTbHB6RQIT&new=1
+  将小爱音箱接入ChatGPT和豆包，变身真正的AI音箱
+  tags: 书签栏,python量化
+
+- **SiteGPT - Make AI your expert customer support agent** — https://sitegpt.ai/
+  SiteGPT - Make AI your expert customer support agent
+  tags: 书签栏,python量化
+
+- **Flowise - Low code LLM Apps Builder** — https://flowiseai.com/
+  Flowise - Low code LLM Apps Builder
+  tags: 书签栏,python量化
+
+- **【文心智能体】00后疯感工牌生成器，低代码的简单应用以及图片快速响应解决方案，干货满满，不容错过** — https://agents.baidu.com/community/article-detail.html?articleId=1306
+  【文心智能体】00后疯感工牌生成器，低代码的简单应用以及图片快速响应解决方案，干货满满，不容错过
+  tags: 书签栏,python量化
+
+- **智谱清言** — https://chatglm.cn/developersPanel/apiSet
+  智谱清言
+  tags: 书签栏,python量化
+
+- **小智 AI 聊天机器人** — https://xiaozhi.me/console/agents/550dae5a-19fa-4ca0-8f82-c1b4645dc0d3/speakers
+  小智 AI 聊天机器人
+  tags: 书签栏,python量化
+
+- **GitHub - idootop/mi-gpt: 🏠 将小爱音箱接入 ChatGPT 和豆包，改造成你的专属语音助手。** — https://github.com/idootop/mi-gpt
+  GitHub - idootop/mi-gpt: 🏠 将小爱音箱接入 ChatGPT 和豆包，改造成你的专属语音助手。
+  tags: 书签栏,python量化,github
+
+- **GitHub - yihong0618/xiaogpt: Play ChatGPT and other LLM with Xiaomi AI Speaker** — https://github.com/yihong0618/xiaogpt
+  GitHub - yihong0618/xiaogpt: Play ChatGPT and other LLM with Xiaomi AI Speaker
+  tags: 书签栏,python量化,github
+
+- **YouTube Summary with ChatGPT &amp; Claude** — https://chromewebstore.google.com/detail/youtube-summary-with-chat/nmmicjeknamkfloonkhhcjmomieiodli
+  YouTube Summary with ChatGPT &amp; Claude
+  tags: 书签栏,自媒体运营,爆款素材
+
+- **豆包 - 抖音旗下 AI 智能助手** — https://www.doubao.com/chat/
+  豆包 - 抖音旗下 AI 智能助手
+  tags: 书签栏,自媒体运营,爆款素材
+
+- **通义千问** — https://tongyi.aliyun.com/qianwen/?chatId=d8dde63fdab345559038bd8e97e9638d
+  通义千问
+  tags: 书签栏,自媒体运营,爆款文案
+
+- **ChatGPT** — https://chat.openai.com/c/9a13e606-c046-4a91-b68c-b4457222d861
+  ChatGPT
+  tags: 书签栏,自媒体运营,爆款文案
+
+- **文心一言** — https://yiyan.baidu.com/
+  文心一言
+  tags: 书签栏,自媒体运营,爆款文案
+
+- **星火绘镜** — https://typemovie.art/home/index.html
+  星火绘镜
+  tags: 书签栏,自媒体运营,剪辑排版
+
+- **AI赚钱新思路 利用RPA+KIMI实现小红书全自动制作发布(详细攻略)-今日头条** — https://www.toutiao.com/article/7389457746464916007/?&source=m_redirect
+  AI赚钱新思路 利用RPA+KIMI实现小红书全自动制作发布(详细攻略)-今日头条
+  tags: 书签栏,自媒体运营,变现
+
+- **清影提示词（图生视频专用） - 智谱清言智能体** — https://chatglm.cn/main/gdetail/669fb16ffdf0683c86f7d903?lang=zh
+  清影提示词（图生视频专用） - 智谱清言智能体
+  tags: 书签栏,自媒体运营,视频去水印
+
+- **AI对话 - AIPlus** — https://aiplus.lra.cn/
+  AI对话 - AIPlus
+  tags: 书签栏,自媒体运营,智能图像
+
+- **一款全能会议助手** — https://waytoagi.feishu.cn/wiki/SEZtwGlVYi3XBjkodlDcpIlYnSh
+  一款全能会议助手
+  tags: 书签栏,教程
+
+- **‬﻿⁢‍​​﻿​⁢​​​‌​‍⁣​‍‬⁤⁤‌‌‍⁢﻿⁢⁣⁡⁤﻿⁤‍⁢​﻿⁣﻿‬​​⁣⁤‬‍​‌⁢⁣Notion和ChatGPT都在模仿它！融资4300万美刀，月** — https://waytoagi.feishu.cn/wiki/KgO2wN5kbiOAHtkkZcWcHdFinIg
+  ‬﻿⁢‍​​﻿​⁢​​​‌​‍⁣​‍‬⁤⁤‌‌‍⁢﻿⁢⁣⁡⁤﻿⁤‍⁢​﻿⁣﻿‬​​⁣⁤‬‍​‌⁢⁣Notion和ChatGPT都在模仿它！融资4300万美刀，月
+  tags: 书签栏,教程
+
+- **ipex-llm/python/llm/example/GPU/PyTorch-Models/Model/qwen-vl/chat.py at main · i** — https://github.com/intel/ipex-llm/blob/main/python/llm/example/GPU/PyTorch-Models/Model/qwen-vl/chat.py
+  ipex-llm/python/llm/example/GPU/PyTorch-Models/Model/qwen-vl/chat.py at main · i
+  tags: 书签栏,比赛,英特尔openvino应用
+
+- **GLM-4.1V合集详情-来自ZhipuAI · 魔搭社区** — https://modelscope.cn/collections/GLM-41V-35d24b6def9f49
+  GLM-4.1V合集详情-来自ZhipuAI · 魔搭社区
+  tags: 书签栏,比赛,英特尔openvino应用
+
+- **openvino_notebooks/notebooks/qwen2.5-vl at latest · openvinotoolkit/openvino_not** — https://github.com/openvinotoolkit/openvino_notebooks/tree/latest/notebooks/qwen2.5-vl
+  openvino_notebooks/notebooks/qwen2.5-vl at latest · openvinotoolkit/openvino_not
+  tags: 书签栏,比赛,英特尔openvino应用
+
+- **Notion和ChatGPT都在模仿它！融资4300万美刀，月留存70%，这款AI会议神器Granola，真能让人专注！** — https://mp.weixin.qq.com/s/EZMmD0WvYwgk4kPwPJzQuw
+  Notion和ChatGPT都在模仿它！融资4300万美刀，月留存70%，这款AI会议神器Granola，真能让人专注！
+  tags: 书签栏,比赛,英特尔openvino应用
+
+- **AtomS3R-M12 火山引擎语音助手** — https://docs.m5stack.com/zh_CN/guide/realtime/volcengine/atomic_echo_base
+  AtomS3R-M12 火山引擎语音助手
+  tags: 书签栏,比赛,COZE智能硬件
+
+- **NextChat** — https://chat.miyucaicai.cn/
+  NextChat
+  tags: 书签栏,比赛,应用部署
+
+- **Ollama** — https://ollama.com/
+  Ollama
+  tags: 书签栏,比赛,应用部署
+
+- **MoonshotAI/Kimi-K2: Kimi K2 is the large language model series developed by Moon** — https://github.com/MoonshotAI/Kimi-K2
+  MoonshotAI/Kimi-K2: Kimi K2 is the large language model series developed by Moon
+  tags: 书签栏,比赛,应用部署
+
+- **Neon Gemini Runner** — https://game.miyucaicai.cn/
+  Neon Gemini Runner
+  tags: 书签栏,比赛,应用部署
+
+  *... 此分类还有 4 个工具，详见 https://ai123.miyucaicai.cn/data/tools_embedded.js*
+
+## AI 写作 (writing)
+
+- **指标转换 - PythonGo 文档** — https://infinitrader.quantdo.com.cn/pythongo/indicators/convert/
+  指标转换 - PythonGo 文档
+  tags: 书签栏,python量化
+
+- **pyStrategy.ctaTemplate — PythonLab 1 文档** — https://infinitrader.quantdo.com.cn/docs/python-lab/_modules/pyStrategy/ctaTemplate.html#CtaTemplate.KLWidget
+  pyStrategy.ctaTemplate — PythonLab 1 文档
+  tags: 书签栏,python量化
+
+- **安装 PythonGo 运行环境 - PythonGo 文档** — https://infinitrader.quantdo.com.cn/pythongo/python-install/#_1
+  安装 PythonGo 运行环境 - PythonGo 文档
+  tags: 书签栏,python量化
+
+- **‬﻿⁣‬⁣⁤‍⁢‌﻿⁣﻿​﻿⁤﻿‬‬﻿⁣‍‌⁣‍‬​⁣‌﻿⁣⁣‌​⁡⁣​﻿⁡‬​‬⁢‌​‬‍‍‍⁡文案馆: 一键发文项目操作手册 - 飞书云文档** — https://aiawaken.feishu.cn/wiki/BPz4wH3TuiQGBXkSfDdcBN3hnP9
+  ‬﻿⁣‬⁣⁤‍⁢‌﻿⁣﻿​﻿⁤﻿‬‬﻿⁣‍‌⁣‍‬​⁣‌﻿⁣⁣‌​⁡⁣​﻿⁡‬​‬⁢‌​‬‍‍‍⁡文案馆: 一键发文项目操作手册 - 飞书云文档
+  tags: 书签栏,python量化
+
+- **晋江文学城[管理文章]** — https://my.jjwxc.net/backend/managenovel.php?novelid=8439746
+  晋江文学城[管理文章]
+  tags: 书签栏,自媒体运营,爆款素材
+
+- **《宿命之环》小说在线阅读-起点中文网** — https://www.qidian.com/book/1036370336/
+  《宿命之环》小说在线阅读-起点中文网
+  tags: 书签栏,自媒体运营,爆款素材
+
+- **135编辑器官网-微信排版编辑器-微信公众号图文排版工具，好用素材多** — https://www.135editor.com/beautify_editor.html
+  135编辑器官网-微信排版编辑器-微信公众号图文排版工具，好用素材多
+  tags: 书签栏,自媒体运营,爆款素材
+
+- **有声小说-有声读物-电台广播在线听书-蜻蜓FM** — https://www.qingting.fm/
+  有声小说-有声读物-电台广播在线听书-蜻蜓FM
+  tags: 书签栏,自媒体运营,爆款素材
+
+- **搜狗微信搜索_订阅号及文章内容独家收录，一搜即达** — https://weixin.sogou.com/
+  搜狗微信搜索_订阅号及文章内容独家收录，一搜即达
+  tags: 书签栏,自媒体运营,爆款素材
+
+- **天工超能AI** — https://search.tiangong.cn/
+  天工超能AI
+  tags: 书签栏,自媒体运营,爆款文案
+
+- **爆款文案** — https://chat.baidu.com/bot?appId=f027551bea81401389b914e365e5b189&is_immersed=0&source=inspiration_resultpage_demo3&tplname=ins_application_card&srcid=52235&lid=8e909e8400092c9d&order=5&params=%7B%22query%22%3A%7B%22type%22%3A%22text%22%2C%22data%22%3A%7B%22text%22%3A%22%E3%80%90%E6%80%8E%E4%B9%88%E6%89%8D%E8%83%BD%E6%B4%BB%E7%9A%84%E8%87%AA%E7%94%B1%E8%87%AA%E5%9C%A8%E3%80%91%7B%E5%B0%8F%E7%BA%A2%E4%B9%A6%7D%22%2C%22isFirstConversation%22%3Atrue%7D%2C%22showText%22%3A%22%E3%80%90%E6%80%8E%E4%B9%88%E6%89%8D%E8%83%BD%E6%B4%BB%E7%9A%84%E8%87%AA%E7%94%B1%E8%87%AA%E5%9C%A8%E3%80%91%7B%E5%B0%8F%E7%BA%A2%E4%B9%A6%7D%22%7D%7D
+  爆款文案
+  tags: 书签栏,自媒体运营,爆款文案
+
+- **OpenAI Platform** — https://platform.openai.com/docs/introduction
+  OpenAI Platform
+  tags: 书签栏,自媒体运营,爆款文案
+
+- **youcom** — https://you.com/?chatMode=custom
+  youcom
+  tags: 书签栏,自媒体运营,爆款文案
+
+- **Bard** — https://bard.google.com/chat/d132fd04931006bd
+  Bard
+  tags: 书签栏,自媒体运营,爆款文案
+
+- **起点达人中心** — https://talent.yuewen.com/#/user/login
+  起点达人中心
+  tags: 书签栏,自媒体运营,爆款文案
+
+- **番茄达人中心** — https://kol.fanqieopen.com/page/task
+  番茄达人中心
+  tags: 书签栏,自媒体运营,爆款文案
+
+- **QQ阅读小说|网文推荐|推广代理接单|赚钱,达人推书,阅文合作——QQ阅读达人推广后台** — https://kol.yuewen.com/#/user/login
+  QQ阅读小说|网文推荐|推广代理接单|赚钱,达人推书,阅文合作——QQ阅读达人推广后台
+  tags: 书签栏,自媒体运营,爆款文案
+
+- **七猫达人** — https://kol.wtzw.com/login
+  七猫达人
+  tags: 书签栏,自媒体运营,爆款文案
+
+- **QQ阅读小说|网文推荐|推广代理接单|赚钱,达人推书,阅文合作——QQ阅读达人推广后台** — https://kol.yuewen.com/#/contentManage/aliasInfoManage
+  QQ阅读小说|网文推荐|推广代理接单|赚钱,达人推书,阅文合作——QQ阅读达人推广后台
+  tags: 书签栏,自媒体运营,爆款文案
+
+- **腾讯元宝 - 轻松工作 多点生活** — https://yuanbao.tencent.com/chat/naQivTmsDa/91a9aa09-b810-4198-8c54-270ea9e420d7
+  腾讯元宝 - 轻松工作 多点生活
+  tags: 书签栏,自媒体运营,爆款文案
+
+- **微信 Markdown 编辑器 | Doocs 开源社区** — https://doocs.github.io/md/
+  微信 Markdown 编辑器 | Doocs 开源社区
+  tags: 书签栏,自媒体运营,剪辑排版
+
+- **文章编辑器掘金** — https://juejin.cn/editor/drafts/7482293261253017639
+  文章编辑器掘金
+  tags: 书签栏,自媒体运营,剪辑排版
+
+- **Markdown编辑器 | 微信公众号排版工具 | 在线内容创作平台** — https://wechat.jeffjade.com/
+  Markdown编辑器 | 微信公众号排版工具 | 在线内容创作平台
+  tags: 书签栏,自媒体运营,剪辑排版
+
+- **Arya - 在线 Markdown 编辑器** — https://markdown.lovejade.cn/
+  Arya - 在线 Markdown 编辑器
+  tags: 书签栏,自媒体运营,剪辑排版
+
+- **微信 Markdown 编辑器 | Doocs 开源社区** — https://md.doocs.org/
+  微信 Markdown 编辑器 | Doocs 开源社区
+  tags: 书签栏,自媒体运营,剪辑排版
+
+- **MD2Card - Markdown 转知识卡片工具** — https://md2card.com/zh/editor
+  MD2Card - Markdown 转知识卡片工具
+  tags: 书签栏,自媒体运营,剪辑排版
+
+- **MDX Editor | 一个微信排版编辑器，使用 MDX 来排版** — https://mdx-editor-muefc1e84-maqi1520s-projects.vercel.app/create
+  MDX Editor | 一个微信排版编辑器，使用 MDX 来排版
+  tags: 书签栏,自媒体运营,剪辑排版
+
+- **返利文案模板 | 旺财狗** — https://wcg.ymette.com/union/template/
+  返利文案模板 | 旺财狗
+  tags: 书签栏,自媒体运营,变现
+
+- **写文章 - 知乎** — https://zhuanlan.zhihu.com/write
+  写文章 - 知乎
+  tags: 书签栏,自媒体运营,发布媒体
+
+- **AI全能写作助手** — https://vt.quark.cn/blm/quark-doc-compassjs-559/home?uc_param_str=dnntnwvepffrgibijbprsvpidicheiutdskp&entry=pc_homecard
+  AI全能写作助手
+  tags: 书签栏,自媒体运营,文案二创
+
+  *... 此分类还有 3 个工具，详见 https://ai123.miyucaicai.cn/data/tools_embedded.js*
+
+## AI 语音 (audio)
+
+- **Online Audio Converter - Сonvert audio files to MP3, WAV, MP4, M4A, OGG or iPhon** — https://online-audio-converter.com/#google_vignette
+  Online Audio Converter - Сonvert audio files to MP3, WAV, MP4, M4A, OGG or iPhon
+  tags: 书签栏,python量化
+
+- **喜韵音坊** — https://everest-ai.ximalaya.com/charm-studio/dub
+  喜韵音坊
+  tags: 书签栏,自媒体运营,智能配音
+
+- **音剪AI** — https://voicefactory.ximalaya.com/detail?current=1&folderId=9ac2e65136a8495aaffa8d9d485d6080&workId=8f679616af2e4c91a898a633f69f18b9
+  音剪AI
+  tags: 书签栏,自媒体运营,智能配音
+
+- **免费音频生产** — https://chutes.ai/app?type=tts
+  免费音频生产
+  tags: 书签栏,自媒体运营,智能配音
+
+- **音乐生成Suno** — https://app.suno.ai/create/
+  音乐生成Suno
+  tags: 书签栏,自媒体运营,智能配音
+
+- **Fish Audio: Audio Generation For All** — https://fish.audio/zh-CN/
+  Fish Audio: Audio Generation For All
+  tags: 书签栏,自媒体运营,智能配音
+
+- **音刻 | 精准音频转录与可搜索笔记** — https://inkr.app/?l=zh-CN
+  音刻 | 精准音频转录与可搜索笔记
+  tags: 书签栏,自媒体运营,智能配音
+
+- **Text To Speech - 在线文本转语音** — https://www.text-to-speech.cn/
+  Text To Speech - 在线文本转语音
+  tags: 书签栏,自媒体运营,智能配音
+
+- **ChatTTS: Text-to-Speech For Chat** — https://chattts.com/
+  ChatTTS: Text-to-Speech For Chat
+  tags: 书签栏,自媒体运营,智能配音
+
+- **Musicfy AI - AI Voice Song Generator** — https://musicfy.lol/
+  Musicfy AI - AI Voice Song Generator
+  tags: 书签栏,自媒体运营,智能配音
+
+- **CosyVoice-300M · 创空间** — https://modelscope.cn/studios/iic/CosyVoice-300M
+  CosyVoice-300M · 创空间
+  tags: 书签栏,自媒体运营,智能配音
+
+- **CosyVoice2-0.5B · 创空间** — https://modelscope.cn/studios/iic/CosyVoice2-0.5B
+  CosyVoice2-0.5B · 创空间
+  tags: 书签栏,自媒体运营,智能配音
+
+- **ChatTTS 稳定音色/区分男女 · 创空间** — https://modelscope.cn/studios/ttwwwaa/ChatTTS_Speaker
+  ChatTTS 稳定音色/区分男女 · 创空间
+  tags: 书签栏,自媒体运营,智能配音
+
+- **SenseVoice · 创空间** — https://modelscope.cn/studios/iic/SenseVoice
+  SenseVoice · 创空间
+  tags: 书签栏,自媒体运营,智能配音
+
+- **AI对话播客（输入网页或PDF即可生成一档对话播客节目） · 创空间** — https://modelscope.cn/studios/modelscope/open-notebooklm-demo
+  AI对话播客（输入网页或PDF即可生成一档对话播客节目） · 创空间
+  tags: 书签栏,自媒体运营,智能配音
+
+- **Funsound 在线字幕合成 · 创空间** — https://modelscope.cn/studios/QuadraV/FunSound
+  Funsound 在线字幕合成 · 创空间
+  tags: 书签栏,自媒体运营,智能配音
+
+- **maskgct语音克隆 · 创空间** — https://modelscope.cn/studios/amphion/maskgct
+  maskgct语音克隆 · 创空间
+  tags: 书签栏,自媒体运营,智能配音
+
+- **各大音乐平台音频解析工具 · 创空间** — https://modelscope.cn/studios/Genius-Society/music_parsers
+  各大音乐平台音频解析工具 · 创空间
+  tags: 书签栏,自媒体运营,智能配音
+
+- **MusicGen: 让AI作曲触手可及 · 创空间** — https://modelscope.cn/studios/AI-ModelScope/MusicGen
+  MusicGen: 让AI作曲触手可及 · 创空间
+  tags: 书签栏,自媒体运营,智能配音
+
+- **WebAssembly实时中英粤语识别:新一代Kaldi+Paraformer · 创空间** — https://modelscope.cn/studios/k2-fsa/web-assembly-asr-sherpa-onnx-zh-cantonese-en-paraformer
+  WebAssembly实时中英粤语识别:新一代Kaldi+Paraformer · 创空间
+  tags: 书签栏,自媒体运营,智能配音
+
+- **MiniMax** — https://www.minimax.io/
+  MiniMax
+  tags: 书签栏,自媒体运营,智能配音
+
+- **Suno | AI Music** — https://suno.com/create
+  Suno | AI Music
+  tags: 书签栏,自媒体运营,智能配音
+
+- **发现声音 - 声音搜索 - 淘声网 - 免费音效素材资源|视频游戏配乐下载** — https://www.tosound.com/search/word-
+  发现声音 - 声音搜索 - 淘声网 - 免费音效素材资源|视频游戏配乐下载
+  tags: 书签栏,自媒体运营,智能配音
+
+- **声音克隆GPT-SoVITS WebUI** — http://localhost:9874/
+  声音克隆GPT-SoVITS WebUI
+  tags: 书签栏,比赛,应用部署
+
+## learning (learning)
+
+- **【麻省理工学院-中文字幕版】计算机科学和Python编程基础79集完整课程，现分享给大家！_哔哩哔哩_bilibili** — https://www.bilibili.com/video/BV1f34y1U7kt?spm_id_from=333.851.b_7265636f6d6d656e64.1
+  【麻省理工学院-中文字幕版】计算机科学和Python编程基础79集完整课程，现分享给大家！_哔哩哔哩_bilibili
+  tags: 书签栏,python量化
+
+- **十分钟快速入门 — TianQin Python SDK 3.3.0 文档** — https://doc.shinnytech.com/tqsdk/latest/quickstart.html
+  十分钟快速入门 — TianQin Python SDK 3.3.0 文档
+  tags: 书签栏,python量化
+
+- **资源、课程和培训 - Google for Developers** — https://developers.google.cn/learn?hl=zh-cn&utm_source=ioc24&utm_medium=hs
+  资源、课程和培训 - Google for Developers
+  tags: 书签栏,python量化
+
+- **实用教程 | Flutter 中文文档 - Flutter 中文开发者网站 - Flutter** — https://docs.flutter.cn/cookbook
+  实用教程 | Flutter 中文文档 - Flutter 中文开发者网站 - Flutter
+  tags: 书签栏,python量化
+
+- **Pixso新手指南-Pixso** — https://pixso.cn/app/editor/sizCojBg-1lEBulh8hj76w?showGuide=true&page-id=0%3A1
+  Pixso新手指南-Pixso
+  tags: 书签栏,自媒体运营,爆款素材
+
+- **AI赚钱的六个境界：从入门到暴富** — https://space.coze.cn/web?uri=7510479898260717618%2FAI%E8%B5%9A%E9%92%B1%E7%9A%84%E5%85%AD%E4%B8%AA%E5%A2%83%E7%95%8C%EF%BC%9A%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E6%9A%B4%E5%AF%8C-7bf7907b1c.html
+  AI赚钱的六个境界：从入门到暴富
+  tags: 书签栏,自媒体运营,变现
+
+- **无需公网IP，用国际域名一键访问本地博客！不加端口号，不做内网穿透、不开端口映射，像官网一样上线！Cloudflare Tunnel全民教程！** — https://larkcommunity.feishu.cn/minutes/obcnsu11u96s5u3j1d9zh3s8?from=from_copylink
+  无需公网IP，用国际域名一键访问本地博客！不加端口号，不做内网穿透、不开端口映射，像官网一样上线！Cloudflare Tunnel全民教程！
+  tags: 书签栏,教程
+
+- **Figma全指南，看这一篇就够了 - 知乎** — https://zhuanlan.zhihu.com/p/266781187
+  Figma全指南，看这一篇就够了 - 知乎
+  tags: 书签栏,教程
+
+- **WaytoAGI-通往AGI之路，最好的 AI 知识库和工具站** — https://www.waytoagi.com/
+  WaytoAGI-通往AGI之路，最好的 AI 知识库和工具站
+  tags: 书签栏,教程
+
+- **网易云课堂 | AI公开课** — https://study163.framer.website/
+  网易云课堂 | AI公开课
+  tags: 书签栏,教程
+
+- **豆包文档Docs** — https://bytedance.larkoffice.com/docx/VZeOdYtpAov0jRx4FfgcWbTXnVe
+  豆包文档Docs
+  tags: 书签栏,教程
+
+- **30案例打造flowith保姆级教程** — https://waytoagi.feishu.cn/wiki/BGxmwJrOEi188lkFpHvc4rtBnHt
+  30案例打造flowith保姆级教程
+  tags: 书签栏,教程
+
+- **Vidu 提示词指南** — https://shengshu.feishu.cn/docx/Dtv8dbnUKo5glfxDoLXcEwzSnyd
+  Vidu 提示词指南
+  tags: 书签栏,教程
+
+- **腾讯云智能体开发平台 快速入门-文档中心-腾讯云** — https://cloud.tencent.com/document/product/1759/104201
+  腾讯云智能体开发平台 快速入门-文档中心-腾讯云
+  tags: 书签栏,比赛,腾讯云
+
+- **ESP-IDF 编程指南 - ESP32 - — ESP-IDF 编程指南 latest 文档** — https://docs.espressif.com/projects/esp-idf/zh_CN/latest/esp32/index.html
+  ESP-IDF 编程指南 - ESP32 - — ESP-IDF 编程指南 latest 文档
+  tags: 书签栏,比赛,COZE智能硬件
+
+- **Cloud Studio - 新一代AI应用学习社区** — https://cloudstudio.net/home
+  Cloud Studio - 新一代AI应用学习社区
+  tags: 书签栏,比赛
+
+- **国家中小学智慧教育平台** — https://basic.smartedu.cn/syncClassroom/classActivity?activityId=3fde7a89-b363-4d32-9fa6-c844b203c082&chapterId=83a93d4d-7b81-36c3-aa74-87d88ae793de&teachingmaterialId=76625bf4-a8aa-42de-a626-5c2051e6c774&fromPrepare=0&classHourId=lesson_1
+  国家中小学智慧教育平台
+  tags: 书签栏,互动教材
+
+- **珠海市教育局网站** — http://zhjy.zhuhai.gov.cn/
+  珠海市教育局网站
+  tags: 
+
+- **国家知识产权局商标局 中国商标网** — https://sbj.cnipa.gov.cn/sbj/index.html
+  国家知识产权局商标局 中国商标网
+  tags: 
+
+## data (data)
+
+- **安装vscode_启动数据库_行情服务器_交易服务器_查询K线_哔哩哔哩_bilibili** — https://www.bilibili.com/video/BV1kk4y1C7AD?p=2&spm_id_from=pageDriver&vd_source=c36a0f7b3016a2017a22fbc6bc2780ae
+  安装vscode_启动数据库_行情服务器_交易服务器_查询K线_哔哩哔哩_bilibili
+  tags: 书签栏,python量化
+
+- **无限易期权可视化操作，行情精准把握，持仓高效管理_哔哩哔哩_bilibili** — https://www.bilibili.com/video/BV1KB4y1C71m/?share_source=copy_web&vd_source=80e711f380c3ada130332e0496f8b39e&t=2315
+  无限易期权可视化操作，行情精准把握，持仓高效管理_哔哩哔哩_bilibili
+  tags: 书签栏,python量化
+
+- **飞瓜数据 - 抖音快手_电商与直播大数据分析平台-feigua.cn** — https://www.feigua.cn/?chl=baidu-pinzhuan
+  飞瓜数据 - 抖音快手_电商与直播大数据分析平台-feigua.cn
+  tags: 书签栏,python量化
+
+- **天聚数行TianAPI - 应用开发者API数据调用平台** — https://www.tianapi.com/
+  天聚数行TianAPI - 应用开发者API数据调用平台
+  tags: 书签栏,python量化
+
+- **数字情报和应用数据分析 - Sensor Tower** — https://sensortower-china.com/zh-cn
+  数字情报和应用数据分析 - Sensor Tower
+  tags: 书签栏,自媒体运营,变现
+
+- **七麦数据 -专业移动产品商业分析平台-关键词优化-ASA优化-七麦科技** — https://www.qimai.cn/
+  七麦数据 -专业移动产品商业分析平台-关键词优化-ASA优化-七麦科技
+  tags: 书签栏,自媒体运营,变现
+
+- **免费API** — https://anyrouter.top/register?aff=TeoG
+  免费API
+  tags: 书签栏,比赛
+
+- **多模态医学数据治理赋能生物医学创新** — http://www.gddatafair.com/competition.html#/detail/detail05
+  多模态医学数据治理赋能生物医学创新
+  tags: 书签栏,比赛
+
+- **输电线路巡检缺陷数据集构建** — http://www.gddatafair.com/competition.html#/detail/detail03
+  输电线路巡检缺陷数据集构建
+  tags: 书签栏,比赛
+
+- **淋巴造血系统肿瘤MICM医学高质量数据集构建** — http://www.gddatafair.com/competition.html#/detail/detail09
+  淋巴造血系统肿瘤MICM医学高质量数据集构建
+  tags: 书签栏,比赛
+
+- **会员数据服务** — https://mip.sseinfo.com/sc/login?redirect=%2Findex
+  会员数据服务
+  tags: 
+
+## productivity (productivity)
+
+- **在线免费PDF转换器_PDF转换WORD转PPT_PDF转换Excel转JPG-PDF转换文档编辑器** — https://www.camscanner.com/tools/main
+  在线免费PDF转换器_PDF转换WORD转PPT_PDF转换Excel转JPG-PDF转换文档编辑器
+  tags: 书签栏,python量化
+
+- **﻿‍⁤﻿‌‬⁡‬⁣​⁣‌⁤﻿⁣⁣⁣​​‌⁡​⁣‬​﻿⁢‌‌⁤‌⁣​‬​﻿‌​‌‌‍‌⁣‌⁤⁡﻿免费搭建AI网站（需要梯子） - 飞书云文档** — https://jiangzhe.feishu.cn/wiki/VMSEwVWZwiWJQakdDljcQm39n5z
+  ﻿‍⁤﻿‌‬⁡‬⁣​⁣‌⁤﻿⁣⁣⁣​​‌⁡​⁣‬​﻿⁢‌‌⁤‌⁣​‬​﻿‌​‌‌‍‌⁣‌⁤⁡﻿免费搭建AI网站（需要梯子） - 飞书云文档
+  tags: 书签栏,自媒体运营,变现
+
+- **画小二AIGC开源文档 - 飞书云文档** — https://a1i1hjmvcf0.feishu.cn/drive/folder/WZ6CfwjkBlTja8der3ncs1XmnWc
+  画小二AIGC开源文档 - 飞书云文档
+  tags: 书签栏,教程
+
+- **人生管理系统 - 飞书云文档** — https://vcn9bv28ym2o.feishu.cn/base/AkRcbgIRsaD4mLsa5WfccOdgnaf?table=tbl9KHnecfrX6KJ3&view=vewKecDsBf
+  人生管理系统 - 飞书云文档
+  tags: 书签栏
+
+- **‍​⁤⁤⁡‌⁡​​⁣‍​﻿‍﻿⁤⁤⁢​⁣⁡⁣​﻿‌​‌﻿‬⁣‌﻿‌‍﻿​‍﻿⁡‌⁤⁡⁤﻿‌‌‌⁢﻿⁡Micropython硬件编程从入门到放弃 - 飞书云文档** — https://hesqca9a6y.feishu.cn/wiki/CZOBwfit1iaM8TkfGi3cQqe2nyf
+  ‍​⁤⁤⁡‌⁡​​⁣‍​﻿‍﻿⁤⁤⁢​⁣⁡⁣​﻿‌​‌﻿‬⁣‌﻿‌‍﻿​‍﻿⁡‌⁤⁡⁤﻿‌‌‌⁢﻿⁡Micropython硬件编程从入门到放弃 - 飞书云文档
+  tags: 书签栏,比赛,COZE智能硬件
+
+- **最好用的AI – 最好用的办公效率AI工具** — https://bestai2.wordpress.com/
+  最好用的AI – 最好用的办公效率AI工具
+  tags: 书签栏,比赛,应用部署
+
+- **云电脑免费体验_云桌面_安全办公_PC租赁-阿里云** — https://www.aliyun.com/activity/creativity/wuying
+  云电脑免费体验_云桌面_安全办公_PC租赁-阿里云
+  tags: 
+
+## search (search)
+
+- **https://pul.tdx.com.cn/site/app/gzhbd/tdx-topsearch/page-main.html?tdxId=R170607** — https://pul.tdx.com.cn/site/app/gzhbd/tdx-topsearch/page-main.html?tdxId=R170607094331211402PFQA&advId=17&fromCh=0
+  https://pul.tdx.com.cn/site/app/gzhbd/tdx-topsearch/page-main.html?tdxId=R170607
+  tags: 书签栏,python量化
+
+- **效率集-主页,导航,聚合搜索** — https://www.xiaolvji.com/u/ljyandlwl?continueFlag=5a90731d720ef7daf917f2dd703f0af9
+  效率集-主页,导航,聚合搜索
+  tags: 书签栏,自媒体运营,爆款素材
+
+- **搜狗搜索引擎 - 上网从搜狗开始** — https://sogou.com/
+  搜狗搜索引擎 - 上网从搜狗开始
+  tags: 书签栏,自媒体运营,爆款素材
+
+- **‌‍‬‍​​​‍⁢​⁣‬﻿⁤‍​⁡‬​⁤‬‌⁡﻿⁢‬⁤⁣‍​‌‌​‬⁤⁤‬​‍⁣﻿​⁣⁡​⁣﻿‍‬⁣⭐ 结构化提示词知识库** — https://langgptai.feishu.cn/wiki/RXdbwRyASiShtDky381ciwFEnpe
+  ‌‍‬‍​​​‍⁢​⁣‬﻿⁤‍​⁡‬​⁤‬‌⁡﻿⁢‬⁤⁣‍​‌‌​‬⁤⁤‬​‍⁣﻿​⁣⁡​⁣﻿‍‬⁣⭐ 结构化提示词知识库
+  tags: 书签栏,比赛, 提示词
+
+- **Mini-dashboard | Meilisearch** — https://meilisearch-jhwvfcdt.us-east-1.clawcloudrun.com/
+  Mini-dashboard | Meilisearch
+  tags: 书签栏,比赛,应用部署
+
+- **亚马逊欧洲电商市场热销新趋势，太阳能产品搜索量暴增1123%！** — https://baijiahao.baidu.com/s?id=1737569492307411929&wfr=spider&for=pc
+  亚马逊欧洲电商市场热销新趋势，太阳能产品搜索量暴增1123%！
+  tags: 光伏
+
+## automation (automation)
+
+- **知乎8天5级，涨的也太快了【文末附RPA源码】** — https://mp.weixin.qq.com/s?src=11&timestamp=1721234445&ver=5388&signature=CYSf-Xlq4o6GxWeActZ4csImHkTXxYSPt9W9zW*NdR8JOa8UsSWwcDpnxyKCRn5odTHaKTJ1qR5T*AO28BUhpmu9vk*wkSbwirVz74gw*9ZcQq7CnwidfAIGwHCKNvWp&new=1
+  知乎8天5级，涨的也太快了【文末附RPA源码】
+  tags: 书签栏,教程
+
+- **n8n.io - Workflow Automation** — http://localhost:5678/setup
+  n8n.io - Workflow Automation
+  tags: 书签栏,比赛,应用部署
+
+- **Discover 800+ Automation Workflows from the n8n&#39;s Community** — https://n8n.io/workflows/
+  Discover 800+ Automation Workflows from the n8n&#39;s Community
+  tags: 书签栏,比赛,应用部署
+
+- **Workflows - n8n** — https://n8n-pivlsjcp.us-east-1.clawcloudrun.com/home/workflows
+  Workflows - n8n
+  tags: 书签栏,比赛,应用部署
+
+- **储能集成面临的三大难题与破局！ 近年来，随着光伏、风力发电等 新能源 项目的快速推广，储能赛道彻底火了！根据国家能源局公布的数据： 2023年今年1-6... ** — https://xueqiu.com/2733868088/260363434
+  储能集成面临的三大难题与破局！ 近年来，随着光伏、风力发电等 新能源 项目的快速推广，储能赛道彻底火了！根据国家能源局公布的数据： 2023年今年1-6... 
+  tags: 光伏
+
+## research (research)
+
+- **生成的论文** — https://ai.miyucaicai.cn/renderer/article.html
+  生成的论文
+  tags: 书签栏,比赛,应用部署
+
+- **Recod.ai/LUC - Scientific Image Forgery Detection | Kaggle** — https://www.kaggle.com/competitions/recodai-luc-scientific-image-forgery-detection
+  Recod.ai/LUC - Scientific Image Forgery Detection | Kaggle
+  tags: 书签栏,比赛
+
+- **基于AIGC背景下的广东重点产业人才供需适配应用研究赛题** — http://www.gddatafair.com/competition.html#/detail/detail08
+  基于AIGC背景下的广东重点产业人才供需适配应用研究赛题
+  tags: 书签栏,比赛
+
+
+## 站群矩阵关联
+
+- skill.miyucaicai.cn (AI Agent 技能商店, ⭐1762)
+- solar.miyucaicai.cn (光伏储能数据库)
+- top.miyucaicai.cn (实时新闻热榜)
+- ai-trend-publish.vercel.app (AI 内容创作平台)
+- TOPGO Platform (AI 资源管理: github.com/anbeime/api-token)

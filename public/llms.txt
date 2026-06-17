@@ -1,0 +1,46 @@
+# llms.txt - AI123 AI工具导航
+
+> 本文件遵循 llms.txt 标准 (https://llmstxt.org)，方便 AI 引擎理解站点。
+
+## 站点信息
+
+- **名称**: AI123 - AI工具导航
+- **主页**: https://ai123.miyucaicai.cn
+- **仓库**: https://github.com/anbeime/nav
+- **定位**: 收录 863+ 精选 AI 工具，源自真实使用收藏夹
+- **更新频率**: 持续维护
+
+## 数据规模
+
+- **AI工具总数**: 863 个
+- **覆盖分类**: 16 大类
+- **Top 分类**:
+  - 智能体平台 (agent): 300 个
+  - AI 金融 (finance): 112 个
+  - AI 营销 (marketing): 66 个
+  - AI 视频 (video): 65 个
+  - AI 编程 (code): 56 个
+  - AI 绘画 (image): 48 个
+  - AI 对话 (chat): 34 个
+  - AI 写作 (writing): 33 个
+  - AI 语音 (audio): 24 个
+
+## 关键资源
+
+- 工具数据 JSON: https://ai123.miyucaicai.cn/data/skills.json
+- 工具完整库: https://ai123.miyucaicai.cn/data/tools_embedded.js
+- 全量精简版: https://ai123.miyucaicai.cn/llms-full.txt
+- 项目页面: https://ai123.miyucaicai.cn/projects.html
+- StarClaw 控制台: https://ai123.miyucaicai.cn/starclaw.html
+
+## 站群矩阵（同主域兄弟站）
+
+- **AI Agent 技能商店**: https://skill.miyucaicai.cn （243 个 Agent 技能，⭐1762）
+- **光伏储能地图站**: https://solar.miyucaicai.cn （990+ 项目数据库）
+- **实时热点新闻**: https://top.miyucaicai.cn （NewsNow 热榜聚合）
+- **AI 内容平台**: https://ai-trend-publish.vercel.app （多平台自动发布）
+
+## 许可与联系
+
+- License: 见 GitHub 仓库
+- Contact: GitHub Issues
