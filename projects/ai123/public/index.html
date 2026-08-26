@@ -28,11 +28,19 @@
         },
         "publisher": {
             "@type": "Organization",
-            "name": "AI123",
+            "name": "TOPGO",
             "logo": {
                 "@type": "ImageObject",
                 "url": "https://ai123.miyucaicai.cn/logo.png"
-            }
+            },
+            "sameAs": [
+                "https://ai123.miyucaicai.cn/",
+                "https://solar.miyucaicai.cn/",
+                "https://skill.miyucaicai.cn/",
+                "https://top.miyucaicai.cn/",
+                "https://github.com/anbeime/skill",
+                "https://github.com/anbeime/ai-trend-publish"
+            ]
         }
     }
     </script>
@@ -172,6 +180,20 @@
         .cat-research{background:linear-gradient(135deg,#6366f1,#a855f7)}
         .cat-other{background:linear-gradient(135deg,#94a3b8,#64748b)}
         
+        /* TOPGO 生态 */
+        .ecosystem{background:linear-gradient(135deg,rgba(255,255,255,0.15),rgba(255,255,255,0.06));border:1px solid rgba(255,255,255,0.25);border-radius:16px;padding:20px 24px;margin-bottom:24px;backdrop-filter:blur(8px)}
+        .ecosystem-header{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+        .ecosystem-badge{background:linear-gradient(135deg,#fbbf24,#f59e0b);color:#78350f;font-size:0.72em;font-weight:700;padding:3px 10px;border-radius:20px;letter-spacing:0.5px}
+        .ecosystem-title{color:white;font-size:1.05em;font-weight:600}
+        .ecosystem-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:10px}
+        .eco-card{display:flex;align-items:center;gap:10px;background:rgba(255,255,255,0.95);border-radius:10px;padding:10px 14px;text-decoration:none;color:var(--text-primary);transition:all 0.2s;cursor:pointer}
+        .eco-card:hover{transform:translateY(-2px);box-shadow:0 6px 16px rgba(0,0,0,0.18);background:white}
+        .eco-icon{width:36px;height:36px;border-radius:9px;display:flex;align-items:center;justify-content:center;font-size:1.1em;flex-shrink:0;color:white;font-weight:700}
+        .eco-info{flex:1;min-width:0}
+        .eco-name{font-size:0.88em;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+        .eco-desc{font-size:0.72em;color:var(--text-secondary);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+        .eco-star{font-size:0.72em;color:#f59e0b;font-weight:600;flex-shrink:0}
+        
         /* Responsive */
         @media(max-width:768px){
             .main-content{grid-template-columns:1fr}
@@ -180,6 +202,7 @@
             .category-item{white-space:nowrap}
             .tools-grid{grid-template-columns:1fr}
             .header-stats{gap:20px}
+            .ecosystem-grid{grid-template-columns:1fr 1fr}
         }
     </style>
 </head>
@@ -195,6 +218,42 @@
         </div>
     </div>
     
+    <!-- TOPGO 生态矩阵 -->
+    <div class="ecosystem">
+        <div class="ecosystem-header">
+            <span class="ecosystem-badge">TOPGO ECOSYSTEM</span>
+            <span class="ecosystem-title">同一团队打造 · 6 大产品矩阵</span>
+        </div>
+        <div class="ecosystem-grid">
+            <a class="eco-card" href="https://ai123.miyucaicai.cn/" target="_blank" rel="noopener">
+                <div class="eco-icon" style="background:linear-gradient(135deg,#6366f1,#8b5cf6)">N</div>
+                <div class="eco-info"><div class="eco-name">AI123 导航</div><div class="eco-desc">863个AI工具一键直达</div></div>
+            </a>
+            <a class="eco-card" href="https://solar.miyucaicai.cn/" target="_blank" rel="noopener">
+                <div class="eco-icon" style="background:linear-gradient(135deg,#f59e0b,#f97316)">☀</div>
+                <div class="eco-info"><div class="eco-name">光伏储能地图</div><div class="eco-desc">1000+项目·200+招标</div></div>
+            </a>
+            <a class="eco-card" href="https://skill.miyucaicai.cn/" target="_blank" rel="noopener">
+                <div class="eco-icon" style="background:linear-gradient(135deg,#10b981,#059669)">S</div>
+                <div class="eco-info"><div class="eco-name">AI技能商店</div><div class="eco-desc">416原创技能包即装即用</div></div>
+            </a>
+            <a class="eco-card" href="https://top.miyucaicai.cn/" target="_blank" rel="noopener">
+                <div class="eco-icon" style="background:linear-gradient(135deg,#ef4444,#ec4899)">H</div>
+                <div class="eco-info"><div class="eco-name">TOP 热点聚合</div><div class="eco-desc">65个数据源实时热榜</div></div>
+            </a>
+            <a class="eco-card" href="https://github.com/anbeime/skill" target="_blank" rel="noopener">
+                <div class="eco-icon" style="background:linear-gradient(135deg,#1f2937,#374151)">⌥</div>
+                <div class="eco-info"><div class="eco-name">Skill 开源仓库</div><div class="eco-desc">416技能包·自动抓取上万</div></div>
+                <div class="eco-star" id="eco-star-skill">★5700+</div>
+            </a>
+            <a class="eco-card" href="https://github.com/anbeime/ai-trend-publish" target="_blank" rel="noopener">
+                <div class="eco-icon" style="background:linear-gradient(135deg,#0ea5e9,#6366f1)">P</div>
+                <div class="eco-info"><div class="eco-name">AI Trend Publish</div><div class="eco-desc">热点采集→生成→多平台发布</div></div>
+                <div class="eco-star">★18</div>
+            </a>
+        </div>
+    </div>
+
     <div class="main-content">
         <!-- Sidebar -->
         <div class="sidebar">
@@ -545,8 +604,25 @@ document.addEventListener('keydown', e => {
     if (e.key === 'Escape') closeDetailModal();
 });
 
+// 动态获取 skill 仓库 star 数
+async function refreshSkillStars() {
+    try {
+        const resp = await fetch('https://api.github.com/repos/anbeime/skill');
+        if (resp.ok) {
+            const data = await resp.json();
+            const s = data.stargazers_count || 0;
+            const display = s >= 1000 ? (Math.floor(s/100)*100) + '+' : s;
+            const el = document.getElementById('eco-star-skill');
+            if (el) el.textContent = '★' + display;
+        }
+    } catch(e) {}
+}
+
 // 初始化
-document.addEventListener('DOMContentLoaded', loadTools);
+document.addEventListener('DOMContentLoaded', () => {
+    loadTools();
+    refreshSkillStars();
+});
 </script>
 </body>
 </html>
