@@ -35,9 +35,18 @@
             },
             "sameAs": [
                 "https://ai123.miyucaicai.cn/",
-                "https://solar.miyucaicai.cn/",
                 "https://skill.miyucaicai.cn/",
+                "https://solar.miyucaicai.cn/",
                 "https://top.miyucaicai.cn/",
+                "https://mp.miyucaicai.cn/",
+                "https://pdf.miyucaicai.cn/",
+                "https://excalidraw.miyucaicai.cn/",
+                "https://stock.miyucaicai.cn/",
+                "https://stockbot.miyucaicai.cn/",
+                "https://zc.miyucaicai.cn/",
+                "https://zf.miyucaicai.cn/",
+                "https://lingxi.miyucaicai.cn/",
+                "https://game.miyucaicai.cn/",
                 "https://github.com/anbeime/skill",
                 "https://github.com/anbeime/ai-trend-publish"
             ]
@@ -191,6 +200,9 @@
         .eco-name{font-size:0.88em;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
         .eco-desc{font-size:0.72em;color:var(--text-secondary);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
         .eco-star{font-size:0.72em;color:#f59e0b;font-weight:600;flex-shrink:0}
+        .eco-group{grid-column:1/-1;margin-top:6px;margin-bottom:2px;padding-left:4px;font-size:0.78em;color:rgba(255,255,255,0.85);font-weight:600;letter-spacing:0.5px;display:flex;align-items:center;gap:8px}
+        .eco-group::before{content:'';width:3px;height:14px;background:linear-gradient(180deg,#fbbf24,#f59e0b);border-radius:2px}
+        .eco-group:first-child{margin-top:0}
         
         /* Responsive */
         @media(max-width:768px){
@@ -220,34 +232,75 @@
     <div class="ecosystem">
         <div class="ecosystem-header">
             <span class="ecosystem-badge">TOPGO ECOSYSTEM</span>
-            <span class="ecosystem-title">同一团队打造 · 6 大产品矩阵</span>
+            <span class="ecosystem-title">同一团队打造 · 14 站产品矩阵</span>
         </div>
         <div class="ecosystem-grid">
+            <div class="eco-group">核心产品</div>
             <a class="eco-card" href="https://ai123.miyucaicai.cn/" target="_blank" rel="noopener">
-                <div class="eco-icon" style="background:linear-gradient(135deg,#6366f1,#8b5cf6)">N</div>
-                <div class="eco-info"><div class="eco-name">AI123 导航</div><div class="eco-desc">640个AI工具一键直达</div></div>
-            </a>
-            <a class="eco-card" href="https://solar.miyucaicai.cn/" target="_blank" rel="noopener">
-                <div class="eco-icon" style="background:linear-gradient(135deg,#f59e0b,#f97316)">☀</div>
-                <div class="eco-info"><div class="eco-name">光伏储能地图</div><div class="eco-desc">1000+项目·200+招标</div></div>
+                <div class="eco-icon" style="background:linear-gradient(135deg,#6366f1,#8b5cf6)">🧭</div>
+                <div class="eco-info"><div class="eco-name">AI123 导航</div><div class="eco-desc">640个AI工具场景分类直达</div></div>
             </a>
             <a class="eco-card" href="https://skill.miyucaicai.cn/" target="_blank" rel="noopener">
-                <div class="eco-icon" style="background:linear-gradient(135deg,#10b981,#059669)">S</div>
-                <div class="eco-info"><div class="eco-name">AI技能商店</div><div class="eco-desc">416原创技能包即装即用</div></div>
+                <div class="eco-icon" style="background:linear-gradient(135deg,#10b981,#059669)">🧩</div>
+                <div class="eco-info"><div class="eco-name">AI 技能商店</div><div class="eco-desc">416原创技能包即装即用</div></div>
+            </a>
+            <a class="eco-card" href="https://solar.miyucaicai.cn/" target="_blank" rel="noopener">
+                <div class="eco-icon" style="background:linear-gradient(135deg,#f59e0b,#f97316)">☀️</div>
+                <div class="eco-info"><div class="eco-name">光伏储能地图</div><div class="eco-desc">1000+项目·200+招投标地图</div></div>
             </a>
             <a class="eco-card" href="https://top.miyucaicai.cn/" target="_blank" rel="noopener">
-                <div class="eco-icon" style="background:linear-gradient(135deg,#ef4444,#ec4899)">H</div>
-                <div class="eco-info"><div class="eco-name">TOP 热点聚合</div><div class="eco-desc">65个数据源实时热榜</div></div>
+                <div class="eco-icon" style="background:linear-gradient(135deg,#ef4444,#ec4899)">🔥</div>
+                <div class="eco-info"><div class="eco-name">TOP 热点聚合</div><div class="eco-desc">NewsNow 65源实时热榜</div></div>
+            </a>
+            <a class="eco-card" href="https://mp.miyucaicai.cn/" target="_blank" rel="noopener">
+                <div class="eco-icon" style="background:linear-gradient(135deg,#0ea5e9,#6366f1)">📰</div>
+                <div class="eco-info"><div class="eco-name">TrendPublish</div><div class="eco-desc">AI智能多平台文章发布</div></div>
             </a>
             <a class="eco-card" href="https://github.com/anbeime/skill" target="_blank" rel="noopener">
-                <div class="eco-icon" style="background:linear-gradient(135deg,#1f2937,#374151)">⌥</div>
-                <div class="eco-info"><div class="eco-name">Skill 开源仓库</div><div class="eco-desc">416技能包·自动抓取上万</div></div>
+                <div class="eco-icon" style="background:linear-gradient(135deg,#1f2937,#374151)">⭐</div>
+                <div class="eco-info"><div class="eco-name">Skill 开源仓库</div><div class="eco-desc">416原创+上万自动抓取</div></div>
                 <div class="eco-star" id="eco-star-skill">★5700+</div>
             </a>
             <a class="eco-card" href="https://github.com/anbeime/ai-trend-publish" target="_blank" rel="noopener">
-                <div class="eco-icon" style="background:linear-gradient(135deg,#0ea5e9,#6366f1)">P</div>
-                <div class="eco-info"><div class="eco-name">AI Trend Publish</div><div class="eco-desc">热点采集→生成→多平台发布</div></div>
-                <div class="eco-star">★18</div>
+                <div class="eco-icon" style="background:linear-gradient(135deg,#8b5cf6,#d946ef)">🚀</div>
+                <div class="eco-info"><div class="eco-name">TrendPublish OSS</div><div class="eco-desc">采集→生成→发布全栈开源</div></div>
+                <div class="eco-star" id="eco-star-atp">★18</div>
+            </a>
+
+            <div class="eco-group">效率 &amp; 知识工具</div>
+            <a class="eco-card" href="https://pdf.miyucaicai.cn/" target="_blank" rel="noopener">
+                <div class="eco-icon" style="background:linear-gradient(135deg,#dc2626,#f97316)">📄</div>
+                <div class="eco-info"><div class="eco-name">PDF 标注工具</div><div class="eco-desc">在线画线/批注/文字标注</div></div>
+            </a>
+            <a class="eco-card" href="https://excalidraw.miyucaicai.cn/" target="_blank" rel="noopener">
+                <div class="eco-icon" style="background:linear-gradient(135deg,#6366f1,#0ea5e9)">✏️</div>
+                <div class="eco-info"><div class="eco-name">Excalidraw 白板</div><div class="eco-desc">手绘风白板·流程图脑图</div></div>
+            </a>
+            <a class="eco-card" href="https://zc.miyucaicai.cn/" target="_blank" rel="noopener">
+                <div class="eco-icon" style="background:linear-gradient(135deg,#059669,#0d9488)">⚖️</div>
+                <div class="eco-info"><div class="eco-name">劳动维权知识库</div><div class="eco-desc">劳动法/仲裁/维权咨询</div></div>
+            </a>
+            <a class="eco-card" href="https://lingxi.miyucaicai.cn/" target="_blank" rel="noopener">
+                <div class="eco-icon" style="background:linear-gradient(135deg,#7c3aed,#ec4899)">🧠</div>
+                <div class="eco-info"><div class="eco-name">AlphaQubit</div><div class="eco-desc">量子纠错解码实验项目</div></div>
+            </a>
+
+            <div class="eco-group">金融数据 &amp; 生活</div>
+            <a class="eco-card" href="https://stock.miyucaicai.cn/" target="_blank" rel="noopener">
+                <div class="eco-icon" style="background:linear-gradient(135deg,#eab308,#ca8a04)">📈</div>
+                <div class="eco-info"><div class="eco-name">股票辅助决策</div><div class="eco-desc">立案/实控人/股东/龙虎榜</div></div>
+            </a>
+            <a class="eco-card" href="https://stockbot.miyucaicai.cn/" target="_blank" rel="noopener">
+                <div class="eco-icon" style="background:linear-gradient(135deg,#16a34a,#65a30d)">🤖</div>
+                <div class="eco-info"><div class="eco-name">StockBot</div><div class="eco-desc">Groq驱动股票助手</div></div>
+            </a>
+            <a class="eco-card" href="https://zf.miyucaicai.cn/" target="_blank" rel="noopener">
+                <div class="eco-icon" style="background:linear-gradient(135deg,#0891b2,#0284c7)">🏠</div>
+                <div class="eco-info"><div class="eco-name">智能租户管理</div><div class="eco-desc">扫码自助·全自动租房</div></div>
+            </a>
+            <a class="eco-card" href="https://game.miyucaicai.cn/" target="_blank" rel="noopener">
+                <div class="eco-icon" style="background:linear-gradient(135deg,#ec4899,#f43f5e)">🎮</div>
+                <div class="eco-info"><div class="eco-name">B站像素世界</div><div class="eco-desc">3D像素方块探索小游戏</div></div>
             </a>
         </div>
     </div>
@@ -597,17 +650,21 @@ document.addEventListener('keydown', e => {
 });
 
 // 动态获取 skill 仓库 star 数
-async function refreshSkillStars() {
+async function fetchRepoStars(repo, elId) {
     try {
-        const resp = await fetch('https://api.github.com/repos/anbeime/skill');
+        const resp = await fetch('https://api.github.com/repos/' + repo);
         if (resp.ok) {
             const data = await resp.json();
             const s = data.stargazers_count || 0;
             const display = s >= 1000 ? (Math.floor(s/100)*100) + '+' : s;
-            const el = document.getElementById('eco-star-skill');
+            const el = document.getElementById(elId);
             if (el) el.textContent = '★' + display;
         }
     } catch(e) {}
+}
+async function refreshSkillStars() {
+    fetchRepoStars('anbeime/skill', 'eco-star-skill');
+    fetchRepoStars('anbeime/ai-trend-publish', 'eco-star-atp');
 }
 
 // 初始化
